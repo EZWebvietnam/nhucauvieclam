@@ -31,11 +31,11 @@
 
                     <tr>
                         <th>Ngành nghề</th>
-                        <td><a href="/vieclam/tuyendung/10/ban-hang.html" target="_blank"><?php echo $info_tintd_detail[0]['e_ngheID']; ?></a>
+                        <td><a href="/vieclam/tuyendung/10/ban-hang.html" target="_blank"><?php echo $info_tintd_detail[0]['e_nghe']; ?></a>
                             <br>
-                            <a href="/vieclam/tuyendung/33/lao-dong-pho-thong.html" target="_blank"><?php echo $info_tintd_detail[0]['e_ngheID1']; ?></a>
+                            <a href="/vieclam/tuyendung/33/lao-dong-pho-thong.html" target="_blank"><?php echo $info_tintd_detail[0]['e_nghe1']; ?></a>
                             <br>
-                            <a href="/vieclam/tuyendung/45/quang-cao-marketing-pr.html" target="_blank"><?php echo $info_tintd_detail[0]['e_ngheID2']; ?></a>
+                            <a href="/vieclam/tuyendung/45/quang-cao-marketing-pr.html" target="_blank"><?php echo $info_tintd_detail[0]['e_nghe2']; ?></a>
                             <br>
                         </td>
                     </tr>
