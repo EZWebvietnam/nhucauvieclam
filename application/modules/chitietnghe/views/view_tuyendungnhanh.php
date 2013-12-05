@@ -25,7 +25,8 @@
                                         <tbody>
                                             <tr>
                                                 <td class="W50"><img src="<?php echo base_url(); ?>template/home/img/hr_asiafoods_vn.jpg" width="50" alt="CÔNG TY CỔ PHẦN THỰC PHẨM Á CHÂU"></td>
-                                                <td style="padding-left: 3px;"><a href="<?php echo base_url(); ?>Infotintd/Infotintd/view_job_post/<?php echo $tin_tuyen_dung['e_id']; ?>" target="_blank"><?php echo $tin_tuyen_dung['e_title']; ?></a><div class="TinyBlank"></div><span class="Number">CÔNG TY CỔ PHẦN THỰC...</span></td>
+                                                <td style="padding-left: 3px;"><a href="<?php echo base_url(); ?>Infotintd/Infotintd/view_job_post/<?php echo $tin_tuyen_dung['e_id']; ?>" target="_blank"><?php echo $tin_tuyen_dung['e_title']; ?></a>
+                                                    <div class="TinyBlank"></div><span class="Number">CÔNG TY CỔ PHẦN THỰC...</span></td>
                                             </tr>
                                         </tbody>
                                     </table></td>
@@ -58,44 +59,32 @@
 
                 <table class="TableVip">
                     <tbody>
+                        <?php
+                        $i = 1;
 
-                        <tr>
+                        foreach ($tuyendungnhanh_detail as $tin_tuyen_dung) {
+                            ?>
+                            <?php
+                            if ($i % 3 == 1) {
+                                ?>
+                                <tr>
+                            <?php } ?>
                             <td width="33%">
                                 <ul>
                                     <li>
-                                        <a href="/vieclam/congviec/2800257/eden-spa-tuyen-ky-thuat-vien-spa.html" title="Eden Spa Tuyển Kỹ Thuật Viên Spa - SAIGON EDEN SPA" target="_blank"><?php echo $tuyendungnhanh_detail[0]['e_title']; ?></a>
+                                        <a href="/vieclam/congviec/2800257/eden-spa-tuyen-ky-thuat-vien-spa.html" title="<?php echo $tuyendungnhanh_detail[0]['e_title']; ?>" target="_blank"><?php echo $tuyendungnhanh_detail[0]['e_title']; ?></a>
                                         <div class="TinyBlank"></div>
                                         <span class="Number">SAIGON EDEN SPA</span>
                                     </li>
                                 </ul></td>
-                            <td width="33%">
-                                <ul>
-                                    <li>
-                                        <a href="/vieclam/congviec/2798857/nhan-vien-kinh-doanh-ma-t-ha-ng-ho-a-cha-t-the-p-va-va-t-tu-ha-ng-ha-i.html" title="Nhân Viên Kinh Doanh Mặt Hàng Hóa Chất, Thép Và Vật Tư Hàng Hải - CÔNG TY CP ĐẦU TƯ VÀ THƯƠNG MẠI DOANH NHÂN" target="_blank"><?php echo $tuyendungnhanh_detail[0]['e_title']; ?></a>
-                                        <div class="TinyBlank"></div>
-                                        <span class="Number">CÔNG TY CP ĐẦU TƯ VÀ THƯƠNG MẠI DOANH...</span>
-                                    </li>
-                                </ul></td>
-                            <td width="33%">
-                                <ul>
-                                    <li>
-                                        <a href="/vieclam/congviec/2798495/tuyen-gap-50-nhan-vien-ban-hang-tai-trung-tam-thuong-mai-aeon-celadon.html" title="Tuyển Gấp 50 Nhân Viên Bán Hàng Tại Trung Tâm Thương Mại Aeon Celadon - CN CÔNG TY TNHH THƯƠNG MẠI LK" target="_blank"><?php echo $tuyendungnhanh_detail[0]['e_title']; ?></a>
-                                        <div class="TinyBlank"></div>
-                                        <span class="Number">CN CÔNG TY TNHH THƯƠNG MẠI LK</span>
-                                    </li>
-                                </ul></td>
-                        </tr>
-
-                    <td width="33%">
-                        <ul>
-                            <li>
-                                <a href="/vieclam/congviec/2739083/nhan-vien-ban-hang-tai-sieu-thi.html" title="Nhân Viên Bán Hàng Tại Siêu Thị - CÔNG TY TNHH SUPOR VIỆT NAM" target="_blank">Nhân Viên Bán Hàng Tại Siêu Thị</a>
-                                <div class="TinyBlank"></div>
-                                <span class="Number">CÔNG TY TNHH SUPOR VIỆT NAM</span>
-                            </li>
-                        </ul></td>
-                    <td width="33%"></td>
-                    </tr>
+                        <?php
+                            if ($i % 3 == 0) {
+                                ?>
+                                    <td width="33%"></td>
+                                </tr>
+                                <?php } ?>
+                                    <?php $i++;
+                                } ?>
                     </tbody>
                 </table>
             </div>
@@ -204,82 +193,28 @@
                             <br>
                             Ngày hết hạn </th>
                     </tr>
-
+                    <?php 
+                     foreach ($tuyendungnhanh_detail as $tin_tuyen_dung)
+                     {
+                         ?>                     
                     <tr class="Even">
-                        <td><a href="/vieclam/congviec/2671624/nhan-vien-kinh-doanh.html" class="NormalJob"><?php echo $tuyendungnhanh_detail[0]['e_title']; ?></a><div class="Blank"></div><a href="/vieclam/congty/2552602/cong-ty-tnhh-tm-dv-xd-hiep-phat.html" class="VipEmployer">Công ty TNHH TM DV XD Hiệp Phát</a></td>
-                        <td class="Nowrap"><?php echo $tuyendungnhanh_detail[0]['e_trinhdo']; ?>
+                        <td><a href="/vieclam/congviec/2671624/nhan-vien-kinh-doanh.html" class="NormalJob"><?php echo $tin_tuyen_dung['e_title']; ?></a><div class="Blank"></div><a href="/vieclam/congty/2552602/cong-ty-tnhh-tm-dv-xd-hiep-phat.html" class="VipEmployer">Công ty TNHH TM DV XD Hiệp Phát</a></td>
+                        <td class="Nowrap"><?php echo $tin_tuyen_dung['e_trinhdo']; ?>
                             <br>
-<?php echo $tuyendungnhanh_detail[0]['e_kinhnghiem']; ?></td>
-                        <td class="Nowrap"><?php echo $tuyendungnhanh_detail[0]['e_luong']; ?></td>
-                        <td class="Nowrap"><?php echo $tuyendungnhanh_detail[0]['e_cityID']; ?>
+                                <?php echo $tin_tuyen_dung['e_kinhnghiem']; ?></td>
+                        <td class="Nowrap"><?php echo $tin_tuyen_dung['e_luong']; ?></td>
+                        <td class="Nowrap"><?php echo $tin_tuyen_dung['e_cityID']; ?>
                             <br>
-<?php echo $tuyendungnhanh_detail[0]['e_cityID']; ?>
-                            <br>
-                        </td>
-                        <td class="Nowrap"><?php echo $tuyendungnhanh_detail[0]['e_dateActive']; ?>
-                            <br>
-<?php echo $tuyendungnhanh_detail[0]['e_lastDate']; ?></td>
-                    </tr>
-
-                    <tr class="Odd">
-                        <td><a href="/vieclam/congviec/2785960/nhan-vien-ban-hang-gas-khu-vuc-binh-duong.html" class="NormalJob"><?php echo $tuyendungnhanh_detail[0]['e_title']; ?></a><div class="Blank"></div><a href="/vieclam/congty/2590666/cong-ty-tnhh-tm-dau-khi-thanh-pho-ho-chi-minh.html" class="VipEmployer">CÔNG TY TNHH TM DẦU KHÍ THÀNH PHỐ HỒ CHÍ MINH</a></td>
-                        <td class="Nowrap"><?php echo $tuyendungnhanh_detail[0]['e_trinhdo']; ?>
-                            <br>
-<?php echo $tuyendungnhanh_detail[0]['e_kinhnghiem']; ?></td>
-                        <td class="Nowrap"><?php echo $tuyendungnhanh_detail[0]['e_luonga']; ?></td>
-                        <td class="Nowrap"><?php echo $tuyendungnhanh_detail[0]['e_cityID']; ?>
+                                <?php echo $tin_tuyen_dung['e_cityID']; ?>
                             <br>
                         </td>
-                        <td class="Nowrap"><?php echo $tuyendungnhanh_detail[0]['e_dateActive']; ?>
+                        <td class="Nowrap"><?php echo $tin_tuyen_dung['e_dateActive']; ?>
                             <br>
-<?php echo $tuyendungnhanh_detail[0]['e_lastDate']; ?></td>
+                                <?php echo $tin_tuyen_dung['e_lastDate']; ?></td>
                     </tr>
-
-                    <tr class="Even">
-                        <td><a href="/vieclam/congviec/2724607/nhan-vien-kinh-doanh-cham-soc-khach-hang.html" class="NormalJob"><?php echo $tuyendungnhanh_detail[0]['e_title']; ?></a><div class="Blank"></div><a href="/vieclam/congty/2571114/cong-ty-tnhh-sx-phim-tuoi-tre-viet.html" class="VipEmployer">Công ty TNHH - SX Phim Tuổi Trẻ Việt</a></td>
-                        <td class="Nowrap"><?php echo $tuyendungnhanh_detail[0]['e_trinhdo']; ?>
-                            <br>
-<?php echo $tuyendungnhanh_detail[0]['e_kinhnghiem']; ?></td>
-                        <td class="Nowrap"><?php echo $tuyendungnhanh_detail[0]['e_luongb']; ?></td>
-                        <td class="Nowrap"><?php echo $tuyendungnhanh_detail[0]['e_cityID']; ?>
-                            <br>
-                        </td>
-                        <td class="Nowrap"><?php echo $tuyendungnhanh_detail[0]['e_dateActive']; ?>
-                            <br>
-<?php echo $tuyendungnhanh_detail[0]['e_lastDate']; ?></td>
-                    </tr>
-
-                    <tr class="Odd">
-                        <td><a href="/vieclam/congviec/2742540/nhan-vien-kinh-doanh-ky-su-nong-nghiep.html" class="NormalJob"><?php echo $tuyendungnhanh_detail[0]['e_title']; ?></a><div class="Blank"></div><a href="/vieclam/congty/2549879/cong-ty-gia-hung-ghd-group.html" class="VipEmployer">CÔNG TY GIA HƯNG - GHD GROUP</a></td>
-                        <td class="Nowrap"><?php echo $tuyendungnhanh_detail[0]['e_trinhdo']; ?>
-                            <br>
-<?php echo $tuyendungnhanh_detail[0]['e_kinhnghiem']; ?></td>
-                        <td class="Nowrap"><?php echo $tuyendungnhanh_detail[0]['e_luong']; ?></td>
-                        <td class="Nowrap">
-<?php echo $tuyendungnhanh_detail[0]['e_cityID']; ?>
-                            <br>
-                            <?php echo $tuyendungnhanh_detail[0]['e_cityID1']; ?>
-                            <br>
-                        </td>
-                        <td class="Nowrap"><?php echo $tuyendungnhanh_detail[0]['e_dateActive']; ?>
-                            <br>
-<?php echo $tuyendungnhanh_detail[0]['e_lastDate']; ?></td>
-                    </tr>
-
-                    <tr class="Even">
-                        <td><a href="/vieclam/congviec/2662931/nhan-vien-kinh-doanh-ky-su-nong-nghiep-khu-vuc-gia-lai.html" class="NormalJob"><?php echo $tuyendungnhanh_detail[0]['e_title']; ?></a><div class="Blank"></div><a href="/vieclam/congty/2549879/cong-ty-gia-hung-ghd-group.html" class="VipEmployer">CÔNG TY GIA HƯNG - GHD GROUP</a></td>
-                        <td class="Nowrap"><?php echo $tuyendungnhanh_detail[0]['e_trinhdo']; ?>
-                            <br>
-<?php echo $tuyendungnhanh_detail[0]['e_kinhnghiem']; ?></td>
-                        <td class="Nowrap"><?php echo $tuyendungnhanh_detail[0]['e_luong']; ?></td>
-                        <td class="Nowrap"><?php echo $tuyendungnhanh_detail[0]['e_cityID']; ?>
-                            <br>
-                        </td>
-                        <td class="Nowrap"><?php echo $tuyendungnhanh_detail[0]['e_dateActive']; ?>
-                            <br>
-                            <?php echo $tuyendungnhanh_detail[0]['e_lastDate']; ?></td>
-                    </tr>
-
+                    <?php
+                        }
+                     ?>
                 </tbody>
             </table>
 

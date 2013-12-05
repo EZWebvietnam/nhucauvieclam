@@ -4,7 +4,14 @@ class Tuyendungnhanh_up extends CI_Model{
         parent::__construct();
         $this->load->database();
     }
-    public function view_tuyendungnhanh_detail($id = null){
+    public function view_timviecnhanh_detail($id = null){
+       $id = intval($id);
+        $this->db->select();
+        $this->db->where('m_id',$id);
+        $query_array = $this->db->get('tbl_employers_post');
+        return $query_array->result_array();
+    }
+        public function view_tuyendungnhanh_detail($id = null){
        $id = intval($id);
         $this->db->select();
         $this->db->where('m_id',$id);
@@ -22,9 +29,6 @@ class Tuyendungnhanh_up extends CI_Model{
                 . " INNER JOIN tbl_job_user ON tbl_job_user.u_id = tbl_job_post.u_id INNER JOIN tbl_employers_post ON tbl_employers_post.u_id = tbl_job_post.u_id WHERE tbl_employers_post.u_id = ".$id;
     
         $query = $this->db->query($sql_join);
-        $this->db->select();
-        $this->db->where('m_id',$id);
-        
         return $query->result_array();
     }
     public function get_cate()
