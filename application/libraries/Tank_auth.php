@@ -4,6 +4,8 @@ require_once('phpass-0.1/PasswordHash.php');
 
 define('STATUS_ACTIVATED', '1');
 define('STATUS_NOT_ACTIVATED', '0');
+define('ACCESS','1');
+define('DENY','0');
 
 /**
  * Tank_auth
@@ -73,6 +75,7 @@ class Tank_auth
                                                                 'file'=>$user->file,
 								'username'	=> $user->username,
 								'status'	=> ($user->activated == 1) ? STATUS_ACTIVATED : STATUS_NOT_ACTIVATED,
+                                                                'role'=>$user->role
 						));
 
 						if ($user->activated == 0) {							// fail - not activated
@@ -133,14 +136,11 @@ class Tank_auth
                 }
                 else
                 {
-                    if($this->ci->session->userdata('status')==1)
+                    if($this->ci->session->userdata('role')==1)
                     {
                         return $this->ci->session->userdata('status') === ($activated ? STATUS_ACTIVATED : STATUS_NOT_ACTIVATED);
                     }
-                    else
-                    {
-                        return STATUS_NOT_ACTIVATED;
-                    }
+                    
                 }
 	}
 
