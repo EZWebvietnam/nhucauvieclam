@@ -39,7 +39,7 @@ class ControllerList {
                     $this->$key = $value;   
                 }
             }
-            $this->get_all();
+            return $this->get_all();
         }
     }
     function get_all() {
@@ -62,7 +62,7 @@ class ControllerList {
             }
             
         }
-        print_r($class);exit;
+        return $class;
     }
     function get_function($path)
     {
