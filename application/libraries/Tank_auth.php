@@ -125,9 +125,23 @@ class Tank_auth
 	 * @param	bool
 	 * @return	bool
 	 */
-	function is_logged_in($activated = TRUE)
+	function is_logged_in($activated = TRUE,$location ='admin')
 	{
-		return $this->ci->session->userdata('status') === ($activated ? STATUS_ACTIVATED : STATUS_NOT_ACTIVATED);
+                if($location=='home')
+                {
+                    return $this->ci->session->userdata('status') === ($activated ? STATUS_ACTIVATED : STATUS_NOT_ACTIVATED);
+                }
+                else
+                {
+                    if($this->ci->session->userdata('status')==1)
+                    {
+                        return $this->ci->session->userdata('status') === ($activated ? STATUS_ACTIVATED : STATUS_NOT_ACTIVATED);
+                    }
+                    else
+                    {
+                        return STATUS_NOT_ACTIVATED;
+                    }
+                }
 	}
 
 	/**
