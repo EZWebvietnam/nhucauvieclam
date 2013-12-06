@@ -44,10 +44,10 @@
                         </td>
                         <td class="tb-row-W"><b><a href="/it-phan-mem/nhan-vien-seo-web-c74p1id1391037.html" target="_blank" title="Click để xem thông tin chi tiết việc làm" class="linkBlack" onmouseover="tooltip.show('&lt;table width=420 cellpadding=1 cellspacing=1 border=0 bgcolor=#d7d7d7&gt;&lt;tr&gt;&lt;td class=DSTT_row_L14 colspan=2&gt;&lt;span class=textBoldBlue14&gt;Nhân viên SEO WEB&lt;/span&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td class=DSTT_row_L14 style=&quot;width:60px;&quot;&gt;&lt;span class=textBoldBlue14&gt;Công ty:&lt;/span&gt;&lt;/td&gt;&lt;td class=DSTT_row_L14 &gt;&lt;span class=textBoldBlue14&gt;Công ty Cổ phần Việt Nam Booking&lt;/span&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td class=DSTT_row_L14 style=&quot;width:60px;&quot;&gt;&lt;span class=textBoldBlue14&gt;Số lượng:&lt;/span&gt;&lt;/td&gt;&lt;td class=DSTT_row_L14 &gt;&lt;span class=textBoldBlue14&gt;10&lt;/span&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td class=DSTT_row_L14 colspan=2&gt;&lt;span class=tt-tieude&gt;Mô tả công việc:&lt;/span&gt;&lt;div class=textBoldBlack14 style=&quot;padding-left:15px;padding-top:5px;&quot;&gt;-Là người có trách nhiệm, nhiệt tình với công việc;&lt;br/&gt;-Đã có quá trình tìm hiểu thực hành làm SEO trên 1 năm;&lt;br/&gt;-Đã có một số website SEO thành công;&lt;br/&gt;-Đã từng tham gia nhiều diễn đàn, mạng cộng đồng, có khả năng xây dựng các blog,&lt;br/&gt;có số lượng website lớn để làm vệ tinh cho website cần SEO;&lt;br/&gt;-Có kinh nghiệm tìm kiếm, phân loại website chất lượng có thể đặt backlinks;&lt;br/&gt;-Có khả năng phát triển nội dung, có kiến thức về on page seo off page;&lt;br/&gt;-Sử dụng thành thạo các công cụ hỗ trợ seo như: Google Webmaster Tools, Google Analytics,...&lt;br/&gt;&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;');" onmouseout="tooltip.hide();"><?php echo $tddaluu_detail[0]['e_title']; ?></a></b>
                             <br>
-                            <span><?php echo $tddaluu_detail[0]['e_ngheID']; ?>
-                                <?php echo $tddaluu_detail[0]['e_ngheID1']; ?>
-                                <?php echo $tddaluu_detail[0]['e_ngheID2']; ?>
-                                <?php echo $tddaluu_detail[0]['e_ngheID3']; ?>
+                            <span><?php echo $tddaluu_detail[0]['e_nghe']; ?>
+                                <?php echo $tddaluu_detail[0]['e_nghe1']; ?>
+                                <?php echo $tddaluu_detail[0]['e_nghe2']; ?>
+                                <?php echo $tddaluu_detail[0]['e_nghe3']; ?>
                             </span>
                             <br>
                             Số lượng:<?php echo $tddaluu_detail[0]['e_mem']; ?></td>

@@ -11,10 +11,7 @@ class CV extends CI_Controller
         $data['main_content']='view_cv';
         if($this->input->post())
         {
-            // Mỗi input có một name, tùy theo name của input là gì, thì khi gán vào biến cái name của input cũng như vậy.
-            //VI input title có name c_tieu_de_cv dùng để lưu tiêu đề, thì khi lấy ra là như dưới:
             $title = $this->input->post('c_tieu_de_cv');
-            // Sau khi lấy ra, gán một mảng, key của mảng là tên field trong database   
             $trinhdo = $this->input->post('c_trinh_do');
             $nganhhoc = $this->input->post('c_nganh_hoc');
             $namtotnghiep = $this->input->post('c_nam_tot_nghiep');
