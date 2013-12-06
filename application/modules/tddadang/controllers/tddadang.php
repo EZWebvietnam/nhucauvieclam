@@ -12,7 +12,7 @@ class Tddadang extends CI_Controller
             redirect($_SERVER['HTTP_REFERER']);
         }
         $data['main_content']='view_tddadang';
-        $this->load->view('home/hsdadang_layout',$data);
+        $this->load->view('home/tddadang_layout',$data);
     }
 }
 ?>
