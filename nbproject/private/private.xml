@@ -3,10 +3,12 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/E:/xampp/htdocs/nhucauvieclam/application/views/home/qltimviec_layout.php</file>
-            <file>file:/E:/xampp/htdocs/nhucauvieclam/application/modules/qltimviec/models/qltimviec_model.php</file>
-            <file>file:/E:/xampp/htdocs/nhucauvieclam/application/modules/qltimviec/views/view_qltimviec.php</file>
-            <file>file:/E:/xampp/htdocs/nhucauvieclam/application/modules/qltimviec/controllers/qltimviec.php</file>
+            <file>file:/E:/xampp/htdocs/nhucauvieclam/application/views/home/tddadang_layout.php</file>
+            <file>file:/E:/xampp/htdocs/nhucauvieclam/application/views/home/qltuyendung_layout.php</file>
+            <file>file:/E:/xampp/htdocs/nhucauvieclam/application/modules/dadang/models/tindadang_post.php</file>
+            <file>file:/E:/xampp/htdocs/nhucauvieclam/application/modules/tddadang/controllers/tddadang.php</file>
+            <file>file:/E:/xampp/htdocs/nhucauvieclam/application/modules/tddadang/models/tindadang_post.php</file>
+            <file>file:/E:/xampp/htdocs/nhucauvieclam/application/modules/dadang/controllers/hsdadang.php</file>
         </group>
     </open-files>
 </project-private>

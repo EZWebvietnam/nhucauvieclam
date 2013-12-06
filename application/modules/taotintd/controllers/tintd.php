@@ -1,5 +1,5 @@
 <?php
-class Taohsuv extends CI_Controller
+class Tintd extends CI_Controller
 {
     public function __construct() {
         parent::__construct();
@@ -29,6 +29,21 @@ class Taohsuv extends CI_Controller
             $lienhe = $this->input->post('cach_lien_he');
             
             $data = array('e_title'=>$title,
+                'e_capbacID'=>$capbac,
+                'm_id'=>$nganhnghe,
+                'e_cityID'=>$city,
+                'e_timeID'=>$thoigian,
+                'e_luong'=>$mucluong,
+                'e_mem'=>$soluong,
+                'e_phucLoi'=>$quyenloi,
+                'e_descript'=>$mota,
+                'e_kinhnghiem'=>$namkinhnghiem,
+                'e_trinhdo'=>$trinhdo,
+                'e_sex'=>$gioitinh,
+                'e_dotuoi'=>$dotuoi,
+                'e_request'=>$yeucau,
+                'e_hoso'=>$hoso,
+                'e_lastDate'=>$denngay,
                 'e_lienhe'=>$lienhe,
                 );
             // Khi gán vào mảng xong, lưu xuống DB, hàm sẽ trả về một số là id được insert xuống
@@ -46,7 +61,7 @@ class Taohsuv extends CI_Controller
         }
         else
         {
-            $data['main_content']='view_taotintd';
+            $data['main_content']='view_tintd';
             $this->load->view('home/taotintd_layout',$data);
         }     
     }
