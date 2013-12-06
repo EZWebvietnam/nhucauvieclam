@@ -34,10 +34,10 @@
                         <div class="cumTT-tieude">
                             <b class="linkBlack"> <a href="/bao-ve/cong-tac-vien-kinh-doanh-tinh-c94p1id1407482.html" target="_blank" title="CỘNG TÁC VIÊN KINH DOANH TỈNH" class="linkBlack"><?php echo $tddangdang_detail[0]['e_title']; ?></a> </b>
                             <br>
-                            <span style="font-size: 11px;"><?php echo $tddangdang_detail[0]['e_ngheID']; ?>
-                                <?php echo $tddangdang_detail[0]['e_ngheID1']; ?>
-                                <?php echo $tddangdang_detail[0]['e_ngheID2']; ?>
-                                <?php echo $tddangdang_detail[0]['e_ngheID3']; ?>
+                            <span style="font-size: 11px;"><?php echo $tddangdang_detail[0]['e_nghe']; ?>
+                                <?php echo $tddangdang_detail[0]['e_nghe1']; ?>
+                                <?php echo $tddangdang_detail[0]['e_nghe2']; ?>
+                                <?php echo $tddangdang_detail[0]['e_nghe3']; ?>
                             </span>
                             <br>
                             <span style="font-size: 11px; font-style:italic;color: #999;">(0 lượt xem)</span>

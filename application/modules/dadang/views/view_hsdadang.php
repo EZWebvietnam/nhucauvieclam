@@ -9,7 +9,6 @@
         <div class="clear"></div>
     </div>
     <div name="div_ntv_quan_tri_tin_tim_viec" id="div_ntv_quan_tri_tin_tim_viec">
-        <!--<div name='div_ntv_quan_tri_tin_tim_viec' id='div_ntv_quan_tri_tin_tim_viec'> -->
         <form name="form_ds_ttv" id="form_ds_ttv" action="" method="post" onsubmit="" enctype="multipart/form-data">
             <iframe name="fr_submit_ds_ttv" width="0" height="0" style="visibility:hidden"></iframe>
             <div class="marBot7">
@@ -44,7 +43,7 @@
                             <div class="cumTT-tieude">
                                 <b class="textRed11"> <a href="/nha-tuyen-dung/it-phan-mem/nhan-vien-it-c74p0id2444325.html" target="_blank" title="Nhân Viên IT" class="textRed11"><?php echo $hsdangdang_detail[0]['j_title']; ?></a> </b>
                                 <br>
-                                <span style="font-size: 11px;"><?php echo $hsdangdang_detail[0]['j_nghe']; ?><?php echo $hsdangdang_detail[0]['j_nghe1']; ?></span>
+                                <span style="font-size: 11px;"><?php echo $hsdangdang_detail[0]['j_nghe1']; ?><?php echo $hsdangdang_detail[0]['j_nghe2']; ?><?php echo $hsdangdang_detail[0]['j_nghe3']; ?></span>
                                 <br>
                                 <span style="font-size: 11px; font-style:italic;color: #999;">(17 lượt xem)</span>
                                 <span style="font-size: 11px; font-style:italic;color: #999;"> - <a href="/ntv-trang-quan-tri-ntd-da-xem-ho-so.html?id_ttv=2444325">NTD đã xem hồ sơ</a></span>
