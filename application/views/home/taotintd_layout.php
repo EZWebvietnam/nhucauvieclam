@@ -3,19 +3,19 @@
 		<link href="img/" />
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 		<title>Tạo tin tuyển dụng</title>
-		<link type="text/css" rel="stylesheet" href="css/cache_blue_sky_default.css">
-		<link type="text/css" rel="stylesheet" href="css/style.css">
-		<script type="text/javascript" async="" src="js/ga.js"></script>
+		<link type="text/css" rel="stylesheet" href="<?php echo base_url(); ?>template/home/css/cache_blue_sky_default.css">
+		<link type="text/css" rel="stylesheet" href="<?php echo base_url(); ?>template/home/css/style.css">
+		<script type="text/javascript" async="" src="<?php echo base_url(); ?>template/home/js/ga.js"></script>
 		<script src="https://apis.google.com/_/scs/apps-static/_/js/k=oz.gapi.vi.p_KGKzRPu9M.O/m=auth/exm=plusone/rt=j/sv=1/d=1/ed=1/am=AQ/rs=AItRSTORhacSmgAD0Mzfl8lNrx0nuGD1AA/cb=gapi.loaded_1" async=""></script>
 		<script src="https://apis.google.com/_/scs/apps-static/_/js/k=oz.gapi.vi.p_KGKzRPu9M.O/m=plusone/rt=j/sv=1/d=1/ed=1/am=AQ/rs=AItRSTORhacSmgAD0Mzfl8lNrx0nuGD1AA/cb=gapi.loaded_0" async=""></script>
-		<script type="text/javascript" src="js/cache_blue_sky_default.js"></script>
+		<script type="text/javascript" src="<?php echo base_url(); ?>template/home/js/cache_blue_sky_default.js"></script>
 	</head>
 	<body>
 		<div id="container">
 			<div id="header">
 				<div id="header-inner">
 					<div id="header-logo">
-						<a href="/" title="nhu cau viec lam" rel="home" id="logo"> <img src="img/logo.png" alt="Tìm việc làm hàng đầu - Itworks" height="125" width="430"> </a>
+						<a href="/" title="nhu cau viec lam" rel="home" id="logo"> <img src="<?php echo base_url(); ?>template/home/img/logo.png" alt="Tìm việc làm hàng đầu - Itworks" height="125" width="430"> </a>
 					</div>
 					<div id="bg_slider">
 						<div class="hbs">
@@ -28,40 +28,40 @@
 											<div class="jcarousel-clip jcarousel-clip-horizontal" style="position: relative;">
 												<ul id="mycarousel" class="jcarousel-list jcarousel-list-horizontal" style="overflow: hidden; position: relative; top: 0px; margin: 0px; padding: 0px; left: -7660.55508px; width: 12220px;">
 													<li class="jcarousel-item jcarousel-item-horizontal jcarousel-item-1 jcarousel-item-1-horizontal" jcarouselindex="1" style="float: left; list-style: none;">
-														<a href="" target="_blank"><img src="img/imployees1.jpg" alt="" title="test"></a>
+														<a href="" target="_blank"><img src="<?php echo base_url(); ?>template/home/img/imployees1.jpg" alt="" title="test"></a>
 													</li>
 													<li class="jcarousel-item jcarousel-item-horizontal jcarousel-item-2 jcarousel-item-2-horizontal" jcarouselindex="2" style="float: left; list-style: none;">
-														<a href="" target="_blank"><img src="img/imployees2.jpg" alt="" title="Quang cao"></a>
+														<a href="" target="_blank"><img src="<?php echo base_url(); ?>template/home/img/imployees2.jpg" alt="" title="Quang cao"></a>
 													</li>
 													<li class="jcarousel-item jcarousel-item-horizontal jcarousel-item-3 jcarousel-item-3-horizontal" jcarouselindex="3" style="float: left; list-style: none;">
-														<a href="" target="_blank"><img src="img/imployees3.jpg" alt="" title="Noi that"></a>
+														<a href="" target="_blank"><img src="<?php echo base_url(); ?>template/home/img/imployees3.jpg" alt="" title="Noi that"></a>
 													</li>
 													<li class="jcarousel-item jcarousel-item-horizontal jcarousel-item-4 jcarousel-item-4-horizontal" jcarouselindex="4" style="float: left; list-style: none;">
-														<a href="" target="_blank"><img src="img/imployees4.jpg" alt="" title="et"></a>
+														<a href="" target="_blank"><img src="<?php echo base_url(); ?>template/home/img/imployees4.jpg" alt="" title="et"></a>
 													</li>
 													<li class="jcarousel-item jcarousel-item-horizontal jcarousel-item-5 jcarousel-item-5-horizontal" jcarouselindex="5" style="float: left; list-style: none;">
-														<a href="" target="_blank"><img src="img/imployees5.jpg" alt="" title="Quang cao"></a>
+														<a href="" target="_blank"><img src="<?php echo base_url(); ?>template/home/img/imployees5.jpg" alt="" title="Quang cao"></a>
 													</li>
 													<li class="jcarousel-item jcarousel-item-horizontal jcarousel-item-6 jcarousel-item-6-horizontal" jcarouselindex="6" style="float: left; list-style: none;">
-														<a href="" target="_blank"><img src="img/imployees6.jpg" alt="" title="Noi that"></a>
+														<a href="" target="_blank"><img src="<?php echo base_url(); ?>template/home/img/imployees6.jpg" alt="" title="Noi that"></a>
 													</li>
 													<li class="jcarousel-item jcarousel-item-horizontal jcarousel-item-7 jcarousel-item-7-horizontal" jcarouselindex="7" style="float: left; list-style: none;">
-														<a href="" target="_blank"><img src="img/imployees7.jpg" alt="" title="et"></a>
+														<a href="" target="_blank"><img src="<?php echo base_url(); ?>template/home/img/imployees7.jpg" alt="" title="et"></a>
 													</li>
 													<li class="jcarousel-item jcarousel-item-horizontal jcarousel-item-91 jcarousel-item-91-horizontal" jcarouselindex="91" style="float: left; list-style: none;">
-														<a href="" target="_blank"><img src="img/imployees7.jpg" alt="" title="et"></a>
+														<a href="" target="_blank"><img src="<?php echo base_url(); ?>template/home/img/imployees7.jpg" alt="" title="et"></a>
 													</li>
 													<li class="jcarousel-item jcarousel-item-horizontal jcarousel-item-92 jcarousel-item-92-horizontal" jcarouselindex="92" style="float: left; list-style: none;">
-														<a href="" target="_blank"><img src="img/imployees1.jpg" alt="" title="test"></a>
+														<a href="" target="_blank"><img src="<?php echo base_url(); ?>template/home/img/imployees1.jpg" alt="" title="test"></a>
 													</li>
 													<li class="jcarousel-item jcarousel-item-horizontal jcarousel-item-93 jcarousel-item-93-horizontal" jcarouselindex="93" style="float: left; list-style: none;">
-														<a href="" target="_blank"><img src="img/imployees2.jpg" alt="" title="Quang cao"></a>
+														<a href="" target="_blank"><img src="<?php echo base_url(); ?>template/home/img/imployees2.jpg" alt="" title="Quang cao"></a>
 													</li>
 													<li class="jcarousel-item jcarousel-item-horizontal jcarousel-item-94 jcarousel-item-94-horizontal" jcarouselindex="94" style="float: left; list-style: none;">
-														<a href="" target="_blank"><img src="img/imployees3.jpg" alt="" title="Noi that"></a>
+														<a href="" target="_blank"><img src="<?php echo base_url(); ?>template/home/img/imployees3.jpg" alt="" title="Noi that"></a>
 													</li>
 													<li class="jcarousel-item jcarousel-item-horizontal jcarousel-item-95 jcarousel-item-95-horizontal" jcarouselindex="95" style="float: left; list-style: none;">
-														<a href="" target="_blank"><img src="img/imployees4.jpg" alt="" title="et"></a>
+														<a href="" target="_blank"><img src="<?php echo base_url(); ?>template/home/img/imployees4.jpg" alt="" title="et"></a>
 													</li>
 												</ul>
 											</div>
@@ -73,9 +73,9 @@
 							</div>
 						</div>
 						<div class="clearer"></div>
-						<link rel="stylesheet" type="text/css" href="css/slider.css">
-						<script type="text/javascript" src="js/jquery.js"></script>
-						<script type="text/javascript" src="js/slider.js"></script>
+						<link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>template/home/css/slider.css">
+						<script type="text/javascript" src="<?php echo base_url(); ?>template/home/js/jquery.js"></script>
+						<script type="text/javascript" src="<?php echo base_url(); ?>template/home/js/slider.js"></script>
 						<script type="text/javascript">
 							function mycarousel_initCallback(e) {
 								e.buttonNext.bind("click", function() {

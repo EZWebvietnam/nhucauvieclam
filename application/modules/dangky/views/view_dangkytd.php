@@ -48,6 +48,14 @@
                                 </td>
                             </tr>
                             <tr>
+                                <th>Logo công ty</th>
+                                <td>
+                                    <input type="file" name="file_logo_cong_ty" id="file_logo_cong_ty">
+                                        <br>
+                                        <span class="text11">(Dạng file ảnh .jpg .gif .png, dung lượng &lt;=300Kb)</span><div id="err_logo_cty" class="textRed11"></div>
+                                </td>
+                            </tr>
+                            <tr>
                                 <th>Địa chỉ<span class="Mandatory">*</span></th>
                                 <td>
                                     <input name="c_adress_company" class="W400" type="text" id="EmployerEmpaddress">
