@@ -18,4 +18,10 @@ class MY_Controller extends CI_Controller
         $this->data['list_job']=$this->info_tintd->get_job();
         
     }
+    public function load_city()
+    {
+        $this->load->model('chitietnghe/tuyendungnhanh_up');
+        $this->data['list_city']=$this->tuyendungnhanh_up->get_city();
+        
+    }
 }

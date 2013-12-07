@@ -37,5 +37,11 @@ class Tuyendungnhanh_up extends CI_Model{
         $query=$this->db->get('tbl_mucvieclam');
         return $query->result_array();
     }
+    public function get_city()
+    {
+        $this->db->select();
+        $query=$this->db->get('tbl_city');
+        return $query->result_array();
+    }
 }
 ?>

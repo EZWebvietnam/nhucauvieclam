@@ -11,10 +11,7 @@ class Taohsuv extends CI_Controller
         $data['main_content']='view_taohsuv';
         if($this->input->post())
         {
-            // Mỗi input có một name, tùy theo name của input là gì, thì khi gán vào biến cái name của input cũng như vậy.
-            //VI input title có name c_tieu_de_cv dùng để lưu tiêu đề, thì khi lấy ra là như dưới:
             $title = $this->input->post('tieu_de');
-            // Sau khi lấy ra, gán một mảng, key của mảng là tên field trong database   
             $chucvumm = $this->input->post('select_box_chuc_vu');
             $nganhnghe = $this->input->post('nganh_nghe');
             $city = $this->input->post('dia_diem');

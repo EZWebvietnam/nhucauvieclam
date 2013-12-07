@@ -69,7 +69,7 @@
                                                                     return false;">
                                                         </td>
                                                         <td width="30">
-                                                            <input type="image" src="images/iconCalendar.gif" onclick="show_box_popup_calendar(12, 08, 1981, 'ngay_sinh', '', '', '', '', '#7214AE');
+                                                            <input type="image" src="<?php echo base_url(); ?>template/home/img/iconCalendar.gif" onclick="show_box_popup_calendar(12, 08, 1981, 'ngay_sinh', '', '', '', '', '#7214AE');
                                                                     return false;">
                                                         </td>
                                                         <td>(dd-mm-yyyy)</td>
@@ -126,25 +126,11 @@
                                                         return(false);
                                                     }">
                                             <div id="err_email_lien_he" class="textRed11"></div></td>
-                                    </tr>
-                                    <tr>
-                                        <td valign="top" class="tbUser-row"><b>Mã bảo mật:</b></td>
-                                        <td class="tbUser-row"><a name="href-ma_xac_minh"></a>
-                                            <div id="div_ma_xac_minh"><img src="/security_image.php" id="security_image" name="security_image" alt="" width="65" height="31">
-                                            </div></td>
-                                    </tr>
-                                    <tr>
-                                        <td valign="top" class="tbUser-row" style="min-width:120px;"><b>Nhập mã bảo mật (<span class="textRed">*</span>):</b></td>
-                                        <td class="tbUser-row">
-                                            <input type="text" class="textbox" name="txt_ma_xac_minh" id="txt_ma_xac_minh" style="width:210px" onkeydown="if (event.keyCode == 13 || event.keyCode == '13') {
-                                                        return(false);
-                                                    }">
-                                            <div id="err_ma_xac_minh" class="textRed11"></div></td>
-                                    </tr>
+                                    </tr>    
                                     <tr>
                                         <td></td>
                                         <td height="60" class="tbUser-row">
-                                            <input type="button" class="button" value="Cập nhật" onclick="javascript: if (dat_trang_thai_dang_xu_ly()) {
+                                            <input type="submit" class="button" value="Cập nhật" onclick="javascript: if (dat_trang_thai_dang_xu_ly()) {
                                                         ntv_quan_tri_cap_nhat_thong_tin_tai_khoan();
                                                     }">
                                         </td>

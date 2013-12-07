@@ -6,7 +6,6 @@
         </marquee>
     </div>
     <div name="div_ntv_quan_tri_ho_so_ca_nhan" id="div_ntv_quan_tri_ho_so_ca_nhan">
-        <!--<div name='div_ntv_quan_tri_ho_so_ca_nhan' id='div_ntv_quan_tri_ho_so_ca_nhan'> -->
         <form name="form_cap_nhat_tin_tv" id="form_cap_nhat_tin_tv" action="" method="post" onsubmit="" enctype="multipart/form-data">
             <iframe name="fr_submit_cap_nhat_tin_tv" width="0" height="0" style="visibility:hidden"></iframe>
             <table width="100%" cellpadding="0" cellspacing="0" border="0">
@@ -133,8 +132,7 @@
                                 </tr>
                                 <tr>
                                     <td colspan="2" align="right">
-                                        <input type="submit" class="buttonGreen" value="Sửa" onclick="ntv_quan_tri_hien_thi_sua_thong_tin_tai_khoan();
-                                                return(false);">
+                                        <a href="<?php echo base_url(); ?>thongtincanhan/thongtincanhan/index/<?php echo $info_user_detail[0]['u_id']; ?>"> <input type="button" class="buttonGreen" value="Sửa" onclick="<?php echo base_url(); ?>thongtincanhan/thongtincanhan/index/<?php echo $info_user_detail[0]['u_id']; ?>"> </a>
                                     </td>
                                 </tr>
                             </tbody>
@@ -461,7 +459,7 @@ Mức lương:</textarea></td>
                 </tr>
                 <tr>
                     <td colspan="3" align="right">
-                        <input type="button" style="margin-right:10px;" class="buttonGreen" value="Sửa" onclick="ntv_quan_tri_hien_thi_sua_thong_tin_lien_he();">
+                        <a href="<?php echo base_url(); ?>thongtincanhan/thongtincanhan/index/<?php echo $info_user_detail[0]['u_id']; ?>"><input type="button" style="margin-right:10px;" class="buttonGreen" value="Sửa" onclick="<?php echo base_url(); ?>thongtincanhan/thongtincanhan/index/<?php echo $info_user_detail[0]['u_id']; ?>"></a>
                     </td>
                 </tr>
                 <tr>
