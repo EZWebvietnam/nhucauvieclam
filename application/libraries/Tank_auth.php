@@ -64,43 +64,42 @@ class Tank_auth
 				$hasher = new PasswordHash(
 						$this->ci->config->item('phpass_hash_strength', 'tank_auth'),
 						$this->ci->config->item('phpass_hash_portable', 'tank_auth'));
-				if ($hasher->CheckPassword($password, $user->password)) {		// password ok
+				if ($hasher->CheckPassword($password, $user->u_password)) {		// password ok
 
-					if ($user->banned == 1) {									// fail - banned
+					if ($user->u_status == 0) {									// fail - banned
 						$this->error = array('banned' => $user->ban_reason);
 
 					} else {
 						$this->ci->session->set_userdata(array(
-								'user_id'	=> $user->id,
-                                                                'file'=>$user->file,
-								'username'	=> $user->username,
-								'status'	=> ($user->activated == 1) ? STATUS_ACTIVATED : STATUS_NOT_ACTIVATED,
-                                                                'role'=>$user->role
+								'u_id'	=> $user->u_id,
+								'u_username'	=> $user->u_username,
+								'u_status'	=> ($user->u_status == 1) ? STATUS_ACTIVATED : STATUS_NOT_ACTIVATED,
+                                                                'u_role'=>$user->u_role
 						));
 
-						if ($user->activated == 0) {							// fail - not activated
+						if ($user->u_status == 0) {							// fail - not activated
 							$this->error = array('not_activated' => '');
 
 						} else {												// success
 							if ($remember) {
-								$this->create_autologin($user->id);
+								$this->create_autologin($user->u_id);
 							}
 
-							$this->clear_login_attempts($login);
+						
 
 							$this->ci->users->update_login_info(
-									$user->id,
+									$user->u_id,
 									$this->ci->config->item('login_record_ip', 'tank_auth'),
 									$this->ci->config->item('login_record_time', 'tank_auth'));
 							return TRUE;
 						}
 					}
 				} else {														// fail - wrong password
-					$this->increase_login_attempt($login);
+					
 					$this->error = array('password' => 'auth_incorrect_password');
 				}
 			} else {															// fail - wrong login
-				$this->increase_login_attempt($login);
+			
 				$this->error = array('login' => 'auth_incorrect_login');
 			}
 		}
@@ -115,10 +114,8 @@ class Tank_auth
 	function logout()
 	{
 		$this->delete_autologin();
-
 		// See http://codeigniter.com/forums/viewreply/662369/ as the reason for the next line
 		$this->ci->session->set_userdata(array('user_id' => '', 'username' => '', 'status' => ''));
-
 		$this->ci->session->sess_destroy();
 	}
 
@@ -132,13 +129,13 @@ class Tank_auth
 	{
                 if($location=='home')
                 {
-                    return $this->ci->session->userdata('status') === ($activated ? STATUS_ACTIVATED : STATUS_NOT_ACTIVATED);
+                    return $this->ci->session->userdata('u_status') === ($activated ? STATUS_ACTIVATED : STATUS_NOT_ACTIVATED);
                 }
                 else
                 {
-                    if($this->ci->session->userdata('role')==1)
+                    if($this->ci->session->userdata('u_role')==1)
                     {
-                        return $this->ci->session->userdata('status') === ($activated ? STATUS_ACTIVATED : STATUS_NOT_ACTIVATED);
+                        return $this->ci->session->userdata('u_status') === ($activated ? STATUS_ACTIVATED : STATUS_NOT_ACTIVATED);
                     }
                     
                 }
@@ -608,15 +605,7 @@ class Tank_auth
 	 * @param	string
 	 * @return	bool
 	 */
-	function is_max_login_attempts_exceeded($login)
-	{
-		if ($this->ci->config->item('login_count_attempts', 'tank_auth')) {
-			$this->ci->load->model('tank_auth/login_attempts');
-			return $this->ci->login_attempts->get_attempts_num($this->ci->input->ip_address(), $login)
-					>= $this->ci->config->item('login_max_attempts', 'tank_auth');
-		}
-		return FALSE;
-	}
+
 
 	/**
 	 * Increase number of attempts for given IP-address and login
@@ -625,15 +614,7 @@ class Tank_auth
 	 * @param	string
 	 * @return	void
 	 */
-	private function increase_login_attempt($login)
-	{
-		if ($this->ci->config->item('login_count_attempts', 'tank_auth')) {
-			if (!$this->is_max_login_attempts_exceeded($login)) {
-				$this->ci->load->model('tank_auth/login_attempts');
-				$this->ci->login_attempts->increase_attempt($this->ci->input->ip_address(), $login);
-			}
-		}
-	}
+
 
 	/**
 	 * Clear all attempt records for given IP-address and login

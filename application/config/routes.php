@@ -38,16 +38,9 @@
 |
 */
 
-$route['default_controller'] = "welcome";
-$route['trang-chu'] = "welcome/welcome/index"; 
-$route['contact'] = "welcome/contact"; 
-$route['trang-chu/(:any)'] = "welcome/welcome/index"; 
-$route['bai-viet/(:any)/(:any)'] = "welcome/welcome/post/$1"; 
-$route['c/(:any)/(:any)'] = "welcome/welcome/list_post_by_cate/$1"; 
-$route['404_override'] = '';
-$route['admin'] = "admin/index/login";
-$route['admin/login.xxx'] = "admin/index/login";
-$route['dang-ky'] = "welcome/register/regis";
+$route['default_controller'] = "home";
+$route['trang-chu'] = "home/home/index";
+$route['nganh-nghe/(:any)-(:any)'] = "chitietnghe/tuyendungnhanh/tuyendungnhanh_post/$1";
 
 /* End of file routes.php */
 /* Location: ./application/config/routes.php */

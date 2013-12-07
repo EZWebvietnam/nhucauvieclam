@@ -3,11 +3,13 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
+            <file>file:/E:/xampp/htdocs/nhucauvieclam/application/views/home/nopdon_layout.php</file>
             <file>file:/E:/xampp/htdocs/nhucauvieclam/application/modules/cv/views/view_cv.php</file>
             <file>file:/E:/xampp/htdocs/nhucauvieclam/application/modules/thongtincanhan/controllers/thongtincanhan.php</file>
             <file>file:/E:/xampp/htdocs/nhucauvieclam/application/modules/home/views/home_/view_home.php</file>
             <file>file:/E:/xampp/htdocs/nhucauvieclam/application/modules/dadang/controllers/hsdadang.php</file>
             <file>file:/E:/xampp/htdocs/nhucauvieclam/application/modules/thongtincanhan/models/thongtincanhan_model.php</file>
+            <file>file:/E:/xampp/htdocs/nhucauvieclam/application/views/home/hosouv_layout.php</file>
         </group>
     </open-files>
 </project-private>
