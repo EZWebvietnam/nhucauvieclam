@@ -6,7 +6,11 @@ class Thongtincanhan extends CI_Controller{
     }
     public function index($id = null)
     {   
-        $data['info_list']=  $this->thongtincanhan_model->info_detail();
+        $data['info_list']=  $this->thongtincanhan_model->info_detail($id);
+        if(empty($data['info_list']))
+        {
+            redirect($_SERVER['HTTP_REFERER']);
+        }
         $data['main_content']= 'view_thongtincanhan';
         if($this->input->post())
         {
@@ -28,17 +32,15 @@ class Thongtincanhan extends CI_Controller{
                 'u_mobi'=>$mobi,
                 'u_email'=>$email
                 );
-            $id = $this->thongtincanhan_model->save_info($data);
-            if($id > 0)
-            {
-                //Insert thành công
-                redirect($_SERVER['HTTP_REFERER']);
-            }
-            else
-            {
-                // Insert không thành công
+            $this->thongtincanhan_model->save_info($id,$data);
+            /*
+            Doi voi ham update thi giong insert nhung truyen them id la id cua user muon update
+            $this->thongtincanhan_model->save_update($id,$data);
+            */
+           
+               
                  redirect($_SERVER['HTTP_REFERER']);
-            }
+           
         }
         else
         {
