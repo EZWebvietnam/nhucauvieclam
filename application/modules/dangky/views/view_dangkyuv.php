@@ -1,3 +1,45 @@
+<?php
+$email = array(
+    'name' => 'email',
+    'id' => 'email',
+    'value' => set_value('email'),
+    'class' => 'W200');
+$full_name = array(
+    'name' => 'c_fullname',
+    'id' => 'fullname',
+    'value' => set_value('c_fullname'),
+    'class' => 'W200');
+$birthday = array(
+    'name' => 'c_birthday',
+    'id' => 'birthday',
+    'value' => set_value('c_birthday'),
+    'class' => 'W200');
+$address = array(
+    'name' => 'c_address',
+    'id' => 'c_address',
+    'value' => set_value('c_address'),
+    'class' => 'W200');
+$username = array(
+    'name' => 'username',
+    'id' => 'username',
+    'value' => set_value('username'),
+    'maxlength' => $this->config->item('username_max_length', 'tank_auth'),
+    'class' => 'W200');
+$password = array(
+    'name' => 'password',
+    'id' => 'password',
+    'value' => set_value('password'),
+    'maxlength' => $this->config->item('password_max_length', 'tank_auth'),
+    'class' => 'W200',
+    'placeholder' => '●●●●●●●●');
+$confirm_password = array(
+    'name' => 'password2',
+    'id' => 'password2',
+    'value' => set_value('password2'),
+    'placeholder' => '●●●●●●●●',
+    'maxlength' => $this->config->item('password_max_length', 'tank_auth'),
+    'class' => 'W200');
+?>
 <h1 class="PageTitle"> Đăng ký tài khoản Người tìm việc </h1>
 <div id="content-detail">
 
@@ -16,7 +58,7 @@
                     Nếu gặp bất kỳ khó khăn nào vui lòng liên hệ ngay các số hotline trên web TimViecNhanh.com để được hỗ trợ. </span>
                 <div class="HighBlank"></div>
 
-                <form action="/thanhvien/nguoitimviec_dangky" enctype="multipart/form-data" id="SeekerNguoitimviecDangkyForm" method="post" accept-charset="utf-8">
+                <form enctype="multipart/form-data" id="SeekerNguoitimviecDangkyForm" method="post" accept-charset="utf-8">
                     <div style="display:none;">
                         <input type="hidden" name="_method" value="POST">
                     </div>
@@ -25,31 +67,63 @@
                             <tr>
                                 <th>Email<span class="Mandatory">*</span></th>
                                 <td>
-                                    <input name="c_username" class="W200" type="text" id="SeekerSeekeremail">
+                                    <?php 
+                                    if($email)
+                                    {
+                                        echo form_input($email);
+                                        echo form_error($email['name']);
+                                        echo isset($errors[$email['name']]) ? $errors[$email['name']] : '';
+                                    }
+                                    ?>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>Username<span class="Mandatory">*</span></th>
+                                <td>
+                                    <?php 
+                                    if($username)
+                                    {
+                                        echo form_input($username);
+                                        echo form_error($username['name']);
+                                        echo isset($errors[$username['name']]) ? $errors[$username['name']] : '';
+                                    }
+                                    ?>
                                 </td>
                             </tr>
                             <tr>
                                 <th>Mật khẩu<span class="Mandatory">*</span></th>
                                 <td>
-                                    <input name="c_password" placeholder="●●●●●●●●" value="" class="W200" type="password" id="SeekerSeekerpassword">
+                                    <?php 
+                                     echo form_password($password);
+                                     echo form_error($password['name']);
+                                    ?>
                                 </td>
                             </tr>
                             <tr>
                                 <th>Nhập lại mật khẩu<span class="Mandatory">*</span></th>
                                 <td>
-                                    <input name="c_conf_password" placeholder="●●●●●●●●" value="" class="W200" type="password" id="SeekerSeekerpasswordConfirm">
+                                    <?php 
+                                     echo form_password($confirm_password);
+                                     echo form_error($confirm_password['name']);
+                                    ?>
                                 </td>
                             </tr>
                             <tr>
                                 <th>Họ tên<span class="Mandatory">*</span></th>
                                 <td>
-                                    <input name="c_fullname" class="W200" type="text" id="SeekerSeekername">
+                                    <?php 
+                                     echo form_input($full_name);
+                                     echo form_error('fullname');
+                                    ?>
                                 </td>
                             </tr>
                             <tr>
                                 <th>Ngày sinh<span class="Mandatory">*</span></th>
                                 <td>
-                                    <input name="c_birthday" placeholder="ngày/tháng/năm" class="W100 hasDatepicker" type="text" id="SeekerSeekerbirthday">
+                                    <?php 
+                                     echo form_input($birthday);
+                                     echo form_error('birthday');
+                                    ?>
                                 </td>
                             </tr>
                             <tr>
@@ -63,7 +137,10 @@
                             <tr>
                                 <th>Địa chỉ<span class="Mandatory">*</span></th>
                                 <td>
-                                    <input name="c_adress" class="W400" type="text" id="SeekerSeekerbirthplace">
+                                    <?php 
+                                     echo form_input($address);
+                                     echo form_error('address');
+                                    ?>
                                 </td>
                             </tr>
                             <tr>

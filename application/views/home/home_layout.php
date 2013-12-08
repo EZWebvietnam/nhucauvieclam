@@ -16,7 +16,8 @@
             <div id="header">
                 <div id="header-inner">
                     <div id="header-logo">
-                        <a href="/" title="nhu cau viec lam" rel="home" id="logo"> <img src="<?php echo base_url(); ?>template/home/img/logo.png" alt="Tìm việc làm hàng đầu - Itworks" height="125" width="430"> </a>
+                        <a href="/" title="nhu cau viec lam" rel="home" id="logo"> <img src="<?php echo
+base_url(); ?>template/home/img/logo.png" alt="Tìm việc làm hàng đầu - Itworks" height="125" width="430"> </a>
                     </div>
                     <div id="bg_slider">
                         <div class="hbs">
@@ -29,25 +30,32 @@
                                             <div class="jcarousel-clip jcarousel-clip-horizontal" style="position: relative;">
                                                 <ul id="mycarousel" class="jcarousel-list jcarousel-list-horizontal" style="overflow: hidden; position: relative; top: 0px; margin: 0px; padding: 0px; left: -4255.900143703704px; width: 9190px;">
                                                     <li class="jcarousel-item jcarousel-item-horizontal jcarousel-item-1 jcarousel-item-1-horizontal" jcarouselindex="1" style="float: left; list-style: none;">
-                                                        <a href="" target="_blank"><img src="<?php echo base_url(); ?>template/home/img/imployees1.jpg" alt="" title="test"></a>
+                                                        <a href="" target="_blank"><img src="<?php echo
+base_url(); ?>template/home/img/imployees1.jpg" alt="" title="test"></a>
                                                     </li>
                                                     <li class="jcarousel-item jcarousel-item-horizontal jcarousel-item-2 jcarousel-item-2-horizontal" jcarouselindex="2" style="float: left; list-style: none;">
-                                                        <a href="" target="_blank"><img src="<?php echo base_url(); ?>template/home/img/imployees2.jpg" alt="" title="Quang cao"></a>
+                                                        <a href="" target="_blank"><img src="<?php echo
+base_url(); ?>template/home/img/imployees2.jpg" alt="" title="Quang cao"></a>
                                                     </li>
                                                     <li class="jcarousel-item jcarousel-item-horizontal jcarousel-item-3 jcarousel-item-3-horizontal" jcarouselindex="3" style="float: left; list-style: none;">
-                                                        <a href="" target="_blank"><img src="<?php echo base_url(); ?>template/home/img/imployees3.jpg" alt="" title="Noi that"></a>
+                                                        <a href="" target="_blank"><img src="<?php echo
+base_url(); ?>template/home/img/imployees3.jpg" alt="" title="Noi that"></a>
                                                     </li>
                                                     <li class="jcarousel-item jcarousel-item-horizontal jcarousel-item-4 jcarousel-item-4-horizontal" jcarouselindex="4" style="float: left; list-style: none;">
-                                                        <a href="" target="_blank"><img src="<?php echo base_url(); ?>template/home/img/imployees4.jpg" alt="" title="et"></a>
+                                                        <a href="" target="_blank"><img src="<?php echo
+base_url(); ?>template/home/img/imployees4.jpg" alt="" title="et"></a>
                                                     </li>
                                                     <li class="jcarousel-item jcarousel-item-horizontal jcarousel-item-622 jcarousel-item-622-horizontal" jcarouselindex="622" style="float: left; list-style: none;">
-                                                        <a href="" target="_blank"><img src="<?php echo base_url(); ?>template/home/img/imployees5.jpg" alt="" title="Quang cao"></a>
+                                                        <a href="" target="_blank"><img src="<?php echo
+base_url(); ?>template/home/img/imployees5.jpg" alt="" title="Quang cao"></a>
                                                     </li>
                                                     <li class="jcarousel-item jcarousel-item-horizontal jcarousel-item-623 jcarousel-item-623-horizontal" jcarouselindex="623" style="float: left; list-style: none;">
-                                                        <a href="" target="_blank"><img src="<?php echo base_url(); ?>template/home/img/imployees6.jpg" alt="" title="Noi that"></a>
+                                                        <a href="" target="_blank"><img src="<?php echo
+base_url(); ?>template/home/img/imployees6.jpg" alt="" title="Noi that"></a>
                                                     </li>
                                                     <li class="jcarousel-item jcarousel-item-horizontal jcarousel-item-624 jcarousel-item-624-horizontal" jcarouselindex="624" style="float: left; list-style: none;">
-                                                        <a href="" target="_blank"><img src="<?php echo base_url(); ?>template/home/img/imployees7.jpg" alt="" title="et"></a>
+                                                        <a href="" target="_blank"><img src="<?php echo
+base_url(); ?>template/home/img/imployees7.jpg" alt="" title="et"></a>
                                                     </li>
                                                 </ul>
                                             </div>
@@ -59,7 +67,8 @@
                             </div>
                         </div>
                         <div class="clearer"></div>
-                        <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>template/home/css/slider.css">
+                        <link rel="stylesheet" type="text/css" href="<?php echo
+base_url(); ?>template/home/css/slider.css">
                         <script type="text/javascript" src="<?php echo base_url(); ?>template/home/js/jquery.js"></script>
                         <script type="text/javascript" src="<?php echo base_url(); ?>template/home/js/slider.js"></script>
                         <script type="text/javascript">
@@ -98,8 +107,7 @@
                         </script>
                     </div>
                     <div class="clear"></div>
-                    <?php if($is_login == 0)
-                    {?>
+                    <?php if ($is_login == 0) { ?>
                     <div id="header-user-menu">
                         <ul>
                             <li>
@@ -114,12 +122,13 @@
                         </ul>
 
                     </div>
-                    <?php } else {?> 
+                    <?php } else { ?> 
                     <div id="header-user-menu">
-                        <?php echo $this->session->userdata['u_username'];?> | <a href="<?php echo base_url();?>dangnhap/logout">Đăng xuất</a>
+                        <?php echo $this->session->userdata['u_username']; ?> | <a href="<?php echo
+    base_url(); ?>dangnhap/logout">Đăng xuất</a>
 
                     </div>
-                    <? } ?>
+                    <?php } ?>
                 </div>
                 <div class="HighBlank"></div>
                 <div class="Clear"></div>
@@ -610,10 +619,9 @@
             <div id="content">
                 <div id="content-top">
                     <div id="content-wrapper">
-                    <?php 
-                    if($is_login == 1)
-                    {
-                    ?>
+                    <?php
+if ($is_login == 1) {
+?>
                         <div id="user-menu">
 
                             <div class="GridInfo">
