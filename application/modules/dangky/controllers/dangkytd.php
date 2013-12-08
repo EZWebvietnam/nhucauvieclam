@@ -15,7 +15,7 @@ class Dangkytd extends CI_Controller
             // Sau khi lấy ra, gán một mảng, key của mảng là tên field trong database
 
             $password = $this->input->post('c_password');
-            $confpassword = $this->input->post('c_conf_password');
+            $confpassword = $this->input->post('c_confpassword');
             $namecompany = $this->input->post('c_namecompany');
             $adresscompany = $this->input->post('c_adress_company');
             $city = $this->input->post('c_city');
