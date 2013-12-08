@@ -15,10 +15,10 @@ class Dangkyuv extends CI_Controller
         if ($this->input->post()) {
             // Mỗi input có một name, tùy theo name của input là gì, thì khi gán vào biến cái name của input cũng như vậy.
             //VI input title có name c_tieu_de_cv dùng để lưu tiêu đề, thì khi lấy ra là như dưới:
-            $username = $this->input->post('c_username');
+            $username = $this->input->post('email');
             // Sau khi lấy ra, gán một mảng, key của mảng là tên field trong database
-            $password = $this->input->post('c_password');
-            $confpassword = $this->input->post('c_conf_password');
+            $password = $this->input->post('password');
+            $confpassword = $this->input->post('password2');
             $fullname = $this->input->post('c_fullname');
             $birthday = $this->input->post('c_birthday');
             $sex = $this->input->post('c_sex');

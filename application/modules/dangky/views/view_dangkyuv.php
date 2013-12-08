@@ -19,12 +19,6 @@ $address = array(
     'id' => 'c_address',
     'value' => set_value('c_address'),
     'class' => 'W200');
-$username = array(
-    'name' => 'username',
-    'id' => 'username',
-    'value' => set_value('username'),
-    'maxlength' => $this->config->item('username_max_length', 'tank_auth'),
-    'class' => 'W200');
 $password = array(
     'name' => 'password',
     'id' => 'password',
@@ -73,19 +67,6 @@ $confirm_password = array(
                                         echo form_input($email);
                                         echo form_error($email['name']);
                                         echo isset($errors[$email['name']]) ? $errors[$email['name']] : '';
-                                    }
-                                    ?>
-                                </td>
-                            </tr>
-                            <tr>
-                                <th>Username<span class="Mandatory">*</span></th>
-                                <td>
-                                    <?php 
-                                    if($username)
-                                    {
-                                        echo form_input($username);
-                                        echo form_error($username['name']);
-                                        echo isset($errors[$username['name']]) ? $errors[$username['name']] : '';
                                     }
                                     ?>
                                 </td>
