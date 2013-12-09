@@ -1,3 +1,65 @@
+<?php
+$email = array(
+    'name' => 'email',
+    'id' => 'email',
+    'value' => set_value('email'),
+    'class' => 'W200');
+$name_com = array(
+    'name' => 'c_company',
+    'id' => 'c_company',
+    'value' => set_value('c_company'),
+    'class' => 'W200');
+
+$address = array(
+    'name' => 'c_address',
+    'id' => 'c_address',
+    'value' => set_value('c_address'),
+    'class' => 'W200');
+$password = array(
+    'name' => 'password',
+    'id' => 'password',
+    'value' => set_value('password'),
+    'maxlength' => $this->config->item('password_max_length', 'tank_auth'),
+    'class' => 'W200',
+    'placeholder' => '●●●●●●●●');
+$confirm_password = array(
+    'name' => 'password2',
+    'id' => 'password2',
+    'value' => set_value('password2'),
+    'placeholder' => '●●●●●●●●',
+    'maxlength' => $this->config->item('password_max_length', 'tank_auth'),
+    'class' => 'W200');
+$com_address = array(
+    'name' => 'com_address',
+    'id' => 'com_address',
+    'value' => set_value('com_address'),
+    'class' => 'W200');
+$phone = array(
+    'name' => 'c_phone',
+    'id' => 'c_phone',
+    'value' => set_value('c_phone'),
+    'class' => 'W200');
+$mail_contact = array(
+    'name' => 'c_mail_contact',
+    'id' => 'c_mail_contact',
+    'value' => set_value('c_mail_contact'),
+    'class' => 'W200');
+$nguoi_lien_he = array(
+    'name' => 'nguoi_lien_he',
+    'id' => 'nguoi_lien_he',
+    'value' => set_value('nguoi_lien_he'),
+    'class' => 'W200');
+$com_address = array(
+    'name' => 'com_address',
+    'id' => 'com_address',
+    'value' => set_value('com_address'),
+    'class' => 'W200');
+$com_phone = array(
+    'name' => 'com_phone',
+    'id' => 'com_phone',
+    'value' => set_value('com_phone'),
+    'class' => 'W200');
+?>
 <h1 class="PageTitle"> Đăng ký tài khoản Nhà tuyển dụng </h1>
 
 <div id="content-detail">
@@ -26,39 +88,58 @@
                             <tr>
                                 <th>Email<span class="Mandatory">*</span></th>
                                 <td>
-                                    <input name="c_username" class="W200" type="text" id="EmployerEmpemail">
+                                    <?php 
+                                    if($email)
+                                    {
+                                        echo form_input($email);
+                                        echo form_error($email['name']);
+                                        echo isset($errors[$email['name']]) ? $errors[$email['name']] : '';
+                                    }
+                                    ?>
                                 </td>
                             </tr>
                             <tr>
                                 <th>Mật khẩu<span class="Mandatory">*</span></th>
                                 <td>
-                                    <input name="c_password" placeholder="●●●●●●●●" value="" class="W200" type="password" id="EmployerEmppassword">
+                                    <?php 
+                                     echo form_password($password);
+                                     echo form_error($password['name']);
+                                    ?>
                                 </td>
                             </tr>
                             <tr>
                                 <th>Nhập lại mật khẩu<span class="Mandatory">*</span></th>
                                 <td>
-                                    <input name="c_confpassword" placeholder="●●●●●●●●" value="" class="W200" type="password" id="EmployerEmppasswordConfirm">
+                                    <?php 
+                                     echo form_password($confirm_password);
+                                     echo form_error($confirm_password['name']);
+                                    ?>
                                 </td>
                             </tr>
                             <tr>
                                 <th>Tên công ty<span class="Mandatory">*</span></th>
                                 <td>
-                                    <input name="c_namecompany" class="W400" type="text" id="EmployerEmpname">
+                                    <?php 
+                                     echo form_input($name_com);
+                                     echo form_error('c_company');
+                                    ?>
                                 </td>
                             </tr>
                             <tr>
                                 <th>Logo công ty</th>
                                 <td>
-                                    <input type="file" name="file_logo_cong_ty" id="file_logo_cong_ty">
+                                    <input type="file" name="userfile" id="file_logo_cong_ty">
                                         <br>
-                                        <span class="text11">(Dạng file ảnh .jpg .gif .png, dung lượng &lt;=300Kb)</span><div id="err_logo_cty" class="textRed11"></div>
+                                        <span class="text11">(Dạng file ảnh .jpg .gif .png, dung lượng &lt;=300Kb)</span><div id="err_logo_cty" class="textRed11"><?php if(isset($error_file)){echo $error_file;}?></div>
                                 </td>
                             </tr>
                             <tr>
                                 <th>Địa chỉ<span class="Mandatory">*</span></th>
                                 <td>
-                                    <input name="c_adress_company" class="W400" type="text" id="EmployerEmpaddress">
+                                   <?php 
+                                     echo form_input($address);
+                                     echo form_error('c_address');
+                                    ?>
                                 </td>
                             </tr>
                             <tr>
@@ -149,7 +230,10 @@
                             <tr>
                                 <th>Điện thoại<span class="Mandatory">*</span></th>
                                 <td>
-                                    <input name="c_phone" class="W200" type="text" id="EmployerEmpphone">
+                                    <?php 
+                                     echo form_input($phone);
+                                     echo form_error('c_phone');
+                                    ?>
                                 </td>
                             </tr>
                             <tr>
@@ -165,7 +249,7 @@
                                 </td>
                             </tr>
                             <tr>
-                                <th>Mô tả<span class="Mandatory">*</span></th>
+                                <th>Mô tả</th>
                                 <td>
                                     <textarea name="c_mota" class="W500 H200" cols="30" rows="6" id="EmployerEmpdesc">
                                     </textarea></td>
@@ -179,27 +263,39 @@
                                 <td><h3>Thông tin liên hệ</h3></td>
                             </tr>
                             <tr>
-                                <th>Email</th>
+                                <th>Email<span class="Mandatory">*</span></th>
                                 <td>
-                                    <input name="c_email" class="W200" type="text" id="EmployerContactEmail">
+                                    <?php 
+                                     echo form_input($mail_contact);
+                                     echo form_error('c_mail_contact');
+                                    ?>
                                 </td>
                             </tr>
                             <tr>
-                                <th>Người liên hệ</th>
+                                <th>Người liên hệ<span class="Mandatory">*</span></th>
                                 <td>
-                                    <input name="c_contactname" class="W200" type="text" id="EmployerEmpcontactname">
+                                    <?php 
+                                     echo form_input($nguoi_lien_he);
+                                     echo form_error('nguoi_lien_he');
+                                    ?>
                                 </td>
                             </tr>
                             <tr>
-                                <th>Địa chỉ</th>
+                                <th>Địa chỉ<span class="Mandatory">*</span></th>
                                 <td>
-                                    <input name="c_contactadress" class="W400" type="text" id="EmployerEmpcontactaddress">
+                                    <?php 
+                                     echo form_input($com_address);
+                                     echo form_error('com_address');
+                                    ?>
                                 </td>
                             </tr>
                             <tr>
-                                <th>Điện thoại</th>
+                                <th>Điện thoại<span class="Mandatory">*</span></th>
                                 <td>
-                                    <input name="c_contactphone" class="W200" type="text" id="EmployerEmpcontactphone">
+                                    <?php 
+                                     echo form_input($com_phone);
+                                     echo form_error('com_phone');
+                                    ?>
                                 </td>
                             </tr>
                             <tr>

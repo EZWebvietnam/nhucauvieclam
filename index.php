@@ -199,6 +199,15 @@ if (defined('ENVIRONMENT'))
  * And away we go...
  *
  */
+ if($_SERVER['SERVER_NAME'] == 'localhost')
+ {
+    
+     define('ROT_DIR','/ninhbinh/');
+ }
+ else
+ {
+     define('ROT_DIR','/');
+ }
 require_once BASEPATH.'core/CodeIgniter.php';
 
 /* End of file index.php */

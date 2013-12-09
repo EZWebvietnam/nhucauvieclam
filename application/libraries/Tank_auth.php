@@ -197,17 +197,20 @@ class Tank_auth
     /**
      * Create User is Normal User
      */
-    function create_user_normal($email, $password, $birthday, $sex, $address,$city, $mobi, $fullname)
+    function create_user_normal(array $data)
     {
-        if ((strlen($email) > 0) and !$this->ci->users->is_username_available($email)) {
+        //$email, $password, $birthday, $sex, $address,$city, $mobi, $fullname
+        if ((strlen($data['u_email']) > 0) and !$this->ci->users->is_username_available($data['u_email'])) {
             $this->error = array('email' => 'auth_username_in_use');
         }else {
             // Hash password using phpass
             $hasher = new PasswordHash($this->ci->config->item('phpass_hash_strength',
                 'tank_auth'), $this->ci->config->item('phpass_hash_portable', 'tank_auth'));
-            $hashed_password = $hasher->HashPassword($password);
-
-            $data = array(
+            $hashed_password = $hasher->HashPassword($data['u_password']);
+            $data['u_password']=$hashed_password;
+            $data['last_ip'] = $this->ci->input->ip_address();
+            
+            /*$data = array(
                 'u_username' => $email,
                 'u_password' => $hashed_password,
                 'u_email' => $email,
@@ -220,7 +223,7 @@ class Tank_auth
                 'u_fullname' => $fullname,
                 'last_ip' => $this->ci->input->ip_address(),
                 );
-
+            */
 
             if (!is_null($res = $this->ci->users->create_user($data))) {
                 $data['user_id'] = $res['user_id'];
