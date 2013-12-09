@@ -4,6 +4,7 @@ class Tintd extends CI_Controller
     public function __construct() {
         parent::__construct();
         $this->load->model('taotintd_model');
+        $this->load->library('session');
     }
     public function index($id = null)
     {   
@@ -27,10 +28,18 @@ class Tintd extends CI_Controller
             $hoso = $this->input->post('ho_so');
             $denngay = $this->input->post('den_ngay');
             $lienhe = $this->input->post('cach_lien_he');
-            
+            if($this->session->userdata('u_id'))
+            {
+                $u_id = $this->session->userdata('u_id');
+            }
+            else
+            {
+                $u_id = 0;
+            }
             $data = array('e_title'=>$title,
                 'e_capbacID'=>$capbac,
                 'm_id'=>$nganhnghe,
+                'u_id'=>$u_id,
                 'e_cityID'=>$city,
                 'e_timeID'=>$thoigian,
                 'e_luong'=>$mucluong,
