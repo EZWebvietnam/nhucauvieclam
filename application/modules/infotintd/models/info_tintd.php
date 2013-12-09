@@ -4,20 +4,20 @@ class Info_tintd extends CI_Model{
         parent::__construct();
         $this->load->database();
     }
-    public function load_info_tintd_detail($id = null){
-        $id = intval($id);
-        $this->db->select();
-        $this->db->where('u_id',$id);
-        $query_array = $this->db->get('tbl_job_user');
-        return $query_array->result_array();
-    }
-    public function load_info_td_detail($id = null){
-        $id = intval($id);
-        $this->db->select();
-        $this->db->where('e_id',$id);
-        $query_array = $this->db->get('tbl_job_post');
-        return $query_array->result_array();
-    }
+//    public function load_info_tintd_detail($id = null){
+//        $id = intval($id);
+//        $this->db->select();
+//        $this->db->where('u_id',$id);
+//        $query_array = $this->db->get('tbl_job_user');
+//        return $query_array->result_array();
+//    }
+//    public function load_info_td_detail($id = null){
+//        $id = intval($id);
+//        $this->db->select();
+//        $this->db->where('e_id',$id);
+//        $query_array = $this->db->get('tbl_job_post');
+//        return $query_array->result_array();
+//    }
     public function load_job($id)
     {
         $id = intval($id);

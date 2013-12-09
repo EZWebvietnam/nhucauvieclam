@@ -12,7 +12,7 @@ class Tuyendungnhanh_up extends CI_Model{
         return $query_array->result_array();
     }
         public function view_tuyendungnhanh_detail($id = null){
-       $id = intval($id);
+        $id = intval($id);
         $this->db->select();
         $this->db->where('m_id',$id);
         $query_array = $this->db->get('tbl_job_post');
@@ -41,6 +41,12 @@ class Tuyendungnhanh_up extends CI_Model{
     {
         $this->db->select();
         $query=$this->db->get('tbl_city');
+        return $query->result_array();
+    }
+    public function get_time()
+    {
+        $this->db->select();
+        $query=$this->db->get('tbl_thoigian');
         return $query->result_array();
     }
 }

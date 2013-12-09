@@ -17,7 +17,7 @@ class Index extends MY_Controller
             $this->data['is_login'] = 0;
         }
         $this->data['main_content'] = 'dangky_index';
-        $this->load->view('home/dangky', $this->data);
+        $this->load->view('home/dangky_layout', $this->data);
     }
 }
 ?>
