@@ -17,18 +17,10 @@ class Home extends MY_Controller
         } else {
             $this->data['is_login'] = 0;
         }
-
-        $this->data['job_list'] = $this->jobpost->job_post();
-        $this->data['user_list'] = $this->jobpost->user_post();
+        $this->data['job_list'] = $this->jobpost->user_post();
         $this->data['main_content'] = 'home_/view_home';
         $this->load->view('home/home_layout', $this->data);
     }
-    /*public function job_post(){
-    parent::load_cate_job();
-    $this->data['user_list']=  $this->jobpost->user_post();
-    $this->data['main_content']= 'home_/view_home';
-    $this->load->view('home/home_layout',$data);
-    }*/
 }
 ?>
 

@@ -3,7 +3,7 @@
     <div class="Grid">
         <div class="TopLeft">
             <div class="TopRight">
-                <h2 class="Headline"> 11713 việc làm mới, đang tuyển dụng                trong 278334 công việc đã đăng </h2>
+                <!--<h2 class="Headline"> 11713 việc làm mới, đang tuyển dụng                trong 278334 công việc đã đăng </h2>-->
             </div>
         </div>
         <div class="BodyLeft">
@@ -55,24 +55,31 @@
         <div class="BodyLeft">
             <div class="BodyRight">
 
-                <table class="TableVip">
+                <table class="TableVip">                    
                     <tbody>
-<?php
-foreach ($job_list as $job) {
-    ?>
-                            <tr>
+                        <?php
+                        $i = 1;
+                        foreach ($job_list as $job) {
+
+                            if ($i % 2 == 1) {
+                                ?>
+                                <tr>
+                            <?php } ?>
                                 <td width="50%">
                                     <ul>
                                         <li>
-                                            <a href="/vieclam/congviec/2803446/nhan-vien-kinh-doanh-cua-cuon-cua-keo-tai-hcm.html" title="Nhân Viên Kinh Doanh Cửa Cuốn, Cửa Kéo Tại Hcm - Công Ty TNHH CK TM Minh Hiền" target="_blank"><?php echo $job['e_title'] ?></a>
+                                            <a href="<?php echo base_url(); ?>tin-tuyen-dung/<?php echo $job['e_id'] ?>-<?php echo mb_strtolower(url_title(removesign($job['e_title'])))?>" title="<?php echo $job['e_title'] ?>" target="_blank"><?php echo $job['e_title'] ?></a>
                                             <div class="TinyBlank"></div>
-                                            <span class="Number">Công Ty TNHH CK TM Minh Hiền</span>
+                                            <span class="Number"><?php echo $job['u_companyName'] ?></span>
                                         </li>
                                     </ul></td>
-                            </tr>
-    <?php
-}
-?>
+                        <?php
+                        if ($i % 2 == 0) {
+                            ?>
+                                </tr>
+                                <?php } ?>
+                                <?php $i++;
+                            } ?>
                     </tbody>
                 </table>
             </div>
@@ -270,7 +277,7 @@ foreach ($job_list as $job) {
                 <table class="TableVip">
                     <tbody>
                         <?php
-                        foreach ($user_list as $user_post) {
+                        foreach ($job_list as $user_post) {
                         ?>
                         <tr>
                             <td>
@@ -278,7 +285,7 @@ foreach ($job_list as $job) {
                                     <li>
                                         <a href="/timungvien/nguoitimviec/1176957/nhan-vien-ki-thuat-nhan-vien-boc-tach-du-toan.html" title="Nhân Viên Kĩ Thuật, Nhân Viên Bóc Tách Dự Toán - Le Van Dung" target="_blank"><?php echo $user_post['j_title'] ?></a>
                                         <div class="TinyBlank"></div>
-                                        <span class="Number">Le Van Dung</span>
+                                        <span class="Number"><?php echo $user_post['u_fullname'] ?></span>
                                     </li>
                                 </ul></td>
                         </tr>

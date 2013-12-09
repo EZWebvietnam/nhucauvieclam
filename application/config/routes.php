@@ -51,7 +51,7 @@ $route['dangky'] = "dangky/index";
 $route['dangnhap'] = "dangnhap/login_uv";
 $route['dangnhap/index'] = "dangnhap/index";
 $route['hoso-ungvien/(:any)'] = "hosouv/hosouv/hosouv_post/$1";
-$route['tin-tuyen-dung/(:any)'] = "Infotintd/Infotintd/view_job_post/$1";
+$route['tin-tuyen-dung/(:any)-(:any)'] = "Infotintd/Infotintd/view_job_post/$1";
 $route['quanly-hoso-ungvien/(:any)'] = "qlhsuv/qlhsuv/index/$1";
 $route['quanly-timviec/(:any)'] = "qltimviec/qltimviec/index/$1";
 $route['quanly-tuyendung/(:any)'] = "qltuyendung/qltuyendung/index/$1";
@@ -64,6 +64,7 @@ $route['thongtin-ntd/(:any)'] = "thongtinntd/infontd/index/$1";
 $route['timvieclam'] = "timvieclam/timvieclam";
 $route['tuyendungnhanh'] = "tuyendungnhanh/tuyendungnhanh";
 $route['da-ung-tuyen/(:any)'] = "ungtuyen/daungtuyen/index/$1";
+$route['nopdon'] = "nopdon/nopdon";
 
 /* End of file routes.php */
 /* Location: ./application/config/routes.php */
