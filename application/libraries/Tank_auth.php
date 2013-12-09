@@ -26,9 +26,7 @@ class Tank_auth
     function __construct()
     {
         $this->ci = &get_instance();
-
         $this->ci->load->config('tank_auth', true);
-
         $this->ci->load->library('session');
         $this->ci->load->database();
         $this->ci->load->model('tank_auth/users');
@@ -71,6 +69,8 @@ class Tank_auth
                             $this->error = array('banned' => $user->ban_reason);
 
                         } else {
+                            $this->ci->session->sess_expiration = 7200;
+                            $this->ci->session->sess_expire_on_close = TRUE;
                             $this->ci->session->set_userdata(array(
                                 'u_id' => $user->u_id,
                                 'u_username' => $user->u_username,
@@ -78,14 +78,9 @@ class Tank_auth
                                 'u_role' => $user->u_role));
 
                             if ($user->u_status == 0) { // fail - not activated
-                                $this->error = array('not_activated' => '');
+                                $this->error = array('not_activated' => 'not_activated');
 
                             } else { // success
-                                if ($remember) {
-                                    $this->create_autologin($user->u_id);
-                                }
-
-
                                 $this->ci->users->update_login_info($user->u_id, $this->ci->config->item('login_record_ip',
                                     'tank_auth'), $this->ci->config->item('login_record_time', 'tank_auth'));
                                 return true;
@@ -110,12 +105,11 @@ class Tank_auth
      */
     function logout()
     {
-        $this->delete_autologin();
-        // See http://codeigniter.com/forums/viewreply/662369/ as the reason for the next line
         $this->ci->session->set_userdata(array(
             'user_id' => '',
-            'username' => '',
-            'status' => ''));
+            'u_username' => '',
+            'u_status' => '',
+            'u_role' => ''));
         $this->ci->session->sess_destroy();
     }
 

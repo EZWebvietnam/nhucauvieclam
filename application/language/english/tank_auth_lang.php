@@ -2,6 +2,7 @@
 
 // Errors
 $lang['auth_incorrect_password'] = 'Mật khẩu không đúng';
+$lang['not_activated'] = 'Thành viên chưa được kích hoạt';
 $lang['auth_incorrect_login'] = 'Incorrect login';
 $lang['auth_incorrect_email_or_username'] = 'Tài khoản không tồn tại!';
 $lang['auth_email_in_use'] = 'Email is already used by another user. Please choose another email.';
