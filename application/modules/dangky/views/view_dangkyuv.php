@@ -94,7 +94,7 @@ $confirm_password = array(
                                 <td>
                                     <?php 
                                      echo form_input($full_name);
-                                     echo form_error('fullname');
+                                     echo form_error('c_fullname');
                                     ?>
                                 </td>
                             </tr>
@@ -103,7 +103,7 @@ $confirm_password = array(
                                 <td>
                                     <?php 
                                      echo form_input($birthday);
-                                     echo form_error('birthday');
+                                     echo form_error('c_birthday');
                                     ?>
                                 </td>
                             </tr>
@@ -120,7 +120,7 @@ $confirm_password = array(
                                 <td>
                                     <?php 
                                      echo form_input($address);
-                                     echo form_error('address');
+                                     echo form_error('c_address');
                                     ?>
                                 </td>
                             </tr>
