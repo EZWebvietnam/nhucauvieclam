@@ -6,7 +6,7 @@ class Infontd extends CI_Controller{
     }
     public function index($id = null)
     {   
-        $data['info_list']=  $this->infontd_model->info_detail();
+        $data['info_list']=  $this->infontd_model->info_detail($id);
         $data['main_content']= 'view_infontd';
         if($this->input->post())
         {

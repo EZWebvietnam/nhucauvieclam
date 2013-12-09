@@ -753,15 +753,7 @@
                                                                     </div>
                                                                 </div>
                                                             </div>
-                                                            <div class="Blank"></div>
-                                                            <div class="AlignCenter">
-                                                                <script>
-                                                                            google_ad_client = "ca-pub-1637346731627697";
-                                                                            google_ad_slot = "5969487315";
-                                                                            google_ad_width = 336;
-                                                                            google_ad_height = 280;        </script>
-                                                                <script src="http://pagead2.googlesyndication.com/pagead/show_ads.js"></script><ins style="display:inline-table;border:none;height:280px;margin:0;padding:0;position:relative;visibility:visible;width:336px;background-color:transparent"><ins id="aswift_0_anchor" style="display:block;border:none;height:280px;margin:0;padding:0;position:relative;visibility:visible;width:336px;background-color:transparent"><iframe width="336" height="280" frameborder="0" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" onload="var i = this.id, s = window.google_iframe_oncopy, H = s & amp; & amp; s.handlers, h = H & amp; & amp; H[i], w = this.contentWindow, d; try{d = w.document} catch (e){}if (h & amp; & amp; d & amp; & amp; (!d.body || !d.body.firstChild)){if (h.call){setTimeout(h, 0)} else if (h.match){try{h = s.upd(h, i)} catch (e){}w.location.replace(h)}}" id="aswift_0" name="aswift_0" style="left:0;position:absolute;top:0;"></iframe></ins></ins>
-                                                            </div>
+                                                            <div class="Blank"></div>                                                           
                                                         </div>
 
                                                         <div id="content-right">
@@ -1256,123 +1248,8 @@
                                                         </div>
 
                                                         <div class="Clear"></div>                        </div>
-                                                </div>
-
-                                                <div id="content-right">
-
-                                                    <div class="Grid">
-                                                        <div class="TopLeft">
-                                                            <div class="TopRight">
-                                                                <h2 class="Headline">Công cụ</h2>
-                                                            </div>
-                                                        </div>
-                                                        <div class="BodyLeft">
-                                                            <div class="BodyRight">
-                                                                <ul class="Tool">
-                                                                    <li>
-                                                                        <a href="#s-login" title="Nộp hồ sơ" rel="popup" class="cboxElement">Nộp hồ sơ</a>
-                                                                    </li>
-                                                                    <li>
-                                                                        <a href="#s-login" title="Lưu công việc" rel="popup" class="cboxElement">Lưu công việc</a>
-                                                                    </li>
-                                                                    <li>
-                                                                        <a href="/vieclam/incongviec/2811197" target="_blank">In công việc</a>
-                                                                    </li>
-                                                                    <li>
-                                                                        <a href="/vieclam/thongbaotindang/2811197">Thông báo tin đăng sai sự thật</a>
-                                                                    </li>
-                                                                </ul>
-                                                            </div>
-                                                        </div>
-                                                        <div class="BottomLeft">
-                                                            <div class="BottomRight"></div>
-                                                        </div>
-
-                                                        <div style="display: none;">
-                                                            <div id="s-login">
-                                                                <div class="CboxContent">
-                                                                    Bạn chưa đăng nhập tài khoản Người tìm việc
-                                                                </div>
-                                                                <div class="CboxButton">
-                                                                    <button type="button" id="s-seeker-login">
-                                                                        <span>Đăng nhập Người tìm việc</span>
-                                                                    </button>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <script>
-                                                                    $(document).ready(function() {
-                                                            $('#s-seeker-login').click(function() {
-                                                            window.location.href = '/thanhvien/nguoitimviec_dangnhap?return_url=http%3A%2F%2Fwww.timviecnhanh.com%2Fvieclam%2Fcongviec%2F2811197%2Fvie-c-la-m-them-cho-sinh-vien.html';
-                                                            });
-                                                            });                                                        </script>
-                                                    </div>
-
-                                                    <div class="Blank"></div>
-
-                                                    <div class="Grid">
-                                                        <div class="TopLeft">
-                                                            <div class="TopRight">
-                                                                <h2 class="Headline">Việc làm đã xem</h2>
-                                                            </div>
-                                                        </div>
-                                                        <div class="BodyLeft">
-                                                            <div class="BodyRight">
-
-                                                                <ul class="ToolHistory">
-
-                                                                    <li>
-                                                                        <a href="/vieclam/congviec/2790664/nhan-vien-truyen-thong.html" title="Nhân Viên Truyền Thông">Nhân Viên Truyền Thông</a>
-                                                                    </li>
-
-                                                                    <li>
-                                                                        <a href="/vieclam/congviec/2811197/vie-c-la-m-them-cho-sinh-vien.html" title="Việc Làm Thêm Cho Sinh Viên">Việc Làm Thêm Cho Sinh Viên</a>
-                                                                    </li>
-                                                                </ul>
-                                                            </div>
-                                                        </div>
-                                                        <div class="BottomLeft">
-                                                            <div class="BottomRight"></div>
-                                                        </div>
-                                                    </div>
-
-                                                    <div class="Blank"></div>
-                                                    <div class="GridInfo">
-                                                        <div class="Content">
-                                                            <div class="Blank"></div>
-                                                            <a href="/vieclam/tags/vie-c-la-m" target="_blank" class="Tags">Việc Làm</a>
-                                                            <a href="/vieclam/tags/them-cho" target="_blank" class="Tags">Thêm Cho</a>
-                                                            <a href="/vieclam/tags/sinh-vien" target="_blank" class="Tags">Sinh Viên</a>
-                                                            <br>
-
-                                                                <a href="/vieclam/tags/ban-hang" target="_blank" class="Tags">Bán hàng</a>
-                                                                <a href="/vieclam/tags/lao-dong-pho-thong" target="_blank" class="Tags">Lao động phổ thông</a>
-                                                                <a href="/vieclam/tags/quang-cao" target="_blank" class="Tags">Quảng cáo</a>
-                                                                <a href="/vieclam/tags/marketing" target="_blank" class="Tags">Marketing</a>
-                                                                <a href="/vieclam/tags/pr" target="_blank" class="Tags">PR</a>
-
-                                                                <a href="/vieclam/tags/viec-lam-them" target="_blank" class="Tags">Việc làm thêm</a>
-                                                                <a href="/vieclam/tags/lam-viec-ngoai-gio" target="_blank" class="Tags">Làm việc ngoài giờ</a>
-
-                                                                <a href="/vieclam/tags/tp-ho-chi-minh" target="_blank" class="Tags">TP.Hồ Chí Minh</a>
-                                                                <a href="/vieclam/tags/binh-duong" target="_blank" class="Tags">Bình Dương</a>
-                                                                <a href="/vieclam/tags/dong-nai" target="_blank" class="Tags">Đồng Nai</a>
-
-                                                                <a href="/vieclam/tags/lao-dong-pho-thong" target="_blank" class="Tags">Lao động phổ thông</a>
-
-                                                                <a href="/vieclam/tags/chua-co-kinh-nghiem" target="_blank" class="Tags">Chưa có kinh nghiệm</a>
-
-                                                                <a href="/vieclam/tags/3-4-trieu" target="_blank" class="Tags">3-4 triệu</a>
-
-                                                                <a href="/vieclam/tags/lam-them-ngoai-gio" target="_blank" class="Tags">Làm thêm ngoài giờ</a>
-
-                                                                <a href="/vieclam/timkiem/nganhnghe:ban-hang/tinhthanhpho:tp-ho-chi-minh/trinhdo:lao-dong-pho-thong/hinhthuclamviec:lam-them-ngoai-gio/mucluong:3-4-trieu" target="_blank" class="Tags">Bán hàng, TP.Hồ Chí Minh, Lao động phổ thông, Làm thêm ngoài giờ, 3-4 triệu</a>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="clear"></div>
+                                                </div>                                                
                                         </div>
-
                                         <div id="footer">
 
                                             <div id="footer-menubar">

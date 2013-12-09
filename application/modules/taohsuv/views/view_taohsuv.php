@@ -200,7 +200,7 @@
                                             <input type="text" class="textbox" style="width:110px" name="den_ngay" id="den_ngay" readonly="" value="" onclick="show_box_popup_calendar(23, 11, 2013, 'den_ngay', '', '', '', '', '#7214AE'); return false;">
                                         </td>
                                         <td width="30">
-                                            <input type="image" src="images/iconCalendar.gif" onclick="show_box_popup_calendar(23, 11, 2013, 'den_ngay', '', '', '', '', '#7214AE'); return false;">
+                                            <input type="image" src="<?php echo base_url(); ?>template/home/img/iconCalendar.gif" onclick="show_box_popup_calendar(23, 11, 2013, 'den_ngay', '', '', '', '', '#7214AE'); return false;">
                                         </td>
                                         <td>(dd-mm-yyyy)</td>
                                     </tr>
@@ -302,18 +302,7 @@
                                                     <option value="1">Đã có gia đình</option>
                                                 </select><div id="err_tinh_trang_hon_nhan" class="textRed11"></div></td>
                                         </tr>
-                                        <tr>
-                                            <td valign="top" class="tbUser-row"><b>Mã chỉnh sửa:</b></td>
-                                            <td class="tbUser-row">
-                                                <div id="div_ma_chinh_thong_tin"><img src="/security_image.php?time=1385186895" id="security_image" name="security_image" alt="" width="65" height="31">
-                                                </div></td>
-                                        </tr>
-                                        <tr>
-                                            <td valign="top" class="tbUser-row"><b>Nhập mã chỉnh sửa:</b></td>
-                                            <td class="tbUser-row">
-                                                <input type="text" class="textbox" style="width:210px" name="ma_chinh_thong_tin" id="ma_chinh_thong_tin">
-                                                <div id="err_ma_chinh_thong_tin" class="textRed11"></div></td>
-                                        </tr>
+                                        
                                         <tr>
                                             <td colspan="2" align="right">
                                                 <input type="button" class="buttonGreen" value="Cập nhật" onclick="javascript: if (dat_trang_thai_dang_xu_ly()) {ntv_quan_tri_thay_doi_thong_tin_ntv(); }">
@@ -563,18 +552,7 @@ Thời gian quen biết:
                                 <input type="text" class="textbox" name="dien_thoai_lien_he" id="dien_thoai_lien_he" value="0962925599">
                                 <div id="err_dien_thoai_lien_he" class="textRed11"></div></td>
                         </tr>
-                        <tr>
-                            <td valign="top" class="tbUser-row"><b>Mã chỉnh sửa:</b></td>
-                            <td class="tbUser-row">
-                                <div id="div_ma_chinh_lien_he"><img src="/security_image.php?time=1385186895" id="security_image" name="security_image" alt="" width="65" height="31">
-                                </div></td>
-                        </tr>
-                        <tr>
-                            <td valign="top" class="tbUser-row"><b>Nhập mã chỉnh sửa:</b></td>
-                            <td class="tbUser-row">
-                                <input type="text" class="textbox" name="ma_chinh_lien_he" id="ma_chinh_lien_he">
-                                <div id="err_ma_chinh_lien_he" class="textRed11"></div></td>
-                        </tr>
+                        
                         <tr>
                             <td colspan="2" align="right">
                                 <input type="button" class="buttonGreen" value="Cập nhật" onclick="javascript: if (dat_trang_thai_dang_xu_ly()) {ntv_quan_tri_thay_doi_lien_he_ntv(); return(false); }">

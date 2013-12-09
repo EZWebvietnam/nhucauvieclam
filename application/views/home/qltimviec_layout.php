@@ -665,7 +665,6 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <h1 class="PageTitle"> Tủ hồ sơ Người tìm việc </h1>
                                         <?php echo $this->load->view($main_content); ?>
                                         <div id="footer">
 

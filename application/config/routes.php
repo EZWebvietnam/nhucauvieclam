@@ -41,6 +41,29 @@
 $route['default_controller'] = "home";
 $route['trang-chu'] = "home/home/index";
 $route['nganh-nghe/(:any)-(:any)'] = "chitietnghe/tuyendungnhanh/tuyendungnhanh_post/$1";
+$route['cv/(:any)'] = "cv/cv/index/$1";
+$route['hsda-dang/(:any)-(:any)'] = "dadang/hsdadang/index/$1";
+$route['tdda-dang/(:any)-(:any)'] = "tddadang/tddadang/index/$1";
+$route['daluu/(:any)'] = "daluu/tddaluu/index/$1";
+$route['dangkyuv'] = "dangky/dangkyuv";
+$route['dangkytd'] = "dangky/dangkytd";
+$route['dangky'] = "dangky/index";
+$route['dangnhap'] = "dangnhap/login_uv";
+$route['dangnhap/index'] = "dangnhap/index";
+$route['hoso-ungvien/(:any)'] = "hosouv/hosouv/hosouv_post/$1";
+$route['tin-tuyen-dung/(:any)'] = "Infotintd/Infotintd/view_job_post/$1";
+$route['quanly-hoso-ungvien/(:any)'] = "qlhsuv/qlhsuv/index/$1";
+$route['quanly-timviec/(:any)'] = "qltimviec/qltimviec/index/$1";
+$route['quanly-tuyendung/(:any)'] = "qltuyendung/qltuyendung/index/$1";
+$route['timviec-city/(:any)'] = "searchadress/searchadress/searchadress_post/$1";
+$route['tao-hsungvien/(:any)'] = "taohsuv/taohsuv/index/$1";
+$route['tao-tintuyendung/(:any)'] = "taotintd/tintd/index/$1";
+$route['tintd-dadang/(:any)'] = "tddadang/tddadang/index/$1";
+$route['thongtin-canhan/(:any)'] = "thongtincanhan/thongtincanhan/index/$1";
+$route['thongtin-ntd/(:any)'] = "thongtinntd/infontd/index/$1";
+$route['timvieclam'] = "timvieclam/timvieclam";
+$route['tuyendungnhanh'] = "tuyendungnhanh/tuyendungnhanh";
+$route['da-ung-tuyen/(:any)'] = "ungtuyen/daungtuyen/index/$1";
 
 /* End of file routes.php */
 /* Location: ./application/config/routes.php */

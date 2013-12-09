@@ -11,7 +11,7 @@
         <script type="text/javascript" async="" src="<?php echo base_url(); ?>template/home/js/ga.js"></script>
         <script src="https://apis.google.com/_/scs/apps-static/_/js/k=oz.gapi.vi.1BWypNDZPPU.O/m=plusone/rt=j/sv=1/d=1/ed=1/am=AQ/rs=AItRSTPXGZZksx7J8grxmtD0URB6MtpB7w/cb=gapi.loaded_0" async=""></script>
         <script type="text/javascript" src="<?php echo base_url(); ?>template/home/js/cache_blue_sky_default.js"></script>
-        <title>Tim viec lam</title>
+        <title>Nộp hồ sơ ứng tuyển</title>
     </head>
     <body>
         <div id="container">
@@ -601,7 +601,7 @@
                     </div>
                 </div>
             </div>
-            <div id="content">
+            <div id="content-">
                 <div id="content-top">
                     <div id="content-wrapper">
                         <div id="user-menu">
@@ -671,9 +671,9 @@
 
                         <div id="content-detail">
 
-                            <div class="content">
+                            <div class="content-qlhs">
                                 <input type="hidden" name="dang_xu_ly" id="dang_xu_ly" value="0">
-                                <div class="colLeft-QT">
+                                <div class="colLeft-QT1">
                                     <div class="navBar">
                                         <div class="navBarLeft"><h2><span class="navBarTxt24-1">Nộp hồ sơ trực tuyến</span></h2></div>
                                         <div class="clear"></div>
@@ -775,7 +775,7 @@
                     cap_nhat_nop_don_truc_tuyen();
                 }" value="Nộp đơn">&nbsp;&nbsp;<input type="button" class="button" onclick="javascript: window.location = document.referrer;" value="Quay lại"></div>
                                 </div>
-                                <div class="colRight-QT">
+                                <div class="colRight-QT2">
                                     <div><b class="text15">Hướng dẫn nộp trực tuyến</b></div>
                                     <div class="borderBot"></div>
                                     <div class="HSMauItem text12 lineHeight10"> 

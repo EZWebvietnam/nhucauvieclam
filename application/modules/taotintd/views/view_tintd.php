@@ -344,7 +344,7 @@
                                             </tr>
                                             <tr>
                                                 <td colspan="2" align="right">
-                                                    <input type="button" class="buttonRed" value="Sửa" onclick="javascript:document.getElementById('thong_tin_cong_ty').style.display = 'none';
+                                                    <input type="button" class="button" value="Sửa" onclick="javascript:document.getElementById('thong_tin_cong_ty').style.display = 'none';
                                                             document.getElementById('sua_thong_tin_cong_ty').style.display = '';
                                                             ntd_quan_tri_reset_ma_bao_mat('div_ma_chinh_thong_tin');">
                                                 </td>
@@ -416,10 +416,10 @@
                                             </tr>
                                             <tr>
                                                 <td colspan="2" align="right">
-                                                    <input type="button" class="buttonRed" value="Cập nhật" onclick="javascript: if (dat_trang_thai_dang_xu_ly()) {
+                                                    <input type="button" class="button" value="Cập nhật" onclick="javascript: if (dat_trang_thai_dang_xu_ly()) {
                                                                 ntd_quan_tri_thay_doi_thong_tin_ntd();
                                                             }">
-                                                    <input type="button" class="buttonRed" value="Hủy" onclick="javascript:document.getElementById('thong_tin_cong_ty').style.display = '';
+                                                    <input type="button" class="button" value="Hủy" onclick="javascript:document.getElementById('thong_tin_cong_ty').style.display = '';
                                                             document.getElementById('sua_thong_tin_cong_ty').style.display = 'none';
                                                             ntd_quan_tri_reset_ma_bao_mat('div_ma_xac_minh');">
                                                 </td>
@@ -461,7 +461,7 @@
                                             </tr>
                                             <tr>
                                                 <td colspan="2" align="right">
-                                                    <input type="button" class="buttonRed" value="Sửa" onclick="javascript:document.getElementById('thong_tin_lien_he').style.display = 'none';
+                                                    <input type="button" class="button" value="Sửa" onclick="javascript:document.getElementById('thong_tin_lien_he').style.display = 'none';
                                                             document.getElementById('sua_thong_tin_lien_he').style.display = '';
                                                             ntd_quan_tri_reset_ma_bao_mat('div_ma_chinh_lien_he');">
                                                 </td>
@@ -516,11 +516,11 @@
                                             </tr>
                                             <tr>
                                                 <td colspan="2" align="right">
-                                                    <input type="button" class="buttonRed" value="Cập nhật" onclick="javascript: if (dat_trang_thai_dang_xu_ly()) {
+                                                    <input type="button" class="button" value="Cập nhật" onclick="javascript: if (dat_trang_thai_dang_xu_ly()) {
                                                                 ntd_quan_tri_thay_doi_lien_he_ntd();
                                                                 return(false);
                                                             }">
-                                                    <input type="button" class="buttonRed" value="Hủy" onclick="javascript:document.getElementById('thong_tin_lien_he').style.display = '';
+                                                    <input type="button" class="button" value="Hủy" onclick="javascript:document.getElementById('thong_tin_lien_he').style.display = '';
                                                             document.getElementById('sua_thong_tin_lien_he').style.display = 'none';
                                                             ntd_quan_tri_reset_ma_bao_mat('div_ma_xac_minh');">
                                                 </td>

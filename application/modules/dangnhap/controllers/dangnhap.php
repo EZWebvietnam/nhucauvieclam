@@ -7,9 +7,7 @@
 		$this->lang->load('tank_auth');
   }
   public function index(){
-  
-  
-             $this->data['main_content']='dangnhap_first';
+    $this->data['main_content']='view_index';
     $this->load->view('home/dangnhap',$this->data);
   } 
   public function login_uv()

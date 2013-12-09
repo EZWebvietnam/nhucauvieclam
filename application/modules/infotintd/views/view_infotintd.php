@@ -115,7 +115,7 @@
     <div class="GridInfo">
         <div class="Content">
             <div id="job-employer-image">
-                <img src="img/default.gif" alt="Cty TNHH Cửu Long Giang Company">
+                <img src="<?php echo base_url(); ?>template/home/img/default.gif" alt="Cty TNHH Cửu Long Giang Company">
                 <div class="Blank"></div>
                 <img src="<?php echo base_url(); ?>template/home/img/choxacthuc.png" alt="Chờ xác thực">
                 <div class="Blank"></div>

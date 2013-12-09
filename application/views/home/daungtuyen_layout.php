@@ -616,23 +616,10 @@
                             <div id="content">
                                 <div id="content-bottom">
                                     <div id="content-wrapper">
-
-                                        <script type="text/javascript">
-                                            google_ad_client = "ca-pub-1637346731627697";
-                                            google_ad_slot = "8175208512";
-                                            google_ad_width = 728;
-                                            google_ad_height = 90;
-                                        </script>
-                                        <script type="text/javascript" src="//pagead2.googlesyndication.com/pagead/show_ads.js"></script>
                                         <div class="HighBlank"></div>
-
-                                        <h1 class="PageTitle"> Tài khoản Người tìm việc </h1>
-
                                         <div id="user-menu">
-
                                             <div class="GridInfo">
                                                 <div class="Content">
-
                                                     <ul class="UserMenu">
                                                         <li>
                                                             <a href="file:///E:/workspace/projectwebjobs/QLtimviec.html">Quản lý tìm việc</a>

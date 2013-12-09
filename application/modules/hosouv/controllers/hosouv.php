@@ -7,6 +7,8 @@ class Hosouv extends CI_Controller
     }
     public function hosouv_post($id = null)
     {
+        $data['user_post_list']=  $this->hsuv_post->load_user_post();
+        $data['job_post_list']=  $this->hsuv_post->load_job_post();
         $data['hsuv_detail']= $this->hsuv_post->load_post($id);
         if(empty($data['hsuv_detail']))
         {

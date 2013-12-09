@@ -339,13 +339,7 @@
                             <div id="content">
                                 <div id="content-bottom">
                                     <div id="content-wrapper">
-
-                                        
-                                        
                                         <div class="HighBlank"></div>
-
-                                        <h1 class="PageTitle"> Tài khoản Người tìm việc </h1>
-
                                         <div id="user-menu">
 
                                             <div class="GridInfo">

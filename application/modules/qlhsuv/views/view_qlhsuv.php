@@ -26,7 +26,7 @@
                             <tbody>
                                 <tr>
 
-                                    <td class="padTop10" align="center" valign="top" width="220"><img src="/upload/files_cua_nguoi_dung/logo/2013/11/23/1385194604_78577167.jpg" alt="<?php echo $qlhsuv_detail[0]['u_companyName'] ?>" height="140" width="187">
+                                    <td class="padTop10" align="center" valign="top" width="220"><img src="<?php echo base_url(); ?>template/home/img/user-img.jpg" alt="<?php echo $qlhsuv_detail[0]['u_companyName'] ?>" height="140" width="187">
                                         <input type="hidden" name="hid_c_ten_cty" id="hid_c_ten_cty" value="<?php echo $qlhsuv_detail[0]['u_companyName'] ?>">
                                     </td>
                                     <td class="tbUser-info" valign="top" width="260"><b>Vị trí tuyển	dụng:</b>

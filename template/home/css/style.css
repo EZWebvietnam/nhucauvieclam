@@ -2134,11 +2134,25 @@ ul.HSMau li a:hover {
 	width: 782px;
 	padding: 0 10px 0 0
 }
+.colLeft-QT1 {
+	float: left;
+	width: 782px;
+	padding: 0 10px 0 0;
+        background: #fff;
+}
 .colRight-QT {
 	float: left;
 	width: 190px;
 	height: 1800px;
 	padding: 10px;
+	background: #f5f5f5;
+	border: #dddddd solid 1px
+}
+.colRight-QT2 {
+	float: left;
+	width: 178px;
+	min-height: 980px;
+	padding: 3px;
 	background: #f5f5f5;
 	border: #dddddd solid 1px
 }

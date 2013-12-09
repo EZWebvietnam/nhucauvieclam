@@ -9,11 +9,7 @@ class Dangkytd extends CI_Controller
     public function index($id = null)
     {
         if ($this->input->post()) {
-            // Mỗi input có một name, tùy theo name của input là gì, thì khi gán vào biến cái name của input cũng như vậy.
-            //VI input title có name c_tieu_de_cv dùng để lưu tiêu đề, thì khi lấy ra là như dưới:
             $username = $this->input->post('c_username');
-            // Sau khi lấy ra, gán một mảng, key của mảng là tên field trong database
-
             $password = $this->input->post('c_password');
             $confpassword = $this->input->post('c_confpassword');
             $namecompany = $this->input->post('c_namecompany');

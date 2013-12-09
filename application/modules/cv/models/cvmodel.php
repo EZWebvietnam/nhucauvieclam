@@ -11,7 +11,7 @@ class Cvmodel extends CI_Model
         return $this->db->insert_id();
     }
     public function view_cv_detail($id = null){
-       $id = intval($id);
+        $id = intval($id);
         $this->db->select();
         $this->db->where('u_id',$id);
         $query_array = $this->db->get('tbl_job_user');
