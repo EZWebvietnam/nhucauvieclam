@@ -12,4 +12,3 @@ class Dangky extends CI_Model
     }
 }
 ?>
-

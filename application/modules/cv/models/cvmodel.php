@@ -18,3 +18,4 @@ class Cvmodel extends CI_Model
         return $query_array->result_array();
     }
 }
+?>

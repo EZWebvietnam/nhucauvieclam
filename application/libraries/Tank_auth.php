@@ -29,7 +29,7 @@ class Tank_auth
         $this->ci->load->config('tank_auth', true);
         $this->ci->load->library('session');
         $this->ci->load->database();
-        $this->ci->load->model('tank_auth/users');
+        $this->ci->load->model('dangky/tank_auth/users');
 
         // Try to autologin
         $this->autologin();
@@ -197,9 +197,9 @@ class Tank_auth
     /**
      * Create User is Normal User
      */
-    function create_user_normal($username, $email, $password, $birthday, $sex, $address,$city, $mobi, $fullname)
+    function create_user_normal($email, $password, $birthday, $sex, $address,$city, $mobi, $fullname)
     {
-        if ((strlen($username) > 0) and !$this->ci->users->is_username_available($email)) {
+        if ((strlen($email) > 0) and !$this->ci->users->is_username_available($email)) {
             $this->error = array('email' => 'auth_username_in_use');
         }else {
             // Hash password using phpass
