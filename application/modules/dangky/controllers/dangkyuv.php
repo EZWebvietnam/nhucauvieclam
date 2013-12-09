@@ -13,7 +13,6 @@ class Dangkyuv extends CI_Controller
     
     public function dangky_uv()
     {
-        $use_username = $this->config->item('use_username', 'tank_auth');
         $this->form_validation->set_rules('email', 'Email',
             'trim|required|xss_clean|valid_email');
         $this->form_validation->set_rules('c_fullname', 'Fullname',
@@ -32,8 +31,7 @@ class Dangkyuv extends CI_Controller
          
         if ($this->form_validation->run() == true) {
          
-            if (!is_null($data = $this->tank_auth->create_user_normal($use_username ? $this->
-                form_validation->set_value('username') : '', $this->form_validation->set_value('email'),
+            if (!is_null($data = $this->tank_auth->create_user_normal($this->form_validation->set_value('email'),
                 $this->form_validation->set_value('password'),$this->form_validation->set_value('c_birthday'),$this->input->post('c_sex'),$this->form_validation->set_value('c_address'),$this->input->post('c_city'),$this->input->post('c_mobi'),$this->form_validation->set_value('c_fullname')))) 
                 {
                 $data['site_name'] = $this->config->item('website_name', 'tank_auth');
