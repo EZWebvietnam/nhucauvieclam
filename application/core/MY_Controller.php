@@ -24,4 +24,10 @@ class MY_Controller extends CI_Controller
         $this->data['list_city']=$this->tuyendungnhanh_up->get_city();
         
     }
+    public function load_time()
+    {
+        $this->load->model('chitietnghe/tuyendungnhanh_up');
+        $this->data['list_time']=$this->tuyendungnhanh_up->get_time();
+        
+    }
 }
