@@ -68,7 +68,7 @@ if ($is_login == 1) {
 
 <div id="content-detail">
     <div class="Clear"></div>
-    <div id="content-left">
+    <div id="content-left1">
 
         <div class="Grid">
             <div class="TopLeft">

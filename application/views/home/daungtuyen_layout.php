@@ -9,8 +9,9 @@
                     <script src="https://apis.google.com/_/scs/apps-static/_/js/k=oz.gapi.vi.p_KGKzRPu9M.O/m=auth/exm=plusone/rt=j/sv=1/d=1/ed=1/am=AQ/rs=AItRSTORhacSmgAD0Mzfl8lNrx0nuGD1AA/cb=gapi.loaded_1" async=""></script>
                     <script src="https://apis.google.com/_/scs/apps-static/_/js/k=oz.gapi.vi.p_KGKzRPu9M.O/m=plusone/rt=j/sv=1/d=1/ed=1/am=AQ/rs=AItRSTORhacSmgAD0Mzfl8lNrx0nuGD1AA/cb=gapi.loaded_0" async=""></script>
                     <script type="text/javascript" src="<?php echo base_url(); ?>template/home/js/cache_blue_sky_default.js"></script>
-                    </head>
-                    <body>
+                    <script type="text/javascript" src="<?php echo base_url(); ?>template/home/js/demo.js"></script>
+     </head>
+     <body>
                         <div id="container">
                             <div id="header">
                                 <div id="header-inner">

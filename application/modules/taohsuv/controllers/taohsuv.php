@@ -4,6 +4,7 @@ class Taohsuv extends CI_Controller
     public function __construct() {
         parent::__construct();
         $this->load->model('taohsuv_model');
+        $this->load->library('session');
         $this->load->library('tank_auth');
     }
     public function index($id = null)
@@ -40,10 +41,19 @@ class Taohsuv extends CI_Controller
             $infokinhnghiem = $this->input->post('c_kinh_nghiem');
             $kynang = $this->input->post('ky_nang');
             $thamkhao = $this->input->post('c_nguon_tham_khao');
+            if($this->session->userdata('u_id'))
+            {
+                $u_id = $this->session->userdata('u_id');
+            }
+            else
+            {
+                $u_id = 0;
+            }
             
             $data = array('j_title'=>$title,
                 'j_trinhdo'=>$trinhdo,
                 'j_nganhhoc'=>$nganhhoc,
+                'u_id'=>$u_id,
                 'j_namtotnghiep'=>$namtotnghiep,
                 'j_loaitotnghiep'=>$loaitotnghiep,
                 'j_truongdahoc'=>$truongdahoc,
