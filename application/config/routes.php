@@ -67,6 +67,7 @@ $route['timvieclam'] = "timvieclam/timvieclam";
 $route['tuyendungnhanh'] = "tuyendungnhanh/tuyendungnhanh";
 $route['da-ung-tuyen/(:any)'] = "ungtuyen/daungtuyen/index/$1";
 $route['nopdon'] = "nopdon/nopdon";
+$route['tim-kiem'] = "formsearch/search";
 
 /* End of file routes.php */
 /* Location: ./application/config/routes.php */

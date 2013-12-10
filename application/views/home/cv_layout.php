@@ -144,7 +144,7 @@
                                     </div>
                                     <div class="BodyLeft">
                                         <div class="BodyRight">
-                                            <form action="/vieclam/timkiem" enctype="multipart/form-data" id="JobSearchJobFormForm" method="get" accept-charset="utf-8">
+                                            <form action="<?php echo base_url();?>tim-kiem" enctype="multipart/form-data" id="JobSearchJobFormForm" method="get" accept-charset="utf-8">
                                                 <div class="TableSearchForm1">
                                                     <select name="jobfeild" class="select-choose" id="JobJobfield">
                                                         <option value="">Chọn ngành nghề</option>

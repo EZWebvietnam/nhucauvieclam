@@ -35,26 +35,26 @@ class CI_Pagination {
 	var $num_links			=  5; // Number of "digit" links to show before/after the currently viewed page
 	var $cur_page			=  0; // The current page being viewed
 	var $use_page_numbers	= TRUE; // Use page number for segment instead of offset
-	var $first_link			= '';
-	var $next_link			= '';
-	var $prev_link			= '';
-	var $last_link			= '';
+	var $first_link			= '&lsaquo; First';
+	var $next_link			= '&gt;';
+	var $prev_link			= '&lt;';
+	var $last_link			= 'Last &rsaquo;';
 	var $uri_segment		= 3;
 	var $full_tag_open		= '';
 	var $full_tag_close		= '';
 	var $first_tag_open		= '';
 	var $first_tag_close	= '&nbsp;';
-	var $last_tag_open		= '<li class="pager-last last active">';
-	var $last_tag_close		= '</a></li></ul>';
+	var $last_tag_open		= '&nbsp;';
+	var $last_tag_close		= '';
 	var $first_url			= ''; // Alternative URL for the First Page.
-	var $cur_tag_open		= '<li class="pager-current first">';
-	var $cur_tag_close		= '</li></strong>';
-	var $next_tag_open		= '';
-	var $next_tag_close		= '';
-	var $prev_tag_open		= '</ul>';
+	var $cur_tag_open		= '&nbsp;<strong>';
+	var $cur_tag_close		= '</strong>';
+	var $next_tag_open		= '&nbsp;';
+	var $next_tag_close		= '&nbsp;';
+	var $prev_tag_open		= '&nbsp;';
 	var $prev_tag_close		= '';
-	var $num_tag_open		= '<li class="pager-item active">';
-	var $num_tag_close		= '</li>';
+	var $num_tag_open		= '&nbsp;';
+	var $num_tag_close		= '';
 	var $page_query_string	= FALSE;
 	var $query_string_segment = 'per_page';
 	var $display_pages		= TRUE;

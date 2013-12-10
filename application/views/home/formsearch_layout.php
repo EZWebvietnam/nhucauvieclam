@@ -132,7 +132,7 @@
                     </div>
                     <div class="BodyLeft">
                         <div class="BodyRight">
-                            <form action="/vieclam/timkiem" enctype="multipart/form-data" id="JobSearchJobFormForm" method="get" accept-charset="utf-8">
+                            <form action="<?php echo base_url();?>tim-kiem" enctype="multipart/form-data" id="JobSearchJobFormForm" method="get" accept-charset="utf-8">
                                 <div class="TableSearchForm1">
                                     <select name="jobfeild" class="select-choose" id="JobJobfield">
                                         <option value="">Chọn ngành nghề</option>
@@ -611,6 +611,10 @@
             <div id="content">
                 <div id="content-top">
                     <div id="content-wrapper">
+                    <?php 
+                    if($is_login == 1)
+                    {
+                    ?>
                         <div id="user-menu">
 
                             <div class="GridInfo">
@@ -675,7 +679,7 @@
                                 </div>
                             </div>
                         </div>
-                        
+                        <?php } ?>
                         <?php echo $this->load->view($main_content); ?>
 
                         <div id="footer">

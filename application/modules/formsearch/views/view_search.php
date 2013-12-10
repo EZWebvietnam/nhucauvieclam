@@ -39,14 +39,14 @@
                             <?php echo $job['e_cityID']; ?> <?php echo $job['e_cityID1']; ?><br>
                         </td>
                         <td class="Nowrap">
-                            <?php echo $job['e_dateActive']; ?><br>
-                            <?php echo $job['e_lastDate']; ?></td>                    
+                            <?php echo date('d/m/Y',$job['e_dateActive']); ?><br>
+                            <?php echo date('d/m/Y',$job['e_lastDate']); ?></td>                    
                     </tr>
                     <?php } ?>
                     
                 </tbody></table>
 
             <div class="Paginator">
-                <span class="prev">Trước</span>		<span class="current"><a href="/vieclam/timkiem/nganhnghe:tu-van-bao-hiem/tinhthanhpho:tp-ho-chi-minh/page:1">1</a></span> | <span><a href="/vieclam/timkiem/nganhnghe:tu-van-bao-hiem/tinhthanhpho:tp-ho-chi-minh/page:2">2</a></span> | <span><a href="/vieclam/timkiem/nganhnghe:tu-van-bao-hiem/tinhthanhpho:tp-ho-chi-minh/page:3">3</a></span>		<span class="next"><a href="/vieclam/timkiem/nganhnghe:tu-van-bao-hiem/tinhthanhpho:tp-ho-chi-minh/page:2" rel="next">Sau</a></span>	</div>
+                <?php echo $this->pagination->create_links();?>	</div>
         </div>
     </div>                        </div>

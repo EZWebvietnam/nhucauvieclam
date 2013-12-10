@@ -9,6 +9,8 @@ class Search extends CI_Controller
     }
     public function index()
     {
+         $this->load->library('pagination');
+        $this->load->helper('url');
         $active = true;
         $location = 'home';
         if ($this->tank_auth->is_logged_in($active, $location)) {
@@ -16,7 +18,43 @@ class Search extends CI_Controller
         } else {
             $this->data['is_login'] = 0;
         }
-        $this->data['job_list'] = $this->search_model->search_info();       
+        $sql_join ="SELECT tbl_job_user.u_id,tbl_job_user.u_username,tbl_job_user.u_companyName,tbl_job_user.u_companyAdress,tbl_job_user.u_companyTypeID,tbl_job_user.u_companyIntro,tbl_job_user.u_companyRun,tbl_job_user.u_companyMem,tbl_job_user.u_img,tbl_job_user.u_home,tbl_job_user.u_companyphone,tbl_job_user.u_companyMobi,tbl_job_user.u_fax,tbl_job_user.u_email,tbl_job_user.u_contactName,tbl_job_user.u_contactPosition,tbl_job_user.u_contactPhone,tbl_job_user.u_contactMobi,tbl_job_user.u_contactEmail,tbl_job_user.u_lienhe,tbl_job_user.u_countryID,tbl_job_user.u_cityID,tbl_job_user.u_urban,tbl_job_user.u_adress,tbl_job_user.u_redate,tbl_job_user.u_lasttime,tbl_job_user.u_now,tbl_job_user.u_sotin,tbl_job_user.u_visits,tbl_job_user.u_active,tbl_job_user.u_contactAdress,tbl_job_user.u_role,tbl_job_user.u_fullname,tbl_job_user.u_sex,tbl_job_user.u_birthday,tbl_job_user.u_age,tbl_job_user.u_marry,tbl_job_user.u_mobi,tbl_job_user.u_national"
+                . ",tbl_job_post.e_id,tbl_job_post.u_id,tbl_job_post.e_sex,tbl_job_post.e_mem,tbl_job_post.e_visits,tbl_job_post.e_timetest,tbl_job_post.e_phucloi,tbl_job_post.e_dateActive,tbl_job_post.e_title,tbl_job_post.e_lastDate,tbl_job_post.e_dateActive,tbl_job_post.e_descript,tbl_job_post.e_luonga,tbl_job_post.e_luong,tbl_job_post.e_luongb,tbl_job_post.e_cityID,tbl_job_post.e_cityID1,tbl_job_post.e_cityID2,tbl_job_post.e_cityID3,tbl_job_post.e_timeID,tbl_job_post.e_trinhdo,tbl_job_post.m_id,tbl_job_post.e_kinhnghiem,tbl_job_post.e_skill,tbl_job_post.e_hoso,tbl_job_post.e_phucLoi"
+                . ",tbl_employers_post.u_id,tbl_employers_post.j_id,tbl_employers_post.m_id,tbl_employers_post.j_countryID,tbl_employers_post.j_cityID,tbl_employers_post.j_cityID1,tbl_employers_post.j_cityID2,tbl_employers_post.j_cityID3,tbl_employers_post.j_title,tbl_employers_post.j_copy,tbl_employers_post.j_year,tbl_employers_post.j_muctieunn,tbl_employers_post.j_kynang,tbl_employers_post.j_dalam,tbl_employers_post.j_luongdaco,tbl_employers_post.j_chucmm,tbl_employers_post.j_luongmm,tbl_employers_post.j_timeID,tbl_employers_post.j_goto,tbl_employers_post.j_date,tbl_employers_post.j_date,tbl_employers_post.j_update,tbl_employers_post.j_lastdate,tbl_employers_post.j_visits,tbl_employers_post.j_active,tbl_employers_post.j_activeSearch,tbl_employers_post.j_hienthi,tbl_employers_post.j_trinhdo,tbl_employers_post.j_nganhhoc,tbl_employers_post.j_namtotnghiep,tbl_employers_post.j_loaitotnghiep,tbl_employers_post.j_truongdahoc,tbl_employers_post.j_ngoaingu,tbl_employers_post.j_trinhdonn,tbl_employers_post.j_tinhoc,tbl_employers_post.j_bangcapkhac,tbl_employers_post.j_kinhnghiem,tbl_employers_post.j_infokinhnghiem,tbl_employers_post.j_datestart,tbl_employers_post.j_thamkhao"
+                . " FROM tbl_job_user"
+                . " INNER JOIN tbl_job_post ON tbl_job_post.u_id = tbl_job_user.u_id INNER JOIN tbl_employers_post ON tbl_employers_post.u_id = tbl_job_user.u_id WHERE 1";
+        $config['base_url'] = base_url('tim-kiem?' . $this->input->get('jobfeild') . '&' . $this->input->get('jobplace'));
+        
+        $config['per_page'] = 10;
+        $config['uri_segment'] = 5;
+       
+        $page = $this->input->get('page');
+       
+        if ($page == '') {
+            $page = 1;
+        }
+        
+        $page = ($page - 1) * $config['per_page'];
+        if (!is_numeric($page)) {
+            show_404();
+            return;
+        }
+       
+         
+        if($this->input->get('jobfeild'))
+        {
+            $sql_join.=" AND tbl_job_post.e_id =".$this->input->get('jobfeild');
+        }
+        if($this->input->get('jobplace'))
+        {
+            $sql_join.=" AND tbl_job_post.e_cityID = ".$this->input->get('jobplace')." OR tbl_job_post.e_cityID1 =".$this->input->get('jobplace')." OR tbl_job_post.e_cityID2=".$this->input->get('jobplace');
+        }
+        $config['total_rows'] = $this->search_model->count_all($sql_join);
+        $this->pagination->initialize($config);
+        $sql_join.=" LIMIT $page,".$config['per_page'];
+        
+        $array_new = $this->search_model->search_info($sql_join);
+        $this->data['job_list'] = $array_new;       
         $this->data['main_content'] = 'view_search';
         $this->load->view('home/formsearch_layout', $this->data);
     }
