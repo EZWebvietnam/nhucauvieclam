@@ -13,32 +13,32 @@
                         <?php
                         $i = 1;
 
-                        foreach ($tuyendungnhanh_detail as $tin_tuyen_dung) {
+                        foreach ($sanggia_detail as $tin_sanggia) {
                             ?>
                             <?php
                             if ($i % 3 == 1) {
                                 ?>
                                 <tr>
                             <?php } ?>
-                                <td width="25%">
+                                <td width="33%">
                                     <table class="TableTdn">
                                         <tbody>
                                             <tr>
                                                 <td class="W50"><img src="<?php echo base_url(); ?>template/home/img/hr_asiafoods_vn.jpg" width="50" alt="CÔNG TY CỔ PHẦN THỰC PHẨM Á CHÂU"></td>
-                                                <td style="padding-left: 3px;"><a href="<?php echo base_url(); ?>Infotintd/Infotintd/view_job_post/<?php echo $tin_tuyen_dung['e_id']; ?>" target="_blank"><?php echo $tin_tuyen_dung['e_title']; ?></a>
-                                                    <div class="TinyBlank"></div><span class="Number">CÔNG TY CỔ PHẦN THỰC...</span></td>
-                                                
+                                                <td style="padding-left: 3px;"><a href="<?php echo base_url(); ?>tin-tuyen-dung/<?php echo $tin_sanggia['e_id']; ?>-<?php echo mb_strtolower(url_title(removesign($tin_sanggia['e_title']))) ?>" target="_blank"><?php echo $tin_sanggia['e_title']; ?></a>
+                                                    <div class="TinyBlank"></div><span class="Number"><?php echo $tin_sanggia['u_companyName']; ?></span>
+                                                </td>                                                
                                             </tr>
                                         </tbody>
                                     </table></td>
-    <?php
-    if ($i % 3 == 0) {
-        ?>
-                                    <td width="25%"></td>
+                            <?php
+                            if ($i % 3 == 0) {
+                                ?>
+                                    <td width="33%"></td>
                                 </tr>
                                 <?php } ?>
-    <?php $i++;
-} ?>
+                                    <?php $i++;
+                                } ?>
 
                     </tbody>
                 </table>
@@ -63,7 +63,7 @@
                         <?php
                         $i = 1;
 
-                        foreach ($tuyendung_detail as $tin_tuyen_dung) {
+                        foreach ($tuyendung_detail as $tin_td_hot) {
                             ?>
                             <?php
                             if ($i % 3 == 1) {
@@ -73,9 +73,9 @@
                             <td width="33%">
                                 <ul>
                                     <li>
-                                        <a href="/vieclam/congviec/2800257/eden-spa-tuyen-ky-thuat-vien-spa.html" title="<?php echo $tuyendungnhanh_detail[0]['e_title']; ?>" target="_blank"><?php echo $tuyendungnhanh_detail[0]['e_title']; ?></a>
+                                        <a href="<?php echo base_url(); ?>tin-tuyen-dung/<?php echo $tin_td_hot['e_id']; ?>-<?php echo mb_strtolower(url_title(removesign($tin_td_hot['e_title']))) ?>" title="<?php echo $tin_td_hot['e_title']; ?>" target="_blank"><?php echo $tin_td_hot['e_title']; ?></a>
                                         <div class="TinyBlank"></div>
-                                        <span class="Number">SAIGON EDEN SPA</span>
+                                        <span class="Number"><?php echo $tin_td_hot['u_companyName']; ?></span>
                                     </li>
                                 </ul></td>
                         <?php
@@ -199,7 +199,7 @@
                      {
                          ?>                     
                     <tr class="Even">
-                        <td><a href="/vieclam/congviec/2671624/nhan-vien-kinh-doanh.html" class="NormalJob"><?php echo $tin_tuyen_dung['e_title']; ?></a><div class="Blank"></div><a href="/vieclam/congty/2552602/cong-ty-tnhh-tm-dv-xd-hiep-phat.html" class="VipEmployer">Công ty TNHH TM DV XD Hiệp Phát</a></td>
+                        <td><a href="<?php echo base_url(); ?>tin-tuyen-dung/<?php echo $tin_td_hot['e_id']; ?>-<?php echo mb_strtolower(url_title(removesign($tin_td_hot['e_title']))) ?>" class="NormalJob"><?php echo $tin_tuyen_dung['e_title']; ?></a><div class="Blank"></div><a href="/vieclam/congty/2552602/cong-ty-tnhh-tm-dv-xd-hiep-phat.html" class="VipEmployer"><?php echo $tin_tuyen_dung['u_companyName']; ?></a></td>
                         <td class="Nowrap"><?php echo $tin_tuyen_dung['e_trinhdo']; ?>
                             <br>
                                 <?php echo $tin_tuyen_dung['e_kinhnghiem']; ?></td>

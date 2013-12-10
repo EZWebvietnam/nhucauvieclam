@@ -2,7 +2,7 @@
     <div class="GridSub">
         <div class="TopLeft">
             <div class="TopRight">
-                <h2 class="Headline"><a href="/vieclam/tintuyendungnhanh" target="_blank">Tin tuyển dụng nhanh</a></h2>
+                <h2 class="Headline"><a href="/vieclam/tintuyendungnhanh" target="_blank">Tin tìm việc nhanh</a></h2>
             </div>
         </div>
         <div class="BodyLeft">
@@ -13,31 +13,32 @@
                         <?php
                         $i = 1;
 
-                        foreach ($timviecnhanh_detail as $tin_timviec) {
+                        foreach ($uvsanggia_detail as $tin_sanggia) {
                             ?>
                             <?php
                             if ($i % 3 == 1) {
                                 ?>
                                 <tr>
                             <?php } ?>
-                                <td width="25%">
+                                <td width="33%">
                                     <table class="TableTdn">
                                         <tbody>
                                             <tr>
                                                 <td class="W50"><img src="<?php echo base_url(); ?>template/home/img/hr_asiafoods_vn.jpg" width="50" alt="CÔNG TY CỔ PHẦN THỰC PHẨM Á CHÂU"></td>
-                                                <td style="padding-left: 3px;"><a href="<?php echo base_url(); ?>Infotintd/Infotintd/view_job_post/<?php echo $tin_timviec['j_id']; ?>" target="_blank"><?php echo $tin_timviec['j_title']; ?></a>
-                                                    <div class="TinyBlank"></div><span class="Number">CÔNG TY CỔ PHẦN THỰC...</span></td>
+                                                <td style="padding-left: 3px;"><a href="<?php echo base_url(); ?>info-hoso-ungvien/<?php echo $tin_sanggia['j_id']; ?>-<?php echo mb_strtolower(url_title(removesign($tin_sanggia['j_title']))) ?>" target="_blank"><?php echo $tin_sanggia['j_title']; ?></a>
+                                                    <div class="TinyBlank"></div><span class="Number"><?php echo $tin_sanggia['u_fullname']; ?></span>
+                                                </td>                                                
                                             </tr>
                                         </tbody>
                                     </table></td>
-    <?php
-    if ($i % 3 == 0) {
-        ?>
-                                    <td width="25%"></td>
+                            <?php
+                            if ($i % 3 == 0) {
+                                ?>
+                                    <td width="33%"></td>
                                 </tr>
                                 <?php } ?>
-    <?php $i++;
-} ?>
+                                    <?php $i++;
+                                } ?>
 
                     </tbody>
                 </table>
@@ -51,7 +52,7 @@
     <div class="GridVip">
         <div class="TopLeft">
             <div class="TopRight">
-                <h2 class="Headline"><a href="/tintieudiem" target="_blank">Tin tiêu điểm tuyển dụng nhân sự</a><?php echo $list_cate_job[0]['m_name']; ?></h2>
+                <h2 class="Headline"><a href="/tintieudiem" target="_blank">Tin tiêu điểm tuyển tìm việc làm</a></h2>
             </div>
         </div>
         <div class="BodyLeft">
@@ -62,7 +63,7 @@
                         <?php
                         $i = 1;
 
-                        foreach ($timviecnhanh_detail as $tin_timviec) {
+                        foreach ($uvhot_detail as $tin_td_hot) {
                             ?>
                             <?php
                             if ($i % 3 == 1) {
@@ -72,9 +73,9 @@
                             <td width="33%">
                                 <ul>
                                     <li>
-                                        <a href="/vieclam/congviec/2800257/eden-spa-tuyen-ky-thuat-vien-spa.html" title="<?php echo $tin_timviec['j_title']; ?>" target="_blank"><?php echo $tin_timviec['j_title']; ?></a>
+                                        <a href="<?php echo base_url(); ?>info-hoso-ungvien/<?php echo $tin_td_hot['j_id']; ?>-<?php echo mb_strtolower(url_title(removesign($tin_td_hot['j_title']))) ?>" title="<?php echo $tin_td_hot['j_title']; ?>" target="_blank"><?php echo $tin_td_hot['j_title']; ?></a>
                                         <div class="TinyBlank"></div>
-                                        <span class="Number">SAIGON EDEN SPA</span>
+                                        <span class="Number"><?php echo $tin_td_hot['u_fullname']; ?></span>
                                     </li>
                                 </ul></td>
                         <?php
@@ -194,23 +195,23 @@
                             Ngày hết hạn </th>
                     </tr>
                     <?php 
-                     foreach ($timviecnhanh_detail as $tin_timviec)
+                     foreach ($tintimviec_detail as $tin_tuyen_dung)
                      {
                          ?>                     
                     <tr class="Even">
-                        <td><a href="/vieclam/congviec/2671624/nhan-vien-kinh-doanh.html" class="NormalJob"><?php echo $tin_timviec['j_title']; ?></a><div class="Blank"></div><a href="/vieclam/congty/2552602/cong-ty-tnhh-tm-dv-xd-hiep-phat.html" class="VipEmployer">Công ty TNHH TM DV XD Hiệp Phát</a></td>
-                        <td class="Nowrap"><?php echo $tin_timviec['j_trinhdo']; ?>
+                        <td><a href="<?php echo base_url(); ?>info-hoso-ungvien/<?php echo $tin_td_hot['j_id']; ?>-<?php echo mb_strtolower(url_title(removesign($tin_td_hot['j_title']))) ?>" class="NormalJob"><?php echo $tin_tuyen_dung['j_title']; ?></a><div class="Blank"></div><a href="/vieclam/congty/2552602/cong-ty-tnhh-tm-dv-xd-hiep-phat.html" class="VipEmployer"><?php echo $tin_tuyen_dung['u_companyName']; ?></a></td>
+                        <td class="Nowrap"><?php echo $tin_tuyen_dung['j_trinhdo']; ?>
                             <br>
-                                <?php echo $tin_timviec['j_kinhnghiem']; ?></td>
-                        <td class="Nowrap"><?php echo $tin_timviec['j_luongmm']; ?></td>
-                        <td class="Nowrap"><?php echo $tin_timviec['j_cityID']; ?>
+                                <?php echo $tin_tuyen_dung['j_kinhnghiem']; ?></td>
+                        <td class="Nowrap"><?php echo $tin_tuyen_dung['j_luongmm']; ?></td>
+                        <td class="Nowrap"><?php echo $tin_tuyen_dung['j_cityID']; ?>
                             <br>
-                                <?php echo $tin_timviec['j_cityID']; ?>
+                                <?php echo $tin_tuyen_dung['j_cityID']; ?>
                             <br>
                         </td>
-                        <td class="Nowrap"><?php echo $tin_timviec['j_update']; ?>
+                        <td class="Nowrap"><?php echo $tin_tuyen_dung['j_update']; ?>
                             <br>
-                                <?php echo $tin_timviec['j_lastdate']; ?></td>
+                                <?php echo $tin_tuyen_dung['j_lastdate']; ?></td>
                     </tr>
                     <?php
                         }

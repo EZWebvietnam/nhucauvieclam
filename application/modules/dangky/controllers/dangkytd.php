@@ -13,7 +13,13 @@ class Dangkytd extends CI_Controller
     }
     public function dangky_td()
     {
-        
+        $active = true;
+        $location = 'home';
+        if ($this->tank_auth->is_logged_in($active, $location)) {
+            $data['is_login'] = 1;
+        } else {
+            $data['is_login'] = 0;
+        }
         $this->form_validation->set_rules('email', 'Email',
             'trim|required|xss_clean|valid_email');
         $this->form_validation->set_rules('c_company', 'Company',

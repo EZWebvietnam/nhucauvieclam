@@ -7,11 +7,25 @@
 		$this->lang->load('tank_auth');
   }
   public function index(){
-    $this->data['main_content']='view_index';
-    $this->load->view('home/dangnhap',$this->data);
+      $active = true;
+      $location = 'home';
+        if ($this->tank_auth->is_logged_in($active, $location)) {
+            $this->data['is_login'] = 1;
+        } else {
+            $this->data['is_login'] = 0;
+        }
+      $this->data['main_content']='view_index';
+      $this->load->view('home/dangnhap',$this->data);
   } 
   public function login_uv()
   {
+      $active = true;
+      $location = 'home';
+        if ($this->tank_auth->is_logged_in($active, $location)) {
+            $this->data['is_login'] = 1;
+        } else {
+            $this->data['is_login'] = 0;
+        }
       $this->data['login_by_username'] = ($this->config->item('login_by_username', 'tank_auth') AND
 					$this->config->item('use_username', 'tank_auth'));
 			$this->data['login_by_email'] = $this->config->item('login_by_email', 'tank_auth');

@@ -5,8 +5,8 @@
                 <h2>Đăng nhập Người tìm việc</h2>
                 <img src="<?php echo base_url(); ?>template/home/img/login.jpg" alt="Đăng nhập">
                 <div class="HighBlank"></div>
-                <button type="button" id="button-seeker-login">
-                    <span>Đăng nhập Người tìm việc</span>
+                <button type="button" id="button-seeker-login" >
+                    <a href="<?php echo base_url(); ?>dangnhap"><span>Đăng nhập Người tìm việc</span> </a>
                 </button>
                 <div class="HighBlank"></div>
             </div>
@@ -14,8 +14,8 @@
                 <h2>Đăng nhập Nhà tuyển dụng</h2>
                 <img src="<?php echo base_url(); ?>template/home/img/register.jpg" alt="Đăng nhập">
                 <div class="HighBlank"></div>
-                <button type="button" id="button-employer-login">
-                    <span>Đăng nhập Nhà tuyển dụng</span>
+                <button type="button" id="button-employer-login" >
+                    <a href="<?php echo base_url(); ?>dangnhap"><span>Đăng nhập Nhà tuyển dụng</span></a>
                 </button>
                 <div class="HighBlank"></div>
             </div>
