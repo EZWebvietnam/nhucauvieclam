@@ -625,66 +625,8 @@
                                 <div id="content-bottom">
                                     <div id="content-wrapper">
                                         <div class="HighBlank"></div>
-                                        <div id="user-menu">
 
-                                            <div class="GridInfo">
-                                                <div class="Content">
-
-                                                    <ul class="UserMenu">
-                                                        <li>
-                                                            <a href="file:///E:/workspace/projectwebjobs/qltuyendung.html">Quản lý tuyển dụng</a>
-                                                        </li>
-
-                                                        <li class="Separator">
-                                                            |
-                                                        </li>
-
-                                                        <li>
-                                                            <a href="file:///E:/workspace/projectwebjobs/tinTDdadang.html">Tin TD đã đăng</a>
-                                                        </li>
-
-                                                        <li class="Separator">
-                                                            |
-                                                        </li>
-
-                                                        <li>
-                                                            <a href="file:///E:/workspace/projectwebjobs/taotinTD.html">Taọ tin TD mới</a>
-                                                        </li>
-
-                                                        <li class="Separator">
-                                                            |
-                                                        </li>
-
-                                                        <li>
-                                                            <a href="file:///E:/workspace/projectwebjobs/taikhoanNTD.html">Thông tin NTD</a>
-                                                        </li>
-
-                                                        <li class="Separator">
-                                                            |
-                                                        </li>
-
-                                                        <li>
-                                                            <a href="file:///E:/workspace/projectwebjobs/qlhsUV.html">Quản lý hồ sơ ứng viên</a>
-                                                        </li>
-
-                                                        <li class="Separator">
-                                                            |
-                                                        </li>
-
-                                                        <li>
-                                                            <a href="/nhatuyendung/hosodaxem">Liên hệ quản cáo</a>
-                                                        </li>
-
-                                                    </ul>
-                                                    <div class="Clear"></div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="content-info" style="background: none repeat scroll 0 0 #FFFFFF;">
-                                            <input type="hidden" name="dang_xu_ly" id="dang_xu_ly" value="0">
-                                                <div name="div_thong_tin_ntd" id="div_thong_tin_ntd">
-
-<?php echo $this->load->view($main_content); ?>
+                                                <?php echo $this->load->view($main_content); ?>
 
                                                 </div>
                                                 

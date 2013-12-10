@@ -113,27 +113,28 @@
                                     </div>
                                     <div class="clear"></div>
                                     <?php if ($is_login == 0) { ?>
-                    <div id="header-user-menu">
-                        <ul>
-                            <li>
-                                <a href="<?php echo base_url(); ?>dangky" ga_click="_gaq.push(['_trackEvent', 'Header', 'Click', 'Đăng ký']);" title="Đăng ký"> Đăng ký </a>
-                            </li>
-                            <li class="Separator">
-                                |
-                            </li>
-                            <li>
-                                <a href="<?php echo base_url(); ?>dangnhap/index" ga_click="_gaq.push(['_trackEvent', 'Header', 'Click', 'Đăng nhập']);" title="Đăng nhập"> Đăng nhập </a>
-                            </li>
-                        </ul>
+                                        <div id="header-user-menu">
+                                            <ul>
+                                                <li>
+                                                    <a href="<?php echo base_url(); ?>dangky" ga_click="_gaq.push(['_trackEvent', 'Header', 'Click', 'Đăng ký']);" title="Đăng ký"> Đăng ký </a>
+                                                </li>
+                                                <li class="Separator">
+                                                    |
+                                                </li>
+                                                <li>
+                                                    <a href="<?php echo base_url(); ?>dangnhap/index" ga_click="_gaq.push(['_trackEvent', 'Header', 'Click', 'Đăng nhập']);" title="Đăng nhập"> Đăng nhập </a>
+                                                </li>
+                                            </ul>
 
-                    </div>
-                    <?php } else { ?> 
-                    <div id="header-user-menu">
-                        <?php echo $this->session->userdata['u_username']; ?> | <a href="<?php echo
-    base_url(); ?>dangnhap/logout">Đăng xuất</a>
+                                        </div>
+                                    <?php } else { ?> 
+                                        <div id="header-user-menu">
+                                            <?php echo $this->session->userdata['u_username']; ?> | <a href="<?php echo
+                                        base_url();
+                                            ?>dangnhap/logout">Đăng xuất</a>
 
-                    </div>
-                    <?php } ?>
+                                        </div>
+<?php } ?>
                                 </div>
                                 <div class="HighBlank"></div>
                                 <div class="Clear"></div>
@@ -573,51 +574,51 @@
                                 <div id="top-menubar">
                                     <div id="top-menubar-left">
                                         <div id="top-menubar-right">
-                            <ul>
-                                <li>
-                                    <a class="trangchu" href="<?php echo base_url(); ?>" ga_click="_gaq.push(['_trackEvent', 'Footer', 'Click', 'Trang chủ']);" target="" rel=""> Trang chủ </a>
-                                </li>
-                                <li class="Separator">
-                                    |
-                                </li>
-                                <li>
-                                    <a href="<?php echo base_url(); ?>timvieclam"> Tìm việc làm </a>
-                                </li>
-                                <li class="Separator">
-                                    |
-                                </li>
-                                <li>
-                                    <a href="<?php echo base_url(); ?>tuyendungnhanh" ga_click="_gaq.push(['_trackEvent', 'Footer', 'Click', 'Tìm hồ sơ Người tìm việc']);" target="" rel=""> Tìm hồ sơ Người tìm việc </a>
-                                </li>
-                                <li class="Separator">
-                                    |
-                                </li>
-                                <li>
-                                    <a href="<?php echo base_url(); ?>" ga_click="_gaq.push(['_trackEvent', 'Footer', 'Click', 'Việc làm 24h']);" target="_blank" rel="">nhucauvieclam</a>
-                                </li>
+                                            <ul>
+                                                <li>
+                                                    <a class="trangchu" href="<?php echo base_url(); ?>" ga_click="_gaq.push(['_trackEvent', 'Footer', 'Click', 'Trang chủ']);" target="" rel=""> Trang chủ </a>
+                                                </li>
+                                                <li class="Separator">
+                                                    |
+                                                </li>
+                                                <li>
+                                                    <a href="<?php echo base_url(); ?>timvieclam"> Tìm việc làm </a>
+                                                </li>
+                                                <li class="Separator">
+                                                    |
+                                                </li>
+                                                <li>
+                                                    <a href="<?php echo base_url(); ?>tuyendungnhanh" ga_click="_gaq.push(['_trackEvent', 'Footer', 'Click', 'Tìm hồ sơ Người tìm việc']);" target="" rel=""> Tìm hồ sơ Người tìm việc </a>
+                                                </li>
+                                                <li class="Separator">
+                                                    |
+                                                </li>
+                                                <li>
+                                                    <a href="<?php echo base_url(); ?>" ga_click="_gaq.push(['_trackEvent', 'Footer', 'Click', 'Việc làm 24h']);" target="_blank" rel="">nhucauvieclam</a>
+                                                </li>
 
-                                <li class="Separator">
-                                    |
-                                </li>
-                                <li>
-                                    <a href="<?php echo base_url(); ?>" ga_click="_gaq.push(['_trackEvent', 'Footer', 'Click', 'Cẩm nang tuyển dụng']);" target="_blank" rel="nofollow"> Cẩm nang tuyển dụng </a>
-                                </li>
-                                <li class="Separator">
-                                    |
-                                </li>
-                                <li>
-                                    <a href="<?php echo base_url(); ?>" ga_click="_gaq.push(['_trackEvent', 'Footer', 'Click', 'Cẩm nang việc làm']);" target="_blank" rel="nofollow"> Cẩm nang việc làm </a>
-                                </li>
-                                <li class="Separator">
-                                    |
-                                </li>
-                                <li>
-                                    <a href="<?php echo base_url(); ?>" ga_click="_gaq.push(['_trackEvent', 'Footer', 'Click', 'Nghề nghiệp']);" target="_blank" rel=""> Nghề nghiệp </a>
-                                </li>
+                                                <li class="Separator">
+                                                    |
+                                                </li>
+                                                <li>
+                                                    <a href="<?php echo base_url(); ?>" ga_click="_gaq.push(['_trackEvent', 'Footer', 'Click', 'Cẩm nang tuyển dụng']);" target="_blank" rel="nofollow"> Cẩm nang tuyển dụng </a>
+                                                </li>
+                                                <li class="Separator">
+                                                    |
+                                                </li>
+                                                <li>
+                                                    <a href="<?php echo base_url(); ?>" ga_click="_gaq.push(['_trackEvent', 'Footer', 'Click', 'Cẩm nang việc làm']);" target="_blank" rel="nofollow"> Cẩm nang việc làm </a>
+                                                </li>
+                                                <li class="Separator">
+                                                    |
+                                                </li>
+                                                <li>
+                                                    <a href="<?php echo base_url(); ?>" ga_click="_gaq.push(['_trackEvent', 'Footer', 'Click', 'Nghề nghiệp']);" target="_blank" rel=""> Nghề nghiệp </a>
+                                                </li>
 
-                            </ul>
-                            <div class="Clear"></div>
-                        </div>
+                                            </ul>
+                                            <div class="Clear"></div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -625,386 +626,335 @@
                                 <div id="content-bottom">
                                     <div id="content-wrapper">
 
-                                        <div id="user-menu">
+<?php echo $this->load->view($main_content); ?>
 
-							<div class="GridInfo">
-								<div class="Content">
+                                        <div id="footer">
 
-									<ul class="UserMenu">
-										<li>
-											<a href="file:///E:/workspace/projectwebjobs/qltuyendung.html">Quản lý tuyển dụng</a>
-										</li>
-										<li class="Separator">
-											|
-										</li>
-										<li>
-											<a href="file:///E:/workspace/projectwebjobs/tinTDdadang.html">Tin TD đã đăng</a>
-										</li>
-										<li class="Separator">
-											|
-										</li>
-										<li>
-											<a href="file:///E:/workspace/projectwebjobs/taotinTD.html">Taọ tin TD mới</a>
-										</li>
-										<li class="Separator">
-											|
-										</li>
-										<li>
-											<a href="file:///E:/workspace/projectwebjobs/taikhoanNTD.html">Thông tin NTD</a>
-										</li>
-										<li class="Separator">
-											|
-										</li>
-										<li>
-											<a href="file:///E:/workspace/projectwebjobs/qlhsUV.html">Quản lý hồ sơ ứng viên</a>
-										</li>
-										<li class="Separator">
-											|
-										</li>
-										<li>
-											<a href="/nhatuyendung/hosodaxem">Liên hệ quản cáo</a>
-										</li>
-									</ul>
-									<div class="Clear"></div>
-								</div>
-							</div>
-						</div>
-                                        <div class="content-qlhs">
-                                            <input type="hidden" name="dang_xu_ly" id="dang_xu_ly" value="0">
-                                                <div>
-                                                    <marquee bgcolor="#FFCC99" scrolldelay="180" style="padding:5px;">
-                                                        <span style="font-size:14px; color:red; font-family: Verdana, Tahoma, Helvetica, Arial;"> Từ 25/10 NTV chỉ được đăng tối đa 10 hồ sơ tìm việc </span>
-                                                    </marquee>
+                                            <div id="footer-menubar">
+                                                <div id="footer-menubar-left">
+                                                    <div id="footer-menubar-right">
+                                                        <ul>
+                                                            <li>
+                                                                <a class="trangchu" href="<?php echo base_url(); ?>" ga_click="_gaq.push(['_trackEvent', 'Footer', 'Click', 'Trang chủ']);" target="" rel=""> Trang chủ </a>
+                                                            </li>
+                                                            <li class="Separator">
+                                                                |
+                                                            </li>
+                                                            <li>
+                                                                <a href="<?php echo base_url(); ?>timvieclam"> Tìm việc làm </a>
+                                                            </li>
+                                                            <li class="Separator">
+                                                                |
+                                                            </li>
+                                                            <li>
+                                                                <a href="<?php echo base_url(); ?>tuyendungnhanh" ga_click="_gaq.push(['_trackEvent', 'Footer', 'Click', 'Tìm hồ sơ Người tìm việc']);" target="" rel=""> Tìm hồ sơ Người tìm việc </a>
+                                                            </li>
+                                                            <li class="Separator">
+                                                                |
+                                                            </li>
+                                                            <li>
+                                                                <a href="<?php echo base_url(); ?>" ga_click="_gaq.push(['_trackEvent', 'Footer', 'Click', 'Việc làm 24h']);" target="_blank" rel="">nhucauvieclam</a>
+                                                            </li>
+
+                                                            <li class="Separator">
+                                                                |
+                                                            </li>
+                                                            <li>
+                                                                <a href="<?php echo base_url(); ?>" ga_click="_gaq.push(['_trackEvent', 'Footer', 'Click', 'Cẩm nang tuyển dụng']);" target="_blank" rel="nofollow"> Cẩm nang tuyển dụng </a>
+                                                            </li>
+                                                            <li class="Separator">
+                                                                |
+                                                            </li>
+                                                            <li>
+                                                                <a href="<?php echo base_url(); ?>" ga_click="_gaq.push(['_trackEvent', 'Footer', 'Click', 'Cẩm nang việc làm']);" target="_blank" rel="nofollow"> Cẩm nang việc làm </a>
+                                                            </li>
+                                                            <li class="Separator">
+                                                                |
+                                                            </li>
+                                                            <li>
+                                                                <a href="<?php echo base_url(); ?>" ga_click="_gaq.push(['_trackEvent', 'Footer', 'Click', 'Nghề nghiệp']);" target="_blank" rel=""> Nghề nghiệp </a>
+                                                            </li>
+
+                                                        </ul>
+                                                        <div class="Clear"></div>
+                                                    </div>
                                                 </div>
-                                                <?php echo $this->load->view($main_content); ?>
+                                            </div>
 
-                                                <div id="footer">
+                                            <div id="web-company-info">
+                                                <h2>Công ty Cổ phần Tìm Việc Nhanh - MST 0303 452 460</h2>
+                                                <table>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td width="33%"><span class="AlertTextSmall">TimViecNhanh.com TP.HCM</span><p></p>
+                                                                <table class="TableFooterInfo">
+                                                                    <tbody>
+                                                                        <tr>
+                                                                            <th>Địa chỉ</th>
+                                                                            <td>380 Bùi Hữu Nghĩa, Q.Bình Thạnh</td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <th>Chăm Sóc KH</th>
+                                                                            <td> (08) 7309 8888 </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <th>Bộ phận khác</th>
+                                                                            <td> (08) 355 159 36 - 355 159 37
+                                                                                <br>
+                                                                                    (08) 355 159 38 - 355 159 39 </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <th>Email</th>
+                                                                            <td>hcm@timviecnhanh.com</td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <th>Fax</th>
+                                                                            <td>(08) 351 023 38</td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table></td>
+                                                            <td width="33%" class="pl15"><span class="AlertTextSmall">TimViecNhanh.com Hà Nội</span><p></p>
+                                                                <table class="TableFooterInfo">
+                                                                    <tbody>
+                                                                        <tr>
+                                                                            <th>Địa chỉ</th>
+                                                                            <td>39 Tây Sơn, Q.Đống Đa</td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <th>Điện thoại</th>
+                                                                            <td>(04) 7309 8888</td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <th>Email</th>
+                                                                            <td>hanoi@timviecnhanh.com</td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table></td>
+                                                            <td width="33%" class="pl15"><span class="AlertTextSmall">TimViecNhanh.com Đà Nẵng</span><p></p>
+                                                                <table class="TableFooterInfo">
+                                                                    <tbody>
+                                                                        <tr>
+                                                                            <th>Địa chỉ</th>
+                                                                            <td>135 Hoàng Hoa Thám, Q.Thanh Khê</td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <th>Điện thoại</th>
+                                                                            <td>(0511) 7309 888</td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <th>Email</th>
+                                                                            <td>danang@timviecnhanh.com</td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table></td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
 
-                                                    <div id="footer-menubar">
-                                                        <div id="footer-menubar-left">
-                                                            <div id="footer-menubar-right">
-                                        <ul>
-                                <li>
-                                    <a class="trangchu" href="<?php echo base_url(); ?>" ga_click="_gaq.push(['_trackEvent', 'Footer', 'Click', 'Trang chủ']);" target="" rel=""> Trang chủ </a>
-                                </li>
-                                <li class="Separator">
-                                    |
-                                </li>
-                                <li>
-                                    <a href="<?php echo base_url(); ?>timvieclam"> Tìm việc làm </a>
-                                </li>
-                                <li class="Separator">
-                                    |
-                                </li>
-                                <li>
-                                    <a href="<?php echo base_url(); ?>tuyendungnhanh" ga_click="_gaq.push(['_trackEvent', 'Footer', 'Click', 'Tìm hồ sơ Người tìm việc']);" target="" rel=""> Tìm hồ sơ Người tìm việc </a>
-                                </li>
-                                <li class="Separator">
-                                    |
-                                </li>
-                                <li>
-                                    <a href="<?php echo base_url(); ?>" ga_click="_gaq.push(['_trackEvent', 'Footer', 'Click', 'Việc làm 24h']);" target="_blank" rel="">nhucauvieclam</a>
-                                </li>
+                                            <div class="Blank"></div>
+                                            <div id="web-company-partner">
+                                                <table>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td width="33%">
+                                                                <ul>
+                                                                    <li>
+                                                                        Tuyển dụng nhanh nhất vì có hàng ngàn website việc làm đăng lại tin tuyển dụng của Timviecnhanh.com
+                                                                    </li>
+                                                                    <li>
+                                                                        Nhãn hiệu nổi tiếng TimViecNhanh đã được bảo hộ độc quyền nhãn hiệu số 4-0150860-000
+                                                                    </li>
+                                                                </ul></td>
+                                                            <td width="33%" class="pl15">
+                                                                <ul>
+                                                                    <li>
+                                                                        Giấy phép Mạng Xã Hội trực tuyến số 25-MXH của Bộ Thông Tin Truyền Thông
+                                                                    </li>
+                                                                    <li>
+                                                                        Giấy phép Trang Tin điện tử tổng hợp số 57/GP-ICP-STTTT của Sở Thông Tin Truyền Thông
+                                                                    </li>
+                                                                </ul></td>
+                                                            <td width="33%" class="pl15">
+                                                                <ul>
+                                                                    <li>
+                                                                        Giấy chứng nhận đăng ký kinh doanh số: 0303452460 do Sở kế hoạch đầu tư Thành phố Hồ Chí Minh cấp ngày 16 tháng 08 năm 2004
+                                                                    </li>
+                                                                    <li>
+                                                                        <a href="http://www.onboom.com" target="_blank" rel="nofollow">Quảng bá web</a> bởi OnBoom Group
+                                                                    </li>
+                                                                    <li>
+                                                                        Designed by Cong ty <a href="http://vinadesign.vn" target="_blank" rel="nofollow">Thiet Ke Web</a> VINA Design
+                                                                    </li>
+                                                                </ul></td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                            <div class="Clear"></div>
 
-                                <li class="Separator">
-                                    |
-                                </li>
-                                <li>
-                                    <a href="<?php echo base_url(); ?>" ga_click="_gaq.push(['_trackEvent', 'Footer', 'Click', 'Cẩm nang tuyển dụng']);" target="_blank" rel="nofollow"> Cẩm nang tuyển dụng </a>
-                                </li>
-                                <li class="Separator">
-                                    |
-                                </li>
-                                <li>
-                                    <a href="<?php echo base_url(); ?>" ga_click="_gaq.push(['_trackEvent', 'Footer', 'Click', 'Cẩm nang việc làm']);" target="_blank" rel="nofollow"> Cẩm nang việc làm </a>
-                                </li>
-                                <li class="Separator">
-                                    |
-                                </li>
-                                <li>
-                                    <a href="<?php echo base_url(); ?>" ga_click="_gaq.push(['_trackEvent', 'Footer', 'Click', 'Nghề nghiệp']);" target="_blank" rel=""> Nghề nghiệp </a>
-                                </li>
+                                            <div class="Blank"></div>
+                                            <strong>Tìm Việc Nhanh thương hiệu nổi tiếng: Tuyển dụng, tìm việc làm, việc làm, tìm kiếm việc làm nhanh, tuyển dụng nhân sự nhanh chóng</strong>
 
-                            </ul>
-                            <div class="Clear"></div>
-                                    </div>
-                                                        </div>
-                                                    </div>
+                                            <div class="HighBlank"></div>
+                                            <div id="bottom-hotline">
+                                                <div id="bottom-hotline-inner">
+                                                    <h2 class="float-left">Hotline 24/7</h2>
+                                                    <ul class="float-left">
+                                                        <li>
+                                                            <table class="table-hotline">
+                                                                <tbody>
+                                                                    <tr>
+                                                                        <td><span class="Mobile">0912283938</span><span class="Name">Ms.Liễu</span></td>
 
-                                                    <div id="web-company-info">
-                                                        <h2>Công ty Cổ phần Tìm Việc Nhanh - MST 0303 452 460</h2>
-                                                        <table>
-                                                            <tbody>
-                                                                <tr>
-                                                                    <td width="33%"><span class="AlertTextSmall">TimViecNhanh.com TP.HCM</span><p></p>
-                                                                        <table class="TableFooterInfo">
-                                                                            <tbody>
-                                                                                <tr>
-                                                                                    <th>Địa chỉ</th>
-                                                                                    <td>380 Bùi Hữu Nghĩa, Q.Bình Thạnh</td>
-                                                                                </tr>
-                                                                                <tr>
-                                                                                    <th>Chăm Sóc KH</th>
-                                                                                    <td> (08) 7309 8888 </td>
-                                                                                </tr>
-                                                                                <tr>
-                                                                                    <th>Bộ phận khác</th>
-                                                                                    <td> (08) 355 159 36 - 355 159 37
-                                                                                        <br>
-                                                                                            (08) 355 159 38 - 355 159 39 </td>
-                                                                                </tr>
-                                                                                <tr>
-                                                                                    <th>Email</th>
-                                                                                    <td>hcm@timviecnhanh.com</td>
-                                                                                </tr>
-                                                                                <tr>
-                                                                                    <th>Fax</th>
-                                                                                    <td>(08) 351 023 38</td>
-                                                                                </tr>
-                                                                            </tbody>
-                                                                        </table></td>
-                                                                    <td width="33%" class="pl15"><span class="AlertTextSmall">TimViecNhanh.com Hà Nội</span><p></p>
-                                                                        <table class="TableFooterInfo">
-                                                                            <tbody>
-                                                                                <tr>
-                                                                                    <th>Địa chỉ</th>
-                                                                                    <td>39 Tây Sơn, Q.Đống Đa</td>
-                                                                                </tr>
-                                                                                <tr>
-                                                                                    <th>Điện thoại</th>
-                                                                                    <td>(04) 7309 8888</td>
-                                                                                </tr>
-                                                                                <tr>
-                                                                                    <th>Email</th>
-                                                                                    <td>hanoi@timviecnhanh.com</td>
-                                                                                </tr>
-                                                                            </tbody>
-                                                                        </table></td>
-                                                                    <td width="33%" class="pl15"><span class="AlertTextSmall">TimViecNhanh.com Đà Nẵng</span><p></p>
-                                                                        <table class="TableFooterInfo">
-                                                                            <tbody>
-                                                                                <tr>
-                                                                                    <th>Địa chỉ</th>
-                                                                                    <td>135 Hoàng Hoa Thám, Q.Thanh Khê</td>
-                                                                                </tr>
-                                                                                <tr>
-                                                                                    <th>Điện thoại</th>
-                                                                                    <td>(0511) 7309 888</td>
-                                                                                </tr>
-                                                                                <tr>
-                                                                                    <th>Email</th>
-                                                                                    <td>danang@timviecnhanh.com</td>
-                                                                                </tr>
-                                                                            </tbody>
-                                                                        </table></td>
-                                                                </tr>
-                                                            </tbody>
-                                                        </table>
-                                                    </div>
+                                                                        <td><span class="Mobile">0917278495</span><span class="Name">Ms.Giàu</span></td>
 
-                                                    <div class="Blank"></div>
-                                                    <div id="web-company-partner">
-                                                        <table>
-                                                            <tbody>
-                                                                <tr>
-                                                                    <td width="33%">
-                                                                        <ul>
-                                                                            <li>
-                                                                                Tuyển dụng nhanh nhất vì có hàng ngàn website việc làm đăng lại tin tuyển dụng của Timviecnhanh.com
-                                                                            </li>
-                                                                            <li>
-                                                                                Nhãn hiệu nổi tiếng TimViecNhanh đã được bảo hộ độc quyền nhãn hiệu số 4-0150860-000
-                                                                            </li>
-                                                                        </ul></td>
-                                                                    <td width="33%" class="pl15">
-                                                                        <ul>
-                                                                            <li>
-                                                                                Giấy phép Mạng Xã Hội trực tuyến số 25-MXH của Bộ Thông Tin Truyền Thông
-                                                                            </li>
-                                                                            <li>
-                                                                                Giấy phép Trang Tin điện tử tổng hợp số 57/GP-ICP-STTTT của Sở Thông Tin Truyền Thông
-                                                                            </li>
-                                                                        </ul></td>
-                                                                    <td width="33%" class="pl15">
-                                                                        <ul>
-                                                                            <li>
-                                                                                Giấy chứng nhận đăng ký kinh doanh số: 0303452460 do Sở kế hoạch đầu tư Thành phố Hồ Chí Minh cấp ngày 16 tháng 08 năm 2004
-                                                                            </li>
-                                                                            <li>
-                                                                                <a href="http://www.onboom.com" target="_blank" rel="nofollow">Quảng bá web</a> bởi OnBoom Group
-                                                                            </li>
-                                                                            <li>
-                                                                                Designed by Cong ty <a href="http://vinadesign.vn" target="_blank" rel="nofollow">Thiet Ke Web</a> VINA Design
-                                                                            </li>
-                                                                        </ul></td>
-                                                                </tr>
-                                                            </tbody>
-                                                        </table>
-                                                    </div>
+                                                                        <td><span class="Mobile">0915653938</span><span class="Name">Ms.Tình</span></td>
+
+                                                                        <td><span class="Mobile">0917278496</span><span class="Name">Ms.Vi</span></td>
+
+                                                                        <td><span class="Mobile">0917278492</span><span class="Name">Ms.Hạnh</span></td>
+
+                                                                        <td><span class="Mobile">0917278575</span><span class="Name">Ms.Huyền</span></td>
+
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td><span class="Mobile">0917278493</span><span class="Name">Ms.Phúc</span></td>
+
+                                                                        <td><span class="Mobile">0917278240</span><span class="Name">Mr.Phong</span></td>
+
+                                                                        <td><span class="Mobile">0902443938</span><span class="Name">Ms.Bích</span></td>
+
+                                                                        <td><span class="Mobile">0917278503</span><span class="Name">Mr Huy</span></td>
+
+                                                                        <td><span class="Mobile">0917278404</span><span class="Name">Ms.Châu</span></td>
+
+                                                                        <td><span class="Mobile">0917278794</span><span class="Name">Ms.Minh</span></td>
+
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td><span class="Mobile">0917278507</span><span class="Name">Ms.Liên</span></td>
+
+                                                                        <td></td>
+
+                                                                        <td></td>
+
+                                                                        <td></td>
+
+                                                                        <td></td>
+
+                                                                        <td></td>
+
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </li>
+                                                    </ul>
                                                     <div class="Clear"></div>
+                                                </div>
+                                            </div>
 
-                                                    <div class="Blank"></div>
-                                                    <strong>Tìm Việc Nhanh thương hiệu nổi tiếng: Tuyển dụng, tìm việc làm, việc làm, tìm kiếm việc làm nhanh, tuyển dụng nhân sự nhanh chóng</strong>
-
-                                                    <div class="HighBlank"></div>
-                                                    <div id="bottom-hotline">
-                                                        <div id="bottom-hotline-inner">
-                                                            <h2 class="float-left">Hotline 24/7</h2>
-                                                            <ul class="float-left">
-                                                                <li>
-                                                                    <table class="table-hotline">
-                                                                        <tbody>
-                                                                            <tr>
-                                                                                <td><span class="Mobile">0912283938</span><span class="Name">Ms.Liễu</span></td>
-
-                                                                                <td><span class="Mobile">0917278495</span><span class="Name">Ms.Giàu</span></td>
-
-                                                                                <td><span class="Mobile">0915653938</span><span class="Name">Ms.Tình</span></td>
-
-                                                                                <td><span class="Mobile">0917278496</span><span class="Name">Ms.Vi</span></td>
-
-                                                                                <td><span class="Mobile">0917278492</span><span class="Name">Ms.Hạnh</span></td>
-
-                                                                                <td><span class="Mobile">0917278575</span><span class="Name">Ms.Huyền</span></td>
-
-                                                                            </tr>
-                                                                            <tr>
-                                                                                <td><span class="Mobile">0917278493</span><span class="Name">Ms.Phúc</span></td>
-
-                                                                                <td><span class="Mobile">0917278240</span><span class="Name">Mr.Phong</span></td>
-
-                                                                                <td><span class="Mobile">0902443938</span><span class="Name">Ms.Bích</span></td>
-
-                                                                                <td><span class="Mobile">0917278503</span><span class="Name">Mr Huy</span></td>
-
-                                                                                <td><span class="Mobile">0917278404</span><span class="Name">Ms.Châu</span></td>
-
-                                                                                <td><span class="Mobile">0917278794</span><span class="Name">Ms.Minh</span></td>
-
-                                                                            </tr>
-                                                                            <tr>
-                                                                                <td><span class="Mobile">0917278507</span><span class="Name">Ms.Liên</span></td>
-
-                                                                                <td></td>
-
-                                                                                <td></td>
-
-                                                                                <td></td>
-
-                                                                                <td></td>
-
-                                                                                <td></td>
-
-                                                                            </tr>
-                                                                        </tbody>
-                                                                    </table>
-                                                                </li>
-                                                            </ul>
-                                                            <div class="Clear"></div>
-                                                        </div>
-                                                    </div>
-
-                                                    <div class="Blank"></div>
-                                                    <div id="fb-container">
-                                                        <div id="fb-like-content">
-                                                            <div class="fb-like-box fb_iframe_widget" data-href="http://www.facebook.com/timviecnhanh" data-width="982" data-height="238" data-show-faces="true" data-stream="false" data-header="false" fb-xfbml-state="rendered" fb-iframe-plugin-query="app_id=357584370994953&amp;header=false&amp;height=238&amp;href=http%3A%2F%2Fwww.facebook.com%2Ftimviecnhanh&amp;locale=vi_VN&amp;sdk=joey&amp;show_faces=true&amp;stream=false&amp;width=982">
-                                                                <span style="vertical-align: bottom; width: 982px; height: 238px;"><iframe name="f38708951" width="982px" height="238px" frameborder="0" allowtransparency="true" scrolling="no" title="fb:like_box Facebook Social Plugin" src="http://www.facebook.com/plugins/like_box.php?app_id=357584370994953&amp;channel=http%3A%2F%2Fstatic.ak.facebook.com%2Fconnect%2Fxd_arbiter.php%3Fversion%3D28%23cb%3Df2aa2caf34%26domain%3Dwww.timviecnhanh.com%26origin%3Dhttp%253A%252F%252Fwww.timviecnhanh.com%252Ff1a2c938c4%26relation%3Dparent.parent&amp;header=false&amp;height=238&amp;href=http%3A%2F%2Fwww.facebook.com%2Ftimviecnhanh&amp;locale=vi_VN&amp;sdk=joey&amp;show_faces=true&amp;stream=false&amp;width=982" style="border: none; visibility: visible; width: 982px; height: 238px;" class=""></iframe></span>
-                                                            </div>
-                                                        </div>
+                                            <div class="Blank"></div>
+                                            <div id="fb-container">
+                                                <div id="fb-like-content">
+                                                    <div class="fb-like-box fb_iframe_widget" data-href="http://www.facebook.com/timviecnhanh" data-width="982" data-height="238" data-show-faces="true" data-stream="false" data-header="false" fb-xfbml-state="rendered" fb-iframe-plugin-query="app_id=357584370994953&amp;header=false&amp;height=238&amp;href=http%3A%2F%2Fwww.facebook.com%2Ftimviecnhanh&amp;locale=vi_VN&amp;sdk=joey&amp;show_faces=true&amp;stream=false&amp;width=982">
+                                                        <span style="vertical-align: bottom; width: 982px; height: 238px;"><iframe name="f38708951" width="982px" height="238px" frameborder="0" allowtransparency="true" scrolling="no" title="fb:like_box Facebook Social Plugin" src="http://www.facebook.com/plugins/like_box.php?app_id=357584370994953&amp;channel=http%3A%2F%2Fstatic.ak.facebook.com%2Fconnect%2Fxd_arbiter.php%3Fversion%3D28%23cb%3Df2aa2caf34%26domain%3Dwww.timviecnhanh.com%26origin%3Dhttp%253A%252F%252Fwww.timviecnhanh.com%252Ff1a2c938c4%26relation%3Dparent.parent&amp;header=false&amp;height=238&amp;href=http%3A%2F%2Fwww.facebook.com%2Ftimviecnhanh&amp;locale=vi_VN&amp;sdk=joey&amp;show_faces=true&amp;stream=false&amp;width=982" style="border: none; visibility: visible; width: 982px; height: 238px;" class=""></iframe></span>
                                                     </div>
                                                 </div>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div><iframe name="oauth2relay804479625" id="oauth2relay804479625" src="https://accounts.google.com/o/oauth2/postmessageRelay?parent=http%3A%2F%2Fwww.timviecnhanh.com#rpctoken=279263165&amp;forcesecure=1" style="width: 1px; height: 1px; position: absolute; top: -100px;"></iframe>
+                            </div>
+                        </div><iframe name="oauth2relay804479625" id="oauth2relay804479625" src="https://accounts.google.com/o/oauth2/postmessageRelay?parent=http%3A%2F%2Fwww.timviecnhanh.com#rpctoken=279263165&amp;forcesecure=1" style="width: 1px; height: 1px; position: absolute; top: -100px;"></iframe>
 
-                            <div id="fb-root" class=" fb_reset">
-                                <div style="position: absolute; top: -10000px; height: 0px; width: 0px;">
-                                    <div>
-                                        <iframe name="fb_xdm_frame_http" frameborder="0" allowtransparency="true" scrolling="no" id="fb_xdm_frame_http" aria-hidden="true" title="Facebook Cross Domain Communication Frame" tab-index="-1" src="http://static.ak.facebook.com/connect/xd_arbiter.php?version=28#channel=f1a2c938c4&amp;channel_path=%2Fnguoitimviec%2Ftaikhoan%3Ffb_xd_fragment%23xd_sig%3Df2b5c12dd4%26&amp;origin=http%3A%2F%2Fwww.timviecnhanh.com" style="border: none;"></iframe><iframe name="fb_xdm_frame_https" frameborder="0" allowtransparency="true" scrolling="no" id="fb_xdm_frame_https" aria-hidden="true" title="Facebook Cross Domain Communication Frame" tab-index="-1" src="https://s-static.ak.facebook.com/connect/xd_arbiter.php?version=28#channel=f1a2c938c4&amp;channel_path=%2Fnguoitimviec%2Ftaikhoan%3Ffb_xd_fragment%23xd_sig%3Df2b5c12dd4%26&amp;origin=http%3A%2F%2Fwww.timviecnhanh.com" style="border: none;"></iframe>
-                                    </div>
-                                </div>
-                                <div style="position: absolute; top: -10000px; height: 0px; width: 0px;">
-                                    <div></div>
+                        <div id="fb-root" class=" fb_reset">
+                            <div style="position: absolute; top: -10000px; height: 0px; width: 0px;">
+                                <div>
+                                    <iframe name="fb_xdm_frame_http" frameborder="0" allowtransparency="true" scrolling="no" id="fb_xdm_frame_http" aria-hidden="true" title="Facebook Cross Domain Communication Frame" tab-index="-1" src="http://static.ak.facebook.com/connect/xd_arbiter.php?version=28#channel=f1a2c938c4&amp;channel_path=%2Fnguoitimviec%2Ftaikhoan%3Ffb_xd_fragment%23xd_sig%3Df2b5c12dd4%26&amp;origin=http%3A%2F%2Fwww.timviecnhanh.com" style="border: none;"></iframe><iframe name="fb_xdm_frame_https" frameborder="0" allowtransparency="true" scrolling="no" id="fb_xdm_frame_https" aria-hidden="true" title="Facebook Cross Domain Communication Frame" tab-index="-1" src="https://s-static.ak.facebook.com/connect/xd_arbiter.php?version=28#channel=f1a2c938c4&amp;channel_path=%2Fnguoitimviec%2Ftaikhoan%3Ffb_xd_fragment%23xd_sig%3Df2b5c12dd4%26&amp;origin=http%3A%2F%2Fwww.timviecnhanh.com" style="border: none;"></iframe>
                                 </div>
                             </div>
-                            <script type="text/javascript">
-                                var _gaq = _gaq || [];
-                                _gaq.push(['_setAccount', 'UA-1771947-1']);
-                                /*_gaq.push(['_setDomainName', 'timviecnhanh.com']);*/
-                                _gaq.push(['_trackPageview']);
-                                (function() {
-                                    var ga = document.createElement('script');
-                                    ga.type = 'text/javascript';
-                                    ga.async = true;
-                                    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-                                    var s = document.getElementsByTagName('script')[0];
-                                    s.parentNode.insertBefore(ga, s);
-                                })();
-                                (function(d, s, id) {
-                                    var js, fjs = d.getElementsByTagName(s)[0];
-                                    if (d.getElementById(id)) {
-                                        return;
-                                    }
-                                    js = d.createElement(s);
-                                    js.id = id;
-                                    js.src = "//connect.facebook.net/vi_VN/all.js#xfbml=1&appId=357584370994953";
-                                    fjs.parentNode.insertBefore(js, fjs);
-                                }(document, 'script', 'facebook-jssdk'));
+                            <div style="position: absolute; top: -10000px; height: 0px; width: 0px;">
+                                <div></div>
+                            </div>
+                        </div>
+                        <script type="text/javascript">
+                            var _gaq = _gaq || [];
+                            _gaq.push(['_setAccount', 'UA-1771947-1']);
+                            /*_gaq.push(['_setDomainName', 'timviecnhanh.com']);*/
+                            _gaq.push(['_trackPageview']);
+                            (function() {
+                                var ga = document.createElement('script');
+                                ga.type = 'text/javascript';
+                                ga.async = true;
+                                ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+                                var s = document.getElementsByTagName('script')[0];
+                                s.parentNode.insertBefore(ga, s);
+                            })();
+                            (function(d, s, id) {
+                                var js, fjs = d.getElementsByTagName(s)[0];
+                                if (d.getElementById(id)) {
+                                    return;
+                                }
+                                js = d.createElement(s);
+                                js.id = id;
+                                js.src = "//connect.facebook.net/vi_VN/all.js#xfbml=1&appId=357584370994953";
+                                fjs.parentNode.insertBefore(js, fjs);
+                            }(document, 'script', 'facebook-jssdk'));
 
-                                window.fbAsyncInit = function() {
-                                    FB.init({
-                                        appId: '357584370994953',
-                                        status: true,
-                                        cookie: true,
-                                        xfbml: true
-                                    });
-                                };
+                            window.fbAsyncInit = function() {
+                                FB.init({
+                                    appId: '357584370994953',
+                                    status: true,
+                                    cookie: true,
+                                    xfbml: true
+                                });
+                            };
 
-                                $(document).on('click', 'a', function() {
-                                    var ga_click = $(this).attr('ga_click');
+                            $(document).on('click', 'a', function() {
+                                var ga_click = $(this).attr('ga_click');
 
-                                    if (ga_click) {
-                                        eval(ga_click);
-                                    }
+                                if (ga_click) {
+                                    eval(ga_click);
+                                }
+                            });
+
+                            $(document).ready(function() {
+                                $('a[rel="popup"]').colorbox({
+                                    inline: true,
+                                    transition: 'none',
+                                    overlayClose: false,
+                                    top: '30%',
+                                    width: '40%',
+                                    initialWidth: '0',
+                                    initialHeight: '0',
+                                    arrowKey: false
                                 });
 
-                                $(document).ready(function() {
-                                    $('a[rel="popup"]').colorbox({
-                                        inline: true,
-                                        transition: 'none',
-                                        overlayClose: false,
-                                        top: '30%',
-                                        width: '40%',
-                                        initialWidth: '0',
-                                        initialHeight: '0',
-                                        arrowKey: false
-                                    });
-
-                                    $('.ButtonClose').click(function() {
-                                        $.colorbox.close();
-                                    });
+                                $('.ButtonClose').click(function() {
+                                    $.colorbox.close();
                                 });
-                            </script>
+                            });
+                        </script>
 
-                            <!-- 0.231 -->
+                        <!-- 0.231 -->
 
-                            <div id="cboxOverlay" style="display: none;"></div>
-                            <div id="colorbox" class="" style="display: none; padding-bottom: 42px; padding-right: 42px;">
-                                <div id="cboxWrapper">
-                                    <div>
-                                        <div id="cboxTopLeft" style="float: left;"></div><div id="cboxTopCenter" style="float: left;"></div><div id="cboxTopRight" style="float: left;"></div>
-                                    </div>
-                                    <div style="clear: left;">
-                                        <div id="cboxMiddleLeft" style="float: left;"></div>
-                                        <div id="cboxContent" style="float: left;">
-                                            <div id="cboxLoadedContent" style="width: 0px; height: 0px; overflow: hidden; float: left;"></div><div id="cboxTitle" style="float: left;"></div><div id="cboxCurrent" style="float: left;"></div><div id="cboxNext" style="float: left;"></div><div id="cboxPrevious" style="float: left;"></div><div id="cboxSlideshow" style="float: left;"></div><div id="cboxClose" style="float: left;"></div>
-                                        </div><div id="cboxMiddleRight" style="float: left;"></div>
-                                    </div>
-                                    <div style="clear: left;">
-                                        <div id="cboxBottomLeft" style="float: left;"></div><div id="cboxBottomCenter" style="float: left;"></div><div id="cboxBottomRight" style="float: left;"></div>
-                                    </div>
-                                </div><div style="position: absolute; width: 9999px; visibility: hidden; display: none;"></div>
-                            </div><div id="ui-datepicker-div" class="ui-datepicker ui-widget ui-widget-content ui-helper-clearfix ui-corner-all"></div>
+                        <div id="cboxOverlay" style="display: none;"></div>
+                        <div id="colorbox" class="" style="display: none; padding-bottom: 42px; padding-right: 42px;">
+                            <div id="cboxWrapper">
+                                <div>
+                                    <div id="cboxTopLeft" style="float: left;"></div><div id="cboxTopCenter" style="float: left;"></div><div id="cboxTopRight" style="float: left;"></div>
+                                </div>
+                                <div style="clear: left;">
+                                    <div id="cboxMiddleLeft" style="float: left;"></div>
+                                    <div id="cboxContent" style="float: left;">
+                                        <div id="cboxLoadedContent" style="width: 0px; height: 0px; overflow: hidden; float: left;"></div><div id="cboxTitle" style="float: left;"></div><div id="cboxCurrent" style="float: left;"></div><div id="cboxNext" style="float: left;"></div><div id="cboxPrevious" style="float: left;"></div><div id="cboxSlideshow" style="float: left;"></div><div id="cboxClose" style="float: left;"></div>
+                                    </div><div id="cboxMiddleRight" style="float: left;"></div>
+                                </div>
+                                <div style="clear: left;">
+                                    <div id="cboxBottomLeft" style="float: left;"></div><div id="cboxBottomCenter" style="float: left;"></div><div id="cboxBottomRight" style="float: left;"></div>
+                                </div>
+                            </div><div style="position: absolute; width: 9999px; visibility: hidden; display: none;"></div>
+                        </div><div id="ui-datepicker-div" class="ui-datepicker ui-widget ui-widget-content ui-helper-clearfix ui-corner-all"></div>
                     </body>
                     </html>

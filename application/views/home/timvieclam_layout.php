@@ -77,61 +77,62 @@
                                             <script type="text/javascript" src="<?php echo base_url(); ?>template/home/js/jquery.js"></script>
                                             <script type="text/javascript" src="<?php echo base_url(); ?>template/home/js/slider.js"></script>
                                             <script type="text/javascript">
-                                                        function mycarousel_initCallback(e) {
-                                                        e.buttonNext.bind("click", function() {
+                                                function mycarousel_initCallback(e) {
+                                                    e.buttonNext.bind("click", function() {
                                                         e.startAuto(1)
-                                                        });
-                                                                e.buttonPrev.bind("click", function() {
-                                                                e.startAuto(1)
-                                                                });
-                                                                e.clip.hover(function() {
-                                                                e.stopAuto()
-                                                                }, function() {
-                                                                e.startAuto()
-                                                                })
-                                                        }
+                                                    });
+                                                    e.buttonPrev.bind("click", function() {
+                                                        e.startAuto(1)
+                                                    });
+                                                    e.clip.hover(function() {
+                                                        e.stopAuto()
+                                                    }, function() {
+                                                        e.startAuto()
+                                                    })
+                                                }
                                                 ;
-                                                        jQuery(document).ready(function() {
-                                                var e = jQuery("#slider");
-                                                        var t = jQuery(".hbs").offset();
-                                                        e.css({
+                                                jQuery(document).ready(function() {
+                                                    var e = jQuery("#slider");
+                                                    var t = jQuery(".hbs").offset();
+                                                    e.css({
                                                         position: "absolute",
-                                                                top: "142px",
-                                                                left: "0"
-                                                        });
-                                                        jQuery("#mycarousel").show().jcarousel({
-                                                auto: 3,
+                                                        top: "142px",
+                                                        left: "0"
+                                                    });
+                                                    jQuery("#mycarousel").show().jcarousel({
+                                                        auto: 3,
                                                         scroll: 1,
                                                         animation: 1500,
                                                         wrap: "circular",
                                                         easing: "easeInOutCubic",
                                                         initCallback: mycarousel_initCallback
-                                                })
-                                                });                                            </script>
+                                                    })
+                                                });</script>
                                     </div>
                                     <div class="clear"></div>
                                     <?php if ($is_login == 0) { ?>
-                    <div id="header-user-menu">
-                        <ul>
-                            <li>
-                                <a href="<?php echo base_url(); ?>dangky" ga_click="_gaq.push(['_trackEvent', 'Header', 'Click', 'Đăng ký']);" title="Đăng ký"> Đăng ký </a>
-                            </li>
-                            <li class="Separator">
-                                |
-                            </li>
-                            <li>
-                                <a href="<?php echo base_url(); ?>dangnhap/index" ga_click="_gaq.push(['_trackEvent', 'Header', 'Click', 'Đăng nhập']);" title="Đăng nhập"> Đăng nhập </a>
-                            </li>
-                        </ul>
+                                        <div id="header-user-menu">
+                                            <ul>
+                                                <li>
+                                                    <a href="<?php echo base_url(); ?>dangky" ga_click="_gaq.push(['_trackEvent', 'Header', 'Click', 'Đăng ký']);" title="Đăng ký"> Đăng ký </a>
+                                                </li>
+                                                <li class="Separator">
+                                                    |
+                                                </li>
+                                                <li>
+                                                    <a href="<?php echo base_url(); ?>dangnhap/index" ga_click="_gaq.push(['_trackEvent', 'Header', 'Click', 'Đăng nhập']);" title="Đăng nhập"> Đăng nhập </a>
+                                                </li>
+                                            </ul>
 
-                    </div>
-                    <?php } else { ?> 
-                    <div id="header-user-menu">
-                        <?php echo $this->session->userdata['u_username']; ?> | <a href="<?php echo
-    base_url(); ?>dangnhap/logout">Đăng xuất</a>
+                                        </div>
+                                    <?php } else { ?> 
+                                        <div id="header-user-menu">
+                                            <?php echo $this->session->userdata['u_username']; ?> | <a href="<?php echo
+                                        base_url();
+                                            ?>dangnhap/logout">Đăng xuất</a>
 
-                    </div>
-                    <?php } ?>
+                                        </div>
+<?php } ?>
                                 </div>
                                 <div class="HighBlank"></div>
                                 <div class="Clear"></div>
@@ -287,327 +288,327 @@
                                 </div>
 
                                 <script type="text/javascript">
-                                            var fields = new Array();
-                                            var provinces = new Array();
-                                            var levels = new Array();
-                                            var experiences = new Array();
-                                            var time = new Array();
-                                            var salary_vnd = new Array();
-                                            var salary_usd = new Array();
-                                            fields[10] = 'ban-hang';
-                                            fields[11] = 'tu-van-bao-hiem';
-                                            fields[12] = 'bao-chi-bien-tap-vien';
-                                            fields[13] = 'bat-dong-san';
-                                            fields[14] = 'bien-dich-phien-dich';
-                                            fields[15] = 'buu-chinh-vien-thong';
-                                            fields[16] = 'co-khi-ky-thuat-ung-dung';
-                                            fields[17] = 'cong-nghe-thong-tin';
-                                            fields[18] = 'dau-khi-dia-chat';
-                                            fields[19] = 'det-may';
-                                            fields[20] = 'bao-ve-ve-si-an-ninh';
-                                            fields[21] = 'cham-soc-khach-hang';
-                                            fields[22] = 'dien-dien-tu-dien-lanh';
-                                            fields[23] = 'du-lich-nha-hang-khach-san';
-                                            fields[24] = 'duoc-hoa-chat-sinh-hoa';
-                                            fields[25] = 'giai-tri-vui-choi';
-                                            fields[26] = 'giao-duc-dao-tao-thu-vien';
-                                            fields[27] = 'giao-thong-van-tai-thuy-loi-cau-duong';
-                                            fields[28] = 'giay-da-thuoc-da';
-                                            fields[29] = 'hanh-chinh-thu-ky';
-                                            fields[30] = 'kho-van-vat-tu';
-                                            fields[31] = 'kien-truc-noi-that';
-                                            fields[32] = 'kinh-doanh';
-                                            fields[33] = 'lao-dong-pho-thong';
-                                            fields[34] = 'luat-phap-ly';
-                                            fields[35] = 'sinh-vien-moi-tot-nghiep-thuc-tap';
-                                            fields[36] = 'moi-truong-xu-ly-chat-thai';
-                                            fields[37] = 'my-pham';
-                                            fields[38] = 'ngan-hang-chung-khoan-dau-tu';
-                                            fields[39] = 'nghe-thuat-dien-anh';
-                                            fields[40] = 'nhan-su';
-                                            fields[41] = 'nong-lam-ngu-nghiep';
-                                            fields[42] = 'quan-he-doi-ngoai';
-                                            fields[43] = 'tham-dinh-giam-dinh-quan-ly-chat-luong';
-                                            fields[44] = 'quan-ly-dieu-hanh';
-                                            fields[45] = 'quang-cao-marketing-pr';
-                                            fields[46] = 'san-xuat-van-hanh-san-xuat';
-                                            fields[47] = 'tai-chinh-ke-toan-kiem-toan';
-                                            fields[48] = 'the-duc-the-thao';
-                                            fields[49] = 'thiet-ke-my-thuat';
-                                            fields[50] = 'thoi-vu-ban-thoi-gian';
-                                            fields[51] = 'thuc-pham-dv-an-uong';
-                                            fields[52] = 'xay-dung';
-                                            fields[53] = 'xuat-nhap-khau-ngoai-thuong';
-                                            fields[54] = 'y-te';
-                                            fields[55] = 'khac';
-                                            fields[56] = 'ngoai-ngu';
-                                            fields[58] = 'khu-che-xuat-khu-cong-nghiep';
-                                            fields[59] = 'lam-dep-the-luc-spa';
-                                            fields[60] = 'tai-xe-lai-xe-giao-nhan';
-                                            fields[61] = 'trang-thiet-bi-cong-nghiep';
-                                            fields[62] = 'trang-thiet-bi-gia-dung';
-                                            fields[63] = 'trang-thiet-bi-van-phong';
-                                            fields[64] = 'pg-pb-le-tan';
-                                            fields[65] = 'ban-hang-kinh-doanh-mang-luoi';
-                                            fields[66] = 'phuc-vu-tap-vu-giup-viec';
-                                            provinces[1] = 'tp-ho-chi-minh';
-                                            provinces[2] = 'ha-noi';
-                                            provinces[3] = 'an-giang';
-                                            provinces[4] = 'bac-lieu';
-                                            provinces[5] = 'ba-ria-vung-tau';
-                                            provinces[6] = 'bac-can';
-                                            provinces[7] = 'bac-giang';
-                                            provinces[8] = 'bac-ninh';
-                                            provinces[9] = 'ben-tre';
-                                            provinces[10] = 'binh-duong';
-                                            provinces[11] = 'binh-dinh';
-                                            provinces[12] = 'binh-phuoc';
-                                            provinces[13] = 'binh-thuan';
-                                            provinces[14] = 'cao-bang';
-                                            provinces[15] = 'ca-mau';
-                                            provinces[16] = 'can-tho';
-                                            provinces[17] = 'da-nang';
-                                            provinces[18] = 'dak-lak';
-                                            provinces[19] = 'dak-nong';
-                                            provinces[20] = 'dien-bien';
-                                            provinces[21] = 'dong-nai';
-                                            provinces[22] = 'dong-thap';
-                                            provinces[23] = 'gia-lai';
-                                            provinces[24] = 'ha-giang';
-                                            provinces[25] = 'ha-nam';
-                                            provinces[26] = 'ha-tay';
-                                            provinces[27] = 'ha-tinh';
-                                            provinces[28] = 'hai-duong';
-                                            provinces[29] = 'hai-phong';
-                                            provinces[30] = 'hau-giang';
-                                            provinces[31] = 'hoa-binh';
-                                            provinces[32] = 'hung-yen';
-                                            provinces[33] = 'khanh-hoa';
-                                            provinces[34] = 'kien-giang';
-                                            provinces[35] = 'kon-tum';
-                                            provinces[36] = 'lai-chau';
-                                            provinces[37] = 'lang-son';
-                                            provinces[38] = 'lao-cai';
-                                            provinces[39] = 'lam-dong';
-                                            provinces[40] = 'long-an';
-                                            provinces[41] = 'nam-dinh';
-                                            provinces[42] = 'nghe-an';
-                                            provinces[43] = 'ninh-binh';
-                                            provinces[44] = 'ninh-thuan';
-                                            provinces[45] = 'phu-tho';
-                                            provinces[46] = 'phu-yen';
-                                            provinces[47] = 'quang-binh';
-                                            provinces[48] = 'quang-nam';
-                                            provinces[49] = 'quang-ngai';
-                                            provinces[50] = 'quang-ninh';
-                                            provinces[51] = 'quang-tri';
-                                            provinces[52] = 'soc-trang';
-                                            provinces[53] = 'son-la';
-                                            provinces[54] = 'tay-ninh';
-                                            provinces[55] = 'thai-binh';
-                                            provinces[56] = 'thai-nguyen';
-                                            provinces[57] = 'thanh-hoa';
-                                            provinces[58] = 'thua-thien-hue';
-                                            provinces[59] = 'tien-giang';
-                                            provinces[60] = 'tra-vinh';
-                                            provinces[61] = 'tuyen-quang';
-                                            provinces[62] = 'vinh-long';
-                                            provinces[63] = 'vinh-phuc';
-                                            provinces[64] = 'yen-bai';
-                                            provinces[65] = 'toan-quoc';
-                                            provinces[66] = 'nuoc-ngoai';
-                                            levels[1] = 'lao-dong-pho-thong';
-                                            levels[2] = 'chung-chi';
-                                            levels[3] = 'trung-hoc';
-                                            levels[4] = 'trung-cap';
-                                            levels[5] = 'cao-dang';
-                                            levels[6] = 'dai-hoc';
-                                            levels[7] = 'cao-hoc';
-                                            levels[8] = 'khong-khai-bao';
-                                            experiences[0] = 'chua-co-kinh-nghiem';
-                                            experiences[1] = '1-nam';
-                                            experiences[2] = '2-nam';
-                                            experiences[3] = '3-nam';
-                                            experiences[4] = '4-nam';
-                                            experiences[5] = '5-nam';
-                                            experiences[6] = 'tren-5-nam';
-                                            time[1] = 'nhan-vien-chinh-thuc';
-                                            time[2] = 'nhan-vien-thoi-vu';
-                                            time[3] = 'ban-thoi-gian';
-                                            time[4] = 'lam-them-ngoai-gio';
-                                            time[5] = 'thuc-tap-va-du-an';
-                                            salary_vnd[1] = '1-2-trieu';
-                                            salary_vnd[2] = '2-3-trieu';
-                                            salary_vnd[3] = '3-4-trieu';
-                                            salary_vnd[4] = '4-5-trieu';
-                                            salary_vnd[5] = '5-8-trieu';
-                                            salary_vnd[6] = '8-15-trieu';
-                                            salary_vnd[8] = '15-30-trieu';
-                                            salary_vnd[9] = 'tren-30-trieu';
-                                            salary_vnd[7] = 'thoa-thuan-vnd';
-                                            salary_usd[1] = '100-150-usd';
-                                            salary_usd[2] = '150-200-usd';
-                                            salary_usd[3] = '200-250-usd';
-                                            salary_usd[4] = '250-300-usd';
-                                            salary_usd[5] = '300-400-usd';
-                                            salary_usd[6] = '400-750-usd';
-                                            salary_usd[8] = '750-1500-usd';
-                                            salary_usd[9] = 'tren-1500-usd';
-                                            salary_usd[7] = 'thoa-thuan-usd';
-                                            function submitSearch() {
-                                            var url_root = '/vieclam/timkiem';
-                                                    var url = '';
-                                                    if ($('#JobJobfield').val() != '') {
+                                    var fields = new Array();
+                                    var provinces = new Array();
+                                    var levels = new Array();
+                                    var experiences = new Array();
+                                    var time = new Array();
+                                    var salary_vnd = new Array();
+                                    var salary_usd = new Array();
+                                    fields[10] = 'ban-hang';
+                                    fields[11] = 'tu-van-bao-hiem';
+                                    fields[12] = 'bao-chi-bien-tap-vien';
+                                    fields[13] = 'bat-dong-san';
+                                    fields[14] = 'bien-dich-phien-dich';
+                                    fields[15] = 'buu-chinh-vien-thong';
+                                    fields[16] = 'co-khi-ky-thuat-ung-dung';
+                                    fields[17] = 'cong-nghe-thong-tin';
+                                    fields[18] = 'dau-khi-dia-chat';
+                                    fields[19] = 'det-may';
+                                    fields[20] = 'bao-ve-ve-si-an-ninh';
+                                    fields[21] = 'cham-soc-khach-hang';
+                                    fields[22] = 'dien-dien-tu-dien-lanh';
+                                    fields[23] = 'du-lich-nha-hang-khach-san';
+                                    fields[24] = 'duoc-hoa-chat-sinh-hoa';
+                                    fields[25] = 'giai-tri-vui-choi';
+                                    fields[26] = 'giao-duc-dao-tao-thu-vien';
+                                    fields[27] = 'giao-thong-van-tai-thuy-loi-cau-duong';
+                                    fields[28] = 'giay-da-thuoc-da';
+                                    fields[29] = 'hanh-chinh-thu-ky';
+                                    fields[30] = 'kho-van-vat-tu';
+                                    fields[31] = 'kien-truc-noi-that';
+                                    fields[32] = 'kinh-doanh';
+                                    fields[33] = 'lao-dong-pho-thong';
+                                    fields[34] = 'luat-phap-ly';
+                                    fields[35] = 'sinh-vien-moi-tot-nghiep-thuc-tap';
+                                    fields[36] = 'moi-truong-xu-ly-chat-thai';
+                                    fields[37] = 'my-pham';
+                                    fields[38] = 'ngan-hang-chung-khoan-dau-tu';
+                                    fields[39] = 'nghe-thuat-dien-anh';
+                                    fields[40] = 'nhan-su';
+                                    fields[41] = 'nong-lam-ngu-nghiep';
+                                    fields[42] = 'quan-he-doi-ngoai';
+                                    fields[43] = 'tham-dinh-giam-dinh-quan-ly-chat-luong';
+                                    fields[44] = 'quan-ly-dieu-hanh';
+                                    fields[45] = 'quang-cao-marketing-pr';
+                                    fields[46] = 'san-xuat-van-hanh-san-xuat';
+                                    fields[47] = 'tai-chinh-ke-toan-kiem-toan';
+                                    fields[48] = 'the-duc-the-thao';
+                                    fields[49] = 'thiet-ke-my-thuat';
+                                    fields[50] = 'thoi-vu-ban-thoi-gian';
+                                    fields[51] = 'thuc-pham-dv-an-uong';
+                                    fields[52] = 'xay-dung';
+                                    fields[53] = 'xuat-nhap-khau-ngoai-thuong';
+                                    fields[54] = 'y-te';
+                                    fields[55] = 'khac';
+                                    fields[56] = 'ngoai-ngu';
+                                    fields[58] = 'khu-che-xuat-khu-cong-nghiep';
+                                    fields[59] = 'lam-dep-the-luc-spa';
+                                    fields[60] = 'tai-xe-lai-xe-giao-nhan';
+                                    fields[61] = 'trang-thiet-bi-cong-nghiep';
+                                    fields[62] = 'trang-thiet-bi-gia-dung';
+                                    fields[63] = 'trang-thiet-bi-van-phong';
+                                    fields[64] = 'pg-pb-le-tan';
+                                    fields[65] = 'ban-hang-kinh-doanh-mang-luoi';
+                                    fields[66] = 'phuc-vu-tap-vu-giup-viec';
+                                    provinces[1] = 'tp-ho-chi-minh';
+                                    provinces[2] = 'ha-noi';
+                                    provinces[3] = 'an-giang';
+                                    provinces[4] = 'bac-lieu';
+                                    provinces[5] = 'ba-ria-vung-tau';
+                                    provinces[6] = 'bac-can';
+                                    provinces[7] = 'bac-giang';
+                                    provinces[8] = 'bac-ninh';
+                                    provinces[9] = 'ben-tre';
+                                    provinces[10] = 'binh-duong';
+                                    provinces[11] = 'binh-dinh';
+                                    provinces[12] = 'binh-phuoc';
+                                    provinces[13] = 'binh-thuan';
+                                    provinces[14] = 'cao-bang';
+                                    provinces[15] = 'ca-mau';
+                                    provinces[16] = 'can-tho';
+                                    provinces[17] = 'da-nang';
+                                    provinces[18] = 'dak-lak';
+                                    provinces[19] = 'dak-nong';
+                                    provinces[20] = 'dien-bien';
+                                    provinces[21] = 'dong-nai';
+                                    provinces[22] = 'dong-thap';
+                                    provinces[23] = 'gia-lai';
+                                    provinces[24] = 'ha-giang';
+                                    provinces[25] = 'ha-nam';
+                                    provinces[26] = 'ha-tay';
+                                    provinces[27] = 'ha-tinh';
+                                    provinces[28] = 'hai-duong';
+                                    provinces[29] = 'hai-phong';
+                                    provinces[30] = 'hau-giang';
+                                    provinces[31] = 'hoa-binh';
+                                    provinces[32] = 'hung-yen';
+                                    provinces[33] = 'khanh-hoa';
+                                    provinces[34] = 'kien-giang';
+                                    provinces[35] = 'kon-tum';
+                                    provinces[36] = 'lai-chau';
+                                    provinces[37] = 'lang-son';
+                                    provinces[38] = 'lao-cai';
+                                    provinces[39] = 'lam-dong';
+                                    provinces[40] = 'long-an';
+                                    provinces[41] = 'nam-dinh';
+                                    provinces[42] = 'nghe-an';
+                                    provinces[43] = 'ninh-binh';
+                                    provinces[44] = 'ninh-thuan';
+                                    provinces[45] = 'phu-tho';
+                                    provinces[46] = 'phu-yen';
+                                    provinces[47] = 'quang-binh';
+                                    provinces[48] = 'quang-nam';
+                                    provinces[49] = 'quang-ngai';
+                                    provinces[50] = 'quang-ninh';
+                                    provinces[51] = 'quang-tri';
+                                    provinces[52] = 'soc-trang';
+                                    provinces[53] = 'son-la';
+                                    provinces[54] = 'tay-ninh';
+                                    provinces[55] = 'thai-binh';
+                                    provinces[56] = 'thai-nguyen';
+                                    provinces[57] = 'thanh-hoa';
+                                    provinces[58] = 'thua-thien-hue';
+                                    provinces[59] = 'tien-giang';
+                                    provinces[60] = 'tra-vinh';
+                                    provinces[61] = 'tuyen-quang';
+                                    provinces[62] = 'vinh-long';
+                                    provinces[63] = 'vinh-phuc';
+                                    provinces[64] = 'yen-bai';
+                                    provinces[65] = 'toan-quoc';
+                                    provinces[66] = 'nuoc-ngoai';
+                                    levels[1] = 'lao-dong-pho-thong';
+                                    levels[2] = 'chung-chi';
+                                    levels[3] = 'trung-hoc';
+                                    levels[4] = 'trung-cap';
+                                    levels[5] = 'cao-dang';
+                                    levels[6] = 'dai-hoc';
+                                    levels[7] = 'cao-hoc';
+                                    levels[8] = 'khong-khai-bao';
+                                    experiences[0] = 'chua-co-kinh-nghiem';
+                                    experiences[1] = '1-nam';
+                                    experiences[2] = '2-nam';
+                                    experiences[3] = '3-nam';
+                                    experiences[4] = '4-nam';
+                                    experiences[5] = '5-nam';
+                                    experiences[6] = 'tren-5-nam';
+                                    time[1] = 'nhan-vien-chinh-thuc';
+                                    time[2] = 'nhan-vien-thoi-vu';
+                                    time[3] = 'ban-thoi-gian';
+                                    time[4] = 'lam-them-ngoai-gio';
+                                    time[5] = 'thuc-tap-va-du-an';
+                                    salary_vnd[1] = '1-2-trieu';
+                                    salary_vnd[2] = '2-3-trieu';
+                                    salary_vnd[3] = '3-4-trieu';
+                                    salary_vnd[4] = '4-5-trieu';
+                                    salary_vnd[5] = '5-8-trieu';
+                                    salary_vnd[6] = '8-15-trieu';
+                                    salary_vnd[8] = '15-30-trieu';
+                                    salary_vnd[9] = 'tren-30-trieu';
+                                    salary_vnd[7] = 'thoa-thuan-vnd';
+                                    salary_usd[1] = '100-150-usd';
+                                    salary_usd[2] = '150-200-usd';
+                                    salary_usd[3] = '200-250-usd';
+                                    salary_usd[4] = '250-300-usd';
+                                    salary_usd[5] = '300-400-usd';
+                                    salary_usd[6] = '400-750-usd';
+                                    salary_usd[8] = '750-1500-usd';
+                                    salary_usd[9] = 'tren-1500-usd';
+                                    salary_usd[7] = 'thoa-thuan-usd';
+                                    function submitSearch() {
+                                        var url_root = '/vieclam/timkiem';
+                                        var url = '';
+                                        if ($('#JobJobfield').val() != '') {
                                             url += '/nganhnghe:' + fields[$('#JobJobfield').val()];
-                                            }
+                                        }
 
-                                            if ($('#JobJobplace').val() != '') {
+                                        if ($('#JobJobplace').val() != '') {
                                             url += '/tinhthanhpho:' + provinces[$('#JobJobplace').val()];
-                                            }
+                                        }
 
-                                            if ($('#JobJoblevel').val() != '') {
+                                        if ($('#JobJoblevel').val() != '') {
                                             url += '/trinhdo:' + levels[$('#JobJoblevel').val()];
-                                            }
+                                        }
 
-                                            if ($('#JobJobexperience').val() != '') {
+                                        if ($('#JobJobexperience').val() != '') {
                                             url += '/kinhnghiem:' + experiences[$('#JobJobexperience').val()];
-                                            }
+                                        }
 
-                                            if ($('#JobJobtimework').val() != '') {
+                                        if ($('#JobJobtimework').val() != '') {
                                             url += '/hinhthuclamviec:' + time[$('#JobJobtimework').val()];
-                                            }
+                                        }
 
-                                            if ($('#JobVND').val() != '') {
+                                        if ($('#JobVND').val() != '') {
                                             if ($('#JobVND').val() == 'Y') {
-                                            if ($('#job-salary-vnd').val() != '') {
-                                            url += '/mucluong:' + salary_vnd[$('#job-salary-vnd').val()];
-                                            }
+                                                if ($('#job-salary-vnd').val() != '') {
+                                                    url += '/mucluong:' + salary_vnd[$('#job-salary-vnd').val()];
+                                                }
                                             } else {
-                                            if ($('#job-salary-usd').val() != '') {
-                                            url += '/mucluong:' + salary_usd[$('#job-salary-usd').val()];
+                                                if ($('#job-salary-usd').val() != '') {
+                                                    url += '/mucluong:' + salary_usd[$('#job-salary-usd').val()];
+                                                }
                                             }
-                                            }
-                                            }
+                                        }
 
-                                            if (url != '') {
+                                        if (url != '') {
                                             url = url_root + url;
-                                                    window.location.href = url;
-                                            }
+                                            window.location.href = url;
+                                        }
 
-                                            return false;
-                                            }
+                                        return false;
+                                    }
 
 
                                     $(document).ready(function() {
-                                    $('#JobVND').change(function() {
-                                    if ($(this).val() == 'Y') {
-                                    $('#job-salary-vnd').show();
-                                            $('#job-salary-usd').hide();
-                                            $('#job-salary-vnd').val('');
-                                            $('#job-salary-usd').val('');
-                                            $('#job-salary-vnd').removeAttr('disabled');
-                                            $('#job-salary-usd').removeAttr('disabled');
-                                    }
+                                        $('#JobVND').change(function() {
+                                            if ($(this).val() == 'Y') {
+                                                $('#job-salary-vnd').show();
+                                                $('#job-salary-usd').hide();
+                                                $('#job-salary-vnd').val('');
+                                                $('#job-salary-usd').val('');
+                                                $('#job-salary-vnd').removeAttr('disabled');
+                                                $('#job-salary-usd').removeAttr('disabled');
+                                            }
 
-                                    if ($(this).val() == 'N') {
-                                    $('#job-salary-vnd').hide();
-                                            $('#job-salary-usd').show();
-                                            $('#job-salary-vnd').val('');
-                                            $('#job-salary-usd').val('');
-                                            $('#job-salary-vnd').removeAttr('disabled');
-                                            $('#job-salary-usd').removeAttr('disabled');
-                                    }
+                                            if ($(this).val() == 'N') {
+                                                $('#job-salary-vnd').hide();
+                                                $('#job-salary-usd').show();
+                                                $('#job-salary-vnd').val('');
+                                                $('#job-salary-usd').val('');
+                                                $('#job-salary-vnd').removeAttr('disabled');
+                                                $('#job-salary-usd').removeAttr('disabled');
+                                            }
 
-                                    if ($(this).val() == '') {
-                                    $('#job-salary-vnd').show();
-                                            $('#job-salary-usd').hide();
-                                            $('#job-salary-vnd').val('');
-                                            $('#job-salary-usd').val('');
-                                            $('#job-salary-vnd').attr('disabled', 'disabled');
-                                            $('#job-salary-usd').attr('disabled', 'disabled');
-                                    }
-                                    });
-                                    });                                </script>
+                                            if ($(this).val() == '') {
+                                                $('#job-salary-vnd').show();
+                                                $('#job-salary-usd').hide();
+                                                $('#job-salary-vnd').val('');
+                                                $('#job-salary-usd').val('');
+                                                $('#job-salary-vnd').attr('disabled', 'disabled');
+                                                $('#job-salary-usd').attr('disabled', 'disabled');
+                                            }
+                                        });
+                                    });</script>
                                 <div class="Blank"></div>
                                 <script type="text/javascript">
-                                            $(document).ready(function() {
-                                    $('#banner-marquee-items li:gt(0)').hide();
-                                            setInterval(function() {
+                                    $(document).ready(function() {
+                                        $('#banner-marquee-items li:gt(0)').hide();
+                                        setInterval(function() {
                                             $('#banner-marquee-items li:first').fadeOut().next().fadeIn().end().appendTo('#banner-marquee-items');
-                                            }, 5000);
-                                    });                                </script>
+                                        }, 5000);
+                                    });</script>
                                 <script type="text/javascript">
-                                            $(document).ready(function() {
-                                    $('#seeker-login').click(function() {
-                                    window.location.href = '/thanhvien/nguoitimviec_dangnhap';
-                                    });
-                                            $('#employer-login').click(function() {
-                                    window.location.href = '/thanhvien/nhatuyendung_dangnhap';
-                                    });
-                                            $('#seeker-register').click(function() {
-                                    window.location.href = '/thanhvien/nguoitimviec_dangky';
-                                    });
-                                            $('#employer-register').click(function() {
-                                    window.location.href = '/thanhvien/nhatuyendung_dangky';
-                                    });
-                                    });                                </script>
+                                    $(document).ready(function() {
+                                        $('#seeker-login').click(function() {
+                                            window.location.href = '/thanhvien/nguoitimviec_dangnhap';
+                                        });
+                                        $('#employer-login').click(function() {
+                                            window.location.href = '/thanhvien/nhatuyendung_dangnhap';
+                                        });
+                                        $('#seeker-register').click(function() {
+                                            window.location.href = '/thanhvien/nguoitimviec_dangky';
+                                        });
+                                        $('#employer-register').click(function() {
+                                            window.location.href = '/thanhvien/nhatuyendung_dangky';
+                                        });
+                                    });</script>
                             </div>
                             <div id="top">
                                 <div id="top-menubar">
                                     <div id="top-menubar-left">
                                         <div id="top-menubar-right">
-                            <ul>
-                                <li>
-                                    <a class="trangchu" href="<?php echo base_url(); ?>" ga_click="_gaq.push(['_trackEvent', 'Footer', 'Click', 'Trang chủ']);" target="" rel=""> Trang chủ </a>
-                                </li>
-                                <li class="Separator">
-                                    |
-                                </li>
-                                <li>
-                                    <a href="<?php echo base_url(); ?>timvieclam"> Tìm việc làm </a>
-                                </li>
-                                <li class="Separator">
-                                    |
-                                </li>
-                                <li>
-                                    <a href="<?php echo base_url(); ?>tuyendungnhanh" ga_click="_gaq.push(['_trackEvent', 'Footer', 'Click', 'Tìm hồ sơ Người tìm việc']);" target="" rel=""> Tìm hồ sơ Người tìm việc </a>
-                                </li>
-                                <li class="Separator">
-                                    |
-                                </li>
-                                <li>
-                                    <a href="<?php echo base_url(); ?>" ga_click="_gaq.push(['_trackEvent', 'Footer', 'Click', 'Việc làm 24h']);" target="_blank" rel="">nhucauvieclam</a>
-                                </li>
+                                            <ul>
+                                                <li>
+                                                    <a class="trangchu" href="<?php echo base_url(); ?>" ga_click="_gaq.push(['_trackEvent', 'Footer', 'Click', 'Trang chủ']);" target="" rel=""> Trang chủ </a>
+                                                </li>
+                                                <li class="Separator">
+                                                    |
+                                                </li>
+                                                <li>
+                                                    <a href="<?php echo base_url(); ?>timvieclam"> Tìm việc làm </a>
+                                                </li>
+                                                <li class="Separator">
+                                                    |
+                                                </li>
+                                                <li>
+                                                    <a href="<?php echo base_url(); ?>tuyendungnhanh" ga_click="_gaq.push(['_trackEvent', 'Footer', 'Click', 'Tìm hồ sơ Người tìm việc']);" target="" rel=""> Tìm hồ sơ Người tìm việc </a>
+                                                </li>
+                                                <li class="Separator">
+                                                    |
+                                                </li>
+                                                <li>
+                                                    <a href="<?php echo base_url(); ?>" ga_click="_gaq.push(['_trackEvent', 'Footer', 'Click', 'Việc làm 24h']);" target="_blank" rel="">nhucauvieclam</a>
+                                                </li>
 
-                                <li class="Separator">
-                                    |
-                                </li>
-                                <li>
-                                    <a href="<?php echo base_url(); ?>" ga_click="_gaq.push(['_trackEvent', 'Footer', 'Click', 'Cẩm nang tuyển dụng']);" target="_blank" rel="nofollow"> Cẩm nang tuyển dụng </a>
-                                </li>
-                                <li class="Separator">
-                                    |
-                                </li>
-                                <li>
-                                    <a href="<?php echo base_url(); ?>" ga_click="_gaq.push(['_trackEvent', 'Footer', 'Click', 'Cẩm nang việc làm']);" target="_blank" rel="nofollow"> Cẩm nang việc làm </a>
-                                </li>
-                                <li class="Separator">
-                                    |
-                                </li>
-                                <li>
-                                    <a href="<?php echo base_url(); ?>" ga_click="_gaq.push(['_trackEvent', 'Footer', 'Click', 'Nghề nghiệp']);" target="_blank" rel=""> Nghề nghiệp </a>
-                                </li>
+                                                <li class="Separator">
+                                                    |
+                                                </li>
+                                                <li>
+                                                    <a href="<?php echo base_url(); ?>" ga_click="_gaq.push(['_trackEvent', 'Footer', 'Click', 'Cẩm nang tuyển dụng']);" target="_blank" rel="nofollow"> Cẩm nang tuyển dụng </a>
+                                                </li>
+                                                <li class="Separator">
+                                                    |
+                                                </li>
+                                                <li>
+                                                    <a href="<?php echo base_url(); ?>" ga_click="_gaq.push(['_trackEvent', 'Footer', 'Click', 'Cẩm nang việc làm']);" target="_blank" rel="nofollow"> Cẩm nang việc làm </a>
+                                                </li>
+                                                <li class="Separator">
+                                                    |
+                                                </li>
+                                                <li>
+                                                    <a href="<?php echo base_url(); ?>" ga_click="_gaq.push(['_trackEvent', 'Footer', 'Click', 'Nghề nghiệp']);" target="_blank" rel=""> Nghề nghiệp </a>
+                                                </li>
 
-                            </ul>
-                            <div class="Clear"></div>
-                        </div>
+                                            </ul>
+                                            <div class="Clear"></div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                             <div id="content">
                                 <div id="content-bottom">
                                     <div id="content-wrapper">
-                                        <div class="HighBlank"></div>
+
                                         <div id="user-menu">
 
                                             <div class="GridInfo">
@@ -615,7 +616,7 @@
 
                                                     <ul class="UserMenu">
                                                         <li>
-                                                            <a href="file:///E:/workspace/projectwebjobs/qltuyendung.html">Quản lý tuyển dụng</a>
+                                                            <a href="<?php echo base_url(); ?>quanly-timviec/<?php echo $info_user[0]['u_id'] ?>">Quản lý tìm việc</a>
                                                         </li>
 
                                                         <li class="Separator">
@@ -623,7 +624,7 @@
                                                         </li>
 
                                                         <li>
-                                                            <a href="file:///E:/workspace/projectwebjobs/tinTDdadang.html">Tin TD đã đăng</a>
+                                                            <a href="<?php echo base_url(); ?>hsda-dang/<?php echo $info_user[0]['u_id'] ?>">Hồ Sơ đã đăng</a>
                                                         </li>
 
                                                         <li class="Separator">
@@ -631,7 +632,7 @@
                                                         </li>
 
                                                         <li>
-                                                            <a href="file:///E:/workspace/projectwebjobs/taotinTD.html">Taọ tin TD mới</a>
+                                                            <a href="<?php echo base_url(); ?>tao-hsungvien/<?php echo $info_user[0]['u_id'] ?>">Tạo HS tìm việc</a>
                                                         </li>
 
                                                         <li class="Separator">
@@ -639,7 +640,7 @@
                                                         </li>
 
                                                         <li>
-                                                            <a href="file:///E:/workspace/projectwebjobs/taikhoanNTD.html">Thông tin NTD</a>
+                                                            <a href="<?php echo base_url(); ?>daluu/<?php echo $info_user[0]['u_id'] ?>">Việc làm đã Lưu</a>
                                                         </li>
 
                                                         <li class="Separator">
@@ -647,7 +648,7 @@
                                                         </li>
 
                                                         <li>
-                                                            <a href="file:///E:/workspace/projectwebjobs/qlhsUV.html">Quản lý hồ sơ ứng viên</a>
+                                                            <a href="<?php echo base_url(); ?>da-ung-tuyen/<?php echo $info_user[0]['u_id'] ?>">Việc làm đã ứng tuyển</a>
                                                         </li>
 
                                                         <li class="Separator">
@@ -655,7 +656,15 @@
                                                         </li>
 
                                                         <li>
-                                                            <a href="/nhatuyendung/hosodaxem">Liên hệ quản cáo</a>
+                                                            <a href="<?php echo base_url(); ?>cv/<?php echo $info_user[0]['u_id'] ?>">Hồ sơ cá nhân(CV)</a>
+                                                        </li>
+
+                                                        <li class="Separator">
+                                                            |
+                                                        </li>
+
+                                                        <li>
+                                                            <a href="<?php echo base_url(); ?>thongtin-canhan/<?php echo $info_user[0]['u_id'] ?>">Thông tin cá nhân</a>
                                                         </li>
 
                                                     </ul>
@@ -683,31 +692,32 @@
                                                                         <table class="TableList">
                                                                             <tbody>
 
-                        <?php
-                        $i = 1;
-                        foreach ($list_cate_job as $job_cate) {
+                                                                                <?php
+                                                                                $i = 1;
+                                                                                foreach ($list_cate_job as $job_cate) {
 
-                            if ($i % 3 == 1) {
-                                ?>
-                                <tr>
-                            <?php } ?>
-                                <td width="33%">
-                                    <ul>
-                                        <li>
-                                            <a href="<?php echo base_url(); ?>nganh-nghe/<?php echo $job_cate['m_id'] ?>-<?php echo mb_strtolower(url_title(removesign($job_cate['m_name'])))?>"  title="<?php echo $job_cate['m_name'] ?>" target="_blank"> <?php echo $job_cate['m_name'] ?> </a>
-                                        </li>
-                                    </ul>
-                                </td>
-    <?php
-    if ($i % 3 == 0) {
-        ?>
-                                </tr>
-                                <?php } ?>
-                                <?php $i++;
-                            } ?>
-                    <td width="33%"></td>
+                                                                                    if ($i % 3 == 1) {
+                                                                                        ?>
+                                                                                        <tr>
+    <?php } ?>
+                                                                                        <td width="33%">
+                                                                                            <ul>
+                                                                                                <li>
+                                                                                                    <a href="<?php echo base_url(); ?>nganh-nghe/<?php echo $job_cate['m_id'] ?>-<?php echo mb_strtolower(url_title(removesign($job_cate['m_name']))) ?>"  title="<?php echo $job_cate['m_name'] ?>" target="_blank"> <?php echo $job_cate['m_name'] ?> </a>
+                                                                                                </li>
+                                                                                            </ul>
+                                                                                        </td>
+                                                                                        <?php
+                                                                                        if ($i % 3 == 0) {
+                                                                                            ?>
+                                                                                        </tr>
+                                                                                    <?php } ?>
+                                                                                    <?php $i++;
+                                                                                }
+                                                                                ?>
+                                                                                <td width="33%"></td>
 
-                    </tbody></table>
+                                                                            </tbody></table>
                                                                     </div>
                                                                 </div>
                                                                 <div class="BottomLeft">
@@ -729,31 +739,32 @@
                                                                         <table class="TableList">
                                                                             <tbody>
 
-                        <?php
-                        $i = 1;
-                        foreach ($list_city as $city_cate) {
+                                                                                <?php
+                                                                                $i = 1;
+                                                                                foreach ($list_city as $city_cate) {
 
-                            if ($i % 3 == 1) {
-                                ?>
-                                <tr>
-                            <?php } ?>
-                                <td width="33%">
-                                    <ul>
-                                        <li>
-                                            <a href="<?php echo base_url(); ?>nganh-nghe/<?php echo $city_cate['n_id'] ?>-<?php echo mb_strtolower(url_title(removesign($city_cate['n_name'])))?>"  title="<?php echo $city_cate['n_name'] ?>" target="_blank"> <?php echo $city_cate['n_name'] ?> </a>
-                                        </li>
-                                    </ul>
-                                </td>
-    <?php
-    if ($i % 3 == 0) {
-        ?>
-                                </tr>
-                                <?php } ?>
-                                <?php $i++;
-                            } ?>
-                    <td width="33%"></td>
+                                                                                    if ($i % 3 == 1) {
+                                                                                        ?>
+                                                                                        <tr>
+    <?php } ?>
+                                                                                        <td width="33%">
+                                                                                            <ul>
+                                                                                                <li>
+                                                                                                    <a href="<?php echo base_url(); ?>nganh-nghe/<?php echo $city_cate['n_id'] ?>-<?php echo mb_strtolower(url_title(removesign($city_cate['n_name']))) ?>"  title="<?php echo $city_cate['n_name'] ?>" target="_blank"> <?php echo $city_cate['n_name'] ?> </a>
+                                                                                                </li>
+                                                                                            </ul>
+                                                                                        </td>
+                                                                                        <?php
+                                                                                        if ($i % 3 == 0) {
+                                                                                            ?>
+                                                                                        </tr>
+                                                                                    <?php } ?>
+    <?php $i++;
+}
+?>
+                                                                                <td width="33%"></td>
 
-                    </tbody></table>
+                                                                            </tbody></table>
                                                                     </div>
                                                                 </div>
                                                                 <div class="BottomLeft">
@@ -1012,246 +1023,246 @@
                                                             </div>
 
                                                             <script type="text/javascript">
-                                                                        var fields = new Array();
-                                                                        var provinces = new Array();
-                                                                        var levels = new Array();
-                                                                        var experiences = new Array();
-                                                                        var time = new Array();
-                                                                        var salary_vnd = new Array();
-                                                                        var salary_usd = new Array();
-                                                                        fields[10] = 'ban-hang';
-                                                                        fields[11] = 'tu-van-bao-hiem';
-                                                                        fields[12] = 'bao-chi-bien-tap-vien';
-                                                                        fields[13] = 'bat-dong-san';
-                                                                        fields[14] = 'bien-dich-phien-dich';
-                                                                        fields[15] = 'buu-chinh-vien-thong';
-                                                                        fields[16] = 'co-khi-ky-thuat-ung-dung';
-                                                                        fields[17] = 'cong-nghe-thong-tin';
-                                                                        fields[18] = 'dau-khi-dia-chat';
-                                                                        fields[19] = 'det-may';
-                                                                        fields[20] = 'bao-ve-ve-si-an-ninh';
-                                                                        fields[21] = 'cham-soc-khach-hang';
-                                                                        fields[22] = 'dien-dien-tu-dien-lanh';
-                                                                        fields[23] = 'du-lich-nha-hang-khach-san';
-                                                                        fields[24] = 'duoc-hoa-chat-sinh-hoa';
-                                                                        fields[25] = 'giai-tri-vui-choi';
-                                                                        fields[26] = 'giao-duc-dao-tao-thu-vien';
-                                                                        fields[27] = 'giao-thong-van-tai-thuy-loi-cau-duong';
-                                                                        fields[28] = 'giay-da-thuoc-da';
-                                                                        fields[29] = 'hanh-chinh-thu-ky';
-                                                                        fields[30] = 'kho-van-vat-tu';
-                                                                        fields[31] = 'kien-truc-noi-that';
-                                                                        fields[32] = 'kinh-doanh';
-                                                                        fields[33] = 'lao-dong-pho-thong';
-                                                                        fields[34] = 'luat-phap-ly';
-                                                                        fields[35] = 'sinh-vien-moi-tot-nghiep-thuc-tap';
-                                                                        fields[36] = 'moi-truong-xu-ly-chat-thai';
-                                                                        fields[37] = 'my-pham';
-                                                                        fields[38] = 'ngan-hang-chung-khoan-dau-tu';
-                                                                        fields[39] = 'nghe-thuat-dien-anh';
-                                                                        fields[40] = 'nhan-su';
-                                                                        fields[41] = 'nong-lam-ngu-nghiep';
-                                                                        fields[42] = 'quan-he-doi-ngoai';
-                                                                        fields[43] = 'tham-dinh-giam-dinh-quan-ly-chat-luong';
-                                                                        fields[44] = 'quan-ly-dieu-hanh';
-                                                                        fields[45] = 'quang-cao-marketing-pr';
-                                                                        fields[46] = 'san-xuat-van-hanh-san-xuat';
-                                                                        fields[47] = 'tai-chinh-ke-toan-kiem-toan';
-                                                                        fields[48] = 'the-duc-the-thao';
-                                                                        fields[49] = 'thiet-ke-my-thuat';
-                                                                        fields[50] = 'thoi-vu-ban-thoi-gian';
-                                                                        fields[51] = 'thuc-pham-dv-an-uong';
-                                                                        fields[52] = 'xay-dung';
-                                                                        fields[53] = 'xuat-nhap-khau-ngoai-thuong';
-                                                                        fields[54] = 'y-te';
-                                                                        fields[55] = 'khac';
-                                                                        fields[56] = 'ngoai-ngu';
-                                                                        fields[58] = 'khu-che-xuat-khu-cong-nghiep';
-                                                                        fields[59] = 'lam-dep-the-luc-spa';
-                                                                        fields[60] = 'tai-xe-lai-xe-giao-nhan';
-                                                                        fields[61] = 'trang-thiet-bi-cong-nghiep';
-                                                                        fields[62] = 'trang-thiet-bi-gia-dung';
-                                                                        fields[63] = 'trang-thiet-bi-van-phong';
-                                                                        fields[64] = 'pg-pb-le-tan';
-                                                                        fields[65] = 'ban-hang-kinh-doanh-mang-luoi';
-                                                                        fields[66] = 'phuc-vu-tap-vu-giup-viec';
-                                                                        provinces[1] = 'tp-ho-chi-minh';
-                                                                        provinces[2] = 'ha-noi';
-                                                                        provinces[3] = 'an-giang';
-                                                                        provinces[4] = 'bac-lieu';
-                                                                        provinces[5] = 'ba-ria-vung-tau';
-                                                                        provinces[6] = 'bac-can';
-                                                                        provinces[7] = 'bac-giang';
-                                                                        provinces[8] = 'bac-ninh';
-                                                                        provinces[9] = 'ben-tre';
-                                                                        provinces[10] = 'binh-duong';
-                                                                        provinces[11] = 'binh-dinh';
-                                                                        provinces[12] = 'binh-phuoc';
-                                                                        provinces[13] = 'binh-thuan';
-                                                                        provinces[14] = 'cao-bang';
-                                                                        provinces[15] = 'ca-mau';
-                                                                        provinces[16] = 'can-tho';
-                                                                        provinces[17] = 'da-nang';
-                                                                        provinces[18] = 'dak-lak';
-                                                                        provinces[19] = 'dak-nong';
-                                                                        provinces[20] = 'dien-bien';
-                                                                        provinces[21] = 'dong-nai';
-                                                                        provinces[22] = 'dong-thap';
-                                                                        provinces[23] = 'gia-lai';
-                                                                        provinces[24] = 'ha-giang';
-                                                                        provinces[25] = 'ha-nam';
-                                                                        provinces[26] = 'ha-tay';
-                                                                        provinces[27] = 'ha-tinh';
-                                                                        provinces[28] = 'hai-duong';
-                                                                        provinces[29] = 'hai-phong';
-                                                                        provinces[30] = 'hau-giang';
-                                                                        provinces[31] = 'hoa-binh';
-                                                                        provinces[32] = 'hung-yen';
-                                                                        provinces[33] = 'khanh-hoa';
-                                                                        provinces[34] = 'kien-giang';
-                                                                        provinces[35] = 'kon-tum';
-                                                                        provinces[36] = 'lai-chau';
-                                                                        provinces[37] = 'lang-son';
-                                                                        provinces[38] = 'lao-cai';
-                                                                        provinces[39] = 'lam-dong';
-                                                                        provinces[40] = 'long-an';
-                                                                        provinces[41] = 'nam-dinh';
-                                                                        provinces[42] = 'nghe-an';
-                                                                        provinces[43] = 'ninh-binh';
-                                                                        provinces[44] = 'ninh-thuan';
-                                                                        provinces[45] = 'phu-tho';
-                                                                        provinces[46] = 'phu-yen';
-                                                                        provinces[47] = 'quang-binh';
-                                                                        provinces[48] = 'quang-nam';
-                                                                        provinces[49] = 'quang-ngai';
-                                                                        provinces[50] = 'quang-ninh';
-                                                                        provinces[51] = 'quang-tri';
-                                                                        provinces[52] = 'soc-trang';
-                                                                        provinces[53] = 'son-la';
-                                                                        provinces[54] = 'tay-ninh';
-                                                                        provinces[55] = 'thai-binh';
-                                                                        provinces[56] = 'thai-nguyen';
-                                                                        provinces[57] = 'thanh-hoa';
-                                                                        provinces[58] = 'thua-thien-hue';
-                                                                        provinces[59] = 'tien-giang';
-                                                                        provinces[60] = 'tra-vinh';
-                                                                        provinces[61] = 'tuyen-quang';
-                                                                        provinces[62] = 'vinh-long';
-                                                                        provinces[63] = 'vinh-phuc';
-                                                                        provinces[64] = 'yen-bai';
-                                                                        provinces[65] = 'toan-quoc';
-                                                                        provinces[66] = 'nuoc-ngoai';
-                                                                        levels[1] = 'lao-dong-pho-thong';
-                                                                        levels[2] = 'chung-chi';
-                                                                        levels[3] = 'trung-hoc';
-                                                                        levels[4] = 'trung-cap';
-                                                                        levels[5] = 'cao-dang';
-                                                                        levels[6] = 'dai-hoc';
-                                                                        levels[7] = 'cao-hoc';
-                                                                        levels[8] = 'khong-khai-bao';
-                                                                        experiences[0] = 'chua-co-kinh-nghiem';
-                                                                        experiences[1] = '1-nam';
-                                                                        experiences[2] = '2-nam';
-                                                                        experiences[3] = '3-nam';
-                                                                        experiences[4] = '4-nam';
-                                                                        experiences[5] = '5-nam';
-                                                                        experiences[6] = 'tren-5-nam';
-                                                                        time[1] = 'nhan-vien-chinh-thuc';
-                                                                        time[2] = 'nhan-vien-thoi-vu';
-                                                                        time[3] = 'ban-thoi-gian';
-                                                                        time[4] = 'lam-them-ngoai-gio';
-                                                                        time[5] = 'thuc-tap-va-du-an';
-                                                                        salary_vnd[1] = '1-2-trieu';
-                                                                        salary_vnd[2] = '2-3-trieu';
-                                                                        salary_vnd[3] = '3-4-trieu';
-                                                                        salary_vnd[4] = '4-5-trieu';
-                                                                        salary_vnd[5] = '5-8-trieu';
-                                                                        salary_vnd[6] = '8-15-trieu';
-                                                                        salary_vnd[8] = '15-30-trieu';
-                                                                        salary_vnd[9] = 'tren-30-trieu';
-                                                                        salary_vnd[7] = 'thoa-thuan-vnd';
-                                                                        salary_usd[1] = '100-150-usd';
-                                                                        salary_usd[2] = '150-200-usd';
-                                                                        salary_usd[3] = '200-250-usd';
-                                                                        salary_usd[4] = '250-300-usd';
-                                                                        salary_usd[5] = '300-400-usd';
-                                                                        salary_usd[6] = '400-750-usd';
-                                                                        salary_usd[8] = '750-1500-usd';
-                                                                        salary_usd[9] = 'tren-1500-usd';
-                                                                        salary_usd[7] = 'thoa-thuan-usd';
-                                                                        function submitSearch()
-                                                                        {
-                                                                        var url_root = '/vieclam/timkiem';
-                                                                                var url = '';
-                                                                                if ($('#JobJobfield').val() != '') {
+                                                                var fields = new Array();
+                                                                var provinces = new Array();
+                                                                var levels = new Array();
+                                                                var experiences = new Array();
+                                                                var time = new Array();
+                                                                var salary_vnd = new Array();
+                                                                var salary_usd = new Array();
+                                                                fields[10] = 'ban-hang';
+                                                                fields[11] = 'tu-van-bao-hiem';
+                                                                fields[12] = 'bao-chi-bien-tap-vien';
+                                                                fields[13] = 'bat-dong-san';
+                                                                fields[14] = 'bien-dich-phien-dich';
+                                                                fields[15] = 'buu-chinh-vien-thong';
+                                                                fields[16] = 'co-khi-ky-thuat-ung-dung';
+                                                                fields[17] = 'cong-nghe-thong-tin';
+                                                                fields[18] = 'dau-khi-dia-chat';
+                                                                fields[19] = 'det-may';
+                                                                fields[20] = 'bao-ve-ve-si-an-ninh';
+                                                                fields[21] = 'cham-soc-khach-hang';
+                                                                fields[22] = 'dien-dien-tu-dien-lanh';
+                                                                fields[23] = 'du-lich-nha-hang-khach-san';
+                                                                fields[24] = 'duoc-hoa-chat-sinh-hoa';
+                                                                fields[25] = 'giai-tri-vui-choi';
+                                                                fields[26] = 'giao-duc-dao-tao-thu-vien';
+                                                                fields[27] = 'giao-thong-van-tai-thuy-loi-cau-duong';
+                                                                fields[28] = 'giay-da-thuoc-da';
+                                                                fields[29] = 'hanh-chinh-thu-ky';
+                                                                fields[30] = 'kho-van-vat-tu';
+                                                                fields[31] = 'kien-truc-noi-that';
+                                                                fields[32] = 'kinh-doanh';
+                                                                fields[33] = 'lao-dong-pho-thong';
+                                                                fields[34] = 'luat-phap-ly';
+                                                                fields[35] = 'sinh-vien-moi-tot-nghiep-thuc-tap';
+                                                                fields[36] = 'moi-truong-xu-ly-chat-thai';
+                                                                fields[37] = 'my-pham';
+                                                                fields[38] = 'ngan-hang-chung-khoan-dau-tu';
+                                                                fields[39] = 'nghe-thuat-dien-anh';
+                                                                fields[40] = 'nhan-su';
+                                                                fields[41] = 'nong-lam-ngu-nghiep';
+                                                                fields[42] = 'quan-he-doi-ngoai';
+                                                                fields[43] = 'tham-dinh-giam-dinh-quan-ly-chat-luong';
+                                                                fields[44] = 'quan-ly-dieu-hanh';
+                                                                fields[45] = 'quang-cao-marketing-pr';
+                                                                fields[46] = 'san-xuat-van-hanh-san-xuat';
+                                                                fields[47] = 'tai-chinh-ke-toan-kiem-toan';
+                                                                fields[48] = 'the-duc-the-thao';
+                                                                fields[49] = 'thiet-ke-my-thuat';
+                                                                fields[50] = 'thoi-vu-ban-thoi-gian';
+                                                                fields[51] = 'thuc-pham-dv-an-uong';
+                                                                fields[52] = 'xay-dung';
+                                                                fields[53] = 'xuat-nhap-khau-ngoai-thuong';
+                                                                fields[54] = 'y-te';
+                                                                fields[55] = 'khac';
+                                                                fields[56] = 'ngoai-ngu';
+                                                                fields[58] = 'khu-che-xuat-khu-cong-nghiep';
+                                                                fields[59] = 'lam-dep-the-luc-spa';
+                                                                fields[60] = 'tai-xe-lai-xe-giao-nhan';
+                                                                fields[61] = 'trang-thiet-bi-cong-nghiep';
+                                                                fields[62] = 'trang-thiet-bi-gia-dung';
+                                                                fields[63] = 'trang-thiet-bi-van-phong';
+                                                                fields[64] = 'pg-pb-le-tan';
+                                                                fields[65] = 'ban-hang-kinh-doanh-mang-luoi';
+                                                                fields[66] = 'phuc-vu-tap-vu-giup-viec';
+                                                                provinces[1] = 'tp-ho-chi-minh';
+                                                                provinces[2] = 'ha-noi';
+                                                                provinces[3] = 'an-giang';
+                                                                provinces[4] = 'bac-lieu';
+                                                                provinces[5] = 'ba-ria-vung-tau';
+                                                                provinces[6] = 'bac-can';
+                                                                provinces[7] = 'bac-giang';
+                                                                provinces[8] = 'bac-ninh';
+                                                                provinces[9] = 'ben-tre';
+                                                                provinces[10] = 'binh-duong';
+                                                                provinces[11] = 'binh-dinh';
+                                                                provinces[12] = 'binh-phuoc';
+                                                                provinces[13] = 'binh-thuan';
+                                                                provinces[14] = 'cao-bang';
+                                                                provinces[15] = 'ca-mau';
+                                                                provinces[16] = 'can-tho';
+                                                                provinces[17] = 'da-nang';
+                                                                provinces[18] = 'dak-lak';
+                                                                provinces[19] = 'dak-nong';
+                                                                provinces[20] = 'dien-bien';
+                                                                provinces[21] = 'dong-nai';
+                                                                provinces[22] = 'dong-thap';
+                                                                provinces[23] = 'gia-lai';
+                                                                provinces[24] = 'ha-giang';
+                                                                provinces[25] = 'ha-nam';
+                                                                provinces[26] = 'ha-tay';
+                                                                provinces[27] = 'ha-tinh';
+                                                                provinces[28] = 'hai-duong';
+                                                                provinces[29] = 'hai-phong';
+                                                                provinces[30] = 'hau-giang';
+                                                                provinces[31] = 'hoa-binh';
+                                                                provinces[32] = 'hung-yen';
+                                                                provinces[33] = 'khanh-hoa';
+                                                                provinces[34] = 'kien-giang';
+                                                                provinces[35] = 'kon-tum';
+                                                                provinces[36] = 'lai-chau';
+                                                                provinces[37] = 'lang-son';
+                                                                provinces[38] = 'lao-cai';
+                                                                provinces[39] = 'lam-dong';
+                                                                provinces[40] = 'long-an';
+                                                                provinces[41] = 'nam-dinh';
+                                                                provinces[42] = 'nghe-an';
+                                                                provinces[43] = 'ninh-binh';
+                                                                provinces[44] = 'ninh-thuan';
+                                                                provinces[45] = 'phu-tho';
+                                                                provinces[46] = 'phu-yen';
+                                                                provinces[47] = 'quang-binh';
+                                                                provinces[48] = 'quang-nam';
+                                                                provinces[49] = 'quang-ngai';
+                                                                provinces[50] = 'quang-ninh';
+                                                                provinces[51] = 'quang-tri';
+                                                                provinces[52] = 'soc-trang';
+                                                                provinces[53] = 'son-la';
+                                                                provinces[54] = 'tay-ninh';
+                                                                provinces[55] = 'thai-binh';
+                                                                provinces[56] = 'thai-nguyen';
+                                                                provinces[57] = 'thanh-hoa';
+                                                                provinces[58] = 'thua-thien-hue';
+                                                                provinces[59] = 'tien-giang';
+                                                                provinces[60] = 'tra-vinh';
+                                                                provinces[61] = 'tuyen-quang';
+                                                                provinces[62] = 'vinh-long';
+                                                                provinces[63] = 'vinh-phuc';
+                                                                provinces[64] = 'yen-bai';
+                                                                provinces[65] = 'toan-quoc';
+                                                                provinces[66] = 'nuoc-ngoai';
+                                                                levels[1] = 'lao-dong-pho-thong';
+                                                                levels[2] = 'chung-chi';
+                                                                levels[3] = 'trung-hoc';
+                                                                levels[4] = 'trung-cap';
+                                                                levels[5] = 'cao-dang';
+                                                                levels[6] = 'dai-hoc';
+                                                                levels[7] = 'cao-hoc';
+                                                                levels[8] = 'khong-khai-bao';
+                                                                experiences[0] = 'chua-co-kinh-nghiem';
+                                                                experiences[1] = '1-nam';
+                                                                experiences[2] = '2-nam';
+                                                                experiences[3] = '3-nam';
+                                                                experiences[4] = '4-nam';
+                                                                experiences[5] = '5-nam';
+                                                                experiences[6] = 'tren-5-nam';
+                                                                time[1] = 'nhan-vien-chinh-thuc';
+                                                                time[2] = 'nhan-vien-thoi-vu';
+                                                                time[3] = 'ban-thoi-gian';
+                                                                time[4] = 'lam-them-ngoai-gio';
+                                                                time[5] = 'thuc-tap-va-du-an';
+                                                                salary_vnd[1] = '1-2-trieu';
+                                                                salary_vnd[2] = '2-3-trieu';
+                                                                salary_vnd[3] = '3-4-trieu';
+                                                                salary_vnd[4] = '4-5-trieu';
+                                                                salary_vnd[5] = '5-8-trieu';
+                                                                salary_vnd[6] = '8-15-trieu';
+                                                                salary_vnd[8] = '15-30-trieu';
+                                                                salary_vnd[9] = 'tren-30-trieu';
+                                                                salary_vnd[7] = 'thoa-thuan-vnd';
+                                                                salary_usd[1] = '100-150-usd';
+                                                                salary_usd[2] = '150-200-usd';
+                                                                salary_usd[3] = '200-250-usd';
+                                                                salary_usd[4] = '250-300-usd';
+                                                                salary_usd[5] = '300-400-usd';
+                                                                salary_usd[6] = '400-750-usd';
+                                                                salary_usd[8] = '750-1500-usd';
+                                                                salary_usd[9] = 'tren-1500-usd';
+                                                                salary_usd[7] = 'thoa-thuan-usd';
+                                                                function submitSearch()
+                                                                {
+                                                                    var url_root = '/vieclam/timkiem';
+                                                                    var url = '';
+                                                                    if ($('#JobJobfield').val() != '') {
                                                                         url += '/nganhnghe:' + fields[$('#JobJobfield').val()];
-                                                                        }
+                                                                    }
 
-                                                                        if ($('#JobJobplace').val() != '') {
+                                                                    if ($('#JobJobplace').val() != '') {
                                                                         url += '/tinhthanhpho:' + provinces[$('#JobJobplace').val()];
-                                                                        }
+                                                                    }
 
-                                                                        if ($('#JobJoblevel').val() != '') {
+                                                                    if ($('#JobJoblevel').val() != '') {
                                                                         url += '/trinhdo:' + levels[$('#JobJoblevel').val()];
-                                                                        }
+                                                                    }
 
-                                                                        if ($('#JobJobexperience').val() != '') {
+                                                                    if ($('#JobJobexperience').val() != '') {
                                                                         url += '/kinhnghiem:' + experiences[$('#JobJobexperience').val()];
-                                                                        }
+                                                                    }
 
-                                                                        if ($('#JobJobtimework').val() != '') {
+                                                                    if ($('#JobJobtimework').val() != '') {
                                                                         url += '/hinhthuclamviec:' + time[$('#JobJobtimework').val()];
-                                                                        }
+                                                                    }
 
-                                                                        if ($('#JobVND').val() != '') {
+                                                                    if ($('#JobVND').val() != '') {
                                                                         if ($('#JobVND').val() == 'Y') {
-                                                                        if ($('#job-salary-vnd').val() != '') {
-                                                                        url += '/mucluong:' + salary_vnd[$('#job-salary-vnd').val()];
-                                                                        }
+                                                                            if ($('#job-salary-vnd').val() != '') {
+                                                                                url += '/mucluong:' + salary_vnd[$('#job-salary-vnd').val()];
+                                                                            }
                                                                         } else {
-                                                                        if ($('#job-salary-usd').val() != '') {
-                                                                        url += '/mucluong:' + salary_usd[$('#job-salary-usd').val()];
+                                                                            if ($('#job-salary-usd').val() != '') {
+                                                                                url += '/mucluong:' + salary_usd[$('#job-salary-usd').val()];
+                                                                            }
                                                                         }
-                                                                        }
-                                                                        }
+                                                                    }
 
-                                                                        if (url != '') {
+                                                                    if (url != '') {
                                                                         url = url_root + url;
-                                                                                window.location.href = url;
-                                                                        }
+                                                                        window.location.href = url;
+                                                                    }
 
-                                                                        return false;
-                                                                        }
+                                                                    return false;
+                                                                }
 
                                                                 $(document).ready(function() {
-                                                                $('#JobVND').change(function() {
-                                                                if ($(this).val() == 'Y') {
-                                                                $('#job-salary-vnd').show();
-                                                                        $('#job-salary-usd').hide();
-                                                                        $('#job-salary-vnd').val('');
-                                                                        $('#job-salary-usd').val('');
-                                                                        $('#job-salary-vnd').removeAttr('disabled');
-                                                                        $('#job-salary-usd').removeAttr('disabled');
-                                                                }
+                                                                    $('#JobVND').change(function() {
+                                                                        if ($(this).val() == 'Y') {
+                                                                            $('#job-salary-vnd').show();
+                                                                            $('#job-salary-usd').hide();
+                                                                            $('#job-salary-vnd').val('');
+                                                                            $('#job-salary-usd').val('');
+                                                                            $('#job-salary-vnd').removeAttr('disabled');
+                                                                            $('#job-salary-usd').removeAttr('disabled');
+                                                                        }
 
-                                                                if ($(this).val() == 'N') {
-                                                                $('#job-salary-vnd').hide();
-                                                                        $('#job-salary-usd').show();
-                                                                        $('#job-salary-vnd').val('');
-                                                                        $('#job-salary-usd').val('');
-                                                                        $('#job-salary-vnd').removeAttr('disabled');
-                                                                        $('#job-salary-usd').removeAttr('disabled');
-                                                                }
+                                                                        if ($(this).val() == 'N') {
+                                                                            $('#job-salary-vnd').hide();
+                                                                            $('#job-salary-usd').show();
+                                                                            $('#job-salary-vnd').val('');
+                                                                            $('#job-salary-usd').val('');
+                                                                            $('#job-salary-vnd').removeAttr('disabled');
+                                                                            $('#job-salary-usd').removeAttr('disabled');
+                                                                        }
 
-                                                                if ($(this).val() == '') {
-                                                                $('#job-salary-vnd').show();
-                                                                        $('#job-salary-usd').hide();
-                                                                        $('#job-salary-vnd').val('');
-                                                                        $('#job-salary-usd').val('');
-                                                                        $('#job-salary-vnd').attr('disabled', 'disabled');
-                                                                        $('#job-salary-usd').attr('disabled', 'disabled');
-                                                                }
-                                                                });
+                                                                        if ($(this).val() == '') {
+                                                                            $('#job-salary-vnd').show();
+                                                                            $('#job-salary-usd').hide();
+                                                                            $('#job-salary-vnd').val('');
+                                                                            $('#job-salary-usd').val('');
+                                                                            $('#job-salary-vnd').attr('disabled', 'disabled');
+                                                                            $('#job-salary-usd').attr('disabled', 'disabled');
+                                                                        }
+                                                                    });
                                                                 });</script>
                                                         </div>
 
@@ -1263,51 +1274,51 @@
                                             <div id="footer-menubar">
                                                 <div id="footer-menubar-left">
                                                     <div id="footer-menubar-right">
-                                        <ul>
-                                <li>
-                                    <a class="trangchu" href="<?php echo base_url(); ?>" ga_click="_gaq.push(['_trackEvent', 'Footer', 'Click', 'Trang chủ']);" target="" rel=""> Trang chủ </a>
-                                </li>
-                                <li class="Separator">
-                                    |
-                                </li>
-                                <li>
-                                    <a href="<?php echo base_url(); ?>timvieclam"> Tìm việc làm </a>
-                                </li>
-                                <li class="Separator">
-                                    |
-                                </li>
-                                <li>
-                                    <a href="<?php echo base_url(); ?>tuyendungnhanh" ga_click="_gaq.push(['_trackEvent', 'Footer', 'Click', 'Tìm hồ sơ Người tìm việc']);" target="" rel=""> Tìm hồ sơ Người tìm việc </a>
-                                </li>
-                                <li class="Separator">
-                                    |
-                                </li>
-                                <li>
-                                    <a href="<?php echo base_url(); ?>" ga_click="_gaq.push(['_trackEvent', 'Footer', 'Click', 'Việc làm 24h']);" target="_blank" rel="">nhucauvieclam</a>
-                                </li>
+                                                        <ul>
+                                                            <li>
+                                                                <a class="trangchu" href="<?php echo base_url(); ?>" ga_click="_gaq.push(['_trackEvent', 'Footer', 'Click', 'Trang chủ']);" target="" rel=""> Trang chủ </a>
+                                                            </li>
+                                                            <li class="Separator">
+                                                                |
+                                                            </li>
+                                                            <li>
+                                                                <a href="<?php echo base_url(); ?>timvieclam"> Tìm việc làm </a>
+                                                            </li>
+                                                            <li class="Separator">
+                                                                |
+                                                            </li>
+                                                            <li>
+                                                                <a href="<?php echo base_url(); ?>tuyendungnhanh" ga_click="_gaq.push(['_trackEvent', 'Footer', 'Click', 'Tìm hồ sơ Người tìm việc']);" target="" rel=""> Tìm hồ sơ Người tìm việc </a>
+                                                            </li>
+                                                            <li class="Separator">
+                                                                |
+                                                            </li>
+                                                            <li>
+                                                                <a href="<?php echo base_url(); ?>" ga_click="_gaq.push(['_trackEvent', 'Footer', 'Click', 'Việc làm 24h']);" target="_blank" rel="">nhucauvieclam</a>
+                                                            </li>
 
-                                <li class="Separator">
-                                    |
-                                </li>
-                                <li>
-                                    <a href="<?php echo base_url(); ?>" ga_click="_gaq.push(['_trackEvent', 'Footer', 'Click', 'Cẩm nang tuyển dụng']);" target="_blank" rel="nofollow"> Cẩm nang tuyển dụng </a>
-                                </li>
-                                <li class="Separator">
-                                    |
-                                </li>
-                                <li>
-                                    <a href="<?php echo base_url(); ?>" ga_click="_gaq.push(['_trackEvent', 'Footer', 'Click', 'Cẩm nang việc làm']);" target="_blank" rel="nofollow"> Cẩm nang việc làm </a>
-                                </li>
-                                <li class="Separator">
-                                    |
-                                </li>
-                                <li>
-                                    <a href="<?php echo base_url(); ?>" ga_click="_gaq.push(['_trackEvent', 'Footer', 'Click', 'Nghề nghiệp']);" target="_blank" rel=""> Nghề nghiệp </a>
-                                </li>
+                                                            <li class="Separator">
+                                                                |
+                                                            </li>
+                                                            <li>
+                                                                <a href="<?php echo base_url(); ?>" ga_click="_gaq.push(['_trackEvent', 'Footer', 'Click', 'Cẩm nang tuyển dụng']);" target="_blank" rel="nofollow"> Cẩm nang tuyển dụng </a>
+                                                            </li>
+                                                            <li class="Separator">
+                                                                |
+                                                            </li>
+                                                            <li>
+                                                                <a href="<?php echo base_url(); ?>" ga_click="_gaq.push(['_trackEvent', 'Footer', 'Click', 'Cẩm nang việc làm']);" target="_blank" rel="nofollow"> Cẩm nang việc làm </a>
+                                                            </li>
+                                                            <li class="Separator">
+                                                                |
+                                                            </li>
+                                                            <li>
+                                                                <a href="<?php echo base_url(); ?>" ga_click="_gaq.push(['_trackEvent', 'Footer', 'Click', 'Nghề nghiệp']);" target="_blank" rel=""> Nghề nghiệp </a>
+                                                            </li>
 
-                            </ul>
-                            <div class="Clear"></div>
-                                    </div>
+                                                        </ul>
+                                                        <div class="Clear"></div>
+                                                    </div>
                                                 </div>
                                             </div>
 
@@ -1509,45 +1520,45 @@
                             </div>
                         </div>
                         <script type="text/javascript">
-                                    var _gaq = _gaq || [];
-                                    _gaq.push(['_setAccount', 'UA-1771947-1']);
-                                    /*_gaq.push(['_setDomainName', 'timviecnhanh.com']);*/
-                                    _gaq.push(['_trackPageview']);
-                                    (function() {
-                                    var ga = document.createElement('script');
-                                            ga.type = 'text/javascript';
-                                            ga.async = true;
-                                            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-                                            var s = document.getElementsByTagName('script')[0];
-                                            s.parentNode.insertBefore(ga, s);
-                                    })();
-                                    (function(d, s, id) {
-                                    var js, fjs = d.getElementsByTagName(s)[0];
-                                            if (d.getElementById(id)) {
+                            var _gaq = _gaq || [];
+                            _gaq.push(['_setAccount', 'UA-1771947-1']);
+                            /*_gaq.push(['_setDomainName', 'timviecnhanh.com']);*/
+                            _gaq.push(['_trackPageview']);
+                            (function() {
+                                var ga = document.createElement('script');
+                                ga.type = 'text/javascript';
+                                ga.async = true;
+                                ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+                                var s = document.getElementsByTagName('script')[0];
+                                s.parentNode.insertBefore(ga, s);
+                            })();
+                            (function(d, s, id) {
+                                var js, fjs = d.getElementsByTagName(s)[0];
+                                if (d.getElementById(id)) {
                                     return;
-                                    }
-                                    js = d.createElement(s);
-                                            js.id = id;
-                                            js.src = "//connect.facebook.net/vi_VN/all.js#xfbml=1&appId=357584370994953";
-                                            fjs.parentNode.insertBefore(js, fjs);
-                                    }(document, 'script', 'facebook-jssdk'));
-                                    window.fbAsyncInit = function() {
-                                    FB.init({
+                                }
+                                js = d.createElement(s);
+                                js.id = id;
+                                js.src = "//connect.facebook.net/vi_VN/all.js#xfbml=1&appId=357584370994953";
+                                fjs.parentNode.insertBefore(js, fjs);
+                            }(document, 'script', 'facebook-jssdk'));
+                            window.fbAsyncInit = function() {
+                                FB.init({
                                     appId: '357584370994953',
-                                            status: true,
-                                            cookie: true,
-                                            xfbml: true
-                                    });
-                                    };
-                                    $(document).on('click', 'a', function() {
-                            var ga_click = $(this).attr('ga_click');
-                                    if (ga_click) {
-                            eval(ga_click);
-                            }
+                                    status: true,
+                                    cookie: true,
+                                    xfbml: true
+                                });
+                            };
+                            $(document).on('click', 'a', function() {
+                                var ga_click = $(this).attr('ga_click');
+                                if (ga_click) {
+                                    eval(ga_click);
+                                }
                             });
-                                    $(document).ready(function() {
-                            $('a[rel="popup"]').colorbox({
-                            inline: true,
+                            $(document).ready(function() {
+                                $('a[rel="popup"]').colorbox({
+                                    inline: true,
                                     transition: 'none',
                                     overlayClose: false,
                                     top: '30%',
@@ -1555,10 +1566,10 @@
                                     initialWidth: '0',
                                     initialHeight: '0',
                                     arrowKey: false
-                            });
-                                    $('.ButtonClose').click(function() {
-                            $.colorbox.close();
-                            });
+                                });
+                                $('.ButtonClose').click(function() {
+                                    $.colorbox.close();
+                                });
                             });
                         </script>
 

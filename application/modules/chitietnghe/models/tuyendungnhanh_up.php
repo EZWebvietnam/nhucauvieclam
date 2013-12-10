@@ -79,5 +79,11 @@ class Tuyendungnhanh_up extends CI_Model{
         $query=$this->db->get('tbl_thoigian');
         return $query->result_array();
     }
+    public function get_user()
+    {
+        $this->db->select();
+        $query=$this->db->get('tbl_job_user');
+        return $query->result_array();
+    }
 }
 ?>

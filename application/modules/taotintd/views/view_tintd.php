@@ -1,3 +1,47 @@
+<div id="user-menu">
+
+    <div class="GridInfo">
+        <div class="Content">
+
+            <ul class="UserMenu">
+                <li>
+                    <a href="<?php echo base_url(); ?>quanly-tuyendung/<?php echo $taotintd_detail[0]['u_id']; ?>">Quản lý tuyển dụng</a>
+                </li>
+                <li class="Separator">
+                    |
+                </li>
+                <li>
+                    <a href="<?php echo base_url(); ?>tintd-dadang/<?php echo $taotintd_detail[0]['u_id']; ?>">Tin TD đã đăng</a>
+                </li>
+                <li class="Separator">
+                    |
+                </li>
+                <li>
+                    <a href="<?php echo base_url(); ?>tao-tintuyendung/<?php echo $taotintd_detail[0]['u_id']; ?>">Taọ tin TD mới</a>
+                </li>
+                <li class="Separator">
+                    |
+                </li>
+                <li>
+                    <a href="<?php echo base_url(); ?>thongtin-ntd/<?php echo $taotintd_detail[0]['u_id']; ?>">Thông tin NTD</a>
+                </li>
+                <li class="Separator">
+                    |
+                </li>
+                <li>
+                    <a href="<?php echo base_url(); ?>quanly-hoso-ungvien/<?php echo $taotintd_detail[0]['u_id']; ?>">Quản lý hồ sơ ứng viên</a>
+                </li>
+                <li class="Separator">
+                    |
+                </li>
+                <li>
+                    <a href="#">Liên hệ quản cáo</a>
+                </li>
+            </ul>
+            <div class="Clear"></div>
+        </div>
+    </div>
+</div>
 <div class="content-qlhs">
     <input type="hidden" name="dang_xu_ly" id="dang_xu_ly" value="0">
     <div>

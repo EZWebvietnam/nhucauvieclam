@@ -6,7 +6,7 @@ class Qltuyendung extends CI_Controller
         $this->load->model('qltuyendung_model');
         $this->load->library('tank_auth');
     }
-    public function index($id = null){
+    public function index($id){
         $active = true;
         $location = 'home';
         if ($this->tank_auth->is_logged_in($active, $location)) {

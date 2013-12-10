@@ -12,6 +12,12 @@ class MY_Controller extends CI_Controller
         $this->data['list_cate_job']=$this->tuyendungnhanh_up->get_cate();
         
     }
+    public function load_user()
+    {
+        $this->load->model('chitietnghe/tuyendungnhanh_up');
+        $this->data['info_user']=$this->tuyendungnhanh_up->get_user();
+        
+    }
     public function load_job()
     {
         $this->load->model('infotintd/info_tintd');
