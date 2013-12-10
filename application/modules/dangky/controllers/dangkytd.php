@@ -72,15 +72,12 @@ class Dangkytd extends CI_Controller
                         'remove_space'  => TRUE,
                         'encrypt_name'  => TRUE,
                     );
-            
                     $this->upload->initialize($this->upload_config);
-            
                     if (!$this->upload->do_upload()) {
                         $data['error_file'] = $this->upload->display_errors();
-                        echo json_encode($upload_error);
+                        $file='';
                     } else {
                         $file_info = $this->upload->data();
-                        echo json_encode($file_info);
                     }
                     if(!empty($file_info))
                     {
@@ -89,23 +86,15 @@ class Dangkytd extends CI_Controller
                     $data['u_img']=$file;
                     if (!is_null($data = $this->tank_auth->create_user_normal($data))) 
                     {
-                    
-                    $data['site_name'] = $this->config->item('website_name', 'tank_auth');
-                    unset($data['u_password']); // Clear password (just for any case)
-                    $this->_show_message($this->lang->line('auth_message_registration_completed_2') .
-                        ' ' . anchor('/auth/login/', 'Login'));
-                    redirect('admin/user/listuser');
+                        $data['site_name'] = $this->config->item('website_name', 'tank_auth');
+                        unset($data['u_password']); // Clear password (just for any case)
+                        redirect('/');
                     } else {
-                    
                     $errors = $this->tank_auth->get_error_message();
                     foreach ($errors as $k => $v)
                         $data['errors'][$k] = $this->lang->line($v);
                     }
             }
-        //
-            
-            
-       
         $data['main_content'] = 'view_dangkytd';
         $this->load->view('home/dangky_layout', $data);
     }
