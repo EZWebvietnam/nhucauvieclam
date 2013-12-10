@@ -257,7 +257,8 @@ if ($is_login == 0) {
                     <table class="TableVip">
                         <tbody>
                             <?php
-                            foreach ($job_list as $user_post) {
+                           
+                            foreach ($nang_dong as $user_post) {
                                 ?>
                                 <tr>
                                     <td>
