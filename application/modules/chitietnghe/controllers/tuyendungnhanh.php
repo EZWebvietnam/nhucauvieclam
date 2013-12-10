@@ -33,6 +33,11 @@ class Tuyendungnhanh extends CI_Controller
         {
             redirect($_SERVER['HTTP_REFERER']);
         }
+        $data['tuyendung_detail']= $this->tuyendungnhanh_up->tuyendungnhanh_detail($id);
+        if(empty($data['tuyendung_detail']))
+        {
+            redirect($_SERVER['HTTP_REFERER']);
+        }
         $data['tuyendungnhanh_detail']= $this->tuyendungnhanh_up->view_tuyendungnhanh_detail($id);
         if(empty($data['tuyendungnhanh_detail']))
         {

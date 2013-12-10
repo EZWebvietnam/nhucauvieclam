@@ -11,9 +11,9 @@ class Timvieclam extends MY_Controller
         $active = true;
         $location = 'home';
         if ($this->tank_auth->is_logged_in($active, $location)) {
-            $data['is_login'] = 1;
+            $this->data['is_login'] = 1;
         } else {
-            $data['is_login'] = 0;
+            $this->data['is_login'] = 0;
         }
         $this->load->view('home/timvieclam_layout',$this->data);
     }

@@ -11,10 +11,17 @@ class Tuyendungnhanh_up extends CI_Model{
         $query_array = $this->db->get('tbl_employers_post');
         return $query_array->result_array();
     }
-        public function view_tuyendungnhanh_detail($id = null){
+    public function view_tuyendungnhanh_detail($id = null){
         $id = intval($id);
         $this->db->select();
         $this->db->where('m_id',$id);
+        $query_array = $this->db->get('tbl_job_post');
+        return $query_array->result_array();
+    }
+    public function tuyendungnhanh_detail($id = null){
+        $id = intval($id);
+        $this->db->select();
+        $this->db->where('e_hot',1);// ?????
         $query_array = $this->db->get('tbl_job_post');
         return $query_array->result_array();
     }

@@ -63,7 +63,7 @@
                         <?php
                         $i = 1;
 
-                        foreach ($tuyendungnhanh_detail as $tin_tuyen_dung) {
+                        foreach ($tuyendung_detail as $tin_tuyen_dung) {
                             ?>
                             <?php
                             if ($i % 3 == 1) {
