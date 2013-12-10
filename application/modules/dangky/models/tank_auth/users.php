@@ -131,9 +131,7 @@ class Users extends CI_Model
      */
     function create_user($data, $activated = true)
     {
-        $data['u_redate'] = date('Y-m-d H:i:s');
         $data['u_status'] = $activated ? 1 : 0;
-
         if ($this->db->insert($this->table_name, $data)) {
             $user_id = $this->db->insert_id();
             if ($activated)
