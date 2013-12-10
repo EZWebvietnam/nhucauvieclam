@@ -3,9 +3,17 @@ class Infotintd extends CI_Controller{
     public function __construct() {
         parent::__construct();
         $this->load->model('info_tintd');
+        $this->load->library('tank_auth');
     }
     public function view_job_post($id = null)
     {
+        $active = true;
+        $location = 'home';
+        if ($this->tank_auth->is_logged_in($active, $location)) {
+            $data['is_login'] = 1;
+        } else {
+            $data['is_login'] = 0;
+        }
         $data['info_tintd_detail']= $this->info_tintd->load_job($id);
         if(empty($data['info_tintd_detail']))
         {

@@ -3,9 +3,17 @@ class Infontd extends CI_Controller{
     public function __construct() {
         parent::__construct();
         $this->load->model('infontd_model');
+        $this->load->library('tank_auth');
     }
     public function index($id = null)
     {   
+        $active = true;
+        $location = 'home';
+        if ($this->tank_auth->is_logged_in($active, $location)) {
+            $data['is_login'] = 1;
+        } else {
+            $data['is_login'] = 0;
+        }
         $data['info_list']=  $this->infontd_model->info_detail($id);
         $data['main_content']= 'view_infontd';
         if($this->input->post())

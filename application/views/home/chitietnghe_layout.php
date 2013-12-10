@@ -98,20 +98,28 @@
                         </script>
                     </div>
                     <div class="clear"></div>
+                    <?php if ($is_login == 0) { ?>
                     <div id="header-user-menu">
                         <ul>
                             <li>
-                                <a href="/thanhvien/dangky" ga_click="_gaq.push(['_trackEvent', 'Header', 'Click', 'Đăng ký']);" title="Đăng ký"> Đăng ký </a>
+                                <a href="<?php echo base_url(); ?>dangky" ga_click="_gaq.push(['_trackEvent', 'Header', 'Click', 'Đăng ký']);" title="Đăng ký"> Đăng ký </a>
                             </li>
                             <li class="Separator">
                                 |
                             </li>
                             <li>
-                                <a href="/thanhvien/dangnhap" ga_click="_gaq.push(['_trackEvent', 'Header', 'Click', 'Đăng nhập']);" title="Đăng nhập"> Đăng nhập </a>
+                                <a href="<?php echo base_url(); ?>dangnhap/index" ga_click="_gaq.push(['_trackEvent', 'Header', 'Click', 'Đăng nhập']);" title="Đăng nhập"> Đăng nhập </a>
                             </li>
                         </ul>
 
                     </div>
+                    <?php } else { ?> 
+                    <div id="header-user-menu">
+                        <?php echo $this->session->userdata['u_username']; ?> | <a href="<?php echo
+    base_url(); ?>dangnhap/logout">Đăng xuất</a>
+
+                    </div>
+                    <?php } ?>
                 </div>
                 <div class="HighBlank"></div>
                 <div class="Clear"></div>
@@ -602,6 +610,9 @@
             <div id="content">
                 <div id="content-top">
                     <div id="content-wrapper">
+                        <?php
+if ($is_login == 1) {
+?>
                         <div id="user-menu">
 
                             <div class="GridInfo">
@@ -662,9 +673,11 @@
 
                                     </ul>
                                     <div class="Clear"></div>
+
                                 </div>
                             </div>
-                        </div>    
+                        </div>
+                        <?php } ?>    
                             <?php $this->load->view($main_content); ?>
                         <div id="footer">
 

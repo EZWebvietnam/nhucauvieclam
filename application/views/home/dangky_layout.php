@@ -105,20 +105,28 @@
                                             </script>
                                     </div>
                                     <div class="clear"></div>
-                                    <div id="header-user-menu">
-                                        <ul>
-                                            <li>
-                                                <a href="/thanhvien/dangky" ga_click="_gaq.push(['_trackEvent', 'Header', 'Click', 'Đăng ký']);" title="Đăng ký"> Đăng ký </a>
-                                            </li>
-                                            <li class="Separator">
-                                                |
-                                            </li>
-                                            <li>
-                                                <a href="/thanhvien/dangnhap" ga_click="_gaq.push(['_trackEvent', 'Header', 'Click', 'Đăng nhập']);" title="Đăng nhập"> Đăng nhập </a>
-                                            </li>
-                                        </ul>
+                                    <?php if ($is_login == 0) { ?>
+                    <div id="header-user-menu">
+                        <ul>
+                            <li>
+                                <a href="<?php echo base_url(); ?>dangky" ga_click="_gaq.push(['_trackEvent', 'Header', 'Click', 'Đăng ký']);" title="Đăng ký"> Đăng ký </a>
+                            </li>
+                            <li class="Separator">
+                                |
+                            </li>
+                            <li>
+                                <a href="<?php echo base_url(); ?>dangnhap/index" ga_click="_gaq.push(['_trackEvent', 'Header', 'Click', 'Đăng nhập']);" title="Đăng nhập"> Đăng nhập </a>
+                            </li>
+                        </ul>
 
-                                    </div>
+                    </div>
+                    <?php } else { ?> 
+                    <div id="header-user-menu">
+                        <?php echo $this->session->userdata['u_username']; ?> | <a href="<?php echo
+    base_url(); ?>dangnhap/logout">Đăng xuất</a>
+
+                    </div>
+                    <?php } ?>
                                 </div>
                                 <div class="HighBlank"></div>
                                 <div class="Clear"></div>

@@ -5,9 +5,17 @@ class Tintd extends CI_Controller
         parent::__construct();
         $this->load->model('taotintd_model');
         $this->load->library('session');
+        $this->load->library('tank_auth');
     }
     public function index($id = null)
     {   
+        $active = true;
+        $location = 'home';
+        if ($this->tank_auth->is_logged_in($active, $location)) {
+            $data['is_login'] = 1;
+        } else {
+            $data['is_login'] = 0;
+        }
         $data['taotintd_detail']= $this->taotintd_model->tintd_detail($id);
         if($this->input->post())
         {

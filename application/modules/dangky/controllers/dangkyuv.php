@@ -41,7 +41,7 @@ class Dangkyuv extends CI_Controller
                 'u_mobi' => $this->input->post('c_mobi'),
                 'u_role' => 2,
                 'u_fullname' => $this->form_validation->set_value('c_fullname'),
-                'uredate'=>strtotime('now')
+                'u_redate'=>strtotime('now')
                 );
 
             if (!is_null($data = $this->tank_auth->create_user_normal($data_uv))) 

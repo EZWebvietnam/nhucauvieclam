@@ -51,7 +51,7 @@
     <div class="GridVip">
         <div class="TopLeft">
             <div class="TopRight">
-                <h2 class="Headline"><a href="/tintieudiem" target="_blank">Tin tiêu điểm tuyển dụng nhân sự</a> Bán hàng </h2>
+                <h2 class="Headline"><a href="/tintieudiem" target="_blank">Tin tiêu điểm tuyển dụng nhân sự</a><?php echo $list_cate_job[0]['m_name']; ?></h2>
             </div>
         </div>
         <div class="BodyLeft">

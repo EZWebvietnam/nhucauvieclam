@@ -3,9 +3,17 @@ class Thongtincanhan extends CI_Controller{
     public function __construct() {
         parent::__construct();
         $this->load->model('thongtincanhan_model');
+        $this->load->library('tank_auth');
     }
     public function index($id = null)
     {   
+        $active = true;
+        $location = 'home';
+        if ($this->tank_auth->is_logged_in($active, $location)) {
+            $data['is_login'] = 1;
+        } else {
+            $data['is_login'] = 0;
+        }
         $data['info_list']=  $this->thongtincanhan_model->info_detail($id);
         if(empty($data['info_list']))
         {

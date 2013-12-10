@@ -619,78 +619,9 @@ base_url(); ?>template/home/css/slider.css">
             <div id="content">
                 <div id="content-top">
                     <div id="content-wrapper">
-                    <?php
-if ($is_login == 1) {
-?>
-                        <div id="user-menu">
-
-                            <div class="GridInfo">
-                                <div class="Content">
-
-                                    <ul class="UserMenu">
-                                        <li>
-                                            <a href="/nguoitimviec">Quản lý tìm việc</a>
-                                        </li>
-
-                                        <li class="Separator">
-                                            |
-                                        </li>
-
-                                        <li>
-                                            <a href="/nguoitimviec/taikhoan">Hồ Sơ đã đăng</a>
-                                        </li>
-
-                                        <li class="Separator">
-                                            |
-                                        </li>
-
-                                        <li>
-                                            <a href="/nguoitimviec/vieclamdaluu">Tạo HS tìm việc</a>
-                                        </li>
-
-                                        <li class="Separator">
-                                            |
-                                        </li>
-
-                                        <li>
-                                            <a href="/nguoitimviec/vieclamungtuyen">Việc làm đã Lưu</a>
-                                        </li>
-
-                                        <li class="Separator">
-                                            |
-                                        </li>
-
-                                        <li>
-                                            <a href="/nguoitimviec/nhatuyendungxemhoso">Việc làm đã ứng tuyển</a>
-                                        </li>
-
-                                        <li class="Separator">
-                                            |
-                                        </li>
-
-                                        <li>
-                                            <a href="/nguoitimviec/nhatuyendungxemhoso">Hồ sơ cá nhân(CV)</a>
-                                        </li>
-
-                                        <li class="Separator">
-                                            |
-                                        </li>
-
-                                        <li>
-                                            <a href="/nguoitimviec/nhatuyendungxemhoso">Thông tin cá nhân</a>
-                                        </li>
-
-                                    </ul>
-                                    <div class="Clear"></div>
-
-                                </div>
-                            </div>
-                        </div>
-                        <?php } ?>
-                        <div id="content-detail">
-                            <div class="Clear"></div>
+                    
                               <?php echo $this->load->view($main_content); ?>
-                            <div class="Clear"></div>
+                            
                         <div id="footer">
 
                             <div id="footer-menubar">

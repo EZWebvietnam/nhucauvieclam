@@ -27,6 +27,7 @@
                                                 <td class="W50"><img src="<?php echo base_url(); ?>template/home/img/hr_asiafoods_vn.jpg" width="50" alt="CÔNG TY CỔ PHẦN THỰC PHẨM Á CHÂU"></td>
                                                 <td style="padding-left: 3px;"><a href="<?php echo base_url(); ?>Infotintd/Infotintd/view_job_post/<?php echo $tin_tuyen_dung['e_id']; ?>" target="_blank"><?php echo $tin_tuyen_dung['e_title']; ?></a>
                                                     <div class="TinyBlank"></div><span class="Number">CÔNG TY CỔ PHẦN THỰC...</span></td>
+                                                
                                             </tr>
                                         </tbody>
                                     </table></td>
@@ -51,7 +52,7 @@
     <div class="GridVip">
         <div class="TopLeft">
             <div class="TopRight">
-                <h2 class="Headline"><a href="/tintieudiem" target="_blank">Tin tiêu điểm tuyển dụng nhân sự</a> Bán hàng </h2>
+                <h2 class="Headline"><a href="/tintieudiem" target="_blank">Tin tiêu điểm tuyển dụng nhân sự</a></h2>
             </div>
         </div>
         <div class="BodyLeft">
