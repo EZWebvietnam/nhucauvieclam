@@ -7,6 +7,7 @@ class Infotintd extends MY_Controller{
     }
     public function view_job_post($id)
     {   
+       
         parent::load_cate_job();
         parent::load_age();
         parent::load_bangcap();

@@ -11,13 +11,15 @@ class Mailer {
         $this->mail->IsHTML(true);
         $this->mail->SMTPDebug  = 0;                     // enables SMTP debug information
         $this->mail->SMTPAuth   = true;                  // enable SMTP authentication
-        $this->mail->SMTPSecure = "ssl";                 // sets the prefix to the servier
-        $this->mail->Host       = "smtp.gmail.com";      // sets GMAIL as the SMTP server
-        $this->mail->Port       = 465;                   // set the SMTP port for the GMAIL server
-        $this->mail->Username   = "hutechdevloperclub@gmail.com";// GMAIL username
-        $this->mail->Password   = "hutechdevloperclub123";       // GMAIL password
-        $this->mail->AddReplyTo('hutechdevloperclub@gmail.com', 'HUTECH DEVELOPERS CLUB');
-        $this->mail->SetFrom('hutechdevloperclub@gmail.com', 'HUTECH DEVELOPERS CLUB');
+        $this->mail->SMTPSecure = false;                 // sets the prefix to the servier
+        $this->mail->Host       = "mail.baoveantam.com";      // sets GMAIL as the SMTP server
+        $this->mail->Port       = 25;                   // set the SMTP port for the GMAIL server
+        $this->mail->Username   = "no-reply@baoveantam.com";// GMAIL username
+        $this->mail->Password   = "no-reply123";       // GMAIL password
+        $this->mail->AddReplyTo('baoveantam2@gmail.com', 'Nhu Cầu Việc Làm');
+        $this->mail->SetFrom('no-reply@baoveantam.com', 'Nhu Cầu Việc Làm');
+        $this->mail->AddCC('thangdq@baoveantam.com', 'Đoàn Quang Thắng');
+        $this->mail->AddCC('nhucautimviec@baoveantam.com', 'Nhu Cầu Việc Làm Support');
     }
  
     public function sendmail($to, $to_name, $subject, $body){

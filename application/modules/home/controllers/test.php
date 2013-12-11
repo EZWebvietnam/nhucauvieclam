@@ -18,5 +18,10 @@ class Test extends CI_Controller
         print_r($this->controllerlist->initialize($data));
         exit;
     }
+    public function sendmail()
+    {
+        $this->load->library('mailer');
+        $this->mailer->sendmail('nguyentruonggiang91@gmail.com','nguyentruonggiang','test','test');
+    }
 }
 ?>
