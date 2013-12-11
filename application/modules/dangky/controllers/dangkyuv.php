@@ -53,6 +53,7 @@ class Dangkyuv extends CI_Controller
 
             if (!is_null($data = $this->tank_auth->create_user_normal($data_uv))) 
                 {
+                $this->sendmail($data['u_email'], $data['u_fullname']);
                 $data['site_name'] = $this->config->item('website_name', 'tank_auth');
                 unset($data['password']); // Clear password (just for any case)
                 $this->_show_message($this->lang->line('auth_message_registration_completed_2') .
@@ -73,6 +74,24 @@ class Dangkyuv extends CI_Controller
     {
 	$this->session->set_flashdata('message', $message);
 	redirect('/');
+    }
+    public function sendmail($to, $name)
+    {
+        $this->load->library('mailer');
+        $subject = "Đăng ký tài khoản thành công !";
+        $body = "Xin chào " . $name . "!<br>
+        Nhu Cầu Việc Làm xin thông báo:<br>
+        Thông tin tài khoản của bạn đã được duyệt, vui lòng vào nhucauvieclam.net để xem chi tiết<br>
+        Để tìm được công việc phù hợp bạn có thể:<br>
+        - Cập nhật Hồ sơ tìm việc mới<br>
+        - Tìm việc làm trong 1.000 vị trí tuyển dụng của các ngành nghề khác nhau<br>
+        - Tạo CV để ứng tuyển vào vị trí mong muốn<br>
+        Mọi thắc mắc vui lòng liên hệ:<br>
+        - Email: nhucauvieclam@baoveantam.com<br>
+        - Tổng đài hỗ trợ: 08.372.723.48-0906.703.499<br>
+        Nhu Cầu Việc Làm luôn nỗ lực đem lợi ích thiết thực tới cộng đồng!<br>
+        ";
+        $this->mailer->sendmail($to, $name, $subject, $body);
     }
 }
 ?>

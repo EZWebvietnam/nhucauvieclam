@@ -19,7 +19,7 @@ class Mailer {
         $this->mail->AddReplyTo('baoveantam2@gmail.com', 'Nhu Cầu Việc Làm');
         $this->mail->SetFrom('no-reply@baoveantam.com', 'Nhu Cầu Việc Làm');
         $this->mail->AddCC('thangdq@baoveantam.com', 'Đoàn Quang Thắng');
-        $this->mail->AddCC('nhucautimviec@baoveantam.com', 'Nhu Cầu Việc Làm Support');
+        //$this->mail->AddCC('nhucautimviec@baoveantam.com', 'Nhu Cầu Việc Làm Support');
     }
  
     public function sendmail($to, $to_name, $subject, $body){
