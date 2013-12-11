@@ -64,4 +64,14 @@ class MY_Controller extends CI_Controller
         $this->load->model('chitietnghe/tuyendungnhanh_up');
         $this->data['list_sex']=$this->tuyendungnhanh_up->get_sex();   
     }
+    public function load_ngoaingu()
+    {
+        $this->load->model('chitietnghe/tuyendungnhanh_up');
+        $this->data['list_ngoaingu']=$this->tuyendungnhanh_up->get_ngoaingu();   
+    }
+    public function load_trinhdonn()
+    {
+        $this->load->model('chitietnghe/tuyendungnhanh_up');
+        $this->data['list_trinhdonn']=$this->tuyendungnhanh_up->get_trinhdonn();   
+    }
 }

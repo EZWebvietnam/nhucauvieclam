@@ -200,11 +200,11 @@
                          ?>                     
                     <tr class="Even">
                         <td><a href="<?php echo base_url(); ?>info-hoso-ungvien/<?php echo $tin_td_hot['j_id']; ?>-<?php echo mb_strtolower(url_title(removesign($tin_td_hot['j_title']))) ?>" class="NormalJob"><?php echo $tin_tuyen_dung['j_title']; ?></a><div class="Blank"></div><a href="/vieclam/congty/2552602/cong-ty-tnhh-tm-dv-xd-hiep-phat.html" class="VipEmployer"><?php echo $tin_tuyen_dung['u_companyName']; ?></a></td>
-                        <td class="Nowrap"><?php echo $tin_tuyen_dung['j_trinhdo']; ?>
+                        <td class="Nowrap"><?php echo $list_bangcap[$tin_tuyen_dung['j_trinhdo']]['bang_name']; ?>
                             <br>
-                                <?php echo $tin_tuyen_dung['j_kinhnghiem']; ?></td>
-                        <td class="Nowrap"><?php echo $tin_tuyen_dung['j_luongmm']; ?></td>
-                        <td class="Nowrap"><?php echo $tin_tuyen_dung['j_cityID']; ?>
+                                <?php echo $list_exp[$tin_tuyen_dung['j_kinhnghiem']]['exp_name']; ?></td>
+                        <td class="Nowrap"><?php echo $list_luong[$tin_tuyen_dung['j_luongmm']]['luong_name']; ?></td>
+                        <td class="Nowrap"><?php echo $list_city[$tin_tuyen_dung['j_cityID']]['n_name']; ?>
                             <br>
                                 <?php echo $tin_tuyen_dung['j_cityID']; ?>
                             <br>

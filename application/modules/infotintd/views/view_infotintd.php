@@ -8,9 +8,7 @@
 <div id="content-left">
     <div class="GridInfo">
         <div class="Content">
-
             <h2>Thông tin tuyển dụng</h2>
-
             <table class="TableInfo">
                 <tbody>
                     <tr>
@@ -26,31 +24,24 @@
 
                     <tr>
                         <th>Giới tính</th>
-                        <td> <?php echo $info_tintd_detail[0]['e_sex']; ?> </td>
+                        <td><?php echo $list_sex[$info_tintd_detail[0]['e_sex']]['sex_name']; ?></td>
                     </tr>
 
                     <tr>
                         <th>Ngành nghề</th>
-                        <td><a href="/vieclam/tuyendung/10/ban-hang.html" target="_blank"><?php echo $info_tintd_detail[0]['e_nghe']; ?></a>
-                            <br>
-                            <a href="/vieclam/tuyendung/33/lao-dong-pho-thong.html" target="_blank"><?php echo $info_tintd_detail[0]['e_nghe1']; ?></a>
-                            <br>
-                            <a href="/vieclam/tuyendung/45/quang-cao-marketing-pr.html" target="_blank"><?php echo $info_tintd_detail[0]['e_nghe2']; ?></a>
-                            <br>
+                        <td><a href="/vieclam/tuyendung/10/ban-hang.html" target="_blank"><?php echo $list_cate_job[$info_tintd_detail[0]['m_id']]['m_name']; ?></a>
+                            <br>                            
                         </td>
                     </tr>
                     <tr>
                         <th>Tính chất công việc</th>
-                        <td><a href="/vieclam/tinhchatcongviec/11/viec-lam-them-lam-viec-ngoai-gio.html" target="_blank"><?php echo $info_tintd_detail[0]['e_timeID']; ?></a></td>
+                        <td><a href="/vieclam/tinhchatcongviec/11/viec-lam-them-lam-viec-ngoai-gio.html" target="_blank"><?php echo $list_time[$info_tintd_detail[0]['e_timeID']]['t_name']; ?></a></td>
                     </tr>
                     <tr>
                         <th>Tỉnh/Thành phố</th>
-                        <td><a href="/vieclam/tinhthanhpho/1/tp-ho-chi-minh.html" target="_blank"><?php echo $info_tintd_detail[0]['e_cityID']; ?></a>
+                        <td><a href="/vieclam/tinhthanhpho/1/tp-ho-chi-minh.html" target="_blank"><?php echo $list_city[$info_tintd_detail[0]['e_cityID']]['n_name']; ?></a>
                             <br>
-                            <a href="/vieclam/tinhthanhpho/10/binh-duong.html" target="_blank"><?php echo $info_tintd_detail[0]['e_cityID1']; ?></a>
-                            <br>
-                            <a href="/vieclam/tinhthanhpho/21/dong-nai.html" target="_blank"><?php echo $info_tintd_detail[0]['e_cityID2']; ?></a>
-                            <br>
+                            
                         </td>
                     </tr>
 
@@ -68,19 +59,19 @@
 
                     <tr>
                         <th>Trình độ</th>
-                        <td><?php echo $info_tintd_detail[0]['e_trinhdo']; ?></td>
+                        <td><?php echo $list_bangcap[$info_tintd_detail[0]['e_trinhdo']]['bang_name']; ?></td>
                     </tr>
                     <tr>
                         <th>Kinh nghiệm</th>
-                        <td><?php echo $info_tintd_detail[0]['e_kinhnghiem']; ?></td>
+                        <td><?php echo $list_exp[$info_tintd_detail[0]['e_kinhnghiem']]['exp_name']; ?></td>
                     </tr>
                     <tr>
                         <th>Mức lương</th>
-                        <td><?php echo $info_tintd_detail[0]['e_luonga']; ?></td>
+                        <td><?php echo $list_luong[$info_tintd_detail[0]['e_luong']]['luong_name']; ?></td>
                     </tr>
                     <tr>
                         <th>Hình thức làm việc</th>
-                        <td><?php echo $info_tintd_detail[0]['e_timeID']; ?></td>
+                        <td><?php echo $list_time[$info_tintd_detail[0]['e_timeID']]['t_name']; ?></td>
                     </tr>
                     
                     <tr>

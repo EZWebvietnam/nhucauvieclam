@@ -1,5 +1,5 @@
 <?php
-class Tuyendungnhanh extends MY_Controller
+class Tuyendungnhanh extends CI_Controller
 {
     public function __construct() {
         parent::__construct();
@@ -8,10 +8,10 @@ class Tuyendungnhanh extends MY_Controller
     }
     public function tuyendungnhanh_post($id)
     {   
-        parent::load_bangcap();
-        parent::load_exp();
-        parent::load_luong();
-        parent::load_city();
+        $data['list_bangcap']= $this->tuyendungnhanh_up->get_bangcap();
+        $data['list_luong']= $this->tuyendungnhanh_up->get_luong();
+        $data['list_city']= $this->tuyendungnhanh_up->get_city();
+        $data['list_exp']= $this->tuyendungnhanh_up->get_exp();
         $active = true;
         $location = 'home';
         if ($this->tank_auth->is_logged_in($active, $location)) {
@@ -23,7 +23,7 @@ class Tuyendungnhanh extends MY_Controller
         {
             redirect($_SERVER['HTTP_REFERER']);
         }
-        $data['tuyendung_detail']= $this->tuyendungnhanh_up->hot_post();
+        $data['tuyendung_detail']= $this->tuyendungnhanh_up->hot_post($id);
         if(empty($data['tuyendung_detail']))
         {
             redirect($_SERVER['HTTP_REFERER']);
@@ -33,7 +33,7 @@ class Tuyendungnhanh extends MY_Controller
         {
             redirect($_SERVER['HTTP_REFERER']);
         }
-        $data['tuyendungnhanh_detail']= $this->tuyendungnhanh_up->tintuyendung_post();
+        $data['tuyendungnhanh_detail']= $this->tuyendungnhanh_up->tintuyendung_post($id);
         if(empty($data['tuyendungnhanh_detail']))
         {
             redirect($_SERVER['HTTP_REFERER']);
@@ -43,6 +43,10 @@ class Tuyendungnhanh extends MY_Controller
     }
     public function timviecnhanh_post($id)
     {  
+        $data['list_bangcap']= $this->tuyendungnhanh_up->get_bangcap();
+        $data['list_luong']= $this->tuyendungnhanh_up->get_luong();
+        $data['list_city']= $this->tuyendungnhanh_up->get_city();
+        $data['list_exp']= $this->tuyendungnhanh_up->get_exp();
         $active = true;
         $location = 'home';
         if ($this->tank_auth->is_logged_in($active, $location)) {
@@ -59,12 +63,12 @@ class Tuyendungnhanh extends MY_Controller
         {
             redirect($_SERVER['HTTP_REFERER']);
         }
-        $data['uvhot_detail']= $this->tuyendungnhanh_up->timviec_hot();
+        $data['uvhot_detail']= $this->tuyendungnhanh_up->timviec_hot($id);
         if(empty($data['uvhot_detail']))
         {
             redirect($_SERVER['HTTP_REFERER']);
         }
-        $data['tintimviec_detail']= $this->tuyendungnhanh_up->tintimviec_post();
+        $data['tintimviec_detail']= $this->tuyendungnhanh_up->tintimviec_post($id);
         if(empty($data['tintimviec_detail']))
         {
             redirect($_SERVER['HTTP_REFERER']);

@@ -14,7 +14,7 @@
                             </tr>
                             <tr>
                                 <th>Giới tính</th>
-                                <td><?php echo $infohsuv_detail[0]['u_sex'] ?></td>
+                                <td><?php echo $list_sex[$infohsuv_detail[0]['u_sex']]['sex_name']; ?></td>
                             </tr>
                             <tr>
                                 <th>Địa chỉ</th>
@@ -51,24 +51,24 @@
                             </td>
                         </tr>
                         <tr>
-                            <th>Vị trí</th>
-                            <td><?php echo $infohsuv_detail[0]['j_chucmm'] ?></td>
+                            <th>Mục tiêu nghề nghiệp</th>
+                            <td><?php echo $infohsuv_detail[0]['j_muctieunn'] ?></td>
                         </tr>
                         <tr>
                             <th>Ngành nghề</th>
                             <td>
-                                <?php echo $infohsuv_detail[0]['m_id'] ?> <?php echo $infohsuv_detail[0]['j_nghe1'] ?> <?php echo $infohsuv_detail[0]['j_nghe2'] ?> <?php echo $infohsuv_detail[0]['j_nghe3'] ?>
+                                <?php echo $list_cate_job[$infohsuv_detail[0]['m_id']]['m_name']; ?>
                             </td>
                         </tr>
                         <tr>
                             <th>Tỉnh/Thành phố</th>
                             <td>
-                                <?php echo $infohsuv_detail[0]['j_cityID'] ?> <?php echo $infohsuv_detail[0]['j_cityID1'] ?> <?php echo $infohsuv_detail[0]['j_cityID2'] ?> <?php echo $infohsuv_detail[0]['j_cityID3'] ?>
+                                <?php echo $list_city[$infohsuv_detail[0]['j_cityID']]['n_name']; ?>
                             </td>
                         </tr>
                         <tr>
                             <th>Vị trí mong muốn</th>
-                            <td><?php echo $infohsuv_detail[0]['j_chucmm'] ?></td>
+                            <td><?php echo $list_capbac[$infohsuv_detail[0]['j_chucmm']]['cb_name']; ?></td>
                         </tr>                        
                         <tr>
                             <th>Kỹ năng</th>
@@ -77,11 +77,11 @@
 
                         <tr>
                             <th>Trình độ</th>
-                            <td><?php echo $infohsuv_detail[0]['j_trinhdo'] ?></td>
+                            <td><?php echo $list_bangcap[$infohsuv_detail[0]['j_trinhdo']]['bang_name']; ?></td>
                         </tr>
                         <tr>
                             <th>Kinh nghiệm</th>
-                            <td><?php echo $infohsuv_detail[0]['j_kinhnghiem'] ?></td>
+                            <td><?php echo $list_exp[$infohsuv_detail[0]['j_kinhnghiem']]['exp_name']; ?></td>
                         </tr>
 
                         <tr>
@@ -90,16 +90,16 @@
                         </tr>
                         <tr>
                             <th>Ngoại ngữ</th>
-                            <td><?php echo $infohsuv_detail[0]['j_ngoaingu'] ?>,<?php echo $infohsuv_detail[0]['j_trinhdonn'] ?></td>
+                            <td><?php echo $list_ngoaingu[$infohsuv_detail[0]['j_ngoaingu']]['nn_name']; ?>,<?php echo $list_trinhdonn[$infohsuv_detail[0]['j_trinhdonn']]['td_name']; ?></td>
                         </tr>
 
                         <tr>
                             <th>Mức lương mong muốn</th>
-                            <td><?php echo $infohsuv_detail[0]['j_luongmm'] ?></td>
+                            <td><?php echo $list_luong[$infohsuv_detail[0]['j_luongmm']]['luong_name']; ?></td>
                         </tr>
                         <tr>
                             <th>Hình thức làm việc</th>
-                            <td><?php echo $infohsuv_detail[0]['j_timeID'] ?></td>
+                            <td><?php echo $list_time[$infohsuv_detail[0]['j_timeID']]['t_name']; ?></td>
                         </tr>
 
                         <tr>
