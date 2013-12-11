@@ -7,16 +7,31 @@ class Tintd extends CI_Controller
         $this->load->library('session');
         $this->load->library('tank_auth');
     }
-    public function index($id = null)
+    public function index()
     {   
         $active = true;
         $location = 'home';
         if ($this->tank_auth->is_logged_in($active, $location)) {
+            
             $data['is_login'] = 1;
+            
         } else {
             $data['is_login'] = 0;
+            redirect('/');
         }
-        $data['taotintd_detail']= $this->taotintd_model->tintd_detail($id);
+        if($this->session->userdata('u_role')==2)
+        {
+            redirect('/');
+        }
+        if($this->session->userdata('u_id'))
+        {
+                $u_id = $this->session->userdata('u_id');
+            }
+            else
+            {
+                $u_id = 0;
+            }
+        $data['taotintd_detail']= $this->taotintd_model->tintd_detail($u_id);
         if($this->input->post())
         {
             $title = $this->input->post('tieu_de');
@@ -36,14 +51,7 @@ class Tintd extends CI_Controller
             $hoso = $this->input->post('ho_so');
             $denngay = $this->input->post('den_ngay');
             $lienhe = $this->input->post('cach_lien_he');
-            if($this->session->userdata('u_id'))
-            {
-                $u_id = $this->session->userdata('u_id');
-            }
-            else
-            {
-                $u_id = 0;
-            }
+            
             $data = array('e_title'=>$title,
                 'e_capbacID'=>$capbac,
                 'm_id'=>$nganhnghe,

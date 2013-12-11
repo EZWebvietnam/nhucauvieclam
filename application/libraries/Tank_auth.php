@@ -74,6 +74,7 @@ class Tank_auth
                             $this->ci->session->set_userdata(array(
                                 'u_id' => $user->u_id,
                                 'u_username' => $user->u_username,
+                                'u_fullname' => $user->u_fullname,
                                 'u_status' => ($user->u_status == 1) ? STATUS_ACTIVATED : STATUS_NOT_ACTIVATED,
                                 'u_role' => $user->u_role));
 

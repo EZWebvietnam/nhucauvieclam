@@ -7,16 +7,28 @@ class Taohsuv extends CI_Controller
         $this->load->library('session');
         $this->load->library('tank_auth');
     }
-    public function index($id = null)
+    public function index()
     {   
         $active = true;
         $location = 'home';
         if ($this->tank_auth->is_logged_in($active, $location)) {
+            
             $data['is_login'] = 1;
+            
         } else {
             $data['is_login'] = 0;
+            redirect('/');
         }
-        $data['taohsuv_detail']= $this->taohsuv_model->view_hsuv_detail($id);
+       
+        if($this->session->userdata('u_id'))
+        {
+                $u_id = $this->session->userdata('u_id');
+            }
+            else
+            {
+                $u_id = 0;
+            }
+        $data['taohsuv_detail']= $this->taohsuv_model->view_hsuv_detail($u_id);
         $data['main_content']='view_taohsuv';
         if($this->input->post())
         {

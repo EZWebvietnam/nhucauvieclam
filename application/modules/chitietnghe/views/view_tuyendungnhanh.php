@@ -9,7 +9,6 @@
             <div class="BodyRight">
                 <table class="TableTdnVip">
                     <tbody>
-
                         <?php
                         $i = 1;
 
@@ -24,7 +23,16 @@
                                     <table class="TableTdn">
                                         <tbody>
                                             <tr>
-                                                <td class="W50"><img src="<?php echo base_url(); ?>template/home/img/hr_asiafoods_vn.jpg" width="50" alt="CÔNG TY CỔ PHẦN THỰC PHẨM Á CHÂU"></td>
+                                                <td class="W50">
+                                                    <?php 
+                                                    if(is_file($_SERVER['DOCUMENT_ROOT'].ROT_DIR.'file/'.$tin_sanggia['u_img']))
+                                                    {
+                                                    ?>
+                                                        <img src="<?php echo base_url(); ?>file/<?php echo $tin_sanggia['u_img']; ?>" width="50" alt="<?php echo $tin_sanggia['e_title']; ?>">
+                                                    <?php } else {?> 
+                                                        <img src="<?php echo base_url(); ?>template/home/img/default.gif" width="50" alt="<?php echo $tin_sanggia['e_title']; ?>">
+                                                        <?php }?>
+                                                </td>
                                                 <td style="padding-left: 3px;"><a href="<?php echo base_url(); ?>tin-tuyen-dung/<?php echo $tin_sanggia['e_id']; ?>-<?php echo mb_strtolower(url_title(removesign($tin_sanggia['e_title']))) ?>" target="_blank"><?php echo $tin_sanggia['e_title']; ?></a>
                                                     <div class="TinyBlank"></div><span class="Number"><?php echo $tin_sanggia['u_companyName']; ?></span>
                                                 </td>                                                
@@ -207,9 +215,8 @@
                         <td class="Nowrap"><?php echo $list_city[$tin_tuyen_dung['e_cityID']]['n_name']; ?>
                             
                         </td>
-                        <td class="Nowrap"><?php echo $tin_tuyen_dung['e_dateActive']; ?>
-                            <br>
-                                <?php echo $tin_tuyen_dung['e_lastDate']; ?></td>
+                        <td class="Nowrap"><?php echo date('d/m/Y',$tin_tuyen_dung['e_dateActive']); ?><br>
+                                <?php echo date('d/m/Y',$tin_tuyen_dung['e_lastDate']); ?></td>
                     </tr>
                     <?php
                         }

@@ -24,7 +24,7 @@
                                     <table class="TableTdn">
                                         <tbody>
                                             <tr>
-                                                <td class="W50"><img src="<?php echo base_url(); ?>template/home/img/hr_asiafoods_vn.jpg" width="50" alt="CÔNG TY CỔ PHẦN THỰC PHẨM Á CHÂU"></td>
+                                                
                                                 <td style="padding-left: 3px;"><a href="<?php echo base_url(); ?>info-hoso-ungvien/<?php echo $tin_sanggia['j_id']; ?>-<?php echo mb_strtolower(url_title(removesign($tin_sanggia['j_title']))) ?>" target="_blank"><?php echo $tin_sanggia['j_title']; ?></a>
                                                     <div class="TinyBlank"></div><span class="Number"><?php echo $tin_sanggia['u_fullname']; ?></span>
                                                 </td>                                                
@@ -209,9 +209,8 @@
                                 <?php echo $tin_tuyen_dung['j_cityID']; ?>
                             <br>
                         </td>
-                        <td class="Nowrap"><?php echo $tin_tuyen_dung['j_update']; ?>
-                            <br>
-                                <?php echo $tin_tuyen_dung['j_lastdate']; ?></td>
+                        <td class="Nowrap"><?php echo date('d/m/Y',$tin_tuyen_dung['j_update']); ?><br>
+                                <?php echo date('d/m/Y',$tin_tuyen_dung['j_lastdate']); ?></td>
                     </tr>
                     <?php
                         }
