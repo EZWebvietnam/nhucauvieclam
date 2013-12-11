@@ -44,7 +44,7 @@ class Search extends CI_Controller
         {
             if($this->input->get('jobfeild')!='')
             {
-                $sql_join.=" AND tbl_job_post.e_id =".$this->input->get('jobfeild');
+                $sql_join.=" AND tbl_job_post.m_id =".$this->input->get('jobfeild');
             }
         }
         else
@@ -59,7 +59,6 @@ class Search extends CI_Controller
         $config['total_rows'] = $this->search_model->count_all($sql_join);
         $this->pagination->initialize($config);
         $sql_join.=" LIMIT $page,".$config['per_page'];
-        
         $array_new = $this->search_model->search_info($sql_join);
         $this->data['job_list'] = $array_new;       
         $this->data['main_content'] = 'view_search';
