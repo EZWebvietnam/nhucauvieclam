@@ -1,5 +1,5 @@
 <?php
-class Tuyendungnhanh extends CI_Controller
+class Tuyendungnhanh extends MY_Controller
 {
     public function __construct() {
         parent::__construct();
@@ -7,7 +7,11 @@ class Tuyendungnhanh extends CI_Controller
         $this->load->library('tank_auth');
     }
     public function tuyendungnhanh_post($id)
-    {           
+    {   
+        parent::load_bangcap();
+        parent::load_exp();
+        parent::load_luong();
+        parent::load_city();
         $active = true;
         $location = 'home';
         if ($this->tank_auth->is_logged_in($active, $location)) {

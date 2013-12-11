@@ -332,7 +332,7 @@
                                                                         return false;">
                                                             </td>
                                                             <td width="30">
-                                                                <input type="image" src="images/iconCalendar.gif" onclick="show_box_popup_calendar(23, 11, 2013, 'den_ngay', '', '', '', '', '');
+                                                                <input type="image" src="<?php echo base_url(); ?>template/home/img/iconCalendar.gif" onclick="show_box_popup_calendar(23, 11, 2013, 'den_ngay', '', '', '', '', '');
                                                                         return false;">
                                                             </td>
                                                             <td>(dd-mm-yyyy)</td>
@@ -357,7 +357,7 @@
                             <td class="ntd_tbInfo-header" colspan="2"><h3>Thông tin Nhà tuyển dụng</h3></td>
                         </tr>
                         <tr>
-                            <td width="170" align="center" valign="top" class="padTop10"><img src="/upload/files_cua_nguoi_dung/logo/2013/11/23/1385194604_78577167.jpg" alt="" width="104" height="79"></td>
+                            <td width="170" align="center" valign="top" class="padTop10"><img src="<?php echo base_url(); ?>template/home/img/user-img.jpg" alt="" width="104" height="79"></td>
                             <td valign="top" class="padTop10">
                                 <div id="thong_tin_cong_ty" style="display: inline;">
                                     <table width="100%" cellpadding="0" cellspacing="0" border="0">
@@ -598,14 +598,8 @@
                 </table>
             </form>
         </div>
-        <script src="/js/HeaderScriptHandler.js"></script>
-        <script src="/temp/ds_tinh.js"></script>
-        <script src="/temp/ds_nganh_cap1.js"></script>
-        <script>
-                                    set_focus(document.forms['form_cap_nhat_tin_td']);
-                                    SetAutoComplete(ds_tinh, 'txt_tinh', 'them_tinh_tu_suggestion', 'them_tinh_tu_suggestion', 150, 'ntd_ntv_quan_tri_them_tinh_tu_suggestion(",~,",10)');
-                                    SetAutoComplete(ds_nganh_cap1, 'txt_nganh_nghe', 'txt_nganh_nghe', 'them_nganh_cap1_tu_suggestion', 150, 'ntd_ntv_quan_tri_them_nganh_cap_1_tu_suggestion()');
-        </script>
+        <script src="<?php echo base_url(); ?>template/home/js/demo.js"></script>
+        <script src="<?php echo base_url(); ?>template/home/js/HeaderScriptHandler.js"></script>
         <!--</div> -->
     </div>
     <div name="div_mau_tin_tuyen_dung" id="div_mau_tin_tuyen_dung">

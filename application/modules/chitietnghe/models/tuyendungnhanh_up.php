@@ -85,5 +85,47 @@ class Tuyendungnhanh_up extends CI_Model{
         $query=$this->db->get('tbl_job_user');
         return $query->result_array();
     }
+    public function get_age()
+    {
+        $this->db->select();
+        $query=$this->db->get('tbl_age');
+        return $query->result_array();
+    }
+    public function get_bangcap()
+    {
+        $this->db->select();
+        $query=$this->db->get('tbl_bangcap');
+        return $query->result_array();
+    }
+    public function get_capbac()
+    {
+        $this->db->select();
+        $query=$this->db->get('tbl_capbac');
+        return $query->result_array();
+    }
+    public function get_hoso()
+    {
+        $this->db->select();
+        $query=$this->db->get('tbl_hoso');
+        return $query->result_array();
+    }
+    public function get_luong()
+    {
+        $this->db->select();
+        $query=$this->db->get('tbl_luong');
+        return $query->result_array();
+    }
+    public function get_exp()
+    {
+        $this->db->select();
+        $query=$this->db->get('tbl_namexp');
+        return $query->result_array();
+    }
+    public function get_sex()
+    {
+        $this->db->select();
+        $query=$this->db->get('tbl_sex');
+        return $query->result_array();
+    }
 }
 ?>
