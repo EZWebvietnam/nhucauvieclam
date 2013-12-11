@@ -25,7 +25,6 @@ class Mailer {
     public function sendmail($to, $to_name, $subject, $body){
         try{
             $this->mail->AddAddress($to, $to_name);
- 
             $this->mail->Subject = $subject;
             $this->mail->Body    = $body;
  
