@@ -74,4 +74,9 @@ class MY_Controller extends CI_Controller
         $this->load->model('chitietnghe/tuyendungnhanh_up');
         $this->data['list_trinhdonn']=$this->tuyendungnhanh_up->get_trinhdonn();   
     }
+    public function load_loaitn()
+    {
+        $this->load->model('chitietnghe/tuyendungnhanh_up');
+        $this->data['list_loaitn']=$this->tuyendungnhanh_up->get_loaitn();   
+    }
 }

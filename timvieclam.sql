@@ -1,13 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 4.0.4.1
+-- version 3.4.5
 -- http://www.phpmyadmin.net
 --
--- Host: 127.0.0.1
--- Generation Time: Dec 09, 2013 at 02:01 PM
--- Server version: 5.5.32
--- PHP Version: 5.4.19
+-- Host: localhost
+-- Generation Time: Dec 11, 2013 at 05:54 AM
+-- Server version: 5.5.16
+-- PHP Version: 5.3.8
 
-SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
 
 
@@ -19,8 +19,6 @@ SET time_zone = "+00:00";
 --
 -- Database: `timvieclam`
 --
-CREATE DATABASE IF NOT EXISTS `timvieclam` DEFAULT CHARACTER SET latin1 COLLATE latin1_swedish_ci;
-USE `timvieclam`;
 
 -- --------------------------------------------------------
 
@@ -42,7 +40,7 @@ CREATE TABLE IF NOT EXISTS `ci_sessions` (
 --
 
 INSERT INTO `ci_sessions` (`session_id`, `ip_address`, `user_agent`, `last_activity`, `user_data`) VALUES
-('86db71ff477b95920334323d583dc66f', '::1', 'Mozilla/5.0 (Windows NT 6.2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/31.0.1650.63 Safari/537.36', 1386593445, 'a:2:{s:9:"user_data";s:0:"";s:17:"flash:old:message";s:95:"You have successfully registered. <a href="http://localhost/nhucauvieclam/auth/login">Login</a>";}');
+('5c51ded1de1194c260cbe0a620079f96', '127.0.0.1', 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/31.0.1650.63 Safari/537.36', 1386737087, 0x613a353a7b733a393a22757365725f64617461223b733a303a22223b733a343a22755f6964223b733a323a223131223b733a31303a22755f757365726e616d65223b733a31393a226368697073686f636b40676d61696c2e636f6d223b733a383a22755f737461747573223b733a313a2231223b733a363a22755f726f6c65223b733a313a2232223b7d);
 
 -- --------------------------------------------------------
 
@@ -77,15 +75,78 @@ INSERT INTO `tbl_admin` (`id`, `ten`, `matkhau`, `tenthat`, `email`, `capdo`, `s
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `tbl_age`
+--
+
+CREATE TABLE IF NOT EXISTS `tbl_age` (
+  `age_id` int(11) NOT NULL AUTO_INCREMENT,
+  `age_name` text CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  PRIMARY KEY (`age_id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=8 ;
+
+--
+-- Dumping data for table `tbl_age`
+--
+
+INSERT INTO `tbl_age` (`age_id`, `age_name`) VALUES
+(1, 'Dưới 18 tuổi'),
+(2, '18 - 24 tuổi'),
+(3, '25 - 29 tuổi'),
+(4, '30 - 34 tuổi'),
+(5, '35 - 39 tuổi'),
+(6, '40 - 44 tuổi'),
+(7, 'Trên 45 tuổi');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tbl_bangcap`
+--
+
+CREATE TABLE IF NOT EXISTS `tbl_bangcap` (
+  `bang_id` int(11) NOT NULL AUTO_INCREMENT,
+  `bang_name` text CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  PRIMARY KEY (`bang_id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=7 ;
+
+--
+-- Dumping data for table `tbl_bangcap`
+--
+
+INSERT INTO `tbl_bangcap` (`bang_id`, `bang_name`) VALUES
+(1, 'Trên đại học'),
+(2, 'Đại học'),
+(3, 'Cao đẳng'),
+(4, 'Trung cấp'),
+(5, 'Trung học'),
+(6, 'Không yêu cầu');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `tbl_capbac`
 --
 
 CREATE TABLE IF NOT EXISTS `tbl_capbac` (
-  `d_id` int(20) NOT NULL AUTO_INCREMENT,
-  `d_name` text CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
-  `u_id` int(11) NOT NULL,
-  PRIMARY KEY (`d_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+  `cb_id` int(11) NOT NULL AUTO_INCREMENT,
+  `cb_name` text CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  PRIMARY KEY (`cb_id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=12 ;
+
+--
+-- Dumping data for table `tbl_capbac`
+--
+
+INSERT INTO `tbl_capbac` (`cb_id`, `cb_name`) VALUES
+(3, 'Quản trị cấp cao'),
+(4, 'Trưởng/Phó phòng'),
+(5, 'Tư vấn/Trợ lý'),
+(6, 'Chuyên gia'),
+(7, 'Nhân viên'),
+(8, 'Khác'),
+(9, 'Trưởng nhóm/Giám sát'),
+(10, 'Kỹ thuật viên/Kỹ sư'),
+(11, 'Chuyên viên');
 
 -- --------------------------------------------------------
 
@@ -174,101 +235,89 @@ INSERT INTO `tbl_city` (`n_id`, `n_name`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tbl_company`
---
-
-CREATE TABLE IF NOT EXISTS `tbl_company` (
-  `c_id` int(11) NOT NULL AUTO_INCREMENT,
-  `c_name` text CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
-  `c_active` int(11) NOT NULL,
-  PRIMARY KEY (`c_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=3 ;
-
---
--- Dumping data for table `tbl_company`
---
-
-INSERT INTO `tbl_company` (`c_id`, `c_name`, `c_active`) VALUES
-(1, 'Trách nhiệm hữu hạn', 1),
-(2, 'Cổ Phần Dịch Vụ', 1);
-
--- --------------------------------------------------------
-
---
 -- Table structure for table `tbl_employers_post`
 --
 
 CREATE TABLE IF NOT EXISTS `tbl_employers_post` (
   `j_id` int(20) NOT NULL AUTO_INCREMENT,
   `u_id` int(20) NOT NULL,
-  `m_id` text CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `m_id` int(11) NOT NULL,
   `j_nghe1` text CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
   `j_nghe2` text CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
   `j_nghe3` text CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
   `j_countryID` text CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
-  `j_cityID` text CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `j_cityID` int(11) NOT NULL,
   `j_cityID1` text CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
   `j_cityID2` text CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
   `j_cityID3` text CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
   `j_title` text CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
   `j_copy` text CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
-  `j_year` text CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `j_year` int(11) NOT NULL,
   `j_perID` text CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
   `j_degID` text CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
   `j_muctieunn` text CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
   `j_kynang` text CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
   `j_dalam` text CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
-  `j_luongdaco` text CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `j_luongdaco` int(11) NOT NULL,
   `j_chucmm` text CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
-  `j_luongmm` text CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
-  `j_timeID` text CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `j_luongmm` int(11) NOT NULL,
+  `j_timeID` int(11) NOT NULL,
   `j_goto` text CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
   `j_date` int(10) NOT NULL,
   `j_update` int(10) NOT NULL,
   `j_lastdate` int(11) NOT NULL,
   `j_visits` text CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
   `j_active` int(11) NOT NULL,
-  `j_anTen` int(11) NOT NULL,
-  `j_anNS` int(11) NOT NULL,
-  `j_anAdress` int(11) NOT NULL,
-  `j_anPhone` int(11) NOT NULL,
-  `j_anImg` int(11) NOT NULL,
-  `j_anTuoi` int(11) NOT NULL,
+  `j_hot` int(11) NOT NULL,
   `j_activeSearch` text CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
   `j_hienthi` text CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
-  `j_trinhdo` text CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `j_trinhdo` int(11) NOT NULL,
   `j_nganhhoc` text CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
-  `j_namtotnghiep` text CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
-  `j_loaitotnghiep` text CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `j_namtotnghiep` int(11) NOT NULL,
+  `j_loaitotnghiep` int(11) NOT NULL,
   `j_truongdahoc` text CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
-  `j_ngoaingu` text CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `j_ngoaingu` int(11) NOT NULL,
   `j_trinhdonn` text CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
   `j_tinhoc` text CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
   `j_bangcapkhac` text CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
-  `j_kinhnghiem` text CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `j_kinhnghiem` int(11) NOT NULL,
   `j_infokinhnghiem` text CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
   `j_datestart` int(11) NOT NULL,
   `j_thamkhao` text CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `j_sanggia` int(11) NOT NULL DEFAULT '0',
   PRIMARY KEY (`j_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=24 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=8 ;
 
 --
 -- Dumping data for table `tbl_employers_post`
 --
 
-INSERT INTO `tbl_employers_post` (`j_id`, `u_id`, `m_id`, `j_nghe1`, `j_nghe2`, `j_nghe3`, `j_countryID`, `j_cityID`, `j_cityID1`, `j_cityID2`, `j_cityID3`, `j_title`, `j_copy`, `j_year`, `j_perID`, `j_degID`, `j_muctieunn`, `j_kynang`, `j_dalam`, `j_luongdaco`, `j_chucmm`, `j_luongmm`, `j_timeID`, `j_goto`, `j_date`, `j_update`, `j_lastdate`, `j_visits`, `j_active`, `j_anTen`, `j_anNS`, `j_anAdress`, `j_anPhone`, `j_anImg`, `j_anTuoi`, `j_activeSearch`, `j_hienthi`, `j_trinhdo`, `j_nganhhoc`, `j_namtotnghiep`, `j_loaitotnghiep`, `j_truongdahoc`, `j_ngoaingu`, `j_trinhdonn`, `j_tinhoc`, `j_bangcapkhac`, `j_kinhnghiem`, `j_infokinhnghiem`, `j_datestart`, `j_thamkhao`) VALUES
-(3, 3, '10', 'coder', 'IT phần cứng', 'Ăn chơi nhảy múa', '1', '1', '2', '3', '4', 'Nhân viên công nghệ thông tin', 'dán demo vào đây', '1', '1', '1', 'team leader', 'nhiều', 'teera Sorfware', '4000000', 'teamleader', '1000000', 'lấy ở bảng thời gian', '1', 12032013, 30042013, 30052013, '33', 1, 1, 1, 1, 1, 1, 1, '0', '1', 'Đại học', 'Công nghệ thông tin', '2013', 'khá', 'Đại học công nghiệp Hà Nội', 'English - Tiếng Anh', 'siêu sao', 'cao thủ', 'đéo có', '1 năm', 'chém đấy chưa có kinh nghiệm', 0, 'ko có ai'),
-(5, 4, '13', 'phổ thông', 'đánh nhau', 'chém nhau', '1', '1', '3', '5', '8', 'Nhân viên công nghệ thông tin', 'demo vào đây', '2', '1', '1', 'giàu', 'bao la', 'rất nhiều', '6000000', 'to nhất', '200000000', '1', '1', 1, 1, 0, '14', 1, 1, 1, 1, 1, 1, 1, '0', '1', '', '', '', '', '', '', '', '', '', '', '', 0, ''),
-(6, 5, '10', '', '', '', '', '', '', '', '', 'Nhân viên IT webDevoloper', '', '', '', '', '', '', '', '', '', '', '', '', 0, 0, 0, '', 0, 0, 0, 0, 0, 0, 0, '', '', '', '', '', '', '', '', '', '', '', '', '', 0, ''),
-(15, 0, '15', '', '', '', '', '', '', '', '', 'Nhân viên web developer', '', '', '', '', '', '', '', '', '', '', '', '', 0, 0, 0, '', 0, 0, 0, 0, 0, 0, 0, '', '', '2', 'CNTT', '', '', '', '', '', '', '', '', '', 0, ''),
-(16, 0, '14', '', '', '', '', '', '', '', '', 'Nhân viên web developer', '', '', '', '', 'thay vị trí giám đốc đê', 'nhiều lắm', '', '', '', '1', '', '', 0, 0, 0, '', 0, 0, 0, 0, 0, 0, 0, '', '', '2', 'CNTT', '2013', '3', 'Đại Học Công Nghiệp Hà Nội', 'EN', '3', 'siêu sao', 'chẳng có ji cả', '2', 'Tên công ty:\r\nVị trí công việc:\r\nNgành nghề:\r\nThời gian bắt đầu:\r\nThời gian kết thúc:\r\nMô tả công việc:\r\nLý do thôi việc:\r\nThành tích đạt được:\r\nMức lương:', 0, 'Họ và tên:\r\n                    Địa chỉ:\r\n                    Điện thoại:\r\n                    Nghề nghiệp:\r\n                    Quan hệ:\r\n                    Thời gian quen biết:'),
-(17, 0, '10', '', '', '', '', '1', '', '', '', 'Nhân viên kinh doanh', '', '', '', '', 'adwqeqw', 'sdasdasda', '', '', '3', '1', '1', '', 0, 0, 0, '', 0, 0, 0, 0, 0, 0, 0, '', '', '1', 'Đánh nhau vô tội vạ', '2013', '1', 'ádasduhqwiueyiu', 'EN-DE', '1', 'dqwhwuieyiqwy', 'uhsiywuheoqjnkbuyg', '8', 'Tên công ty:\r\nVị trí công việc:\r\nNgành nghề:\r\nThời gian bắt đầu:\r\nThời gian kết thúc:\r\nMô tả công việc:\r\nLý do thôi việc:\r\nThành tích đạt được:\r\nMức lương:\r\n                            ', 0, 'Họ và tên:\r\nĐịa chỉ:\r\nĐiện thoại:\r\nNghề nghiệp:\r\nQuan hệ:\r\nThời gian quen biết:\r\n                            '),
-(18, 0, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '-1', '', '', 0, 0, 0, '', 0, 0, 0, 0, 0, 0, 0, '', '', '-1', '', '-1', '-1', '', '-1', '-1', '', '', '-1', 'Tên công ty:\r\nVị trí công việc:\r\nNgành nghề:\r\nThời gian bắt đầu:\r\nThời gian kết thúc:\r\nMô tả công việc:\r\nLý do thôi việc:\r\nThành tích đạt được:\r\nMức lương:', 0, 'Họ và tên:\r\n                    Địa chỉ:\r\n                    Điện thoại:\r\n                    Nghề nghiệp:\r\n                    Quan hệ:\r\n                    Thời gian quen biết:'),
-(19, 0, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '-1', '', '', 0, 0, 0, '', 0, 0, 0, 0, 0, 0, 0, '', '', '-1', '', '-1', '-1', '', '-1', '-1', '', '', '-1', 'Tên công ty:\r\nVị trí công việc:\r\nNgành nghề:\r\nThời gian bắt đầu:\r\nThời gian kết thúc:\r\nMô tả công việc:\r\nLý do thôi việc:\r\nThành tích đạt được:\r\nMức lương:', 0, 'Họ và tên:\r\n                    Địa chỉ:\r\n                    Điện thoại:\r\n                    Nghề nghiệp:\r\n                    Quan hệ:\r\n                    Thời gian quen biết:'),
-(20, 0, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '-1', '', '', 0, 0, 0, '', 0, 0, 0, 0, 0, 0, 0, '', '', '-1', '', '-1', '-1', '', '-1', '-1', '', '', '-1', 'Tên công ty:\r\nVị trí công việc:\r\nNgành nghề:\r\nThời gian bắt đầu:\r\nThời gian kết thúc:\r\nMô tả công việc:\r\nLý do thôi việc:\r\nThành tích đạt được:\r\nMức lương:', 0, 'Họ và tên:\r\n                    Địa chỉ:\r\n                    Điện thoại:\r\n                    Nghề nghiệp:\r\n                    Quan hệ:\r\n                    Thời gian quen biết:'),
-(21, 0, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '-1', '', '', 0, 0, 0, '', 0, 0, 0, 0, 0, 0, 0, '', '', '-1', '', '-1', '-1', '', '-1', '-1', '', '', '-1', 'Tên công ty:\r\nVị trí công việc:\r\nNgành nghề:\r\nThời gian bắt đầu:\r\nThời gian kết thúc:\r\nMô tả công việc:\r\nLý do thôi việc:\r\nThành tích đạt được:\r\nMức lương:', 0, 'Họ và tên:\r\n                    Địa chỉ:\r\n                    Điện thoại:\r\n                    Nghề nghiệp:\r\n                    Quan hệ:\r\n                    Thời gian quen biết:'),
-(22, 0, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '-1', '', '', 0, 0, 0, '', 0, 0, 0, 0, 0, 0, 0, '', '', '-1', '', '-1', '-1', '', '-1', '-1', '', '', '-1', 'Tên công ty:\r\nVị trí công việc:\r\nNgành nghề:\r\nThời gian bắt đầu:\r\nThời gian kết thúc:\r\nMô tả công việc:\r\nLý do thôi việc:\r\nThành tích đạt được:\r\nMức lương:', 0, 'Họ và tên:\r\n                    Địa chỉ:\r\n                    Điện thoại:\r\n                    Nghề nghiệp:\r\n                    Quan hệ:\r\n                    Thời gian quen biết:'),
-(23, 0, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '-1', '', '', 0, 0, 0, '', 0, 0, 0, 0, 0, 0, 0, '', '', '-1', '', '-1', '-1', '', '-1', '-1', '', '', '-1', 'Tên công ty:\r\nVị trí công việc:\r\nNgành nghề:\r\nThời gian bắt đầu:\r\nThời gian kết thúc:\r\nMô tả công việc:\r\nLý do thôi việc:\r\nThành tích đạt được:\r\nMức lương:', 0, 'Họ và tên:\r\n                    Địa chỉ:\r\n                    Điện thoại:\r\n                    Nghề nghiệp:\r\n                    Quan hệ:\r\n                    Thời gian quen biết:');
+INSERT INTO `tbl_employers_post` (`j_id`, `u_id`, `m_id`, `j_nghe1`, `j_nghe2`, `j_nghe3`, `j_countryID`, `j_cityID`, `j_cityID1`, `j_cityID2`, `j_cityID3`, `j_title`, `j_copy`, `j_year`, `j_perID`, `j_degID`, `j_muctieunn`, `j_kynang`, `j_dalam`, `j_luongdaco`, `j_chucmm`, `j_luongmm`, `j_timeID`, `j_goto`, `j_date`, `j_update`, `j_lastdate`, `j_visits`, `j_active`, `j_hot`, `j_activeSearch`, `j_hienthi`, `j_trinhdo`, `j_nganhhoc`, `j_namtotnghiep`, `j_loaitotnghiep`, `j_truongdahoc`, `j_ngoaingu`, `j_trinhdonn`, `j_tinhoc`, `j_bangcapkhac`, `j_kinhnghiem`, `j_infokinhnghiem`, `j_datestart`, `j_thamkhao`, `j_sanggia`) VALUES
+(3, 3, 10, 'coder', 'IT phần cứng', 'Ăn chơi nhảy múa', '1', 1, '2', '3', '4', 'Nhân viên công nghệ thông tin', 'dán demo vào đây', 1, '1', '1', 'mục tiêu nn', 'nhiều', 'teera Sorfware', 4000000, '3', 3, 2, '1', 12032013, 30042013, 30052013, '33', 1, 1, '0', '1', 2, 'Công nghệ thông tin', 2013, 3, 'Đại học công nghiệp Hà Nội', 4, '2', 'cao thủ', 'đéo có', 2, 'chém đấy chưa có kinh nghiệm', 0, 'ko có ai', 1),
+(5, 4, 13, 'phổ thông', 'đánh nhau', 'chém nhau', '1', 1, '3', '5', '8', 'Nhân viên công nghệ thông tin', 'demo vào đây', 2, '1', '1', '2', 'bao la', 'rất nhiều', 6000000, '2', 1, 1, '1', 1, 1, 0, '14', 1, 0, '0', '1', 0, '', 0, 0, '', 0, '', '', '', 0, '', 0, '', 0),
+(6, 5, 10, '', '', '', '', 5, '', '', '', 'Nhân viên IT webDevoloper', '', 0, '', '', '', '', '', 0, '', 0, 0, '', 0, 0, 0, '', 0, 0, '', '', 0, '', 0, 0, '', 0, '', '', '', 0, '', 0, '', 0),
+(7, 11, 10, '', '', '', '', 2, '', '', '', 'Nhân viên siêu siêu sao', '', 0, '', '', '3', 'ko có kỹ năng nổi bật ji', '', 0, '4', 6, 1, '', 0, 0, 0, '', 0, 0, '', '', 2, 'Đánh nhau vô tội vạ', 2013, 1, 'Đại học bôn ba', 0, '3', 'trình độ tin học', 'ko có bằng cấp ji khác nhé', 2, 'Tên công ty:\r\nVị trí công việc:\r\nNgành nghề:\r\nThời gian bắt đầu:\r\nThời gian kết thúc:\r\nMô tả công việc:\r\nLý do thôi việc:\r\nThành tích đạt được:\r\nMức lương:\r\n                            ', 0, 'Họ và tên:\r\nĐịa chỉ:\r\nĐiện thoại:\r\nNghề nghiệp:\r\nQuan hệ:\r\nThời gian quen biết:\r\n                            ', 0);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tbl_hoso`
+--
+
+CREATE TABLE IF NOT EXISTS `tbl_hoso` (
+  `hoso_id` int(11) NOT NULL AUTO_INCREMENT,
+  `hoso_name` text CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  PRIMARY KEY (`hoso_id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=4 ;
+
+--
+-- Dumping data for table `tbl_hoso`
+--
+
+INSERT INTO `tbl_hoso` (`hoso_id`, `hoso_name`) VALUES
+(1, 'Trực tiếp'),
+(2, 'Trực tuyến'),
+(3, 'Qua Email');
 
 -- --------------------------------------------------------
 
@@ -305,17 +354,17 @@ CREATE TABLE IF NOT EXISTS `tbl_job_post` (
   `u_id` int(20) NOT NULL,
   `e_title` text CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
   `e_mem` text CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
-  `e_luong` text CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `e_luong` int(11) NOT NULL,
   `e_luonga` text CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
   `e_luongb` text CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
-  `e_trinhdo` text CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `e_trinhdo` int(11) NOT NULL,
   `e_capbacID` text CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
-  `e_timeID` text CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
-  `e_cityID` text CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `e_timeID` int(11) NOT NULL,
+  `e_cityID` int(11) NOT NULL,
   `e_cityID1` text CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
   `e_cityID2` text CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
   `e_cityID3` text CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
-  `e_nghe` text CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `e_nghe` int(11) NOT NULL,
   `e_nghe1` text CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
   `e_nghe2` text CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
   `e_nghe3` text CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
@@ -323,20 +372,18 @@ CREATE TABLE IF NOT EXISTS `tbl_job_post` (
   `e_request` text CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
   `e_hoso` text CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
   `e_phucLoi` text CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
-  `e_kinhnghiem` text CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `e_kinhnghiem` int(11) NOT NULL,
   `e_date` int(11) NOT NULL,
   `e_dateActive` int(11) NOT NULL,
   `e_lastDate` int(11) NOT NULL,
   `e_visits` text CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
   `e_hienthi` text CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
   `e_indam` int(11) NOT NULL,
-  `e_maudo` int(11) NOT NULL,
   `e_hot` int(11) NOT NULL,
   `e_sanggia` int(11) NOT NULL,
-  `e_sanggiaN` text CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
   `e_active` int(11) NOT NULL,
   `e_active_home` int(11) NOT NULL,
-  `e_sex` text CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `e_sex` int(11) NOT NULL,
   `e_skill` text CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
   `e_timetest` int(11) NOT NULL,
   `e_datesave` int(11) NOT NULL,
@@ -344,17 +391,20 @@ CREATE TABLE IF NOT EXISTS `tbl_job_post` (
   `e_lienhe` text CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
   `e_dotuoi` int(11) NOT NULL,
   PRIMARY KEY (`e_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=5 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=8 ;
 
 --
 -- Dumping data for table `tbl_job_post`
 --
 
-INSERT INTO `tbl_job_post` (`e_id`, `u_id`, `e_title`, `e_mem`, `e_luong`, `e_luonga`, `e_luongb`, `e_trinhdo`, `e_capbacID`, `e_timeID`, `e_cityID`, `e_cityID1`, `e_cityID2`, `e_cityID3`, `e_nghe`, `e_nghe1`, `e_nghe2`, `e_nghe3`, `e_descript`, `e_request`, `e_hoso`, `e_phucLoi`, `e_kinhnghiem`, `e_date`, `e_dateActive`, `e_lastDate`, `e_visits`, `e_hienthi`, `e_indam`, `e_maudo`, `e_hot`, `e_sanggia`, `e_sanggiaN`, `e_active`, `e_active_home`, `e_sex`, `e_skill`, `e_timetest`, `e_datesave`, `m_id`, `e_lienhe`, `e_dotuoi`) VALUES
-(1, 3, 'Tim viec lam nhanh nhat qua dat', '5', '2', '5000000', '7000000', 'lao động phổ thông', '1', '1', '1', '0', '0', '0', '4', '2', '0', '0', 'Mô tả công việc vào đây', 'yêu cầu thêm', 'hồ sơ cần ji viết vào đây', 'phúc lợi ra sao', 'yêu cầu kinh nghiệm thế nào', 28112013, 29112013, 12122012, '56', '1', 1, 1, 1, 1, '1', 1, 1, 'Nam', 'kỹ năng thì ghi vào đây', 12, 12122013, 10, '', 0),
-(2, 5, 'title tìm việc làm', '5', '700$', '900$', '800$', 'Đại học', '3', '1', '1', '1', '1', '1', '1', '1', '1', '1', 'skhkjdahsidiuwhiuh', 'thông tin hả', 'ji cũng đc', 'như nhà nước quy định', '1', 12052013, 13052013, 12062013, '32', '1', 1, 1, 1, 1, '1', 1, 1, '1', '1', 0, 0, 13, '', 0),
-(3, 4, 'Tim viec nhanh, tuyen dung nhanh', '1', '1', '1', '1', 'Cao đẳng', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', 1, 1, 1, '1', '1', 0, 0, 0, 0, '11', 0, 0, '', 'ừ thì kỹ năng', 0, 0, 10, '', 0),
-(4, 0, 'Nhân viên kinh doanh', '3', '4', '', '', '1', '3', '3', '15', '', '', '', '', '', '', '', 'mô tả công việc', 'yêu cầu khác', 'hồ sơ bao gồm', 'quyền lợi được hưởng', '8', 0, 0, 0, '', '', 0, 0, 0, 0, '', 0, 0, '1', '', 0, 0, 24, '3', 2);
+INSERT INTO `tbl_job_post` (`e_id`, `u_id`, `e_title`, `e_mem`, `e_luong`, `e_luonga`, `e_luongb`, `e_trinhdo`, `e_capbacID`, `e_timeID`, `e_cityID`, `e_cityID1`, `e_cityID2`, `e_cityID3`, `e_nghe`, `e_nghe1`, `e_nghe2`, `e_nghe3`, `e_descript`, `e_request`, `e_hoso`, `e_phucLoi`, `e_kinhnghiem`, `e_date`, `e_dateActive`, `e_lastDate`, `e_visits`, `e_hienthi`, `e_indam`, `e_hot`, `e_sanggia`, `e_active`, `e_active_home`, `e_sex`, `e_skill`, `e_timetest`, `e_datesave`, `m_id`, `e_lienhe`, `e_dotuoi`) VALUES
+(1, 3, 'Tuyển nhân viên Bán hàng', '5', 2, '5000000', '7000000', 2, '1', 1, 1, '0', '0', '0', 4, '2', '0', '0', 'Mô tả công việc vào đây', 'yêu cầu thêm', 'hồ sơ cần ji viết vào đây', 'phúc lợi ra sao', 2, 28112013, 29112013, 12122012, '56', '1', 1, 1, 1, 1, 1, 0, 'kỹ năng thì ghi vào đây', 12, 12122013, 10, '', 0),
+(2, 5, 'Tuyển nhân viên văn phòng', '5', 3, '900$', '800$', 2, '3', 1, 1, '1', '1', '1', 1, '1', '1', '1', 'skhkjdahsidiuwhiuh', 'thông tin hả', 'ji cũng đc', 'như nhà nước quy định', 1, 12052013, 13052013, 12062013, '32', '1', 1, 1, 1, 1, 1, 1, '1', 0, 0, 13, '', 0),
+(3, 4, 'Tuyển cửu vạn bê vác', '1', 1, '1', '1', 3, '1', 1, 1, '1', '1', '1', 1, '1', '1', '1', '1', '1', '1', '1', 1, 1, 1, 1, '1', '1', 0, 0, 0, 0, 0, 0, 'ừ thì kỹ năng', 0, 0, 10, '', 0),
+(4, 6, 'Nhân viên kinh doanh', '3', 4, '', '', 1, '3', 3, 15, '', '', '', 0, '', '', '', 'mô tả công việc', 'yêu cầu khác', 'hồ sơ bao gồm', 'quyền lợi được hưởng', 8, 0, 0, 0, '', '', 0, 0, 0, 0, 0, 1, '', 0, 0, 24, '3', 2),
+(5, 10, 'Nhân viên IT phần mêm', '5', 1, '', '', 2, '7', 1, 1, '', '', '', 0, '', '', '', 'mô tả công việc', 'yêu cầu khác', 'yêu cầu của hồ sơ', 'quyền lợi được hưởng của nhân viên', 5, 0, 0, 0, '', '', 0, 0, 0, 0, 0, 1, '', 0, 0, 10, '3', 2),
+(6, 11, 'Tuyển nhân viên bán hàng toàn quốc', '5', 1, '', '', 1, '4', 1, 2, '', '', '', 0, '', '', '', 'công việc dạng háng ăn hàng', 'yêu cầu khác của nhà tuyển dụng', 'hồ sơ cần những ji', 'hưởng đầy đủ quyền lợi', 2, 0, 0, 0, '', '', 0, 0, 0, 0, 0, 0, '', 0, 0, 10, '1', 1),
+(7, 11, 'Giám đốc chém gió', '3', 4, '', '', 1, '3', 2, 2, '', '', '', 0, '', '', '', 'công việc thì chỉ ngồi và chém gió thôi', 'yêu cầu đẹp trai co to đen hôi', 'hồ sơ như bình thường', 'quyền của giám đốc thì đừng có hỏi', 1, 0, 0, 0, '', '', 0, 0, 0, 0, 0, 1, '', 0, 0, 11, '3', 2);
 
 -- --------------------------------------------------------
 
@@ -409,7 +459,7 @@ CREATE TABLE IF NOT EXISTS `tbl_job_user` (
   `last_ip` text NOT NULL,
   `last_login` text NOT NULL,
   PRIMARY KEY (`u_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=11 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=12 ;
 
 --
 -- Dumping data for table `tbl_job_user`
@@ -420,7 +470,58 @@ INSERT INTO `tbl_job_user` (`u_id`, `u_username`, `u_password`, `u_salt`, `u_com
 (4, 'chipshock12891@gmail.com', '', '', 'Công ty Phát Tài', 'địa chỉ cty', '', '       ssssssssssss', '', '1', '', 'baoveantam.net', '03675236212', '', '2323364', 'kinhdoanh@baoveantam.net', 'Mr.Thắng', '', '0962925599', 0, '0931273626', 'quangthang12891@gmail.com', '0', '', '2', '', 'địa chỉ - của người - tuyển dụng', 0, 0, '', '', '', 0, '', 2, 'Đoàn Quang Thắng 3', '1', 12, '', '0', '', '0962925599', '', '', ''),
 (5, 'quangthang12891', '$2a$08$gupiwL9MdnyZ.I/tjRQ37uuIHo5Gz.Ze0XrnXsnW/v4oM.Y6A0uOG', '', '', '', '', '', '', '', '', '', '', '', '', 'quangthang12891@gmail.com', '', '', '', 1, '', '', '', '', '1', '', 'quangthang12891', 2013, 0, '', '', '', 0, '', 2, 'quangthang12891', 'Y', 9, '', '', '', '11111', '', '::1', ''),
 (6, 'beobeboi91@gmail.com', '$2a$08$SiY/2UH4qcaM3bitriDSUu35z7Q7FMczaXKybjSHAiQ1kAPLpeIwW', '', '', '', '', '', '', '', '', '', '', '', '', 'beobeboi91@gmail.com', '', '', '', 1, '', '', '', '', '1', '', 'beobeboi91', 2013, 0, '', '', '', 0, '', 2, 'beobeboi91', 'Y', 9, '', '', '', '01667039939', '', '::1', ''),
-(10, 'giangbeoit232222@gmail.com', '$2a$08$Uk32CZFKI5sh1OyP5AaIG.UpcoKThGa9wj2ZXaAurWQ57Qm.uxu4i', '', 'giangbeoit', 'giangbeoit', '', '                                  giangbeoit  ', '', '0', '3eb50c9e6fa88056081daac283b832cf.jpg', 'giangbeoit', 'giangbeoit', '', 'giangbeoitgiangbeoitgiangbeoit', 'giangbeoit232222@gmail.com', 'giangbeoit', '', 'giangbeoit', 1, 'giangbeoit', 'giangbeoit@gmail.com', '', '', '1', '', 'giangbeoit', 2013, 0, '', '', '', 0, '', 3, '', '', 0, '', '', '', '', '', '::1', '');
+(10, 'giangbeoit232222@gmail.com', '$2a$08$Uk32CZFKI5sh1OyP5AaIG.UpcoKThGa9wj2ZXaAurWQ57Qm.uxu4i', '', 'giangbeoit', 'giangbeoit', '', '                                  giangbeoit  ', '', '0', '3eb50c9e6fa88056081daac283b832cf.jpg', 'giangbeoit', 'giangbeoit', '', 'giangbeoitgiangbeoitgiangbeoit', 'giangbeoit232222@gmail.com', 'giangbeoit', '', 'giangbeoit', 1, 'giangbeoit', 'giangbeoit@gmail.com', '', '', '1', '', 'giangbeoit', 2013, 0, '', '', '', 0, '', 3, '', '', 0, '', '', '', '', '', '::1', ''),
+(11, 'chipshock@gmail.com', '$2a$08$ZzCyE4QOPjvv.9yNvqvSQ.vi60SlAvC.K2ya7mYUnsgnS7CDH19pi', '', '', '', '', '', '', '', '', '', '', '', '', 'chipshock@gmail.com', '', '', '', 1, '', '', '', '', '1', '', 'Hải Dương', 1386641621, 0, '', '', '', 0, '', 2, 'Đoàn Quang Thắng', 'Y', 12, '', '', '', '0962925599', '', '127.0.0.1', '2013-12-11 02:11:17');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tbl_loaitn`
+--
+
+CREATE TABLE IF NOT EXISTS `tbl_loaitn` (
+  `tn_id` int(11) NOT NULL AUTO_INCREMENT,
+  `tn_name` text CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  PRIMARY KEY (`tn_id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=6 ;
+
+--
+-- Dumping data for table `tbl_loaitn`
+--
+
+INSERT INTO `tbl_loaitn` (`tn_id`, `tn_name`) VALUES
+(1, 'Xuất sắc'),
+(2, 'Giỏi'),
+(3, 'Khá'),
+(4, 'Trung bình khá'),
+(5, 'Trung bình');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tbl_luong`
+--
+
+CREATE TABLE IF NOT EXISTS `tbl_luong` (
+  `luong_id` int(11) NOT NULL AUTO_INCREMENT,
+  `luong_name` text CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  PRIMARY KEY (`luong_id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=10 ;
+
+--
+-- Dumping data for table `tbl_luong`
+--
+
+INSERT INTO `tbl_luong` (`luong_id`, `luong_name`) VALUES
+(1, 'Thỏa thuận'),
+(2, '1 - 3 triệu'),
+(3, '3 - 5 triệu'),
+(4, '5 - 7 triệu'),
+(5, '7 - 10 triệu'),
+(6, '10 - 15 triệu'),
+(7, '15 - 20 triệu'),
+(8, '20 - 30 triệu'),
+(9, 'Trên 30 triệu');
 
 -- --------------------------------------------------------
 
@@ -499,6 +600,88 @@ INSERT INTO `tbl_mucvieclam` (`m_id`, `m_name`, `u_id`, `e_nghe`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `tbl_namexp`
+--
+
+CREATE TABLE IF NOT EXISTS `tbl_namexp` (
+  `exp_id` int(11) NOT NULL AUTO_INCREMENT,
+  `exp_name` text CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  PRIMARY KEY (`exp_id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=9 ;
+
+--
+-- Dumping data for table `tbl_namexp`
+--
+
+INSERT INTO `tbl_namexp` (`exp_id`, `exp_name`) VALUES
+(1, 'Dưới 1 năm'),
+(2, '1 Năm'),
+(3, '2 năm'),
+(4, '3 năm'),
+(5, '4 năm'),
+(6, '5 năm'),
+(7, 'Hơn 5 năm'),
+(8, 'Chưa có kinh nghiệm');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tbl_ngoaingu`
+--
+
+CREATE TABLE IF NOT EXISTS `tbl_ngoaingu` (
+  `nn_id` int(11) NOT NULL AUTO_INCREMENT,
+  `nn_name` text CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  PRIMARY KEY (`nn_id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=39 ;
+
+--
+-- Dumping data for table `tbl_ngoaingu`
+--
+
+INSERT INTO `tbl_ngoaingu` (`nn_id`, `nn_name`) VALUES
+(1, 'Tiếng Anh - Tiếng Đức'),
+(2, 'Tiếng Anh - Tiếng Nha'),
+(3, 'Tiếng Anh - Tiếng Ý'),
+(4, 'Tiếng Anh - Tiếng Tây Ban Nha'),
+(5, 'English - Tiếng Anh'),
+(6, 'French - Tiếng Pháp'),
+(7, 'United States - Tiếng Anh Mỹ'),
+(8, 'Russian - Tiếng Nga'),
+(9, 'Chinese - Tiếng Trung'),
+(10, 'Korean - Tiếng Hàn'),
+(11, 'Japanese - Tiếng Nhật'),
+(12, 'German - Tiếng Đức'),
+(13, 'Arabic - Tiếng Ả Rập'),
+(14, 'Bengalic - Tiếng Bengal'),
+(15, 'Bulgarian - Tiếng Bungary'),
+(16, 'Burmese - Tiếng Miến điện'),
+(17, 'Cambodian - Tiếng Campuchia'),
+(18, 'Czech  - Tiếng Séc'),
+(19, 'Danmark - Tiếng Đan mạch'),
+(20, 'Dutch - Tiếng Hà Lan'),
+(21, 'Finnish - Tiếng phần Lan'),
+(22, 'Greek - Tiếng Hy Lạp'),
+(23, 'Hindi - Tiếng Hinđi'),
+(24, 'Hungarian - Tiếng Hungary'),
+(25, 'Indonesian - Tiếng Inđônesia'),
+(26, 'Italian - Tiếng Ý'),
+(27, 'Laotian - Tiếng Lào'),
+(28, 'Malay - Tiếng Mã Lai'),
+(29, 'Norwegian - Tiếng Nauy'),
+(30, 'Polish - Tiếng Ba Lan'),
+(31, 'Portuguese - Tiếng Bồ Đào Nha'),
+(32, 'Romanian  - Tiếng Ru ma ni'),
+(33, 'Spanish - Tiếng Tây Ban Nha'),
+(34, 'Taiwanese - Tiếng Đài Loan'),
+(35, 'Turkish - Tiếng Thổ Nhĩ Kỳ'),
+(36, 'Thai - Tiếng Thái'),
+(37, 'Ukrainian - Tiếng Ucraina'),
+(38, 'Khác');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `tbl_quancao`
 --
 
@@ -525,6 +708,27 @@ CREATE TABLE IF NOT EXISTS `tbl_quancao` (
 INSERT INTO `tbl_quancao` (`l_id`, `l_name`, `l_url`, `l_img`, `l_border`, `l_width`, `l_height`, `l_position`, `l_comment`, `l_order`, `l_click`, `l_active`) VALUES
 (1, 'Tên công ty muốn quản cáo', 'link website công ty đó', 'logo công ty', 'thông tin khung quảng cáo', 'thông tin khung quảng cáo', 'thông tin khung quảng cáo', 'thông tin khung quảng cáo', 'thông tin khung quảng cáo', 'thông tin khung quảng cáo', '12', 1),
 (2, 'Tên công ty muốn quản cáo', 'link website công ty đó', 'logo công ty', 'thông tin khung quảng cáo', 'thông tin khung quảng cáo', 'thông tin khung quảng cáo', 'thông tin khung quảng cáo', 'thông tin khung quảng cáo', 'thông tin khung quảng cáo', '12', 1);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tbl_sex`
+--
+
+CREATE TABLE IF NOT EXISTS `tbl_sex` (
+  `sex_id` int(11) NOT NULL AUTO_INCREMENT,
+  `sex_name` text CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  PRIMARY KEY (`sex_id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=4 ;
+
+--
+-- Dumping data for table `tbl_sex`
+--
+
+INSERT INTO `tbl_sex` (`sex_id`, `sex_name`) VALUES
+(1, 'Nam'),
+(2, 'Nữ'),
+(3, 'Khác');
 
 -- --------------------------------------------------------
 
@@ -589,30 +793,23 @@ INSERT INTO `tbl_tinchitiet` (`k_id`, `cat_id`, `k_tieude`, `k_trichdan`, `k_noi
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tbl_vitri_nangluc`
+-- Table structure for table `tbl_trinhdonn`
 --
 
-CREATE TABLE IF NOT EXISTS `tbl_vitri_nangluc` (
-  `p_id` int(20) NOT NULL AUTO_INCREMENT,
-  `p_name` text CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
-  `p_active` int(11) NOT NULL,
-  `u_id` int(11) NOT NULL,
-  PRIMARY KEY (`p_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=9 ;
+CREATE TABLE IF NOT EXISTS `tbl_trinhdonn` (
+  `td_id` int(11) NOT NULL AUTO_INCREMENT,
+  `td_name` text CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  PRIMARY KEY (`td_id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=4 ;
 
 --
--- Dumping data for table `tbl_vitri_nangluc`
+-- Dumping data for table `tbl_trinhdonn`
 --
 
-INSERT INTO `tbl_vitri_nangluc` (`p_id`, `p_name`, `p_active`, `u_id`) VALUES
-(1, 'Bất kỳ', 1, 0),
-(2, 'Nhân viên', 1, 0),
-(3, 'Kỹ sư', 1, 0),
-(4, 'Phó phòng', 1, 0),
-(5, 'Trưởng phòng', 1, 0),
-(6, 'Cố vấn/Giám sát', 1, 0),
-(7, 'Phó giám đốc/Phó tổng giám đốc', 1, 0),
-(8, 'Giám đốc/Tổng giám đốc', 1, 0);
+INSERT INTO `tbl_trinhdonn` (`td_id`, `td_name`) VALUES
+(1, 'Sơ cấp'),
+(2, 'Trung cấp'),
+(3, 'Cao cấp');
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;

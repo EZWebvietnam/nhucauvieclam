@@ -141,5 +141,11 @@ class Tuyendungnhanh_up extends CI_Model{
         $query=$this->db->get('tbl_trinhdonn');
         return $query->result_array();
     }
+    public function get_loaitn()
+    {
+        $this->db->select();
+        $query=$this->db->get('tbl_loaitn');
+        return $query->result_array();
+    }
 }
 ?>
