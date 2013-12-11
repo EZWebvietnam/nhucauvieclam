@@ -116,8 +116,7 @@
                     </div>
                     <?php } else { ?> 
                     <div id="header-user-menu">
-                        <?php echo $this->session->userdata['u_username']; ?> | <a href="<?php echo
-    base_url(); ?>dangnhap/logout">Đăng xuất</a>
+                        <?php echo $this->session->userdata['u_username']; ?> | <a href="<?php echo base_url(); ?>dangnhap/logout">Đăng xuất</a>
 
                     </div>
                     <?php } ?>

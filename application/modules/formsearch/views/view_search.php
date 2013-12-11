@@ -1,8 +1,6 @@
 <div id="content-detail">
     <div class="GridInfo">
         <div class="Content">
-
-
             <table class="TableGrid">
                 <tbody><tr>
                         <th>Vị trí</th>
@@ -49,4 +47,5 @@
             <div class="Paginator">
                 <?php echo $this->pagination->create_links();?>	</div>
         </div>
-    </div>                        </div>
+    </div>                        
+</div>
