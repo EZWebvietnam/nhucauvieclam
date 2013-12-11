@@ -203,10 +203,18 @@ if (defined('ENVIRONMENT'))
  {
     
      define('ROT_DIR','/ninhbinh/');
+     define('HOST','localhost');
+     define('DB_NAME','timvieclam');
+     define('DB_USER','root');
+     define('DB_PASS','');
  }
  else
  {
      define('ROT_DIR','/');
+     define('HOST','mysql-server02');
+     define('DB_NAME','giangbeotimviec');
+     define('DB_USER','giangbeotimviec');
+     define('DB_PASS','aA123456');
  }
 require_once BASEPATH.'core/CodeIgniter.php';
 
