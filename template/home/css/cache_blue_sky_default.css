@@ -20,6 +20,26 @@ h1 {
 	left: 0;
 	bottom: 150px;
 }
+.barhotline{
+    position: fixed;
+    left: 0;
+    bottom: 150px;
+    width: 170px;
+    background: #fff;
+    border-radius: 5px;
+    padding-left: 3px;
+}
+.table-barhotline{
+    font-style: inherit;
+    font-size: 15px;
+    font-weight: bold;
+    color: #000;
+    text-align: center;
+}
+.line-hotline{
+    color: #ff0000;
+    padding: 5px 20px 10px 20px;
+}
 h1.PageTitle {
 	padding-left: 20px;
 	font-weight: 400;
@@ -1553,11 +1573,12 @@ logo1 {
 }
 .table-hotline {
 	border-collapse: collapse;
-	width: 100%
+	width: 100%;
+        text-align: left;
+        font-size: 13px;
 }
 .table-hotline tr td {
-	padding-left: 15px;
-	padding-right: 0
+	padding: 2px 25px 2px 30px;
 }
 .table-hotline tr td.separator {
 	border-left: 1px solid #82C6E6
@@ -1748,14 +1769,16 @@ logo1 {
 	color: #FF0;
 }
 #web-company-info {
+        text-align: center;
 	line-height: 16px
 }
 #web-company-info table {
+        text-align: center;
 	width: 100%;
 	border-collapse: collapse
 }
 #web-company-info table tr td {
-	vertical-align: top
+	text-align: center;
 }
 #web-company-link {
 	float: left;

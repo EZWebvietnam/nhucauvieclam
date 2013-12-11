@@ -162,7 +162,7 @@ if ($is_login == 1) {
             </div>
         </div>
         <div class="Blank"></div>
-        <a href="/tintuc/gocbaochi" target="_blank" rel="nofollow" class="ImageLink"> <img src="<?php echo base_url(); ?>template/home/img/giai_thuong_706.jpg" alt="TimViecNhanh.com"> </a>
+        <a href="/tintuc/gocbaochi" target="_blank" rel="nofollow" class="ImageLink"> <img src="" > </a>
         <div class="Blank"></div>
     </div>
 

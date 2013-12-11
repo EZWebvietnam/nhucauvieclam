@@ -115,7 +115,7 @@
                         <table width="100%" cellpadding="0" cellspacing="0" border="0">
                             <tbody>
                                 <tr>
-                                    <td width="125" valign="top" class="tbUser-row"><b>Họ và tên:</b></td>
+                                    <td width="100" valign="top" class="tbUser-row"><b>Họ và tên:</b></td>
                                     <td class="tbUser-row"><?php echo $info_user_detail[0]['u_fullname']; ?></td>
                                 </tr>
                                 <tr>
@@ -394,7 +394,7 @@ Mức lương:</textarea></td>
                                             return false;">
                                 </td>
                                 <td width="30">
-                                    <input type="image" src="images/iconCalendar.gif" onclick="show_box_popup_calendar(23, 11, 2013, 'c_ngay_co_the_bat_dau_lam', '', '', '', '', '#7214AE');
+                                    <input type="image" src="<?php echo base_url(); ?>template/home/img/iconCalendar.gif" onclick="show_box_popup_calendar(23, 11, 2013, 'c_ngay_co_the_bat_dau_lam', '', '', '', '', '#7214AE');
                                             return false;">
                                 </td>
                                 <td>(dd-mm-yyyy)</td>

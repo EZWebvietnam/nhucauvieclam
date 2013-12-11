@@ -17,8 +17,7 @@
             <div id="header">
                 <div id="header-inner">
                     <div id="header-logo">
-                        <a href="/" title="nhu cau viec lam" rel="home" id="logo"> <img src="<?php echo
-base_url(); ?>template/home/img/logo.png" alt="Tìm việc làm hàng đầu - Itworks" height="125" width="430"> </a>
+                        <a href="/" title="nhu cau viec lam" rel="home" id="logo"> <img src="<?php echo base_url(); ?>template/home/img/logo.png" alt="Tìm việc làm hàng đầu - Itworks" height="125" width="430"> </a>
                     </div>
                     <div id="bg_slider">
                         <div class="hbs">
@@ -677,49 +676,24 @@ base_url(); ?>template/home/css/slider.css">
                             </div>
 
                             <div id="web-company-info">
-                                <h2>Công ty Cổ phần Tìm Việc Nhanh - MST 0303 452 460</h2>
+                                <h2 style="font-size: 15px;">Công ty TNHH Phát Triển Nguồn Nhân Lực Nhu Cầu Việc Làm Đất Phương Nam</h2>
                                 <table>
                                     <tbody>
                                         <tr>
-                                            <td width="33%"><span class="AlertTextSmall">TimViecNhanh.com TP.HCM</span><p></p>
+                                            <td width="33%"><span class="AlertTextSmall" style="font-size: 14px">nhucauvieclam.net</span><p></p>
                                                 <table class="TableFooterInfo">
-                                                    <tbody>
+                                                   
                                                         <tr>
-                                                            <th>Địa chỉ</th>
-                                                            <td>380 Bùi Hữu Nghĩa, Q.Bình Thạnh</td>
+                                                            <td>Địa chỉ: Tầng 3, Số 7, Đường Số 49, P.Hiệp Bình Chánh, Q.Thủ Đức, Tp.HCM</td>
+                                                        </tr>
+                                                        <tr>                                                            
+                                                            <td>Email: hcm@nhucauvieclam.net</td>
                                                         </tr>
                                                         <tr>
-                                                            <th>Email</th>
-                                                            <td>hcm@timviecnhanh.com</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <th>Fax</th>
-                                                            <td>(08) 351 023 38</td>
+                                                            <td>Fax: 37273665</td>
                                                         </tr>
                                                     </tbody>
-                                                </table></td>
-                                            <td width="33%" class="pl15"><span class="AlertTextSmall">TimViecNhanh.com Hà Nội</span><p></p>
-                                                <table class="TableFooterInfo">
-                                                    <tbody>
-                                                        <tr>
-                                                            <th>Địa chỉ</th>
-                                                            <td>39 Tây Sơn, Q.Đống Đa</td>
-                                                        </tr>
-                                                    </tbody>
-                                                </table></td>
-                                            <td width="33%" class="pl15"><span class="AlertTextSmall">TimViecNhanh.com Đà Nẵng</span><p></p>
-                                                <table class="TableFooterInfo">
-                                                    <tbody>
-                                                        <tr>
-                                                            <th>Địa chỉ</th>
-                                                            <td>135 Hoàng Hoa Thám, Q.Thanh Khê</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <th>Email</th>
-                                                            <td>danang@timviecnhanh.com</td>
-                                                        </tr>
-                                                    </tbody>
-                                                </table></td>
+                                                </table></td>                                            
                                         </tr>
                                     </tbody>
                                 </table>
@@ -753,38 +727,36 @@ base_url(); ?>template/home/css/slider.css">
 
                             <div class="HighBlank"></div>
                             <div id="bottom-hotline">
-                                <div id="bottom-hotline-inner">
-                                    <h2 class="float-left">Hotline 24/7</h2>
-                                    <ul class="float-left">
+                                <div id="bottom-hotline-inner" style="text-align: center">
+                                    <h2 class="float-left">Hotline 24/7</h2>                                    
+                                    <ul>
                                         <li>
                                             <table class="table-hotline">
-                                                <tbody>
+                                                <tbody width="100%">
                                                     <tr>
-                                                        <td><span class="Mobile">0912283938</span><span class="Name">Ms.Liễu</span></td>
+                                                        <td><span class="Mobile">01676.534.751 </span><span class="Name">Ms.Yến</span></td>
 
-                                                        <td><span class="Mobile">0917278495</span><span class="Name">Ms.Giàu</span></td>
-
-                                                        <td><span class="Mobile">0915653938</span><span class="Name">Ms.Tình</span></td>
-
-                                                        <td><span class="Mobile">0917278496</span><span class="Name">Ms.Vi</span></td>
-
-                                                        <td><span class="Mobile">0917278492</span><span class="Name">Ms.Hạnh</span></td>
+                                                        <td><span class="Mobile">01685.455.381 </span><span class="Name">Ms.Tình</span></td>
+                                                        <td><span class="Mobile">0979.368.313 </span><span class="Name">Ms.Khoa</span></td>
+                                                        <td><span class="Mobile">01656.134.306 </span><span class="Name">Ms.Thoa</span></td>
                                                     </tr>
                                                     <tr>
-                                                        <td><span class="Mobile">0917278507</span><span class="Name">Ms.Liên</span></td>
+                                                        <td><span class="Mobile">01656.244.327 </span><span class="Name">Ms.Tâm</span></td>
+                                                        
+                                                        <td><span class="Mobile">01642.446.754 </span><span class="Name">Ms.Yên</span></td>
 
-                                                        <td></td>
-
-                                                        <td></td>
-
-                                                        <td></td>
-
-                                                        <td></td>
-
-                                                        <td></td>
-
+                                                        <td><span class="Mobile">01278.789.987 </span><span class="Name">Ms.Khuê</span></td>
+                                                        <td><span class="Mobile">0962925599 </span><span class="Name">Mr.Thắng</span></td>
                                                     </tr>
-                                                </tbody>
+                                                    <tr>
+                                                        <td><span class="Mobile">01689.952.759 </span><span class="Name">Ms.Khuê</span></td>
+                                                        
+                                                        <td><span class="Mobile">0935.916.420 </span><span class="Name">Mr.Trung</span></td>
+
+                                                        <td><span class="Mobile">0169.533.2638 </span><span class="Name">Ms.Thanh</span></td>
+                                                        <td><span class="Mobile">0932.597.000 </span><span class="Name">Ms.Hiếu</span></td>
+                                                    </tr>
+                                                                                             
                                             </table>
                                         </li>
                                     </ul>
@@ -805,8 +777,39 @@ base_url(); ?>template/home/css/slider.css">
                 </div>
             </div>
         </div>
-        <div class="tool-hotline">
-            <img class="" src="<?php echo base_url(); ?>template/home/img/hotline1.jpg" />
+        <div class="barhotline">
+            <table class="table-barhotline">
+                <tr>
+                    <td><img src="<?php echo base_url(); ?>template/home/img/hotline.png" style="width: 25px;height: 25px;">Ms.Tình</td>                    
+                </tr>
+                <tr>
+                    <td class="line-hotline">01685.455.381</td>
+                </tr>
+                <tr>
+                    <td><img src="<?php echo base_url(); ?>template/home/img/hotline.png" style="width: 25px;height: 25px;">Ms.Yến</td>                    
+                </tr>
+                <tr>
+                    <td class="line-hotline">01676.534.751</td>
+                </tr>
+                <tr>
+                    <td><img src="<?php echo base_url(); ?>template/home/img/hotline.png" style="width: 25px;height: 25px;">Ms.Tâm</td>                    
+                </tr>
+                <tr>
+                    <td class="line-hotline">01656.244.327</td>
+                </tr>
+                <tr>
+                    <td><img src="<?php echo base_url(); ?>template/home/img/hotline.png" style="width: 25px;height: 25px;">Ms.Thoa</td>                    
+                </tr>
+                <tr>
+                    <td class="line-hotline">01656.134.306</td>
+                </tr>
+                <tr>
+                    <td><img src="<?php echo base_url(); ?>template/home/img/hotline.png" style="width: 25px;height: 25px;">Ms.Yên</td>                    
+                </tr>
+                <tr>
+                    <td class="line-hotline">01642.446.754</td>
+                </tr>
+            </table>            
         </div>
     </body>
 </html>
