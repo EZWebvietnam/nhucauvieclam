@@ -1,4 +1,3 @@
-
 <div id="content-detail">
     <div class="GridSub">
         <div class="TopLeft">
