@@ -31,8 +31,8 @@ class Hsdadang extends MY_Controller
             else
             {
                 $u_id = 0;
-            }
-            $this->data['hsdangdang_detail']= $this->tindadang_post->view_hsdadang_detail($u_id);
+            }        
+        $this->data['hsdangdang_detail']= $this->tindadang_post->hsdadang_detail($u_id);
         if(empty($this->data['hsdangdang_detail']))
         {
             redirect($_SERVER['HTTP_REFERER']);
