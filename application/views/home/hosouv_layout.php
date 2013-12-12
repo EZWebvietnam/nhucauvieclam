@@ -12,7 +12,7 @@
         <script src="https://apis.google.com/_/scs/apps-static/_/js/k=oz.gapi.vi.1BWypNDZPPU.O/m=plusone/rt=j/sv=1/d=1/ed=1/am=AQ/rs=AItRSTPXGZZksx7J8grxmtD0URB6MtpB7w/cb=gapi.loaded_0" async=""></script>
         <script type="text/javascript" src="<?php echo base_url(); ?>template/home/js/cache_blue_sky_default.js"></script>
         <script type="text/javascript" src="<?php echo base_url(); ?>template/home/js/demo.js"></script>
-        <title>Tim viec lam</title>
+        <title>Hồ Sơ Ứng Viên</title>
     </head>
     <body>
         <div id="container">

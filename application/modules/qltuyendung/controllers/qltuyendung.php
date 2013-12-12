@@ -5,6 +5,7 @@ class Qltuyendung extends CI_Controller
         parent::__construct();
         $this->load->model('qltuyendung_model');
         $this->load->library('tank_auth');
+        $this->load->library('session');
     }
     public function index(){
         $active = true;
