@@ -5,9 +5,8 @@ class Infotintd extends MY_Controller{
         $this->load->model('info_tintd');
         $this->load->library('tank_auth');
     }
-    public function view_job_post()
+    public function view_job_post($id)
     {   
-       
         parent::load_cate_job();
         parent::load_age();
         parent::load_bangcap();
@@ -33,7 +32,7 @@ class Infotintd extends MY_Controller{
             {
                 $u_id = 0;
             }
-        $this->data['info_tintd_detail']= $this->info_tintd->load_job($u_id);
+        $this->data['info_tintd_detail']= $this->info_tintd->load_job($id);
         if(empty($this->data['info_tintd_detail']))
         {
             redirect($_SERVER['HTTP_REFERER']);
