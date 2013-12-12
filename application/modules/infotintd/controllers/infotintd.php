@@ -5,7 +5,7 @@ class Infotintd extends MY_Controller{
         $this->load->model('info_tintd');
         $this->load->library('tank_auth');
     }
-    public function view_job_post($id)
+    public function view_job_post()
     {   
        
         parent::load_cate_job();
@@ -25,7 +25,15 @@ class Infotintd extends MY_Controller{
         } else {
             $this->data['is_login'] = 0;
         }
-        $this->data['info_tintd_detail']= $this->info_tintd->load_job($id);
+        if($this->session->userdata('u_id'))
+        {
+                $u_id = $this->session->userdata('u_id');
+            }
+            else
+            {
+                $u_id = 0;
+            }
+        $this->data['info_tintd_detail']= $this->info_tintd->load_job($u_id);
         if(empty($this->data['info_tintd_detail']))
         {
             redirect($_SERVER['HTTP_REFERER']);

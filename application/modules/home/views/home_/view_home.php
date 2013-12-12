@@ -135,7 +135,7 @@ if ($is_login == 1) {
                                 if ($i % 2 == 1) {
                                     ?>
                                     <tr>
-    <?php } ?>
+                                <?php } ?>
                                     <td width="50%">
                                         <ul>
                                             <li>
