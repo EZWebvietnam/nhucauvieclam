@@ -5,17 +5,33 @@ class CV extends CI_Controller
         parent::__construct();
         $this->load->model('cvmodel');
         $this->load->library('tank_auth');
+        $this->load->library('session');
     }
-    public function index($id = null)
+    public function index()
     {   
         $active = true;
         $location = 'home';
         if ($this->tank_auth->is_logged_in($active, $location)) {
+            
             $data['is_login'] = 1;
+            
         } else {
             $data['is_login'] = 0;
+            redirect('/');
         }
-        $data['info_user_detail']= $this->cvmodel->view_cv_detail($id);
+        if($this->session->userdata('u_role')==2)
+        {
+            redirect('/');
+        }
+        if($this->session->userdata('u_id'))
+        {
+                $u_id = $this->session->userdata('u_id');
+            }
+            else
+            {
+                $u_id = 0;
+            }
+        $data['info_user_detail']= $this->cvmodel->view_cv_detail($u_id);
         $data['main_content']='view_cv';
         if($this->input->post())
         {

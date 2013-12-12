@@ -38,26 +38,27 @@
                         <input type="hidden" name="gia_han_2444325" id="gia_han_2444325" value="3">
                         <input type="hidden" name="lam_moi_2444325" id="lam_moi_2444325" value="1000">
                         <tr style="">
-                            <td class="tb-row-W" align="center"><?php echo $qltimviec_detail[0]['e_id']; ?></td>
+                            <td class="tb-row-W" align="center"><?php echo $qlhoso_detail[0]['j_id']; ?></td>
                             <td class="tb-row-W">
                                 <div class="cumTT-tieude">
-                                    <b class="textRed11"> <a href="/nha-tuyen-dung/it-phan-mem/nhan-vien-it-c74p0id2444325.html" target="_blank" title="Nhân Viên IT" class="textRed11"><?php echo $qltimviec_detail[0]['e_title']; ?></a> </b>
+                                    <b class="textRed11"> <a href="/nha-tuyen-dung/it-phan-mem/nhan-vien-it-c74p0id2444325.html" target="_blank" title="Nhân Viên IT" class="textRed11"><?php echo $qlhoso_detail[0]['j_title']; ?></a> </b>
                                     <br>
-                                    <span style="font-size: 11px;"><?php echo $qltimviec_detail[0]['e_nghe']; ?></span>
-                                    <br>                                    
-                                </div></td>
-                            <td class="tb-row-W" align="center"><?php echo $qltimviec_detail[0]['e_dateActive']; ?>
-                                <br>
-                                (Số lần làm mới còn lại: <span class="textRed11">1000</span>) </td>
-                            <td class="tb-row-W" align="center"><?php echo $qltimviec_detail[0]['e_date']; ?></td>
-                            <td class="tb-row-W" align="center"><?php echo $qltimviec_detail[0]['e_dateActive']; ?></td>
-                            <td class="tb-row-W" align="center"><?php echo $qltimviec_detail[0]['e_lastDate']; ?>
-                                <br>
-                                (Số lần gia hạn còn lại: <span class="textRed11">3</span>) </td>
-                            <td class="tb-row-W"><span class="textRed11">Hết hạn</span></td>
+                                    <span>Ngành: <?php echo $list_cate_job[$qlhoso_detail[0]['m_id']]['m_name']; ?>
+                                    </span>
+                                                                       
+                                </td>
+                            <td class="tb-row-W" align="center"><span><?php echo date('d/m/Y',$qlhoso_detail[0]['j_update']); ?></span>
+                                </td>
+                            <td class="tb-row-W" align="center"><?php echo date('d/m/Y',$qlhoso_detail[0]['j_date']); ?></td>
+                            <td class="tb-row-W" align="center"><?php echo date('d/m/Y',$qlhoso_detail[0]['j_update']); ?></td>
+                            <td class="tb-row-W" align="center"><?php echo date('d/m/Y',$qlhoso_detail[0]['j_lastdate']); ?>
+                                </td>
+                            <td class="tb-row-W"><span class="textRed11"></span></td>
                             <td class="tb-row-W">
                                 <div class="borderBot padTop5">
-                                    <a href="/nha-tuyen-dung/it-phan-mem/nhan-vien-it-c74p0id2444325.html" target="_blank" title="Xem thông tin chi tiết tin tìm việc">Xem</a> | <a href="/ntv-trang-quan-tri-cap-nhat-tin-tim-viec.html?id_tin_tv=2444325" title="">Sửa</a> | <a href='javascript: if (dat_trang_thai_dang_xu_ly()) {ntv_quan_tri_doi_trang_thai_1_ttv(2444325,"xoa_tam"); }' title="Xoá tạm hồ sơ">Xóa</a>
+                                    <a href="<?php echo base_url(); ?>hoso-ungvien/<?php echo $qlhoso_detail[0]['j_id']; ?>" target="_blank" title="Xem thông tin chi tiết tin tìm việc">Xem</a> | 
+                                    <a href="<?php echo base_url(); ?>hoso-ungvien/<?php echo $qlhoso_detail[0]['j_id']; ?>" title="">Sửa</a> | 
+                                    <a href='javascript: if (dat_trang_thai_dang_xu_ly()) {ntv_quan_tri_doi_trang_thai_1_ttv(2444325,"xoa_tam"); }' title="Xoá tạm hồ sơ">Xóa</a>
                                 </div>
                                 <div class="padTop5">
                                     <a href="javascript: if (dat_trang_thai_dang_xu_ly()) {ntv_quan_tri_gia_han_1_ttv(2281716,2444325); }" title="">Gia hạn</a>
@@ -103,19 +104,21 @@
                         </td>
                         <td class="tb-row-W"><b><a href="/it-phan-mem/nhan-vien-seo-web-c74p1id1391037.html" target="_blank" title="Click để xem thông tin chi tiết việc làm" class="linkBlack" ><?php echo $qltimviec_detail[0]['e_title']; ?></a></b>
                             <br>
+                            <span>Ngành: <?php echo $list_cate_job[$qltimviec_detail[0]['m_id']]['m_name']; ?>
                             <br>
                             Số lượng:<?php echo $qltimviec_detail[0]['e_mem']; ?></td>
                         <td class="tb-row-W" align="center"><?php echo $qltimviec_detail[0]['u_companyName']; ?></td>
-                        <td class="tb-row-W" align="center" onmouseover="tooltip.show('TP. HCM');" onmouseout="tooltip.hide();"><?php echo $qltimviec_detail[0]['e_cityID']; ?>
-                        <?php echo $qltimviec_detail[0]['e_cityID1']; ?> <?php echo $qltimviec_detail[0]['e_cityID2']; ?> <?php echo $qltimviec_detail[0]['e_cityID3']; ?></td>
-                        <td class="tb-row-W" align="center"><?php echo $qltimviec_detail[0]['e_luong']; ?></td>
-                        <td class="tb-row-W" align="center"><?php echo $qltimviec_detail[0]['e_dateActive']; ?></td>
-                        <td class="tb-row-W" align="center"><?php echo $qltimviec_detail[0]['e_lastDate']; ?></td>
+                        <td class="tb-row-W" align="center" onmouseover="tooltip.show('TP. HCM');" onmouseout="tooltip.hide();">
+                        <?php echo $list_city[$qltimviec_detail[0]['e_cityID']]['n_name']; ?></td>
+                        <td class="tb-row-W" align="center"><?php echo $list_luong[$qltimviec_detail[0]['e_luong']]['luong_name']; ?></td>
+                        <td class="tb-row-W" align="center"><?php echo date('d/m/Y',$qltimviec_detail[0]['e_dateActive']); ?></td>
+                        <td class="tb-row-W" align="center"><?php echo date('d/m/Y',$qltimviec_detail[0]['e_lastDate']); ?></td>
                         <td class="tb-row-W" align="center"><?php echo $qltimviec_detail[0]['e_visits']; ?></td>
-                        <td class="tb-row-W" align="center"><?php echo $qltimviec_detail[0]['e_datesave']; ?></td>
+                        <td class="tb-row-W" align="center"><?php echo date('d/m/Y',$qltimviec_detail[0]['e_datesave']); ?></td>
                         <td class="tb-row-W">
                             <div class="borderBot padTop5">
-                                <a href="/it-phan-mem/nhan-vien-seo-web-c74p1id1391037.html" target="_blank" title="Click để xem thông tin chi tiết việc làm">Xem</a> | <a href="javascript: if (dat_trang_thai_dang_xu_ly()) {ntv_quan_tri_xoa_1_viec_lam_da_luu(1391037); }" title="Xoá việc làm đã lưu">Xóa</a>
+                                <a href="<?php echo base_url(); ?>tin-tuyen-dung/<?php echo $qlhoso_detail[0]['j_id']; ?>-<?php echo mb_strtolower(url_title(removesign($qlhoso_detail[0]['j_title']))) ?>" target="_blank" title="Click để xem thông tin chi tiết việc làm">Xem</a> | 
+                                <a href="javascript: if (dat_trang_thai_dang_xu_ly()) {ntv_quan_tri_xoa_1_viec_lam_da_luu(1391037); }" title="Xoá việc làm đã lưu">Xóa</a>
                             </div>
                             <div class="padTop5">
                                 <a href="/ntv-nop-ho-so-truc-tuyen.html?ds_id_tin_td=1391037" target="_blank" title="Ứng tuyển vào vị trí này">Ứng tuyển</a>
@@ -157,21 +160,21 @@
                         <td class="tb-row-W" align="center">
                             <input type="checkbox" name="checkbox_viec_lam_da_ung_tuyen[]" id="checkbox_viec_lam_da_ung_tuyen[0]" value="1330523">
                         </td>
-                        <td class="tb-row-W"><b><a href="/it-phan-cung/mang/nhan-vien-cong-nghe-thong-tin-c5p1id1330523.html" target="_blank" title="Click để xem thông tin chi tiết việc làm" class="linkBlack"><?php echo $qltimviec_detail[0]['e_title']; ?></a></b>
+                        <td class="tb-row-W"><b><a href="/it-phan-cung/mang/nhan-vien-cong-nghe-thong-tin-c5p1id1330523.html" target="_blank" title="Click để xem thông tin chi tiết việc làm" class="linkBlack"><?php echo $qlungtuyen_detail[0]['e_title']; ?></a></b>
                             <br>
-                            <span>Ngành: <?php echo $qltimviec_detail[0]['e_nghe']; ?>
+                            <span>Ngành: <?php echo $list_cate_job[$qlungtuyen_detail[0]['m_id']]['m_name']; ?>
                             </span>
                             <br>
-                            Số lượng: <?php echo $qltimviec_detail[0]['e_mem']; ?> </td>
-                        <td class="tb-row-W" align="center"><?php echo $qltimviec_detail[0]['u_companyName']; ?></td>
-                        <td class="tb-row-W" align="center" onmouseover="tooltip.show('Hải Dương');" onmouseout="tooltip.hide();"><?php echo $qltimviec_detail[0]['e_cityID']; ?> <?php echo $qltimviec_detail[0]['e_cityID1']; ?> <?php echo $qltimviec_detail[0]['e_cityID2']; ?> <?php echo $qltimviec_detail[0]['e_cityID3']; ?></td>
-                        <td class="tb-row-W" align="center"><?php echo $qltimviec_detail[0]['e_luong']; ?> <?php echo $qltimviec_detail[0]['e_luonga']; ?> <?php echo $qltimviec_detail[0]['e_luongb']; ?></td>
-                        <td class="tb-row-W" align="center"><?php echo $qltimviec_detail[0]['e_dateActive']; ?></td>
-                        <td class="tb-row-W" align="center"><?php echo $qltimviec_detail[0]['e_lastDate']; ?></td>
-                        <td class="tb-row-W" align="center"><?php echo $qltimviec_detail[0]['e_datesave']; ?></td>
+                            Số lượng: <?php echo $qlungtuyen_detail[0]['e_mem']; ?> </td>
+                        <td class="tb-row-W" align="center"><?php echo $qlungtuyen_detail[0]['u_companyName']; ?></td>
+                        <td class="tb-row-W" align="center" onmouseover="tooltip.show('Hải Dương');" onmouseout="tooltip.hide();"><?php echo $list_city[$qlungtuyen_detail[0]['e_cityID']]['n_name']; ?></td>
+                        <td class="tb-row-W" align="center"><?php echo $list_luong[$qlungtuyen_detail[0]['e_luong']]['luong_name']; ?></td>
+                        <td class="tb-row-W" align="center"><?php echo date('d/m/Y',$qltimviec_detail[0]['e_dateActive']); ?></td>
+                        <td class="tb-row-W" align="center"><?php echo date('d/m/Y',$qltimviec_detail[0]['e_lastDate']); ?></td>
+                        <td class="tb-row-W" align="center"><?php echo date('d/m/Y',$qltimviec_detail[0]['e_datesave']); ?></td>
                         <td class="tb-row-W">
                             <div class="borderBot padTop5">
-                                <a href="/it-phan-cung/mang/nhan-vien-cong-nghe-thong-tin-c5p1id1330523.html" target="_blank" title="Click để xem thông tin chi tiết việc làm">Xem</a>
+                                <a href="<?php echo base_url(); ?>tin-tuyen-dung/<?php echo $qlhoso_detail[0]['j_id']; ?>-<?php echo mb_strtolower(url_title(removesign($qlhoso_detail[0]['j_title']))) ?>">Xem</a>
                             </div>
                             <div class="padTop5">
                                 <a href="javascript: if (dat_trang_thai_dang_xu_ly()) {ntv_quan_tri_xoa_1_viec_lam_da_ung_tuyen(1330523); }" title="Hủy ứng tuyển việc làm đã ứng tuyển">Hủy ứng tuyển</a>

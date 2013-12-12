@@ -5,6 +5,8 @@ class Hosouv extends MY_Controller
         parent::__construct();
         $this->load->model('hsuv_post');
         $this->load->library('tank_auth');
+        $this->load->library('session');
+        
     }
     public function hosouv_post($id)
     {
@@ -24,13 +26,17 @@ class Hosouv extends MY_Controller
         $active = true;
         $location = 'home';
         if ($this->tank_auth->is_logged_in($active, $location)) {
+            
             $this->data['is_login'] = 1;
+            
         } else {
             $this->data['is_login'] = 0;
+            redirect('/');
         }
+        
         $this->data['user_post_list']=  $this->hsuv_post->timviec_hot();
         $this->data['job_post_list']=  $this->hsuv_post->hot_post();
-        $this->data['hsuv_detail']= $this->hsuv_post->load_post();
+        $this->data['hsuv_detail']= $this->hsuv_post->load_post($id);
         if(empty($this->data['hsuv_detail']))
         {
             redirect($_SERVER['HTTP_REFERER']);

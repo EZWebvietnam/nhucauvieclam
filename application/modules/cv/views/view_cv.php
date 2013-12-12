@@ -1,3 +1,65 @@
+<div id="user-menu">
+        <div class="GridInfo">
+            <div class="Content">
+
+                <ul class="UserMenu">
+                    <li>
+                        <a href="<?php echo base_url(); ?>quanly-timviec/<?php echo $info_user_detail[0]['u_id'] ?>">Quản lý tìm việc</a>
+                    </li>
+
+                    <li class="Separator">
+                        |
+                    </li>
+
+                    <li>
+                        <a href="<?php echo base_url(); ?>hsda-dang/<?php echo $info_user_detail[0]['u_id'] ?>">Hồ Sơ đã đăng</a>
+                    </li>
+
+                    <li class="Separator">
+                        |
+                    </li>
+
+                    <li>
+                        <a href="<?php echo base_url(); ?>tao-hsungvien/<?php echo $info_user_detail[0]['u_id'] ?>">Tạo HS tìm việc</a>
+                    </li>
+
+                    <li class="Separator">
+                        |
+                    </li>
+
+                    <li>
+                        <a href="<?php echo base_url(); ?>daluu/<?php echo $info_user_detail[0]['u_id'] ?>">Việc làm đã Lưu</a>
+                    </li>
+
+                    <li class="Separator">
+                        |
+                    </li>
+
+                    <li>
+                        <a href="<?php echo base_url(); ?>da-ung-tuyen/<?php echo $info_user_detail[0]['u_id'] ?>">Việc làm đã ứng tuyển</a>
+                    </li>
+
+                    <li class="Separator">
+                        |
+                    </li>
+
+                    <li>
+                        <a href="<?php echo base_url(); ?>cv/<?php echo $info_user_detail[0]['u_id'] ?>">Hồ sơ cá nhân(CV)</a>
+                    </li>
+
+                    <li class="Separator">
+                        |
+                    </li>
+
+                    <li>
+                        <a href="<?php echo base_url(); ?>thongtin-canhan/<?php echo $info_user_detail[0]['u_id'] ?>">Thông tin cá nhân</a>
+                    </li>
+
+                </ul>
+                <div class="Clear"></div>
+            </div>
+        </div>
+    </div>
 <div class="content-qlhs">
     <input type="hidden" name="dang_xu_ly" id="dang_xu_ly" value="0">
     <div>
@@ -52,8 +114,7 @@
                                 <td valign="top" class="padTop10 padLeft10" width="150" align="left"><a href="/ntv-trang-quan-tri-ho-so-ca-nhan.html?id_cv=137108" title="Hồ sơ ứng tuyển vị trí nhân viên lập trình web">Hồ sơ ứng tuyển vị trí nhân viên lập...</a></td>
                                 <td valign="top" class="padTop10" width="50" align="left"> Đã duyệt </td>
                                 <td valign="top" class="padTop10" width="50" align="center">
-                                    <input type="button" value="Sửa" onclick="javascript: window.location.href = '/ntv-trang-quan-tri-ho-so-ca-nhan.html?id_cv=137108';
-                                            return(false);">
+                                    <a href="<?php echo base_url(); ?>thongtin-canhan/<?php echo $info_user_detail[0]['u_id']; ?>"><input type="button" value="Sửa" onclick="" >   </a>            
                                 </td>
                                 <td width="20" valign="top" class="padTop10" align="right">
                                     <input type="button" value="Xóa" onclick="javascript: ntv_quan_tri_xoa_CV(137108);
@@ -132,7 +193,7 @@
                                 </tr>
                                 <tr>
                                     <td colspan="2" align="right">
-                                        <a href="<?php echo base_url(); ?>thongtincanhan/thongtincanhan/index/<?php echo $info_user_detail[0]['u_id']; ?>"> <input type="button" class="buttonGreen" value="Sửa" onclick="<?php echo base_url(); ?>thongtincanhan/thongtincanhan/index/<?php echo $info_user_detail[0]['u_id']; ?>"> </a>
+                                        <a href="<?php echo base_url(); ?>thongtin-canhan/<?php echo $info_user_detail[0]['u_id']; ?>"> <input type="button" class="buttonGreen" value="Sửa" onclick="<?php echo base_url(); ?>thongtincanhan/thongtincanhan/index/<?php echo $info_user_detail[0]['u_id']; ?>"> </a>
                                     </td>
                                 </tr>
                             </tbody>
@@ -390,14 +451,12 @@ Mức lương:</textarea></td>
                         <tbody>
                             <tr>
                                 <td width="130">
-                                    <input type="text" class="textbox" style="width:110px" name="c_ngay_co_the_bat_dau_lam" id="c_ngay_co_the_bat_dau_lam" readonly="" value="" onclick="show_box_popup_calendar(23, 11, 2013, 'c_ngay_co_the_bat_dau_lam', '', '', '', '', '#7214AE');
-                                            return false;">
+                                    <input class="dateline" type="text" style="width:110px" name="c_ngay_co_the_bat_dau_lam">
                                 </td>
                                 <td width="30">
-                                    <input type="image" src="<?php echo base_url(); ?>template/home/img/iconCalendar.gif" onclick="show_box_popup_calendar(23, 11, 2013, 'c_ngay_co_the_bat_dau_lam', '', '', '', '', '#7214AE');
-                                            return false;">
+                                    <input type="image" src="<?php echo base_url(); ?>template/home/img/iconCalendar.gif" >
                                 </td>
-                                <td>(dd-mm-yyyy)</td>
+                                <td>(dd/mm/yyyy)</td>
                             </tr>
                         </tbody>
                     </table><div id="err_c_ngay_co_the_bat_dau_lam" class="textRed11"></div></td>
@@ -459,7 +518,7 @@ Mức lương:</textarea></td>
                 </tr>
                 <tr>
                     <td colspan="3" align="right">
-                        <a href="<?php echo base_url(); ?>thongtincanhan/thongtincanhan/index/<?php echo $info_user_detail[0]['u_id']; ?>"><input type="button" style="margin-right:10px;" class="buttonGreen" value="Sửa" onclick="<?php echo base_url(); ?>thongtincanhan/thongtincanhan/index/<?php echo $info_user_detail[0]['u_id']; ?>"></a>
+                        <a href="<?php echo base_url(); ?>thongtincanhan/thongtincanhan/index/<?php echo $info_user_detail[0]['u_id']; ?>"><input type="button" style="margin-right:10px;" class="buttonGreen" value="Sửa" onclick="<?php echo base_url(); ?>thongtin-canhan/<?php echo $info_user_detail[0]['u_id']; ?>"></a>
                     </td>
                 </tr>
                 <tr>

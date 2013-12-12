@@ -20,6 +20,20 @@ h1 {
 	left: 0;
 	bottom: 150px;
 }
+.button-right{
+    border: 1px solid #fff;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 2px;
+    background: #fff;
+    cursor: pointer;
+}
+.button-right :hover{
+    color: #ff0000;
+}
+.dateline{
+    background: #eee;
+}
 .barhotline{
     position: fixed;
     left: 0;
