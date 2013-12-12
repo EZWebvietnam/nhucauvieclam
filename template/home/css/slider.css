@@ -2,40 +2,40 @@
 
 .jcarousel-skin-tango .jcarousel-container {
 	position: relative;
-	width: 1000px;
-	height: 370px;
+	width: 980px;
+	height: 140px;
 	margin: 0 auto;
 }
 .jcarousel-skin-tango .jcarousel-direction-rtl {
 	direction: rtl;
 }
 .jcarousel-skin-tango .jcarousel-container-horizontal {
-	width: 1000px;
+	width: 980px;
 }
 .jcarousel-skin-tango .jcarousel-container-vertical {
-	width: 1080px;
-	height: 370px;
+	width: 980px;
+	height: 140px;
 	padding: 40px 20px;
 }
 .jcarousel-skin-tango .jcarousel-clip {
 	/* overflow: hidden; */
-	width: 1000px;
-	height: 370px;
+	width: 980px;
+	height: 140px;
 }
 
 .jcarousel-skin-tango .jcarousel-clip-horizontal {
-	width: 1080px;
-	height: 370px;
+	width: 980px;
+	height: 140px;
 }
 
 .jcarousel-skin-tango .jcarousel-clip-vertical {
-	width: 1000px;
-	height: 370px;
+	width: 980px;
+	height: 140px;
 }
 
 .jcarousel-skin-tango .jcarousel-item {
-	width: 1000px;
-	height: 370px;
+	width: 530px;
+	height: 140px;
 	position: relative;
 }
 
@@ -757,7 +757,7 @@
 	width: 3800px;
 	overflow: hidden;
 	position: absolute;
-	left: -1010px;
+	left: 0px;
 }
 .hbs .jcarousel-next-horizontal {
 	left: 1940px;

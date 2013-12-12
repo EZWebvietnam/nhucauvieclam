@@ -27,37 +27,40 @@
                                                     <div class=" jcarousel-skin-tango">
                                                         <div class="jcarousel-container jcarousel-container-horizontal" style="position: relative; display: block;">
                                                             <div class="jcarousel-clip jcarousel-clip-horizontal" style="position: relative;">
-                                                                <ul id="mycarousel" class="jcarousel-list jcarousel-list-horizontal" style="overflow: hidden; position: relative; top: 0px; margin: 0px; padding: 0px; left: -7070px; width: 11210px;">
-                                                                    <li class="jcarousel-item jcarousel-item-horizontal jcarousel-item-1 jcarousel-item-1-horizontal" jcarouselindex="1" style="float: left; list-style: none;">
-                                                                        <a href="" target="_blank"><img src="<?php echo base_url(); ?>template/home/img/imployees1.jpg" alt="" title="test"></a>
-                                                                    </li>
-                                                                    <li class="jcarousel-item jcarousel-item-horizontal jcarousel-item-2 jcarousel-item-2-horizontal" jcarouselindex="2" style="float: left; list-style: none;">
-                                                                        <a href="" target="_blank"><img src="<?php echo base_url(); ?>template/home/img/imployees2.jpg" alt="" title="Quang cao"></a>
-                                                                    </li>
-                                                                    <li class="jcarousel-item jcarousel-item-horizontal jcarousel-item-3 jcarousel-item-3-horizontal" jcarouselindex="3" style="float: left; list-style: none;">
-                                                                        <a href="" target="_blank"><img src="<?php echo base_url(); ?>template/home/img/imployees3.jpg" alt="" title="Noi that"></a>
-                                                                    </li>
-                                                                    <li class="jcarousel-item jcarousel-item-horizontal jcarousel-item-4 jcarousel-item-4-horizontal" jcarouselindex="4" style="float: left; list-style: none;">
-                                                                        <a href="" target="_blank"><img src="<?php echo base_url(); ?>template/home/img/imployees4.jpg" alt="" title="et"></a>
-                                                                    </li>
-                                                                    <li class="jcarousel-item jcarousel-item-horizontal jcarousel-item-5 jcarousel-item-5-horizontal" jcarouselindex="5" style="float: left; list-style: none;">
-                                                                        <a href="" target="_blank"><img src="<?php echo base_url(); ?>template/home/img/imployees5.jpg" alt="" title="Quang cao"></a>
-                                                                    </li>
-                                                                    <li class="jcarousel-item jcarousel-item-horizontal jcarousel-item-6 jcarousel-item-6-horizontal" jcarouselindex="6" style="float: left; list-style: none;">
-                                                                        <a href="" target="_blank"><img src="<?php echo base_url(); ?>template/home/img/imployees6.jpg" alt="" title="Noi that"></a>
-                                                                    </li>
-                                                                    <li class="jcarousel-item jcarousel-item-horizontal jcarousel-item-7 jcarousel-item-7-horizontal" jcarouselindex="7" style="float: left; list-style: none;">
-                                                                        <a href="" target="_blank"><img src="<?php echo base_url(); ?>template/home/img/imployees7.jpg" alt="" title="et"></a>
-                                                                    </li><li class="jcarousel-item jcarousel-item-horizontal jcarousel-item-13 jcarousel-item-13-horizontal" jcarouselindex="13" style="float: left; list-style: none;">
-                                                                        <a href="" target="_blank"><img src="<?php echo base_url(); ?>template/home/img/imployees6.jpg" alt="" title="Noi that"></a>
-                                                                    </li><li class="jcarousel-item jcarousel-item-horizontal jcarousel-item-14 jcarousel-item-14-horizontal" jcarouselindex="14" style="float: left; list-style: none;">
-                                                                        <a href="" target="_blank"><img src="<?php echo base_url(); ?>template/home/img/imployees7.jpg" alt="" title="et"></a>
-                                                                    </li><li class="jcarousel-item jcarousel-item-horizontal jcarousel-item-15 jcarousel-item-15-horizontal" jcarouselindex="15" style="float: left; list-style: none;">
-                                                                        <a href="" target="_blank"><img src="<?php echo base_url(); ?>template/home/img/imployees1.jpg" alt="" title="test"></a>
-                                                                    </li><li class="jcarousel-item jcarousel-item-horizontal jcarousel-item-16 jcarousel-item-16-horizontal" jcarouselindex="16" style="float: left; list-style: none;">
-                                                                        <a href="" target="_blank"><img src="<?php echo base_url(); ?>template/home/img/imployees2.jpg" alt="" title="Quang cao"></a>
-                                                                    </li>
-                                                                </ul>
+                                                                <ul id="mycarousel" class="jcarousel-list jcarousel-list-horizontal" style="overflow: hidden; position: relative; top: 0px; margin: 0px; padding: 0px; left: -4255.900143703704px; width: 9190px;">
+                                                    <li class="jcarousel-item jcarousel-item-horizontal jcarousel-item-1 jcarousel-item-1-horizontal" jcarouselindex="1" style="float: left; list-style: none;">
+                                                        <a href="" target="_blank"><img src="<?php echo
+base_url(); ?>template/home/img/slider1.png" alt="" title="Nhu cau viec lam"></a>
+                                                    </li>
+                                                    <li class="jcarousel-item jcarousel-item-horizontal jcarousel-item-2 jcarousel-item-2-horizontal" jcarouselindex="2" style="float: left; list-style: none;">
+                                                        <a href="" target="_blank"><img src="<?php echo
+base_url(); ?>template/home/img/slider2.png" alt="" title="tim viec lam"></a>
+                                                    </li>
+                                                    <li class="jcarousel-item jcarousel-item-horizontal jcarousel-item-3 jcarousel-item-3-horizontal" jcarouselindex="3" style="float: left; list-style: none;">
+                                                        <a href="" target="_blank"><img src="<?php echo
+base_url(); ?>template/home/img/slider3.png" alt="" title="tuyen dung nhanh"></a>
+                                                    </li>
+                                                    <li class="jcarousel-item jcarousel-item-horizontal jcarousel-item-4 jcarousel-item-4-horizontal" jcarouselindex="4" style="float: left; list-style: none;">
+                                                        <a href="" target="_blank"><img src="<?php echo
+base_url(); ?>template/home/img/slider4.png" alt="" title="tim viec ho chi minh"></a>
+                                                    </li>
+                                                    <li class="jcarousel-item jcarousel-item-horizontal jcarousel-item-622 jcarousel-item-622-horizontal" jcarouselindex="5" style="float: left; list-style: none;">
+                                                        <a href="" target="_blank"><img src="<?php echo
+base_url(); ?>template/home/img/slider5.png" alt="" title="tim viec ha noi"></a>
+                                                    </li>
+                                                    <li class="jcarousel-item jcarousel-item-horizontal jcarousel-item-623 jcarousel-item-623-horizontal" jcarouselindex="6" style="float: left; list-style: none;">
+                                                        <a href="" target="_blank"><img src="<?php echo
+base_url(); ?>template/home/img/slider6.png" alt="" title="tim viec sai gon"></a>
+                                                    </li>
+                                                    <li class="jcarousel-item jcarousel-item-horizontal jcarousel-item-624 jcarousel-item-624-horizontal" jcarouselindex="7" style="float: left; list-style: none;">
+                                                        <a href="" target="_blank"><img src="<?php echo
+base_url(); ?>template/home/img/slider7.png" alt="" title="viec lam chat luong"></a>
+                                                    </li>
+                                                    <li class="jcarousel-item jcarousel-item-horizontal jcarousel-item-624 jcarousel-item-624-horizontal" jcarouselindex="8" style="float: left; list-style: none;">
+                                                        <a href="" target="_blank"><img src="<?php echo
+base_url(); ?>template/home/img/slider8.png" alt="" title="nhan luc chat luong"></a>
+                                                    </li>
+                                                </ul>
                                                             </div>
                                                             <div class="jcarousel-prev jcarousel-prev-horizontal" style="display: block;"></div>
                                                             <div class="jcarousel-next jcarousel-next-horizontal" style="display: block;"></div>
