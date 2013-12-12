@@ -608,54 +608,7 @@
                             <div id="content">
                                 <div id="content-bottom">
                                     <div id="content-wrapper">
-                                        <div id="user-menu">
-                                            <div class="GridInfo">
-                                                <div class="Content">
-                                                    <ul class="UserMenu">
-                                                        <li>
-                                                            <a href="file:///E:/workspace/projectwebjobs/QLtimviec.html">Quản lý tìm việc</a>
-                                                        </li>
-                                                        <li class="Separator">
-                                                            |
-                                                        </li>
-                                                        <li>
-                                                            <a href="file:///E:/workspace/projectwebjobs/hsdadang.html">Hồ Sơ đã đăng</a>
-                                                        </li>
-                                                        <li class="Separator">
-                                                            |
-                                                        </li>
-                                                        <li>
-                                                            <a href="file:///E:/workspace/projectwebjobs/taohsUV.html">Tạo HS tìm việc</a>
-                                                        </li>
-                                                        <li class="Separator">
-                                                            |
-                                                        </li>
-                                                        <li>
-                                                            <a href="file:///E:/workspace/projectwebjobs/vieclamdaluu.html">Việc làm đã Lưu</a>
-                                                        </li>
-                                                        <li class="Separator">
-                                                            |
-                                                        </li>
-                                                        <li>
-                                                            <a href="file:///E:/workspace/projectwebjobs/vldaungtuyen.html">Việc làm đã ứng tuyển</a>
-                                                        </li>
-                                                        <li class="Separator">
-                                                            |
-                                                        </li>
-                                                        <li>
-                                                            <a href="file:///E:/workspace/projectwebjobs/cv.html">Hồ sơ cá nhân(CV)</a>
-                                                        </li>
-                                                        <li class="Separator">
-                                                            |
-                                                        </li>
-                                                        <li>
-                                                            <a href="file:///E:/workspace/projectwebjobs/thongtincanhan.html">Thông tin cá nhân</a>
-                                                        </li>
-                                                    </ul>
-                                                    <div class="Clear"></div>
-                                                </div>
-                                            </div>
-                                        </div>
+                                        
                                         <?php echo $this->load->view($main_content); ?>
                                         <div id="footer">
 

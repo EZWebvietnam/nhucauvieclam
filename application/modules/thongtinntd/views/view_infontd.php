@@ -117,9 +117,15 @@
                                             <td valign="top" width="150" class="tbUser-row">
                                                 <div id="div_xoa_logo">
                                                     <b>Logo công ty:</b>
-
                                                     <br>
-                                                    <img src="/upload/files_cua_nguoi_dung/logo/2013/11/23/1385194604_78577167.jpg" width="104" height="79" alt="">
+                                                    <?php 
+                                                    if(is_file($_SERVER['DOCUMENT_ROOT'].ROT_DIR.'file/'.$info_list[0]['u_img']))
+                                                    {
+                                                    ?>
+                                                        <img src="<?php echo base_url(); ?>file/<?php echo $info_list[0]['u_img']; ?>" width="50" alt="<?php echo $info_list[0]['u_companyName']; ?>">
+                                                    <?php } else {?> 
+                                                        <img src="<?php echo base_url(); ?>template/home/img/default.gif" width="50" alt="<?php echo $info_list[0]['u_companyName']; ?>">
+                                                        <?php }?>
                                                     <br>
                                                     <a href="javascript: ntd_quan_tri_xoa_logo_cty()" title="Xóa hẳn file logo công ty" class="textRed">Xóa ảnh</a>
                                                 </div></td>

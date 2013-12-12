@@ -325,20 +325,18 @@
                                             <td valign="top" class="tbUser-row"><b>Hạn nộp hồ sơ: <span class="textRed">*</span></b></td>
                                             <td class="tbUser-row"><a name="href-den_ngay"></a>
                                                 <table width="100%" cellpadding="0" cellspacing="0" border="0">
-                                                    <tbody>
-                                                        <tr>
-                                                            <td width="130">
-                                                                <input type="text" class="textbox" style="width:110px" name="den_ngay" id="den_ngay" readonly="" value="" onclick="show_box_popup_calendar(23, 11, 2013, 'den_ngay', '', '', '', '', '');
-                                                                        return false;">
-                                                            </td>
-                                                            <td width="30">
-                                                                <input type="image" src="<?php echo base_url(); ?>template/home/img/iconCalendar.gif" onclick="show_box_popup_calendar(23, 11, 2013, 'den_ngay', '', '', '', '', '');
-                                                                        return false;">
-                                                            </td>
-                                                            <td>(dd-mm-yyyy)</td>
-                                                        </tr>
-                                                    </tbody>
-                                                </table><div id="err_den_ngay" class="textRed11"></div></td>
+                                                        <tbody>
+                                                            <tr>
+                                                                <td width="130">
+                                                                    <input class="dateline" type="text" style="width:110px" name="c_ngay_co_the_bat_dau_lam">
+                                                                </td>
+                                                                <td width="30">
+                                                                    <input type="image" src="<?php echo base_url(); ?>template/home/img/iconCalendar.gif" >
+                                                                </td>
+                                                                <td>(dd/mm/yyyy)</td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table><div id="err_den_ngay" class="textRed11"></div></td>
                                         </tr>
                                         <tr>
                                             <td width="125" valign="top" class="tbUser-row"><b>Hình thức nộp hồ sơ: <span class="textRed">*</span></b></td>

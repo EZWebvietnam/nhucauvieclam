@@ -130,7 +130,7 @@ if ($is_login == 1) {
                         <tbody>
                             <?php
                             $i = 1;
-                            foreach ($job_list as $job) {
+                            foreach ($sanggia_detail as $job) {
 
                                 if ($i % 2 == 1) {
                                     ?>
@@ -190,7 +190,7 @@ if ($is_login == 0) {
                     <table class="TableTdn">
                         <tbody>
                             <?php
-                            foreach ($job_list as $job) {
+                            foreach ($tuyendung_detail as $job) {
                                 ?>
                                 <tr>
                                     <td class="W50"><img src="<?php echo base_url(); ?>template/home/img/aosomihanquoc99_gmail_com.jpg" width="50" alt="CỬA HÀNG THỜI TRANG THÁI - SHOP"></td>
@@ -258,7 +258,7 @@ if ($is_login == 0) {
                         <tbody>
                             <?php
                            
-                            foreach ($nang_dong as $user_post) {
+                            foreach ($timviec_detail as $user_post) {
                                 ?>
                                 <tr>
                                     <td>

@@ -1,3 +1,66 @@
+<div id="user-menu">
+
+    <div class="GridInfo">
+        <div class="Content">
+
+            <ul class="UserMenu">
+                <li>
+                    <a href="<?php echo base_url(); ?>quanly-timviec/<?php echo $taohsuv_detail[0]['u_id'] ?>">Quản lý tìm việc</a>
+                </li>
+
+                <li class="Separator">
+                    |
+                </li>
+
+                <li>
+                    <a href="<?php echo base_url(); ?>hsda-dang/<?php echo $taohsuv_detail[0]['u_id'] ?>">Hồ Sơ đã đăng</a>
+                </li>
+
+                <li class="Separator">
+                    |
+                </li>
+
+                <li>
+                    <a href="<?php echo base_url(); ?>tao-hsungvien/<?php echo $taohsuv_detail[0]['u_id'] ?>">Tạo HS tìm việc</a>
+                </li>
+
+                <li class="Separator">
+                    |
+                </li>
+
+                <li>
+                    <a href="<?php echo base_url(); ?>daluu/<?php echo $taohsuv_detail[0]['u_id'] ?>">Việc làm đã Lưu</a>
+                </li>
+
+                <li class="Separator">
+                    |
+                </li>
+
+                <li>
+                    <a href="<?php echo base_url(); ?>da-ung-tuyen/<?php echo $taohsuv_detail[0]['u_id'] ?>">Việc làm đã ứng tuyển</a>
+                </li>
+
+                <li class="Separator">
+                    |
+                </li>
+
+                <li>
+                    <a href="<?php echo base_url(); ?>cv/<?php echo $taohsuv_detail[0]['u_id'] ?>">Hồ sơ cá nhân(CV)</a>
+                </li>
+
+                <li class="Separator">
+                    |
+                </li>
+
+                <li>
+                    <a href="<?php echo base_url(); ?>thongtin-canhan/<?php echo $taohsuv_detail[0]['u_id'] ?>">Thông tin cá nhân</a>
+                </li>
+
+            </ul>
+            <div class="Clear"></div>
+        </div>
+    </div>
+</div>
 <div name="div_ntv_quan_tri_cap_nhat_tin_tim_viec" id="div_ntv_quan_tri_cap_nhat_tin_tim_viec">
     <div class="colLeft-QT">
         <form name="form_cap_nhat_tin_tv" id="form_cap_nhat_tin_tv" action="" method="post" onsubmit="" enctype="multipart/form-data">
@@ -16,7 +79,9 @@
                         <td rowspan="50" width="10" class="br-L"></td>
                         <td valign="top" width="160" class="tbUser-row"><b>Vị trí mong muốn: (<span class="textRed">*</span>)</b></td>
                         <td class="tbUser-row"><a name="href-tieu_de"></a>
-                            <input type="text" class="textbox" name="tieu_de" id="tieu_de" value="" onkeydown="if (event.keyCode == 13 || event.keyCode == '13'){return(false); }">
+                            <input type="text" class="textbox" name="tieu_de" id="tieu_de" value="" onkeydown="if (event.keyCode == 13 || event.keyCode == '13') {
+                                        return(false);
+                                    }">
                             <div id="err_tieu_de" class="textRed11"></div></td>
                         <td rowspan="10" width="10" class="br-R"></td>
                     </tr>
@@ -34,139 +99,139 @@
                             <br>
                         <td class="tbUser-row">        
                             <select name="nganh_nghe" class="dropbox" id="nganh_nghe">
-                                        <option value="">Chọn ngành nghề</option>
-                                        <option value="10">Bán hàng</option>
-                                        <option value="11">Tư vấn bảo hiểm</option>
-                                        <option value="12">Báo chí/Biên tập viên</option>
-                                        <option value="13">Bất động sản</option>
-                                        <option value="14">Biên dịch/Phiên dịch</option>
-                                        <option value="15">Bưu chính viễn thông</option>
-                                        <option value="16">Cơ khí/Kĩ thuật ứng dụng</option>
-                                        <option value="17">Công nghệ thông tin</option>
-                                        <option value="18">Dầu khí/Địa chất</option>
-                                        <option value="19">Dệt may</option>
-                                        <option value="20">Bảo vệ/Vệ sĩ/An ninh</option>
-                                        <option value="21">Chăm sóc khách hàng</option>
-                                        <option value="22">Điện/Điện tử/Điện lạnh</option>
-                                        <option value="23">Du lịch/Nhà hàng/Khách sạn</option>
-                                        <option value="24">Dược/Hóa chất/Sinh hóa</option>
-                                        <option value="25">Giải trí/Vui chơi</option>
-                                        <option value="26">Giáo dục/Đào tạo/Thư viện</option>
-                                        <option value="27">Giao thông/Vận tải/Thủy lợi/Cầu đường</option>
-                                        <option value="28">Giày da/Thuộc da</option>
-                                        <option value="29">Hành chính/Thư ký</option>
-                                        <option value="30">Kho vận/Vật tư</option>
-                                        <option value="31">Kiến trúc/Nội thất</option>
-                                        <option value="32">Kinh doanh</option>
-                                        <option value="33">Lao động phổ thông</option>
-                                        <option value="34">Luật/Pháp lý</option>
-                                        <option value="35">Sinh viên/Mới tốt nghiệp/Thực tập</option>
-                                        <option value="36">Môi trường/Xử lý chất thải</option>
-                                        <option value="37">Mỹ phẩm</option>
-                                        <option value="38">Ngân hàng/Chứng khoán/Đầu tư</option>
-                                        <option value="39">Nghệ thuật/Điện ảnh</option>
-                                        <option value="40">Nhân sự</option>
-                                        <option value="41">Nông/Lâm/Ngư nghiệp</option>
-                                        <option value="42">Quan hệ đối ngoại</option>
-                                        <option value="43">Thẩm định/Giám định/Quản lý chất lượng</option>
-                                        <option value="44">Quản lý điều hành</option>
-                                        <option value="45">Quảng cáo/Marketing/PR</option>
-                                        <option value="46">Sản xuất/Vận hành sản xuất</option>
-                                        <option value="47">Tài chính/Kế toán/Kiểm toán</option>
-                                        <option value="48">Thể dục/Thể thao</option>
-                                        <option value="49">Thiết kế/Mỹ thuật</option>
-                                        <option value="50">Thời vụ/Bán thời gian</option>
-                                        <option value="51">Thực phẩm/DV ăn uống</option>
-                                        <option value="52">Xây dựng</option>
-                                        <option value="53">Xuất-Nhập khẩu/Ngoại thương</option>
-                                        <option value="54">Y tế</option>
-                                        <option value="55">Khác</option>
-                                        <option value="56">Ngoại ngữ</option>
-                                        <option value="58">Khu chế xuất/Khu công nghiệp</option>
-                                        <option value="59">Làm đẹp/Thể lực/Spa</option>
-                                        <option value="60">Tài xế/Lái xe/Giao nhận</option>
-                                        <option value="61">Trang thiết bị công nghiệp</option>
-                                        <option value="62">Trang thiết bị gia dụng</option>
-                                        <option value="63">Trang thiết bị văn phòng</option>
-                                        <option value="64">PG/PB/Lễ tân</option>
-                                        <option value="65">Bán hàng/Kinh doanh mạng lưới</option>
-                                        <option value="66">Phục vụ/Tạp vụ/Giúp việc</option>
-                                    </select>
-                            </td>
+                                <option value="">Chọn ngành nghề</option>
+                                <option value="10">Bán hàng</option>
+                                <option value="11">Tư vấn bảo hiểm</option>
+                                <option value="12">Báo chí/Biên tập viên</option>
+                                <option value="13">Bất động sản</option>
+                                <option value="14">Biên dịch/Phiên dịch</option>
+                                <option value="15">Bưu chính viễn thông</option>
+                                <option value="16">Cơ khí/Kĩ thuật ứng dụng</option>
+                                <option value="17">Công nghệ thông tin</option>
+                                <option value="18">Dầu khí/Địa chất</option>
+                                <option value="19">Dệt may</option>
+                                <option value="20">Bảo vệ/Vệ sĩ/An ninh</option>
+                                <option value="21">Chăm sóc khách hàng</option>
+                                <option value="22">Điện/Điện tử/Điện lạnh</option>
+                                <option value="23">Du lịch/Nhà hàng/Khách sạn</option>
+                                <option value="24">Dược/Hóa chất/Sinh hóa</option>
+                                <option value="25">Giải trí/Vui chơi</option>
+                                <option value="26">Giáo dục/Đào tạo/Thư viện</option>
+                                <option value="27">Giao thông/Vận tải/Thủy lợi/Cầu đường</option>
+                                <option value="28">Giày da/Thuộc da</option>
+                                <option value="29">Hành chính/Thư ký</option>
+                                <option value="30">Kho vận/Vật tư</option>
+                                <option value="31">Kiến trúc/Nội thất</option>
+                                <option value="32">Kinh doanh</option>
+                                <option value="33">Lao động phổ thông</option>
+                                <option value="34">Luật/Pháp lý</option>
+                                <option value="35">Sinh viên/Mới tốt nghiệp/Thực tập</option>
+                                <option value="36">Môi trường/Xử lý chất thải</option>
+                                <option value="37">Mỹ phẩm</option>
+                                <option value="38">Ngân hàng/Chứng khoán/Đầu tư</option>
+                                <option value="39">Nghệ thuật/Điện ảnh</option>
+                                <option value="40">Nhân sự</option>
+                                <option value="41">Nông/Lâm/Ngư nghiệp</option>
+                                <option value="42">Quan hệ đối ngoại</option>
+                                <option value="43">Thẩm định/Giám định/Quản lý chất lượng</option>
+                                <option value="44">Quản lý điều hành</option>
+                                <option value="45">Quảng cáo/Marketing/PR</option>
+                                <option value="46">Sản xuất/Vận hành sản xuất</option>
+                                <option value="47">Tài chính/Kế toán/Kiểm toán</option>
+                                <option value="48">Thể dục/Thể thao</option>
+                                <option value="49">Thiết kế/Mỹ thuật</option>
+                                <option value="50">Thời vụ/Bán thời gian</option>
+                                <option value="51">Thực phẩm/DV ăn uống</option>
+                                <option value="52">Xây dựng</option>
+                                <option value="53">Xuất-Nhập khẩu/Ngoại thương</option>
+                                <option value="54">Y tế</option>
+                                <option value="55">Khác</option>
+                                <option value="56">Ngoại ngữ</option>
+                                <option value="58">Khu chế xuất/Khu công nghiệp</option>
+                                <option value="59">Làm đẹp/Thể lực/Spa</option>
+                                <option value="60">Tài xế/Lái xe/Giao nhận</option>
+                                <option value="61">Trang thiết bị công nghiệp</option>
+                                <option value="62">Trang thiết bị gia dụng</option>
+                                <option value="63">Trang thiết bị văn phòng</option>
+                                <option value="64">PG/PB/Lễ tân</option>
+                                <option value="65">Bán hàng/Kinh doanh mạng lưới</option>
+                                <option value="66">Phục vụ/Tạp vụ/Giúp việc</option>
+                            </select>
+                        </td>
                     </tr>
                     <tr>
                         <td valign="top" class="tbUser-row"><b>Địa điểm làm việc (<span class="textRed">*</span>):</b>
                             <br>
                         <td class="tbUser-row"><a name="href-tinh"></a>
                             <select name="dia_diem" class="dropbox" id="dia_diem">
-                                        <option value="">Chọn địa điểm</option>
-                                        <option value="1">TP.Hồ Chí Minh</option>
-                                        <option value="2">Hà Nội</option>
-                                        <option value="3">An Giang</option>
-                                        <option value="4">Bạc Liêu</option>
-                                        <option value="5">Bà Rịa-Vũng Tàu</option>
-                                        <option value="6">Bắc Cạn</option>
-                                        <option value="7">Bắc Giang</option>
-                                        <option value="8">Bắc Ninh</option>
-                                        <option value="9">Bến Tre</option>
-                                        <option value="10">Bình Dương</option>
-                                        <option value="11">Bình Định</option>
-                                        <option value="12">Bình Phước</option>
-                                        <option value="13">Bình Thuận</option>
-                                        <option value="14">Cao Bằng</option>
-                                        <option value="15">Cà Mau</option>
-                                        <option value="16">Cần Thơ</option>
-                                        <option value="17">Đà Nẵng</option>
-                                        <option value="18">Đắk Lắk</option>
-                                        <option value="19">Đắk Nông</option>
-                                        <option value="20">Điện Biên</option>
-                                        <option value="21">Đồng Nai</option>
-                                        <option value="22">Đồng Tháp</option>
-                                        <option value="23">Gia Lai</option>
-                                        <option value="24">Hà Giang</option>
-                                        <option value="25">Hà Nam</option>
-                                        <option value="26">Hà Tây</option>
-                                        <option value="27">Hà Tĩnh</option>
-                                        <option value="28">Hải Dương</option>
-                                        <option value="29">Hải Phòng</option>
-                                        <option value="30">Hậu Giang</option>
-                                        <option value="31">Hòa Bình</option>
-                                        <option value="32">Hưng Yên</option>
-                                        <option value="33">Khánh Hòa</option>
-                                        <option value="34">Kiên Giang</option>
-                                        <option value="35">Kon Tum</option>
-                                        <option value="36">Lai Châu</option>
-                                        <option value="37">Lạng Sơn</option>
-                                        <option value="38">Lào Cai</option>
-                                        <option value="39">Lâm Đồng</option>
-                                        <option value="40">Long An</option>
-                                        <option value="41">Nam Định</option>
-                                        <option value="42">Nghệ An</option>
-                                        <option value="43">Ninh Bình</option>
-                                        <option value="44">Ninh Thuận</option>
-                                        <option value="45">Phú Thọ</option>
-                                        <option value="46">Phú Yên</option>
-                                        <option value="47">Quảng Bình</option>
-                                        <option value="48">Quảng Nam</option>
-                                        <option value="49">Quảng Ngãi</option>
-                                        <option value="50">Quảng Ninh</option>
-                                        <option value="51">Quảng Trị</option>
-                                        <option value="52">Sóc Trăng</option>
-                                        <option value="53">Sơn La</option>
-                                        <option value="54">Tây Ninh</option>
-                                        <option value="55">Thái Bình</option>
-                                        <option value="56">Thái Nguyên</option>
-                                        <option value="57">Thanh Hóa</option>
-                                        <option value="58">Thừa Thiên-Huế</option>
-                                        <option value="59">Tiền Giang</option>
-                                        <option value="60">Trà Vinh</option>
-                                        <option value="61">Tuyên Quang</option>
-                                        <option value="62">Vĩnh Long</option>
-                                        <option value="63">Vĩnh Phúc</option>
-                                        <option value="64">Yên Bái</option>
-                                        <option value="65">Toàn quốc</option>
-                                        <option value="66">Nước ngoài</option>
-                                    </select>
+                                <option value="">Chọn địa điểm</option>
+                                <option value="1">TP.Hồ Chí Minh</option>
+                                <option value="2">Hà Nội</option>
+                                <option value="3">An Giang</option>
+                                <option value="4">Bạc Liêu</option>
+                                <option value="5">Bà Rịa-Vũng Tàu</option>
+                                <option value="6">Bắc Cạn</option>
+                                <option value="7">Bắc Giang</option>
+                                <option value="8">Bắc Ninh</option>
+                                <option value="9">Bến Tre</option>
+                                <option value="10">Bình Dương</option>
+                                <option value="11">Bình Định</option>
+                                <option value="12">Bình Phước</option>
+                                <option value="13">Bình Thuận</option>
+                                <option value="14">Cao Bằng</option>
+                                <option value="15">Cà Mau</option>
+                                <option value="16">Cần Thơ</option>
+                                <option value="17">Đà Nẵng</option>
+                                <option value="18">Đắk Lắk</option>
+                                <option value="19">Đắk Nông</option>
+                                <option value="20">Điện Biên</option>
+                                <option value="21">Đồng Nai</option>
+                                <option value="22">Đồng Tháp</option>
+                                <option value="23">Gia Lai</option>
+                                <option value="24">Hà Giang</option>
+                                <option value="25">Hà Nam</option>
+                                <option value="26">Hà Tây</option>
+                                <option value="27">Hà Tĩnh</option>
+                                <option value="28">Hải Dương</option>
+                                <option value="29">Hải Phòng</option>
+                                <option value="30">Hậu Giang</option>
+                                <option value="31">Hòa Bình</option>
+                                <option value="32">Hưng Yên</option>
+                                <option value="33">Khánh Hòa</option>
+                                <option value="34">Kiên Giang</option>
+                                <option value="35">Kon Tum</option>
+                                <option value="36">Lai Châu</option>
+                                <option value="37">Lạng Sơn</option>
+                                <option value="38">Lào Cai</option>
+                                <option value="39">Lâm Đồng</option>
+                                <option value="40">Long An</option>
+                                <option value="41">Nam Định</option>
+                                <option value="42">Nghệ An</option>
+                                <option value="43">Ninh Bình</option>
+                                <option value="44">Ninh Thuận</option>
+                                <option value="45">Phú Thọ</option>
+                                <option value="46">Phú Yên</option>
+                                <option value="47">Quảng Bình</option>
+                                <option value="48">Quảng Nam</option>
+                                <option value="49">Quảng Ngãi</option>
+                                <option value="50">Quảng Ninh</option>
+                                <option value="51">Quảng Trị</option>
+                                <option value="52">Sóc Trăng</option>
+                                <option value="53">Sơn La</option>
+                                <option value="54">Tây Ninh</option>
+                                <option value="55">Thái Bình</option>
+                                <option value="56">Thái Nguyên</option>
+                                <option value="57">Thanh Hóa</option>
+                                <option value="58">Thừa Thiên-Huế</option>
+                                <option value="59">Tiền Giang</option>
+                                <option value="60">Trà Vinh</option>
+                                <option value="61">Tuyên Quang</option>
+                                <option value="62">Vĩnh Long</option>
+                                <option value="63">Vĩnh Phúc</option>
+                                <option value="64">Yên Bái</option>
+                                <option value="65">Toàn quốc</option>
+                                <option value="66">Nước ngoài</option>
+                            </select>
                         </td>
                     </tr>
                     <tr>
@@ -197,12 +262,12 @@
                                 <tbody>
                                     <tr>
                                         <td width="130">
-                                            <input type="text" class="textbox" style="width:110px" name="den_ngay" id="den_ngay" readonly="" value="" onclick="show_box_popup_calendar(23, 11, 2013, 'den_ngay', '', '', '', '', '#7214AE'); return false;">
+                                            <input class="dateline" type="text" style="width:110px" name="c_ngay_co_the_bat_dau_lam">
                                         </td>
                                         <td width="30">
-                                            <input type="image" src="<?php echo base_url(); ?>template/home/img/iconCalendar.gif" onclick="show_box_popup_calendar(23, 11, 2013, 'den_ngay', '', '', '', '', '#7214AE'); return false;">
+                                            <input type="image" src="<?php echo base_url(); ?>template/home/img/iconCalendar.gif" >
                                         </td>
-                                        <td>(dd-mm-yyyy)</td>
+                                        <td>(dd/mm/yyyy)</td>
                                     </tr>
                                 </tbody>
                             </table><div id="err_den_ngay" class="textRed11"></div></td>
@@ -225,7 +290,8 @@
                                 <div id="div_anh_dai_dien"></div>
                                 <div class="padTop10">
                                     <a name="href-anh_dai_dien"></a>
-                                    <input type="image" src="images/btnUpAnh.gif" onclick="ntv_quan_tri_show_box_popup_doi_anh_dai_dien(); return false;">
+                                    <input type="image" src="images/btnUpAnh.gif" onclick="ntv_quan_tri_show_box_popup_doi_anh_dai_dien();
+                                            return false;">
                                 </div>
                             </div></td>
                         <td valign="top" class="padTop10">
@@ -250,7 +316,8 @@
                                         </tr>
                                         <tr>
                                             <td colspan="2" align="right">
-                                                <input type="button" class="buttonGreen" value="Sửa" onclick="ntv_quan_tri_hien_thi_sua_thong_tin_tai_khoan(); return(false);">
+                                                <input type="button" class="buttonGreen" value="Sửa" onclick="ntv_quan_tri_hien_thi_sua_thong_tin_tai_khoan();
+                                                        return(false);">
                                             </td>
                                         </tr>
                                     </tbody>
@@ -274,10 +341,12 @@
                                                     <tbody>
                                                         <tr>
                                                             <td width="130">
-                                                                <input type="text" class="textbox" name="ngay_sinh" id="ngay_sinh" style="width:110px" readonly="" value="12-08-1981" onclick="show_box_popup_calendar(12, 08, 1981, 'ngay_sinh', '', '', '', '', '#7214AE'); return false;">
+                                                                <input type="text" class="textbox" name="ngay_sinh" id="ngay_sinh" style="width:110px" readonly="" value="12-08-1981" onclick="show_box_popup_calendar(12, 08, 1981, 'ngay_sinh', '', '', '', '', '#7214AE');
+                                                                        return false;">
                                                             </td>
                                                             <td width="30">
-                                                                <input type="image" src="images/iconCalendar.gif" onclick="show_box_popup_calendar(12, 08, 1981, 'ngay_sinh', '', '', '', '', '#7214AE'); return false;">
+                                                                <input type="image" src="images/iconCalendar.gif" onclick="show_box_popup_calendar(12, 08, 1981, 'ngay_sinh', '', '', '', '', '#7214AE');
+                                                                        return false;">
                                                             </td>
                                                             <td>(dd-mm-yyyy)</td>
                                                         </tr>
@@ -302,11 +371,14 @@
                                                     <option value="1">Đã có gia đình</option>
                                                 </select><div id="err_tinh_trang_hon_nhan" class="textRed11"></div></td>
                                         </tr>
-                                        
+
                                         <tr>
                                             <td colspan="2" align="right">
-                                                <input type="button" class="buttonGreen" value="Cập nhật" onclick="javascript: if (dat_trang_thai_dang_xu_ly()) {ntv_quan_tri_thay_doi_thong_tin_ntv(); }">
-                                                <input type="button" class="buttonGreen" value="Hủy" onclick="ntv_quan_tri_khong_hien_thi_sua_thong_tin_tai_khoan(); return(false);">
+                                                <input type="button" class="buttonGreen" value="Cập nhật" onclick="javascript: if (dat_trang_thai_dang_xu_ly()) {
+                                                            ntv_quan_tri_thay_doi_thong_tin_ntv();
+                                                        }">
+                                                <input type="button" class="buttonGreen" value="Hủy" onclick="ntv_quan_tri_khong_hien_thi_sua_thong_tin_tai_khoan();
+                                                        return(false);">
                                             </td>
                                         </tr>
                                     </tbody>
@@ -339,7 +411,9 @@
                     <tr>
                         <td valign="top" class="tbUser-row"><b>Ngành học (<span class="textRed">*</span>):</b></td>
                         <td class="tbUser-row"><a name="href-nganh_hoc"></a>
-                            <input type="text" class="textbox" name="nganh_hoc" id="nganh_hoc" value="" onkeydown="if (event.keyCode == 13 || event.keyCode == '13'){return(false); }">
+                            <input type="text" class="textbox" name="nganh_hoc" id="nganh_hoc" value="" onkeydown="if (event.keyCode == 13 || event.keyCode == '13') {
+                                        return(false);
+                                    }">
                             <div id="err_nganh_hoc" class="textRed11"></div></td>
                     </tr>
                     <tr>
@@ -367,7 +441,7 @@
                         <td valign="top" class="tbUser-row"><b>Tốt nghiệp tại trường:</b>
                         </td>
                         <td class="tbUser-row" width ="510"><a name="href-c_truong"></a>
-                           <textarea class="textArea" style="width:500px" name="c_truong_da_hoc" id="c_truong_da_hoc"></textarea>
+                            <textarea class="textArea" style="width:500px" name="c_truong_da_hoc" id="c_truong_da_hoc"></textarea>
                         </td>
                     </tr>
                     <tr>
@@ -552,10 +626,13 @@ Thời gian quen biết:
                                 <input type="text" class="textbox" name="dien_thoai_lien_he" id="dien_thoai_lien_he" value="0962925599">
                                 <div id="err_dien_thoai_lien_he" class="textRed11"></div></td>
                         </tr>
-                        
+
                         <tr>
                             <td colspan="2" align="right">
-                                <input type="button" class="buttonGreen" value="Cập nhật" onclick="javascript: if (dat_trang_thai_dang_xu_ly()) {ntv_quan_tri_thay_doi_lien_he_ntv(); return(false); }">
+                                <input type="button" class="buttonGreen" value="Cập nhật" onclick="javascript: if (dat_trang_thai_dang_xu_ly()) {
+                                            ntv_quan_tri_thay_doi_lien_he_ntv();
+                                            return(false);
+                                        }">
                                 <input type="button" class="buttonGreen" value="Hủy" onclick="ntv_quan_tri_khong_hien_thi_sua_thong_tin_lien_he();">
                             </td>
                         </tr>
@@ -575,7 +652,9 @@ Thời gian quen biết:
                     </tr>
                     <tr>
                         <td class="tbUser-row" valign="top" colspan="2" align="center">
-                            <input type="submit" class="button" value="Đăng hồ sơ tìm việc" style="width:150px;" onclick="javascript: if (dat_trang_thai_dang_xu_ly()) {ntv_quan_tri_ghi_lai_tin_tv('dang_tin'); }">
+                            <input type="submit" class="button" value="Đăng hồ sơ tìm việc" style="width:150px;" onclick="javascript: if (dat_trang_thai_dang_xu_ly()) {
+                                        ntv_quan_tri_ghi_lai_tin_tv('dang_tin');
+                                    }">
                             &nbsp;&nbsp;
                             <input type="submit" class="button" value="Quay lại" onclick="javascript: window.location.href = '/ntv-trang-quan-tri-tin-tim-viec.html';" title="Về trang quản lý hồ sơ tìm việc">
                         </td>
@@ -592,10 +671,10 @@ Thời gian quen biết:
         <script src="/temp/ds_tinh.js"></script>
         <script src="/temp/ds_nganh_cap1.js"></script>
         <script>
-                    set_focus(document.forms['form_cap_nhat_tin_tv']);
-                    SetAutoComplete(ds_truong_dhcd, 'txt_truong', 'chon_truong_tu_suggestion', 'chon_truong_tu_suggestion', 150, 'ntv_quan_tri_them_truong_tu_suggestion(",~,")');
-                    SetAutoComplete(ds_tinh, 'txt_tinh', 'them_tinh_tu_suggestion', 'them_tinh_tu_suggestion', 150, 'ntd_ntv_quan_tri_them_tinh_tu_suggestion(",~,",10)');
-                    SetAutoComplete(ds_nganh_cap1, 'txt_nganh_nghe', 'txt_nganh_nghe', 'them_nganh_cap1_tu_suggestion', 150, 'ntd_ntv_quan_tri_them_nganh_cap_1_tu_suggestion()');</script>
+                                set_focus(document.forms['form_cap_nhat_tin_tv']);
+                                SetAutoComplete(ds_truong_dhcd, 'txt_truong', 'chon_truong_tu_suggestion', 'chon_truong_tu_suggestion', 150, 'ntv_quan_tri_them_truong_tu_suggestion(",~,")');
+                                SetAutoComplete(ds_tinh, 'txt_tinh', 'them_tinh_tu_suggestion', 'them_tinh_tu_suggestion', 150, 'ntd_ntv_quan_tri_them_tinh_tu_suggestion(",~,",10)');
+                                SetAutoComplete(ds_nganh_cap1, 'txt_nganh_nghe', 'txt_nganh_nghe', 'them_nganh_cap1_tu_suggestion', 150, 'ntd_ntv_quan_tri_them_nganh_cap_1_tu_suggestion()');</script>
         <!--</div> -->
     </div>
     <div name="div_mau_tin_tim_viec" id="div_mau_tin_tim_viec">
@@ -613,14 +692,18 @@ Thời gian quen biết:
                         <div id="div_hien_thi_nganh_thu_1_tin_mau_1" style="display:inline;">
                             <li>
                                 <a href="/ntv-trang-quan-tri-cap-nhat-tin-tim-viec.html?id_mau_tin_tv=82&amp;id_tin_tv=-1" title="">
-                                    <input type="checkbox" id="mau_tin_tim_viec_82" onclick="javascript: if (document.getElementById('mau_tin_tim_viec_82').checked) {window.location.href = '/ntv-trang-quan-tri-cap-nhat-tin-tim-viec.html?id_mau_tin_tv=82'; }">
+                                    <input type="checkbox" id="mau_tin_tim_viec_82" onclick="javascript: if (document.getElementById('mau_tin_tim_viec_82').checked) {
+                                                window.location.href = '/ntv-trang-quan-tri-cap-nhat-tin-tim-viec.html?id_mau_tin_tv=82';
+                                            }">
                                     Phóng viên, biên tập viên, cộng tác viên </a>
                             </li>
                         </div>
                         <div id="div_hien_thi_nganh_thu_1_tin_mau_2" style="display:inline;">
                             <li>
                                 <a href="/ntv-trang-quan-tri-cap-nhat-tin-tim-viec.html?id_mau_tin_tv=83&amp;id_tin_tv=-1" title="">
-                                    <input type="checkbox" id="mau_tin_tim_viec_83" onclick="javascript: if (document.getElementById('mau_tin_tim_viec_83').checked) {window.location.href = '/ntv-trang-quan-tri-cap-nhat-tin-tim-viec.html?id_mau_tin_tv=83'; }">
+                                    <input type="checkbox" id="mau_tin_tim_viec_83" onclick="javascript: if (document.getElementById('mau_tin_tim_viec_83').checked) {
+                                                window.location.href = '/ntv-trang-quan-tri-cap-nhat-tin-tim-viec.html?id_mau_tin_tv=83';
+                                            }">
                                     Nhân viên dựng phim, quay phim, biên tập nhiều năm kinh nghiệm </a>
                             </li>
                         </div>
@@ -635,7 +718,9 @@ Thời gian quen biết:
                         <div id="div_hien_thi_nganh_thu_2_tin_mau_1" style="display:inline;">
                             <li>
                                 <a href="/ntv-trang-quan-tri-cap-nhat-tin-tim-viec.html?id_mau_tin_tv=81&amp;id_tin_tv=-1" title="">
-                                    <input type="checkbox" id="mau_tin_tim_viec_81" onclick="javascript: if (document.getElementById('mau_tin_tim_viec_81').checked) {window.location.href = '/ntv-trang-quan-tri-cap-nhat-tin-tim-viec.html?id_mau_tin_tv=81'; }">
+                                    <input type="checkbox" id="mau_tin_tim_viec_81" onclick="javascript: if (document.getElementById('mau_tin_tim_viec_81').checked) {
+                                                window.location.href = '/ntv-trang-quan-tri-cap-nhat-tin-tim-viec.html?id_mau_tin_tv=81';
+                                            }">
                                     Chuyên viên tư vấn đầu tư tài chính </a>
                             </li>
                         </div>
@@ -650,14 +735,18 @@ Thời gian quen biết:
                         <div id="div_hien_thi_nganh_thu_3_tin_mau_1" style="display:inline;">
                             <li>
                                 <a href="/ntv-trang-quan-tri-cap-nhat-tin-tim-viec.html?id_mau_tin_tv=79&amp;id_tin_tv=-1" title="">
-                                    <input type="checkbox" id="mau_tin_tim_viec_79" onclick="javascript: if (document.getElementById('mau_tin_tim_viec_79').checked) {window.location.href = '/ntv-trang-quan-tri-cap-nhat-tin-tim-viec.html?id_mau_tin_tv=79'; }">
+                                    <input type="checkbox" id="mau_tin_tim_viec_79" onclick="javascript: if (document.getElementById('mau_tin_tim_viec_79').checked) {
+                                                window.location.href = '/ntv-trang-quan-tri-cap-nhat-tin-tim-viec.html?id_mau_tin_tv=79';
+                                            }">
                                     Quản trị mạng, Nhân viên IT, Quản trị Website </a>
                             </li>
                         </div>
                         <div id="div_hien_thi_nganh_thu_3_tin_mau_2" style="display:inline;">
                             <li>
                                 <a href="/ntv-trang-quan-tri-cap-nhat-tin-tim-viec.html?id_mau_tin_tv=80&amp;id_tin_tv=-1" title="">
-                                    <input type="checkbox" id="mau_tin_tim_viec_80" onclick="javascript: if (document.getElementById('mau_tin_tim_viec_80').checked) {window.location.href = '/ntv-trang-quan-tri-cap-nhat-tin-tim-viec.html?id_mau_tin_tv=80'; }">
+                                    <input type="checkbox" id="mau_tin_tim_viec_80" onclick="javascript: if (document.getElementById('mau_tin_tim_viec_80').checked) {
+                                                window.location.href = '/ntv-trang-quan-tri-cap-nhat-tin-tim-viec.html?id_mau_tin_tv=80';
+                                            }">
                                     Nhân viên IT phần cứng/mạng 3 năm kinh nghiệm </a>
                             </li>
                         </div>
@@ -672,14 +761,18 @@ Thời gian quen biết:
                         <div id="div_hien_thi_nganh_thu_4_tin_mau_1" style="display:inline;">
                             <li>
                                 <a href="/ntv-trang-quan-tri-cap-nhat-tin-tim-viec.html?id_mau_tin_tv=7&amp;id_tin_tv=-1" title="">
-                                    <input type="checkbox" id="mau_tin_tim_viec_7" onclick="javascript: if (document.getElementById('mau_tin_tim_viec_7').checked) {window.location.href = '/ntv-trang-quan-tri-cap-nhat-tin-tim-viec.html?id_mau_tin_tv=7'; }">
+                                    <input type="checkbox" id="mau_tin_tim_viec_7" onclick="javascript: if (document.getElementById('mau_tin_tim_viec_7').checked) {
+                                                window.location.href = '/ntv-trang-quan-tri-cap-nhat-tin-tim-viec.html?id_mau_tin_tv=7';
+                                            }">
                                     Kế toán tổng hợp </a>
                             </li>
                         </div>
                         <div id="div_hien_thi_nganh_thu_4_tin_mau_2" style="display:inline;">
                             <li>
                                 <a href="/ntv-trang-quan-tri-cap-nhat-tin-tim-viec.html?id_mau_tin_tv=11&amp;id_tin_tv=-1" title="">
-                                    <input type="checkbox" id="mau_tin_tim_viec_11" onclick="javascript: if (document.getElementById('mau_tin_tim_viec_11').checked) {window.location.href = '/ntv-trang-quan-tri-cap-nhat-tin-tim-viec.html?id_mau_tin_tv=11'; }">
+                                    <input type="checkbox" id="mau_tin_tim_viec_11" onclick="javascript: if (document.getElementById('mau_tin_tim_viec_11').checked) {
+                                                window.location.href = '/ntv-trang-quan-tri-cap-nhat-tin-tim-viec.html?id_mau_tin_tv=11';
+                                            }">
                                     Nhân viên kế toán 3 năm kinh nghiệm </a>
                             </li>
                         </div>
@@ -694,21 +787,27 @@ Thời gian quen biết:
                         <div id="div_hien_thi_nganh_thu_5_tin_mau_1" style="display:inline;">
                             <li>
                                 <a href="/ntv-trang-quan-tri-cap-nhat-tin-tim-viec.html?id_mau_tin_tv=77&amp;id_tin_tv=-1" title="">
-                                    <input type="checkbox" id="mau_tin_tim_viec_77" onclick="javascript: if (document.getElementById('mau_tin_tim_viec_77').checked) {window.location.href = '/ntv-trang-quan-tri-cap-nhat-tin-tim-viec.html?id_mau_tin_tv=77'; }">
+                                    <input type="checkbox" id="mau_tin_tim_viec_77" onclick="javascript: if (document.getElementById('mau_tin_tim_viec_77').checked) {
+                                                window.location.href = '/ntv-trang-quan-tri-cap-nhat-tin-tim-viec.html?id_mau_tin_tv=77';
+                                            }">
                                     Trưởng nhóm kinh doanh/ Nhân viên kinh doanh </a>
                             </li>
                         </div>
                         <div id="div_hien_thi_nganh_thu_5_tin_mau_2" style="display:inline;">
                             <li>
                                 <a href="/ntv-trang-quan-tri-cap-nhat-tin-tim-viec.html?id_mau_tin_tv=78&amp;id_tin_tv=-1" title="">
-                                    <input type="checkbox" id="mau_tin_tim_viec_78" onclick="javascript: if (document.getElementById('mau_tin_tim_viec_78').checked) {window.location.href = '/ntv-trang-quan-tri-cap-nhat-tin-tim-viec.html?id_mau_tin_tv=78'; }">
+                                    <input type="checkbox" id="mau_tin_tim_viec_78" onclick="javascript: if (document.getElementById('mau_tin_tim_viec_78').checked) {
+                                                window.location.href = '/ntv-trang-quan-tri-cap-nhat-tin-tim-viec.html?id_mau_tin_tv=78';
+                                            }">
                                     Trưởng/ phó phòng kinh doanh </a>
                             </li>
                         </div>
                         <div id="div_hien_thi_nganh_thu_5_tin_mau_3" style="display:none;">
                             <li>
                                 <a href="/ntv-trang-quan-tri-cap-nhat-tin-tim-viec.html?id_mau_tin_tv=64&amp;id_tin_tv=-1" title="">
-                                    <input type="checkbox" id="mau_tin_tim_viec_64" onclick="javascript: if (document.getElementById('mau_tin_tim_viec_64').checked) {window.location.href = '/ntv-trang-quan-tri-cap-nhat-tin-tim-viec.html?id_mau_tin_tv=64'; }">
+                                    <input type="checkbox" id="mau_tin_tim_viec_64" onclick="javascript: if (document.getElementById('mau_tin_tim_viec_64').checked) {
+                                                window.location.href = '/ntv-trang-quan-tri-cap-nhat-tin-tim-viec.html?id_mau_tin_tv=64';
+                                            }">
                                     Nhân viên kinh doanh, chăm sóc khách hàng </a>
                             </li>
                         </div>
@@ -727,8 +826,8 @@ Thời gian quen biết:
         <!--</div> -->
     </div><div class="clear"></div>
     <script type="text/javascript">
-                        if (document.getElementById("a_menu_lv2_68") != null) {
-                document.getElementById("a_menu_lv2_68").style.color = "#518c04";
-                }
+        if (document.getElementById("a_menu_lv2_68") != null) {
+            document.getElementById("a_menu_lv2_68").style.color = "#518c04";
+        }
     </script>
 </div>

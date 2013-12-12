@@ -626,81 +626,10 @@
                             <div id="content">
                                 <div id="content-bottom">
                                     <div id="content-wrapper">
-
-                                        <div id="user-menu">
-
-                                            <div class="GridInfo">
-                                                <div class="Content">
-
-                                                    <ul class="UserMenu">
-                                                        <li>
-                                                            <a href="file:///E:/workspace/projectwebjobs/QLtimviec.html">Quản lý tìm việc</a>
-                                                        </li>
-
-                                                        <li class="Separator">
-                                                            |
-                                                        </li>
-
-                                                        <li>
-                                                            <a href="file:///E:/workspace/projectwebjobs/hsdadang.html">Hồ Sơ đã đăng</a>
-                                                        </li>
-
-                                                        <li class="Separator">
-                                                            |
-                                                        </li>
-
-                                                        <li>
-                                                            <a href="file:///E:/workspace/projectwebjobs/taohsUV.html">Tạo HS tìm việc</a>
-                                                        </li>
-
-                                                        <li class="Separator">
-                                                            |
-                                                        </li>
-
-                                                        <li>
-                                                            <a href="file:///E:/workspace/projectwebjobs/vieclamdaluu.html">Việc làm đã Lưu</a>
-                                                        </li>
-
-                                                        <li class="Separator">
-                                                            |
-                                                        </li>
-
-                                                        <li>
-                                                            <a href="file:///E:/workspace/projectwebjobs/vldaungtuyen.html">Việc làm đã ứng tuyển</a>
-                                                        </li>
-
-                                                        <li class="Separator">
-                                                            |
-                                                        </li>
-
-                                                        <li>
-                                                            <a href="file:///E:/workspace/projectwebjobs/cv.html">Hồ sơ cá nhân(CV)</a>
-                                                        </li>
-
-                                                        <li class="Separator">
-                                                            |
-                                                        </li>
-
-                                                        <li>
-                                                            <a href="file:///E:/workspace/projectwebjobs/thongtincanhan.html">Thông tin cá nhân</a>
-                                                        </li>
-
-                                                    </ul>
-                                                    <div class="Clear"></div>
-
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="content-qlhs">
-                                            <input type="hidden" name="dang_xu_ly" id="dang_xu_ly" value="0">
-                                                <div>
-                                                    <marquee bgcolor="#FFCC99" scrolldelay="180" style="padding:5px;">
-                                                        <span style="font-size:14px; color:red; font-family: Verdana, Tahoma, Helvetica, Arial;"> Từ 25/10 NTV chỉ được đăng tối đa 10 hồ sơ tìm việc </span>
-                                                    </marquee>
-                                                </div>
+                                        
 <?php echo $this->load->view($main_content); ?>
 
-                                                <div id="footer">
+                          <div id="footer">
 
                             <div id="footer-menubar">
                                 <div id="footer-menubar-left">

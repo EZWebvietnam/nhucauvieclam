@@ -1,3 +1,64 @@
+<div id="user-menu">
+
+    <div class="GridInfo">
+        <div class="Content">
+
+            <ul class="UserMenu">
+                <li>
+                    <a href="<?php echo base_url(); ?>quanly-timviec/<?php echo $ungtuyen_detail[0]['u_id'] ?>">Quản lý tìm việc</a>
+                </li>
+
+                <li class="Separator">
+                    |
+                </li>
+
+                <li>
+                    <a href="<?php echo base_url(); ?>hsda-dang/<?php echo $ungtuyen_detail[0]['u_id'] ?>">Hồ Sơ đã đăng</a>
+                </li>
+
+                <li class="Separator">
+                    |
+                </li>
+
+                <li>
+                    <a href="<?php echo base_url(); ?>tao-hsungvien/<?php echo $ungtuyen_detail[0]['u_id'] ?>">Tạo HS tìm việc</a>
+                </li>
+
+                <li class="Separator">
+                    |
+                </li>
+
+                <li>
+                    <a href="<?php echo base_url(); ?>daluu/<?php echo $ungtuyen_detail[0]['u_id'] ?>">Việc làm đã Lưu</a>
+                </li>
+
+                <li class="Separator">
+                    |
+                </li>
+
+                <li>
+                    <a href="<?php echo base_url(); ?>da-ung-tuyen/<?php echo $ungtuyen_detail[0]['u_id'] ?>">Việc làm đã ứng tuyển</a>
+                </li>
+
+                <li class="Separator">
+                    |
+                </li>
+
+                <li>
+                    <a href="<?php echo base_url(); ?>cv/<?php echo $ungtuyen_detail[0]['u_id'] ?>">Hồ sơ cá nhân(CV)</a>
+                </li>
+
+                <li class="Separator">
+                    |
+                </li>
+                <li>
+                    <a href="<?php echo base_url(); ?>thongtin-canhan/<?php echo $ungtuyen_detail[0]['u_id'] ?>">Thông tin cá nhân</a>
+                </li>
+            </ul>
+            <div class="Clear"></div>
+        </div>
+    </div>
+</div>
 <div class="content-qlhs">
     <input type="hidden" name="dang_xu_ly" id="dang_xu_ly" value="0">
     <div>
@@ -41,21 +102,21 @@
                         <td class="tb-row-W" align="center">
                             <input type="checkbox" name="checkbox_viec_lam_da_ung_tuyen[]" id="checkbox_viec_lam_da_ung_tuyen[0]" value="1330523">
                         </td>
-                        <td class="tb-row-W"><b><a href="/it-phan-cung/mang/nhan-vien-cong-nghe-thong-tin-c5p1id1330523.html" target="_blank" title="Click để xem thông tin chi tiết việc làm" class="linkBlack" onmouseover="tooltip.show('&lt;table width=420 cellpadding=1 cellspacing=1 border=0 bgcolor=#d7d7d7&gt;&lt;tr&gt;&lt;td class=DSTT_row_L14 colspan=2&gt;&lt;span class=textBoldBlue14&gt;Nhân viên công nghệ thông tin&lt;/span&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td class=DSTT_row_L14 style=&quot;width:60px;&quot;&gt;&lt;span class=textBoldBlue14&gt;Công ty:&lt;/span&gt;&lt;/td&gt;&lt;td class=DSTT_row_L14 &gt;&lt;span class=textBoldBlue14&gt;Công ty TNHH tin học Gôn Ta&lt;/span&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td class=DSTT_row_L14 style=&quot;width:60px;&quot;&gt;&lt;span class=textBoldBlue14&gt;Số lượng:&lt;/span&gt;&lt;/td&gt;&lt;td class=DSTT_row_L14 &gt;&lt;span class=textBoldBlue14&gt;1&lt;/span&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td class=DSTT_row_L14 colspan=2&gt;&lt;span class=tt-tieude&gt;Mô tả công việc:&lt;/span&gt;&lt;div class=textBoldBlack14 style=&quot;padding-left:15px;padding-top:5px;&quot;&gt;- Tiếng Anh giao tiếp được&lt;br/&gt;- Tốt nghiệp trung cấp, Cao đẳng hoặc Đại học, chuyên ngành Công nghệ thông tin&lt;br/&gt;- Có khả năng phân tích và xử lý sự cố mạng, hệ thống Server, máy tính&lt;br/&gt;- Giao tiếp tốt, sẵn sàng học hỏi và chia sẻ&lt;br/&gt;- Ngoại hình cân đối, ưa nhìn&lt;br/&gt;- Thật thà, trung thực&lt;br/&gt;- Có định hướng làm việc lâu dài&lt;br/&gt;- Có khả năng chịu áp lực cao&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;');" onmouseout="tooltip.hide();"><?php echo $ungtuyen_detail[0]['e_title']; ?></a></b>
+                        <td class="tb-row-W"><b><a href="/it-phan-cung/mang/nhan-vien-cong-nghe-thong-tin-c5p1id1330523.html" target="_blank" title="Click để xem thông tin chi tiết việc làm" class="linkBlack" ><?php echo $ungtuyen_detail[0]['e_title']; ?></a></b>
                             <br>
-                            <span>Ngành: <?php echo $ungtuyen_detail[0]['e_nghe']; ?>
+                            <span>Ngành: <?php echo $list_cate_job[$ungtuyen_detail[0]['m_id']]['m_name']; ?>
                             <?php echo $ungtuyen_detail[0]['e_nghe1']; ?> <?php echo $ungtuyen_detail[0]['e_nghe2']; ?> <?php echo $ungtuyen_detail[0]['e_nghe3']; ?></span>
                             <br>
                             Số lượng: <?php echo $ungtuyen_detail[0]['e_mem']; ?> </td>
                         <td class="tb-row-W" align="center"><?php echo $ungtuyen_detail[0]['u_companyName']; ?></td>
-                        <td class="tb-row-W" align="center" onmouseover="tooltip.show('Hải Dương');" onmouseout="tooltip.hide();"><?php echo $ungtuyen_detail[0]['e_cityID']; ?> <?php echo $ungtuyen_detail[0]['e_cityID1']; ?> <?php echo $ungtuyen_detail[0]['e_cityID2']; ?> <?php echo $ungtuyen_detail[0]['e_cityID3']; ?></td>
-                        <td class="tb-row-W" align="center"><?php echo $ungtuyen_detail[0]['e_luong']; ?> <?php echo $ungtuyen_detail[0]['e_luonga']; ?> <?php echo $ungtuyen_detail[0]['e_luongb']; ?></td>
-                        <td class="tb-row-W" align="center"><?php echo $ungtuyen_detail[0]['e_dateActive']; ?></td>
-                        <td class="tb-row-W" align="center"><?php echo $ungtuyen_detail[0]['e_lastDate']; ?></td>
-                        <td class="tb-row-W" align="center"><?php echo $ungtuyen_detail[0]['e_datesave']; ?></td>
+                        <td class="tb-row-W" align="center" onmouseover="tooltip.show('Hải Dương');" onmouseout="tooltip.hide();"><?php echo $list_city[$ungtuyen_detail[0]['e_cityID']]['n_name']; ?></td>
+                        <td class="tb-row-W" align="center"><?php echo $list_luong[$ungtuyen_detail[0]['e_luong']]['luong_name']; ?></td>
+                        <td class="tb-row-W" align="center"><?php echo date('d/m/Y', $ungtuyen_detail[0]['e_dateActive']); ?></td>
+                        <td class="tb-row-W" align="center"><?php echo date('d/m/Y', $ungtuyen_detail[0]['e_lastDate']); ?></td>
+                        <td class="tb-row-W" align="center"><?php echo date('d/m/Y', $ungtuyen_detail[0]['e_datesave']); ?></td>
                         <td class="tb-row-W">
                             <div class="borderBot padTop5">
-                                <a href="/it-phan-cung/mang/nhan-vien-cong-nghe-thong-tin-c5p1id1330523.html" target="_blank" title="Click để xem thông tin chi tiết việc làm">Xem</a>
+                                <a href="<?php echo base_url(); ?>tin-tuyen-dung/<?php echo $ungtuyen_detail[0]['e_id']; ?>-<?php echo mb_strtolower(url_title(removesign($ungtuyen_detail[0]['e_title']))) ?>" target="_blank" title="Click để xem thông tin chi tiết việc làm">Xem</a>
                             </div>
                             <div class="padTop5">
                                 <a href="javascript: if (dat_trang_thai_dang_xu_ly()) {ntv_quan_tri_xoa_1_viec_lam_da_ung_tuyen(1330523); }" title="Hủy ứng tuyển việc làm đã ứng tuyển">Hủy ứng tuyển</a>

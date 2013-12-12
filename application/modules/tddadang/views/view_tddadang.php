@@ -76,32 +76,33 @@
                     <input type="hidden" name="number_items" id="number_items" value="15">
                     <input type="hidden" name="gia_han_1407482" id="gia_han_1407482" value="3">
                     <input type="hidden" name="lam_moi_1407482" id="lam_moi_1407482" value="1000">
+                    <?php  
+                            foreach ($tddangdang_detail as $tddadang){                      
+                        ?>
                     <tr style="">
+                        
                         <td class="tb-row-W" align="center">
                             <input type="checkbox" name="checkbox_ttd[]" id="checkbox_ttd[0]" value="1407482">
                         </td>
-                        <td class="tb-row-W" align="center"><?php echo $tddangdang_detail[0]['e_id']; ?></td>
+                        <td class="tb-row-W" align="center"><?php echo $tddadang['e_id']; ?></td>
                         <td class="ntd_tb-row-W">
                             <div class="cumTT-tieude">
-                                <b class="linkBlack"> <a href="/bao-ve/cong-tac-vien-kinh-doanh-tinh-c94p1id1407482.html" target="_blank" title="CỘNG TÁC VIÊN KINH DOANH TỈNH" class="linkBlack"><?php echo $tddangdang_detail[0]['e_title']; ?></a> </b>
+                                <b class="linkBlack"> <a href="<?php echo base_url(); ?>tin-tuyen-dung/<?php echo $tddadang['e_id']; ?>-<?php echo mb_strtolower(url_title(removesign($tddadang['e_title']))) ?>" target="_blank" title="<?php echo $tddadang['e_title']; ?>" class="linkBlack"><?php echo $tddadang['e_title']; ?></a> </b>
                                 <br>
-                                <span style="font-size: 11px;"><?php echo $tddangdang_detail[0]['e_nghe']; ?>
-                                    <?php echo $tddangdang_detail[0]['e_nghe1']; ?>
-                                    <?php echo $tddangdang_detail[0]['e_nghe2']; ?>
-                                    <?php echo $tddangdang_detail[0]['e_nghe3']; ?>
+                                <span style="font-size: 11px;">
+                                    <?php echo $list_cate_job[$tddadang['m_id']]['m_name']; ?>
                                 </span>
                                 <br>
                                 <span style="font-size: 11px; font-style:italic;color: #999;">(0 lượt xem)</span>
                             </div></td>
-                        <td class="tb-row-W" align="center"><?php echo $tddangdang_detail[0]['e_dateActive']; ?>
+                        <td class="tb-row-W" align="center"><?php echo date('d/m/Y', $tddadang['e_dateActive']); ?>
                             <br>
-                            (Số lần làm mới còn lại: <span class="textRed11">1000</span>)</td>
-                        <td class="tb-row-W" align="center"><?php echo $tddangdang_detail[0]['e_date']; ?></td>
-                        <td class="tb-row-W" align="center"><?php echo $tddangdang_detail[0]['e_dateActive']; ?></td>
-                        <td class="tb-row-W" align="center"><?php echo $tddangdang_detail[0]['e_lastDate']; ?>
-                            <br>
-                            (Số lần gia hạn còn lại: <span class="textRed11">3</span>)</td>
-                        <td class="ntd_tb-row-W"><?php echo $tddangdang_detail[0]['e_active']; ?></td>
+                            </td>
+                        <td class="tb-row-W" align="center"><?php echo date('d/m/Y', $tddadang['e_date']); ?></td>
+                        <td class="tb-row-W" align="center"><?php echo date('d/m/Y', $tddadang['e_dateActive']); ?></td>
+                        <td class="tb-row-W" align="center"><?php echo date('d/m/Y', $tddadang['e_lastDate']); ?>
+                            </td>
+                        <td class="ntd_tb-row-W"><?php echo $tddadang['e_active']; ?></td>
                         <td class="tb-row-W" align="center">0
                             <br>
                         </td>
@@ -115,7 +116,9 @@
                             <div class="padTop5">
                                 <a href="javascript: if (dat_trang_thai_dang_xu_ly()) {ntd_quan_tri_xuat_ban_them_1_ttd(1407482); }" title="Xuất bản thêm tin tuyển dụng">Xuất bản thêm</a>
                             </div></td>
+                            
                     </tr>
+                    <?php } ?>
                     </tbody>
                 </table>
                 <table width="100%" class="padTop10">

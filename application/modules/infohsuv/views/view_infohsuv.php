@@ -10,12 +10,8 @@
                     <table class="TableInfo">
                         <tbody><tr>
                                 <th>Ngày sinh</th>
-                                <td><?php echo $infohsuv_detail[0]['u_birthday'] ?></td>
-                            </tr>
-                            <tr>
-                                <th>Giới tính</th>
-                                <td><?php echo $list_sex[$infohsuv_detail[0]['u_sex']]['sex_name']; ?></td>
-                            </tr>
+                                <td><?php echo date('d/m/Y', $infohsuv_detail[0]['u_birthday']); ?></td>
+                            </tr>                            
                             <tr>
                                 <th>Địa chỉ</th>
                                 <td><?php echo $infohsuv_detail[0]['u_adress'] ?></td>
@@ -37,7 +33,6 @@
                 <div class="Clear"></div>
             </div>
         </div>
-
         <div class="Blank"></div>
         <div class="GridInfo">
             <div class="Content">
@@ -122,7 +117,7 @@
                                 <br>
                                 <span class="Number"><?php echo $infohsuv_detail[0]['j_truongdahoc'] ?></span>
 
-                                <div class="Blank"></div><?php echo $infohsuv_detail[0]['j_loaitotnghiep'] ?>
+                                <div class="Blank"></div><?php echo $list_loaitn[$infohsuv_detail[0]['j_loaitotnghiep']]['tn_name']; ?>
                             </td>
                         </tr>
                     </tbody></table>
@@ -144,7 +139,7 @@
         <div class="Blank"></div>
         <div class="AlignRight">
             <span class="CustomerCare">
-                Cập nhật: <?php echo $infohsuv_detail[0]['j_update'] ?></span>
+                Cập nhật: <?php echo date('d/m/Y', $infohsuv_detail[0]['j_update']); ?></span>
         </div>
         <div class="Blank"></div>        
     </div>

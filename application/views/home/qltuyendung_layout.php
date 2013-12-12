@@ -130,8 +130,9 @@
                                         </div>
                                     <?php } else { ?> 
                                         <div id="header-user-menu">
-                                            <?php echo $this->session->userdata['u_username']; ?> | <a href="<?php echo
-                                        base_url();
+                                            <?php echo $this->session->userdata['u_username']; ?> | <a href="<?php
+                                            echo
+                                            base_url();
                                             ?>dangnhap/logout">Đăng xuất</a>
 
                                         </div>
@@ -626,161 +627,159 @@
                             <div id="content">
                                 <div id="content-bottom">
                                     <div id="content-wrapper">
-                                        <div class="HighBlank"></div>						
 
 <?php echo $this->load->view($main_content); ?>
 
                                         <div id="footer">
+                                            <div id="footer-menubar">
+                                                <div id="footer-menubar-left">
+                                                    <div id="footer-menubar-right">
+                                                        <ul>
+                                                            <li>
+                                                                <a class="trangchu" href="<?php echo base_url(); ?>" ga_click="_gaq.push(['_trackEvent', 'Footer', 'Click', 'Trang chủ']);" target="" rel=""> Trang chủ </a>
+                                                            </li>
+                                                            <li class="Separator">
+                                                                |
+                                                            </li>
+                                                            <li>
+                                                                <a href="<?php echo base_url(); ?>timvieclam"> Tìm việc làm </a>
+                                                            </li>
+                                                            <li class="Separator">
+                                                                |
+                                                            </li>
+                                                            <li>
+                                                                <a href="<?php echo base_url(); ?>tuyendungnhanh" ga_click="_gaq.push(['_trackEvent', 'Footer', 'Click', 'Tìm hồ sơ Người tìm việc']);" target="" rel=""> Tìm hồ sơ Người tìm việc </a>
+                                                            </li>
+                                                            <li class="Separator">
+                                                                |
+                                                            </li>
+                                                            <li>
+                                                                <a href="<?php echo base_url(); ?>" ga_click="_gaq.push(['_trackEvent', 'Footer', 'Click', 'Việc làm 24h']);" target="_blank" rel="">nhucauvieclam</a>
+                                                            </li>
 
-                            <div id="footer-menubar">
-                                <div id="footer-menubar-left">
-                                    <div id="footer-menubar-right">
-                                        <ul>
-                                <li>
-                                    <a class="trangchu" href="<?php echo base_url(); ?>" ga_click="_gaq.push(['_trackEvent', 'Footer', 'Click', 'Trang chủ']);" target="" rel=""> Trang chủ </a>
-                                </li>
-                                <li class="Separator">
-                                    |
-                                </li>
-                                <li>
-                                    <a href="<?php echo base_url(); ?>timvieclam"> Tìm việc làm </a>
-                                </li>
-                                <li class="Separator">
-                                    |
-                                </li>
-                                <li>
-                                    <a href="<?php echo base_url(); ?>tuyendungnhanh" ga_click="_gaq.push(['_trackEvent', 'Footer', 'Click', 'Tìm hồ sơ Người tìm việc']);" target="" rel=""> Tìm hồ sơ Người tìm việc </a>
-                                </li>
-                                <li class="Separator">
-                                    |
-                                </li>
-                                <li>
-                                    <a href="<?php echo base_url(); ?>" ga_click="_gaq.push(['_trackEvent', 'Footer', 'Click', 'Việc làm 24h']);" target="_blank" rel="">nhucauvieclam</a>
-                                </li>
+                                                            <li class="Separator">
+                                                                |
+                                                            </li>
+                                                            <li>
+                                                                <a href="<?php echo base_url(); ?>" ga_click="_gaq.push(['_trackEvent', 'Footer', 'Click', 'Cẩm nang tuyển dụng']);" target="_blank" rel="nofollow"> Cẩm nang tuyển dụng </a>
+                                                            </li>
+                                                            <li class="Separator">
+                                                                |
+                                                            </li>
+                                                            <li>
+                                                                <a href="<?php echo base_url(); ?>" ga_click="_gaq.push(['_trackEvent', 'Footer', 'Click', 'Cẩm nang việc làm']);" target="_blank" rel="nofollow"> Cẩm nang việc làm </a>
+                                                            </li>
+                                                            <li class="Separator">
+                                                                |
+                                                            </li>
+                                                            <li>
+                                                                <a href="<?php echo base_url(); ?>" ga_click="_gaq.push(['_trackEvent', 'Footer', 'Click', 'Nghề nghiệp']);" target="_blank" rel=""> Nghề nghiệp </a>
+                                                            </li>
 
-                                <li class="Separator">
-                                    |
-                                </li>
-                                <li>
-                                    <a href="<?php echo base_url(); ?>" ga_click="_gaq.push(['_trackEvent', 'Footer', 'Click', 'Cẩm nang tuyển dụng']);" target="_blank" rel="nofollow"> Cẩm nang tuyển dụng </a>
-                                </li>
-                                <li class="Separator">
-                                    |
-                                </li>
-                                <li>
-                                    <a href="<?php echo base_url(); ?>" ga_click="_gaq.push(['_trackEvent', 'Footer', 'Click', 'Cẩm nang việc làm']);" target="_blank" rel="nofollow"> Cẩm nang việc làm </a>
-                                </li>
-                                <li class="Separator">
-                                    |
-                                </li>
-                                <li>
-                                    <a href="<?php echo base_url(); ?>" ga_click="_gaq.push(['_trackEvent', 'Footer', 'Click', 'Nghề nghiệp']);" target="_blank" rel=""> Nghề nghiệp </a>
-                                </li>
+                                                        </ul>
+                                                        <div class="Clear"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
 
-                            </ul>
-                            <div class="Clear"></div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div id="web-company-info">
-                                <h2 style="font-size: 15px;">Công ty TNHH Phát Triển Nguồn Nhân Lực Nhu Cầu Việc Làm Đất Phương Nam</h2>
-                                <table>
-                                    <tbody>
-                                        <tr>
-                                            <td width="33%"><span class="AlertTextSmall" style="font-size: 14px">nhucauvieclam.net</span><p></p>
-                                                <table class="TableFooterInfo">
-                                                   
+                                            <div id="web-company-info">
+                                                <h2 style="font-size: 15px;">Công ty TNHH Phát Triển Nguồn Nhân Lực Nhu Cầu Việc Làm Đất Phương Nam</h2>
+                                                <table>
+                                                    <tbody>
                                                         <tr>
-                                                            <td>Địa chỉ: Tầng 3, Số 7, Đường Số 49, P.Hiệp Bình Chánh, Q.Thủ Đức, Tp.HCM</td>
-                                                        </tr>
-                                                        <tr>                                                            
-                                                            <td>Email: hcm@nhucauvieclam.net</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>Fax: 37273665</td>
+                                                            <td width="33%"><span class="AlertTextSmall" style="font-size: 14px">nhucauvieclam.net</span><p></p>
+                                                                <table class="TableFooterInfo">
+
+                                                                    <tr>
+                                                                        <td>Địa chỉ: Tầng 3, Số 7, Đường Số 49, P.Hiệp Bình Chánh, Q.Thủ Đức, Tp.HCM</td>
+                                                                    </tr>
+                                                                    <tr>                                                            
+                                                                        <td>Email: hcm@nhucauvieclam.net</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>Fax: 37273665</td>
+                                                                    </tr>
+                                                                    </tbody>
+                                                                </table></td>                                            
                                                         </tr>
                                                     </tbody>
-                                                </table></td>                                            
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </div>
+                                                </table>
+                                            </div>
 
-                            <div class="Blank"></div>
-                            <div id="web-company-partner">
-                                <table>
-                                    <tbody>
-                                        <tr>
-                                            <td width="33%" class="pl15">
-                                                <ul>
-                                                    <li>
-                                                        Giấy chứng nhận đăng ký kinh doanh số: 0303452460 do Sở kế hoạch đầu tư Thành phố Hồ Chí Minh cấp ngày 16 tháng 08 năm 2004
-                                                    </li>
-                                                    <li>
-                                                        <a href="http://www.onboom.com" target="_blank" rel="nofollow">Quảng bá web</a> bởi OnBoom Group
-                                                    </li>
-                                                    <li>
-                                                        Designed by Cong ty <a href="http://vinadesign.vn" target="_blank" rel="nofollow">Thiet Ke Web</a> VINA Design
-                                                    </li>
-                                                </ul></td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </div>
-                            <div class="Clear"></div>
+                                            <div class="Blank"></div>
+                                            <div id="web-company-partner">
+                                                <table>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td width="33%" class="pl15">
+                                                                <ul>
+                                                                    <li>
+                                                                        Giấy chứng nhận đăng ký kinh doanh số: 0303452460 do Sở kế hoạch đầu tư Thành phố Hồ Chí Minh cấp ngày 16 tháng 08 năm 2004
+                                                                    </li>
+                                                                    <li>
+                                                                        <a href="http://www.onboom.com" target="_blank" rel="nofollow">Quảng bá web</a> bởi OnBoom Group
+                                                                    </li>
+                                                                    <li>
+                                                                        Designed by Cong ty <a href="http://vinadesign.vn" target="_blank" rel="nofollow">Thiet Ke Web</a> VINA Design
+                                                                    </li>
+                                                                </ul></td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                            <div class="Clear"></div>
 
-                            <div class="Blank"></div>
-                            <strong>Tìm Việc Nhanh thương hiệu nổi tiếng: Tuyển dụng, tìm việc làm, việc làm, tìm kiếm việc làm nhanh, tuyển dụng nhân sự nhanh chóng</strong>
+                                            <div class="Blank"></div>
+                                            <strong>Tìm Việc Nhanh thương hiệu nổi tiếng: Tuyển dụng, tìm việc làm, việc làm, tìm kiếm việc làm nhanh, tuyển dụng nhân sự nhanh chóng</strong>
 
-                            <div class="HighBlank"></div>
-                            <div id="bottom-hotline">
-                                <div id="bottom-hotline-inner" style="text-align: center">
-                                    <h2 class="float-left">Hotline 24/7</h2>                                    
-                                    <ul>
-                                        <li>
-                                            <table class="table-hotline">
-                                                <tbody width="100%">
-                                                    <tr>
-                                                        <td><span class="Mobile">01676.534.751 </span><span class="Name">Ms.Yến</span></td>
+                                            <div class="HighBlank"></div>
+                                            <div id="bottom-hotline">
+                                                <div id="bottom-hotline-inner" style="text-align: center">
+                                                    <h2 class="float-left">Hotline 24/7</h2>                                    
+                                                    <ul>
+                                                        <li>
+                                                            <table class="table-hotline">
+                                                                <tbody width="100%">
+                                                                    <tr>
+                                                                        <td><span class="Mobile">01676.534.751 </span><span class="Name">Ms.Yến</span></td>
 
-                                                        <td><span class="Mobile">01685.455.381 </span><span class="Name">Ms.Tình</span></td>
-                                                        <td><span class="Mobile">0979.368.313 </span><span class="Name">Ms.Khoa</span></td>
-                                                        <td><span class="Mobile">01656.134.306 </span><span class="Name">Ms.Thoa</span></td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td><span class="Mobile">01656.244.327 </span><span class="Name">Ms.Tâm</span></td>
-                                                        
-                                                        <td><span class="Mobile">01642.446.754 </span><span class="Name">Ms.Yên</span></td>
+                                                                        <td><span class="Mobile">01685.455.381 </span><span class="Name">Ms.Tình</span></td>
+                                                                        <td><span class="Mobile">0979.368.313 </span><span class="Name">Ms.Khoa</span></td>
+                                                                        <td><span class="Mobile">01656.134.306 </span><span class="Name">Ms.Thoa</span></td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td><span class="Mobile">01656.244.327 </span><span class="Name">Ms.Tâm</span></td>
 
-                                                        <td><span class="Mobile">01278.789.987 </span><span class="Name">Ms.Khuê</span></td>
-                                                        <td><span class="Mobile">0962925599 </span><span class="Name">Mr.Thắng</span></td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td><span class="Mobile">01689.952.759 </span><span class="Name">Ms.Khuê</span></td>
-                                                        
-                                                        <td><span class="Mobile">0935.916.420 </span><span class="Name">Mr.Trung</span></td>
+                                                                        <td><span class="Mobile">01642.446.754 </span><span class="Name">Ms.Yên</span></td>
 
-                                                        <td><span class="Mobile">0169.533.2638 </span><span class="Name">Ms.Thanh</span></td>
-                                                        <td><span class="Mobile">0932.597.000 </span><span class="Name">Ms.Hiếu</span></td>
-                                                    </tr>
-                                                                                             
-                                            </table>
-                                        </li>
-                                    </ul>
-                                    <div class="Clear"></div>
-                                </div>
-                            </div>
+                                                                        <td><span class="Mobile">01278.789.987 </span><span class="Name">Ms.Khuê</span></td>
+                                                                        <td><span class="Mobile">0962925599 </span><span class="Name">Mr.Thắng</span></td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td><span class="Mobile">01689.952.759 </span><span class="Name">Ms.Khuê</span></td>
 
-                            <div class="Blank"></div>
-                            <div id="fb-container">
-                                <div id="fb-like-content">
-                                    <div class="fb-like-box fb_iframe_widget" data-href="http://www.facebook.com/timviecnhanh" data-width="982" data-height="238" data-show-faces="true" data-stream="false" data-header="false" fb-xfbml-state="rendered" fb-iframe-plugin-query="app_id=357584370994953&amp;header=false&amp;height=238&amp;href=http%3A%2F%2Fwww.facebook.com%2Ftimviecnhanh&amp;locale=vi_VN&amp;sdk=joey&amp;show_faces=true&amp;stream=false&amp;width=982">
-                                        <span style="vertical-align: bottom; width: 982px; height: 238px;"><iframe name="feb366e44" width="982px" height="238px" frameborder="0" allowtransparency="true" scrolling="no" title="fb:like_box Facebook Social Plugin" src="http://www.facebook.com/plugins/like_box.php?app_id=357584370994953&amp;channel=http%3A%2F%2Fstatic.ak.facebook.com%2Fconnect%2Fxd_arbiter.php%3Fversion%3D28%23cb%3Df29bc18ee4%26domain%3Dwww.timviecnhanh.com%26origin%3Dhttp%253A%252F%252Fwww.timviecnhanh.com%252Ff1e1babe2c%26relation%3Dparent.parent&amp;header=false&amp;height=238&amp;href=http%3A%2F%2Fwww.facebook.com%2Ftimviecnhanh&amp;locale=vi_VN&amp;sdk=joey&amp;show_faces=true&amp;stream=false&amp;width=982" style="border: none; visibility: visible; width: 982px; height: 238px;" class=""></iframe></span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                                                                        <td><span class="Mobile">0935.916.420 </span><span class="Name">Mr.Trung</span></td>
+
+                                                                        <td><span class="Mobile">0169.533.2638 </span><span class="Name">Ms.Thanh</span></td>
+                                                                        <td><span class="Mobile">0932.597.000 </span><span class="Name">Ms.Hiếu</span></td>
+                                                                    </tr>
+
+                                                            </table>
+                                                        </li>
+                                                    </ul>
+                                                    <div class="Clear"></div>
+                                                </div>
+                                            </div>
+
+                                            <div class="Blank"></div>
+                                            <div id="fb-container">
+                                                <div id="fb-like-content">
+                                                    <div class="fb-like-box fb_iframe_widget" data-href="http://www.facebook.com/timviecnhanh" data-width="982" data-height="238" data-show-faces="true" data-stream="false" data-header="false" fb-xfbml-state="rendered" fb-iframe-plugin-query="app_id=357584370994953&amp;header=false&amp;height=238&amp;href=http%3A%2F%2Fwww.facebook.com%2Ftimviecnhanh&amp;locale=vi_VN&amp;sdk=joey&amp;show_faces=true&amp;stream=false&amp;width=982">
+                                                        <span style="vertical-align: bottom; width: 982px; height: 238px;"><iframe name="feb366e44" width="982px" height="238px" frameborder="0" allowtransparency="true" scrolling="no" title="fb:like_box Facebook Social Plugin" src="http://www.facebook.com/plugins/like_box.php?app_id=357584370994953&amp;channel=http%3A%2F%2Fstatic.ak.facebook.com%2Fconnect%2Fxd_arbiter.php%3Fversion%3D28%23cb%3Df29bc18ee4%26domain%3Dwww.timviecnhanh.com%26origin%3Dhttp%253A%252F%252Fwww.timviecnhanh.com%252Ff1e1babe2c%26relation%3Dparent.parent&amp;header=false&amp;height=238&amp;href=http%3A%2F%2Fwww.facebook.com%2Ftimviecnhanh&amp;locale=vi_VN&amp;sdk=joey&amp;show_faces=true&amp;stream=false&amp;width=982" style="border: none; visibility: visible; width: 982px; height: 238px;" class=""></iframe></span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>

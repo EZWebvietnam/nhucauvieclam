@@ -1,3 +1,66 @@
+<div id="user-menu">
+
+    <div class="GridInfo">
+        <div class="Content">
+
+            <ul class="UserMenu">
+                <li>
+                    <a href="<?php echo base_url(); ?>quanly-timviec/<?php echo $tddaluu_detail[0]['u_id'] ?>">Quản lý tìm việc</a>
+                </li>
+
+                <li class="Separator">
+                    |
+                </li>
+
+                <li>
+                    <a href="<?php echo base_url(); ?>hsda-dang/<?php echo $tddaluu_detail[0]['u_id'] ?>">Hồ Sơ đã đăng</a>
+                </li>
+
+                <li class="Separator">
+                    |
+                </li>
+
+                <li>
+                    <a href="<?php echo base_url(); ?>tao-hsungvien/<?php echo $tddaluu_detail[0]['u_id'] ?>">Tạo HS tìm việc</a>
+                </li>
+
+                <li class="Separator">
+                    |
+                </li>
+
+                <li>
+                    <a href="<?php echo base_url(); ?>daluu/<?php echo $tddaluu_detail[0]['u_id'] ?>">Việc làm đã Lưu</a>
+                </li>
+
+                <li class="Separator">
+                    |
+                </li>
+
+                <li>
+                    <a href="<?php echo base_url(); ?>da-ung-tuyen/<?php echo $tddaluu_detail[0]['u_id'] ?>">Việc làm đã ứng tuyển</a>
+                </li>
+
+                <li class="Separator">
+                    |
+                </li>
+
+                <li>
+                    <a href="<?php echo base_url(); ?>cv/<?php echo $tddaluu_detail[0]['u_id'] ?>">Hồ sơ cá nhân(CV)</a>
+                </li>
+
+                <li class="Separator">
+                    |
+                </li>
+
+                <li>
+                    <a href="<?php echo base_url(); ?>thongtin-canhan/<?php echo $tddaluu_detail[0]['u_id'] ?>">Thông tin cá nhân</a>
+                </li>
+
+            </ul>
+            <div class="Clear"></div>
+        </div>
+    </div>
+</div>
 <div class="content-qlhs">
     <input type="hidden" name="dang_xu_ly" id="dang_xu_ly" value="0">
     <div>
@@ -49,13 +112,14 @@
                             <br>
                             Số lượng:<?php echo $tddaluu_detail[0]['e_mem']; ?></td>
                         <td class="tb-row-W" align="center"><?php echo $tddaluu_detail[0]['u_companyName']; ?></td>
-                        <td class="tb-row-W" align="center" onmouseover="tooltip.show('TP. HCM');" onmouseout="tooltip.hide();"><?php echo $tddaluu_detail[0]['e_cityID']; ?>
-                        <?php echo $tddaluu_detail[0]['e_cityID1']; ?> <?php echo $tddaluu_detail[0]['e_cityID2']; ?> <?php echo $tddaluu_detail[0]['e_cityID3']; ?></td>
-                        <td class="tb-row-W" align="center"><?php echo $tddaluu_detail[0]['e_luong']; ?></td>
-                        <td class="tb-row-W" align="center"><?php echo date('d/m/Y',$tddaluu_detail['e_dateActive']); ?></td>
-                        <td class="tb-row-W" align="center"><?php echo date('d/m/Y',$tddaluu_detail['e_lastDate']); ?></td>
+                        <td class="tb-row-W" align="center" onmouseover="tooltip.show('TP. HCM');" onmouseout="tooltip.hide();">
+                            <?php echo $list_city[$tddaluu_detail[0]['e_cityID']]['n_name']; ?>
+                        </td>
+                        <td class="tb-row-W" align="center"><?php echo $list_luong[$tddaluu_detail[0]['e_luong']]['luong_name']; ?></td>
+                        <td class="tb-row-W" align="center"><?php echo date('d/m/Y',$tddaluu_detail[0]['e_dateActive']); ?></td>
+                        <td class="tb-row-W" align="center"><?php echo date('d/m/Y',$tddaluu_detail[0]['e_lastDate']); ?></td>
                         <td class="tb-row-W" align="center"><?php echo $tddaluu_detail[0]['e_visits']; ?></td>
-                        <td class="tb-row-W" align="center"><?php echo date('d/m/Y',$tddaluu_detail['e_datesave']); ?></td>
+                        <td class="tb-row-W" align="center"><?php echo date('d/m/Y',$tddaluu_detail[0]['e_datesave']); ?></td>
                         <td class="tb-row-W">
                             <div class="borderBot padTop5">
                                 <a href="<?php echo base_url(); ?>tin-tuyen-dung/<?php echo $tddaluu_detail[0]['e_id']; ?>-<?php echo mb_strtolower(url_title(removesign($tddaluu_detail[0]['e_title']))) ?>" target="_blank" title="Click để xem thông tin chi tiết việc làm">Xem</a> | <a href="javascript: if (dat_trang_thai_dang_xu_ly()) {ntv_quan_tri_xoa_1_viec_lam_da_luu(1391037); }" title="Xoá việc làm đã lưu">Xóa</a>

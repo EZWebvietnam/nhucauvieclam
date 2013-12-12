@@ -9,6 +9,11 @@ class Tddaluu extends MY_Controller
     }
     public function index(){
         parent:: load_cate_job();
+        parent:: load_city();
+        parent:: load_exp();
+        parent:: load_bangcap();
+        parent:: load_capbac();
+        parent:: load_luong();
         $active = true;
         $location = 'home';
         if ($this->tank_auth->is_logged_in($active, $location)) {
@@ -20,7 +25,7 @@ class Tddaluu extends MY_Controller
             redirect('/');
         }
         
-        if($this->this->session->userdata('u_id'))
+        if($this->session->userdata('u_id'))
         {
                 $u_id = $this->session->userdata('u_id');
             }

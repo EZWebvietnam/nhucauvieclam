@@ -19,6 +19,7 @@ class Infohsuv extends MY_Controller{
         parent::load_time();
         parent::load_ngoaingu();
         parent::load_trinhdonn();
+        parent::load_loaitn();
         $active = true;
         $location = 'home';
         if ($this->tank_auth->is_logged_in($active, $location)) {

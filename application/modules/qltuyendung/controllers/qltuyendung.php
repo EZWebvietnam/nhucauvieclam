@@ -1,5 +1,5 @@
 <?php
-class Qltuyendung extends CI_Controller
+class Qltuyendung extends MY_Controller
 {
     public function __construct() {
         parent::__construct();
@@ -8,14 +8,17 @@ class Qltuyendung extends CI_Controller
         $this->load->library('session');
     }
     public function index(){
+        parent::load_cate_job();
+        parent::load_city();
+        parent::load_luong();
         $active = true;
         $location = 'home';
         if ($this->tank_auth->is_logged_in($active, $location)) {
             
-            $data['is_login'] = 1;
+            $this->data['is_login'] = 1;
             
         } else {
-            $data['is_login'] = 0;
+            $this->data['is_login'] = 0;
             redirect('/');
         }
         if($this->session->userdata('u_role')==2)
@@ -30,13 +33,13 @@ class Qltuyendung extends CI_Controller
             {
                 $u_id = 0;
             }
-        $data['qltuyendung_detail']= $this->qltuyendung_model->load_post($u_id);
-        if(empty($data['qltuyendung_detail']))
+            $this->data['qltuyendung_detail']= $this->qltuyendung_model->load_post($u_id);
+        if(empty($this->data['qltuyendung_detail']))
         {
             redirect($_SERVER['HTTP_REFERER']);
         }
-        $data['main_content']='view_qltuyendung';
-        $this->load->view('home/qltuyendung_layout',$data);
+        $this->data['main_content']='view_qltuyendung';
+        $this->load->view('home/qltuyendung_layout',  $this->data);
     }
 }
 ?>

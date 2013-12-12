@@ -5,16 +5,31 @@ class Infontd extends CI_Controller{
         $this->load->model('infontd_model');
         $this->load->library('tank_auth');
     }
-    public function index($id = null)
+    public function index()
     {   
         $active = true;
         $location = 'home';
         if ($this->tank_auth->is_logged_in($active, $location)) {
+            
             $data['is_login'] = 1;
+            
         } else {
             $data['is_login'] = 0;
+            redirect('/');
         }
-        $data['info_list']=  $this->infontd_model->info_detail($id);
+        if($this->session->userdata('u_role')==2)
+        {
+            redirect('/');
+        }
+        if($this->session->userdata('u_id'))
+        {
+                $u_id = $this->session->userdata('u_id');
+            }
+            else
+            {
+                $u_id = 0;
+            }
+        $data['info_list']=  $this->infontd_model->info_detail($u_id);
         $data['main_content']= 'view_infontd';
         if($this->input->post())
         {

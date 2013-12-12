@@ -19,7 +19,7 @@ class CV extends CI_Controller
             $data['is_login'] = 0;
             redirect('/');
         }
-        if($this->session->userdata('u_role')==2)
+        if($this->session->userdata('u_role')==3)
         {
             redirect('/');
         }
