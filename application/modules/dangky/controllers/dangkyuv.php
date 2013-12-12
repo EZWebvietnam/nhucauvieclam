@@ -77,7 +77,7 @@ class Dangkyuv extends CI_Controller
     }
     public function sendmail($to, $name)
     {
-        $this->load->library('mailer');
+        $this->load->library('maillinux');
         $subject = "Đăng ký tài khoản thành công !";
         $body = "Xin chào " . $name . "!<br>
         Nhu Cầu Việc Làm xin thông báo:<br>
@@ -91,7 +91,8 @@ class Dangkyuv extends CI_Controller
         - Tổng đài hỗ trợ: 08.372.723.48-0906.703.499<br>
         Nhu Cầu Việc Làm luôn nỗ lực đem lợi ích thiết thực tới cộng đồng!<br>
         ";
-        $this->mailer->sendmail($to, $name, $subject, $body);
+        $from = "no-reply@nhucauvieclam.net";
+        $this->maillinux->SendMail($from,$to, $subject, $body);
     }
 }
 ?>
