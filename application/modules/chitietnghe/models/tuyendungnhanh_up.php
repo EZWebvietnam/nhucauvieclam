@@ -63,6 +63,7 @@ class Tuyendungnhanh_up extends CI_Model{
         $query = $this->db->query($sql_join);
         return $query->result_array();
     }
+    
     public function get_cate()
     {
         $this->db->select();

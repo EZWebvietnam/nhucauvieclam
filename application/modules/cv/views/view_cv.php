@@ -478,12 +478,13 @@ Mức lương:</textarea></td>
                     <br>
                     <span class="text11" style="line-height:14px">Hãy nêu tên những người không phải là người thân, không phải là người đã thuê bạn làm việc? (Họ tên, địa chỉ, số điện thoại, nghề nghiệp, quan hệ, đã biết bạn mấy năm?)</span></td>
                 <td class="tbUser-row"><a name="href-c_nguon_tham_khao"></a>
-                    <textarea class="textArea" style="width:500px;height:100px" name="c_nguon_tham_khao" id="c_nguon_tham_khao">Họ và tên:
-                    Địa chỉ:
-                    Điện thoại:
-                    Nghề nghiệp:
-                    Quan hệ:
-                    Thời gian quen biết:</textarea></td>
+                    <textarea class="textArea" style="width:500px;height:100px" name="c_nguon_tham_khao" id="c_nguon_tham_khao">
+Họ và tên:
+Địa chỉ:
+Điện thoại:
+Nghề nghiệp:
+Quan hệ:
+Thời gian quen biết:</textarea></td>
                 <td width="50" rowspan="17" class="br-R"></td>
             </tr>
         </tbody>

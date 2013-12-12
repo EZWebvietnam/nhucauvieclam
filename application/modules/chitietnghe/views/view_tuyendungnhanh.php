@@ -1,3 +1,4 @@
+
 <div id="content-detail">
     <div class="GridSub">
         <div class="TopLeft">
@@ -18,20 +19,19 @@
                             if ($i % 3 == 1) {
                                 ?>
                                 <tr>
-                            <?php } ?>
+                                <?php } ?>
                                 <td width="33%">
                                     <table class="TableTdn">
                                         <tbody>
                                             <tr>
                                                 <td class="W50">
-                                                    <?php 
-                                                    if(is_file($_SERVER['DOCUMENT_ROOT'].ROT_DIR.'file/'.$tin_sanggia['u_img']))
-                                                    {
-                                                    ?>
+                                                    <?php
+                                                    if (is_file($_SERVER['DOCUMENT_ROOT'] . ROT_DIR . 'file/' . $tin_sanggia['u_img'])) {
+                                                        ?>
                                                         <img src="<?php echo base_url(); ?>file/<?php echo $tin_sanggia['u_img']; ?>" width="50" alt="<?php echo $tin_sanggia['e_title']; ?>">
-                                                    <?php } else {?> 
+                                                    <?php } else { ?> 
                                                         <img src="<?php echo base_url(); ?>template/home/img/default.gif" width="50" alt="<?php echo $tin_sanggia['e_title']; ?>">
-                                                        <?php }?>
+                                                    <?php } ?>
                                                 </td>
                                                 <td style="padding-left: 3px;"><a href="<?php echo base_url(); ?>tin-tuyen-dung/<?php echo $tin_sanggia['e_id']; ?>-<?php echo mb_strtolower(url_title(removesign($tin_sanggia['e_title']))) ?>" target="_blank"><?php echo $tin_sanggia['e_title']; ?></a>
                                                     <div class="TinyBlank"></div><span class="Number"><?php echo $tin_sanggia['u_companyName']; ?></span>
@@ -39,14 +39,15 @@
                                             </tr>
                                         </tbody>
                                     </table></td>
-                            <?php
-                            if ($i % 3 == 0) {
-                                ?>
+                                <?php
+                                if ($i % 3 == 0) {
+                                    ?>
                                     <td width="33%"></td>
                                 </tr>
-                                <?php } ?>
-                                    <?php $i++;
-                                } ?>
+                            <?php } ?>
+                            <?php $i++;
+                        }
+                        ?>
 
                     </tbody>
                 </table>
@@ -77,23 +78,24 @@
                             if ($i % 3 == 1) {
                                 ?>
                                 <tr>
-                            <?php } ?>
-                            <td width="33%">
-                                <ul>
-                                    <li>
-                                        <a href="<?php echo base_url(); ?>tin-tuyen-dung/<?php echo $tin_td_hot['e_id']; ?>-<?php echo mb_strtolower(url_title(removesign($tin_td_hot['e_title']))) ?>" title="<?php echo $tin_td_hot['e_title']; ?>" target="_blank"><?php echo $tin_td_hot['e_title']; ?></a>
-                                        <div class="TinyBlank"></div>
-                                        <span class="Number"><?php echo $tin_td_hot['u_companyName']; ?></span>
-                                    </li>
-                                </ul></td>
-                        <?php
-                            if ($i % 3 == 0) {
-                                ?>
+                                <?php } ?>
+                                <td width="33%">
+                                    <ul>
+                                        <li>
+                                            <a href="<?php echo base_url(); ?>tin-tuyen-dung/<?php echo $tin_td_hot['e_id']; ?>-<?php echo mb_strtolower(url_title(removesign($tin_td_hot['e_title']))) ?>" title="<?php echo $tin_td_hot['e_title']; ?>" target="_blank"><?php echo $tin_td_hot['e_title']; ?></a>
+                                            <div class="TinyBlank"></div>
+                                            <span class="Number"><?php echo $tin_td_hot['u_companyName']; ?></span>
+                                        </li>
+                                    </ul></td>
+                                <?php
+                                if ($i % 3 == 0) {
+                                    ?>
                                     <td width="33%"></td>
                                 </tr>
-                                <?php } ?>
-                                    <?php $i++;
-                                } ?>
+                            <?php } ?>
+                            <?php $i++;
+                        }
+                        ?>
                     </tbody>
                 </table>
             </div>
@@ -202,25 +204,24 @@
                             <br>
                             Ngày hết hạn  </th>
                     </tr>
-                    <?php 
-                     foreach ($tuyendungnhanh_detail as $tin_tuyen_dung)
-                     {
-                         ?>                     
-                    <tr class="Even">
-                        <td><a href="<?php echo base_url(); ?>tin-tuyen-dung/<?php echo $tin_td_hot['e_id']; ?>-<?php echo mb_strtolower(url_title(removesign($tin_td_hot['e_title']))) ?>" class="NormalJob"><?php echo $tin_tuyen_dung['e_title']; ?></a><div class="Blank"></div><a href="/vieclam/congty/2552602/cong-ty-tnhh-tm-dv-xd-hiep-phat.html" class="VipEmployer"><?php echo $tin_tuyen_dung['u_companyName']; ?></a></td>
-                        <td class="Nowrap"><?php echo $list_bangcap[$tin_tuyen_dung['e_trinhdo']]['bang_name']; ?>
-                            <br>
-                                <?php echo $list_exp[$tin_tuyen_dung['e_kinhnghiem']]['exp_name']; ?></td>
-                        <td class="Nowrap"><?php echo $list_luong[$tin_tuyen_dung['e_luong']]['luong_name']; ?></td>
-                        <td class="Nowrap"><?php echo $list_city[$tin_tuyen_dung['e_cityID']]['n_name']; ?>
-                            
-                        </td>
-                        <td class="Nowrap"><?php echo date('d/m/Y',$tin_tuyen_dung['e_dateActive']); ?><br>
-                                <?php echo date('d/m/Y',$tin_tuyen_dung['e_lastDate']); ?></td>
-                    </tr>
                     <?php
-                        }
-                     ?>
+                    foreach ($tuyendungnhanh_detail as $tin_tuyen_dung) {
+                        ?>                     
+                        <tr class="Even">
+                            <td><a href="<?php echo base_url(); ?>tin-tuyen-dung/<?php echo $tin_td_hot['e_id']; ?>-<?php echo mb_strtolower(url_title(removesign($tin_td_hot['e_title']))) ?>" class="NormalJob"><?php echo $tin_tuyen_dung['e_title']; ?></a><div class="Blank"></div><a href="/vieclam/congty/2552602/cong-ty-tnhh-tm-dv-xd-hiep-phat.html" class="VipEmployer"><?php echo $tin_tuyen_dung['u_companyName']; ?></a></td>
+                            <td class="Nowrap"><?php echo $list_bangcap[$tin_tuyen_dung['e_trinhdo']]['bang_name']; ?>
+                                <br>
+                                <?php echo $list_exp[$tin_tuyen_dung['e_kinhnghiem']]['exp_name']; ?></td>
+                            <td class="Nowrap"><?php echo $list_luong[$tin_tuyen_dung['e_luong']]['luong_name']; ?></td>
+                            <td class="Nowrap"><?php echo $list_city[$tin_tuyen_dung['e_cityID']]['n_name']; ?>
+
+                            </td>
+                            <td class="Nowrap"><?php echo date('d/m/Y', $tin_tuyen_dung['e_dateActive']); ?><br>
+                                <?php echo date('d/m/Y', $tin_tuyen_dung['e_lastDate']); ?></td>
+                        </tr>
+                        <?php
+                    }
+                    ?>
                 </tbody>
             </table>
 

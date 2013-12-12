@@ -15,14 +15,26 @@ class Tuyendungnhanh extends CI_Controller
         $active = true;
         $location = 'home';
         if ($this->tank_auth->is_logged_in($active, $location)) {
+            
             $data['is_login'] = 1;
+            
         } else {
             $data['is_login'] = 0;
+            redirect('/');
         }
+       
+        if($this->session->userdata('u_id'))
+        {
+                $u_id = $this->session->userdata('u_id');
+            }
+            else
+            {
+                $u_id = 0;
+            }
         if(empty($id))
         {
             redirect($_SERVER['HTTP_REFERER']);
-        }
+        }       
         $data['tuyendung_detail']= $this->tuyendungnhanh_up->hot_post($id);
         if(empty($data['tuyendung_detail']))
         {
