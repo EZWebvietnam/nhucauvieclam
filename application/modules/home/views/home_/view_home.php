@@ -228,7 +228,7 @@ if ($is_login == 0) {
                                     <td>
                                         <ul>
                                             <li>
-                                                <a href="/vieclam/tinhchatcongviec/20/viec-lam-cho-tri-thuc-lon-tuoi-tren-50-tuoi.html" ga_click="_gaq.push(['_trackEvent', 'Home', 'Click', 'Tìm việc làm - Việc làm cho trí thức lớn tuổi (trên 50 tuổi)']);" title="<?php echo $time['t_name'] ?>" target="_blank"><?php echo $time['t_name'] ?></a>
+                                                <a href="<?php echo base_url(); ?>search-time/<?php echo $time['t_id'] ?>" ga_click="_gaq.push(['_trackEvent', 'Home', 'Click', 'Tìm việc làm - Việc làm cho trí thức lớn tuổi (trên 50 tuổi)']);" title="<?php echo $time['t_name'] ?>" target="_blank"><?php echo $time['t_name'] ?></a>
 
                                             </li>
                                         </ul></td>

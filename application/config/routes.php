@@ -66,6 +66,7 @@ $route['thongtin-ntd/(:any)'] = "thongtinntd/infontd/index/$1";
 $route['timvieclam'] = "timvieclam/timvieclam";
 $route['tuyendungnhanh'] = "tuyendungnhanh/tuyendungnhanh";
 $route['da-ung-tuyen/(:any)'] = "ungtuyen/daungtuyen/index/$1";
+$route['search-time/(:any)'] = "searchtime/searchtime/index/$1";
 $route['nopdon'] = "nopdon/nopdon";
 $route['tim-kiem'] = "formsearch/search";
 

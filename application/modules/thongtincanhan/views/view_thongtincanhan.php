@@ -129,7 +129,7 @@
                                                         <tbody>
                                                             <tr>
                                                                 <td width="130">
-                                                                    <input class="dateline" type="text" style="width:110px" name="c_ngay_co_the_bat_dau_lam">
+                                                                    <input class="dateline" type="text" style="width:110px" name="c_ngay_co_the_bat_dau_lam" value="<?php echo $info_list[0]['u_birthday']; ?>">
                                                                 </td>
                                                                 <td width="30">
                                                                     <input type="image" src="<?php echo base_url(); ?>template/home/img/iconCalendar.gif" >
