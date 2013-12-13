@@ -490,34 +490,20 @@ base_url(); ?>template/home/img/slider8.png" alt="" title="nhan luc chat luong">
                             </div>
 
                             <div class="Blank"></div>
-                            <div id="fb-container">
-                                <div id="fb-like-content">
-                                    <div class="fb-like-box fb_iframe_widget" data-href="http://www.facebook.com/timviecnhanh" data-width="982" data-height="238" data-show-faces="true" data-stream="false" data-header="false" fb-xfbml-state="rendered" fb-iframe-plugin-query="app_id=357584370994953&amp;header=false&amp;height=238&amp;href=http%3A%2F%2Fwww.facebook.com%2Ftimviecnhanh&amp;locale=vi_VN&amp;sdk=joey&amp;show_faces=true&amp;stream=false&amp;width=982">
-                                        <span style="vertical-align: bottom; width: 982px; height: 238px;"><iframe name="feb366e44" width="982px" height="238px" frameborder="0" allowtransparency="true" scrolling="no" title="fb:like_box Facebook Social Plugin" src="http://www.facebook.com/plugins/like_box.php?app_id=357584370994953&amp;channel=http%3A%2F%2Fstatic.ak.facebook.com%2Fconnect%2Fxd_arbiter.php%3Fversion%3D28%23cb%3Df29bc18ee4%26domain%3Dwww.timviecnhanh.com%26origin%3Dhttp%253A%252F%252Fwww.timviecnhanh.com%252Ff1e1babe2c%26relation%3Dparent.parent&amp;header=false&amp;height=238&amp;href=http%3A%2F%2Fwww.facebook.com%2Ftimviecnhanh&amp;locale=vi_VN&amp;sdk=joey&amp;show_faces=true&amp;stream=false&amp;width=982" style="border: none; visibility: visible; width: 982px; height: 238px;" class=""></iframe></span>
-                                    </div>
-                                </div>
-                            </div>
+                            <div class="fb-like-box" data-href="https://www.facebook.com/NhuCauViecLam?ref=hl" data-width="980px" data-height="230px" data-colorscheme="light" data-show-faces="true" data-header="true" data-stream="false" data-show-border="true"></div>
+                            <div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/vi_VN/all.js#xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
                         </div>
                                     </div>
                                 </div>
                             </div>
+                        </div>
                             
-                            <div id="cboxOverlay" style="display: none;"></div>
-                            <div id="colorbox" class="" style="display: none; padding-bottom: 42px; padding-right: 42px;">
-                                <div id="cboxWrapper">
-                                    <div>
-                                        <div id="cboxTopLeft" style="float: left;"></div><div id="cboxTopCenter" style="float: left;"></div><div id="cboxTopRight" style="float: left;"></div>
-                                    </div>
-                                    <div style="clear: left;">
-                                        <div id="cboxMiddleLeft" style="float: left;"></div>
-                                        <div id="cboxContent" style="float: left;">
-                                            <div id="cboxLoadedContent" style="width: 0px; height: 0px; overflow: hidden; float: left;"></div><div id="cboxTitle" style="float: left;"></div><div id="cboxCurrent" style="float: left;"></div><div id="cboxNext" style="float: left;"></div><div id="cboxPrevious" style="float: left;"></div><div id="cboxSlideshow" style="float: left;"></div><div id="cboxClose" style="float: left;"></div>
-                                        </div><div id="cboxMiddleRight" style="float: left;"></div>
-                                    </div>
-                                    <div style="clear: left;">
-                                        <div id="cboxBottomLeft" style="float: left;"></div><div id="cboxBottomCenter" style="float: left;"></div><div id="cboxBottomRight" style="float: left;"></div>
-                                    </div>
-                                </div><div style="position: absolute; width: 9999px; visibility: hidden; display: none;"></div>
-                            </div><div id="ui-datepicker-div" class="ui-datepicker ui-widget ui-widget-content ui-helper-clearfix ui-corner-all"></div>
                     </body>
                     </html>
