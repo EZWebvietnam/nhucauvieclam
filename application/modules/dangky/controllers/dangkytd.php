@@ -46,7 +46,7 @@ class Dangkytd extends CI_Controller
             'trim|required|xss_clean|matches[password]');
         $data['errors'] = array();
         if ($this->form_validation->run() == true) {
-            $data = array(
+            $data_td = array(
                 'u_username' => $this->form_validation->set_value('email'),
                 'u_password' => $this->form_validation->set_value('password'),
                 'u_email' => $this->form_validation->set_value('email'),
@@ -87,11 +87,11 @@ class Dangkytd extends CI_Controller
             if (!empty($file_info)) {
                 $file = $file_info['file_name'];
             }
-            $data['u_img'] = $file;
-            if (!is_null($data = $this->tank_auth->create_user_normal($data))) {
+            $data_td['u_img'] = $file;
+            if (!is_null($data = $this->tank_auth->create_user_normal($data_td))) {
                 $this->sendmail($data['u_email'], $data['u_fullname']);
-                $data['site_name'] = $this->config->item('website_name', 'tank_auth');
-                unset($data['u_password']); // Clear password (just for any case)
+                $data_td['site_name'] = $this->config->item('website_name', 'tank_auth');
+                unset($data_td['u_password']); // Clear password (just for any case)
                 redirect('/');
             } else {
                 $errors = $this->tank_auth->get_error_message();
