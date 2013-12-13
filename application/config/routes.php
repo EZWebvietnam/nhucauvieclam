@@ -41,6 +41,7 @@
 $route['default_controller'] = "home";
 $route['trang-chu'] = "home/home/index";
 $route['nganh-nghe/(:any)-(:any)'] = "chitietnghe/tuyendungnhanh/tuyendungnhanh_post/$1";
+$route['nganh-nghe/(:any)-(:any)/(:any)'] = "chitietnghe/tuyendungnhanh/tuyendungnhanh_post/$1";
 $route['nganh-ngheuv/(:any)-(:any)'] = "chitietnghe/tuyendungnhanh/timviecnhanh_post/$1";
 $route['cv/(:any)'] = "cv/cv/index/$1";
 $route['hsda-dang/(:any)'] = "dadang/hsdadang/index/$1";

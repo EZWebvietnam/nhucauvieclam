@@ -24,7 +24,7 @@
  * @author		ExpressionEngine Dev Team
  * @link		http://codeigniter.com/user_guide/libraries/pagination.html
  */
-class CI_Pagination {
+class CI_Pagination1 {
 
 	var $base_url			= ''; // The page we are linking to
 	var $prefix				= ''; // A custom prefix added to the path.
@@ -218,7 +218,7 @@ class CI_Pagination {
 		}
 		else
 		{
-			$this->base_url = rtrim($this->base_url, '/') .'&page=';
+			$this->base_url = rtrim($this->base_url, '/') .'/page/';
 		}
 
 		// And here we go...

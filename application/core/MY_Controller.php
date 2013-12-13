@@ -21,7 +21,13 @@ class MY_Controller extends CI_Controller
     public function load_city()
     {
         $this->load->model('chitietnghe/tuyendungnhanh_up');
-        $this->data['list_city']=$this->tuyendungnhanh_up->get_city();
+        $list_city = $this->tuyendungnhanh_up->get_city();
+        $array =array();
+        foreach($list_city as $city)
+        {
+            $array[$city['n_id']] = $city['n_name'];
+        }
+        $this->data['list_city']=$array;
         
     }
     public function load_time()
@@ -37,7 +43,13 @@ class MY_Controller extends CI_Controller
     public function load_bangcap()
     {
         $this->load->model('chitietnghe/tuyendungnhanh_up');
-        $this->data['list_bangcap']=$this->tuyendungnhanh_up->get_bangcap();   
+        $list_bang_cap = $this->tuyendungnhanh_up->get_bangcap();
+        $array =array();
+        foreach($list_bang_cap as $data)
+        {
+            $array[$data['bang_id']] = $data['bang_name'];
+        }
+        $this->data['list_bangcap']=$array;   
     }
     public function load_capbac()
     {
@@ -52,12 +64,24 @@ class MY_Controller extends CI_Controller
     public function load_luong()
     {
         $this->load->model('chitietnghe/tuyendungnhanh_up');
-        $this->data['list_luong']=$this->tuyendungnhanh_up->get_luong();   
+        $list_luong = $this->tuyendungnhanh_up->get_luong();
+        $array =array();
+        foreach($list_luong as $luong)
+        {
+            $array[$luong['luong_id']] = $luong['luong_name'];
+        }
+        $this->data['list_luong']=$array;   
     }
     public function load_exp()
     {
         $this->load->model('chitietnghe/tuyendungnhanh_up');
-        $this->data['list_exp']=$this->tuyendungnhanh_up->get_exp();   
+        $list_kn = $this->tuyendungnhanh_up->get_exp();
+        $array =array();
+        foreach($list_kn as $kn)
+        {
+            $array[$kn['exp_id']] = $kn['exp_name'];
+        }
+        $this->data['list_exp']=$array;   
     }
     public function load_sex()
     {

@@ -204,10 +204,11 @@
                             Ngày hết hạn  </th>
                     </tr>
                     <?php
+                    
                     foreach ($tuyendungnhanh_detail as $tin_tuyen_dung) {
                         ?>                     
                         <tr class="Even">
-                            <td><a href="<?php echo base_url(); ?>tin-tuyen-dung/<?php echo $tin_td_hot['e_id']; ?>-<?php echo mb_strtolower(url_title(removesign($tin_td_hot['e_title']))) ?>" class="NormalJob"><?php echo $tin_tuyen_dung['e_title']; ?></a><div class="Blank"></div><a href="/vieclam/congty/2552602/cong-ty-tnhh-tm-dv-xd-hiep-phat.html" class="VipEmployer"><?php echo $tin_tuyen_dung['u_companyName']; ?></a></td>
+                            <td><a href="<?php echo base_url(); ?>tin-tuyen-dung/<?php echo $tin_tuyen_dung['e_id']; ?>-<?php echo mb_strtolower(url_title(removesign($tin_tuyen_dung['e_title']))) ?>" class="NormalJob"><?php echo $tin_tuyen_dung['e_title']; ?></a><div class="Blank"></div><a href="/vieclam/congty/2552602/cong-ty-tnhh-tm-dv-xd-hiep-phat.html" class="VipEmployer"><?php echo $tin_tuyen_dung['u_companyName']; ?></a></td>
                             <td class="Nowrap"><?php echo $list_bangcap[$tin_tuyen_dung['e_trinhdo']]['bang_name']; ?>
                                 <br>
                                 <?php echo $list_exp[$tin_tuyen_dung['e_kinhnghiem']]['exp_name']; ?></td>
@@ -225,8 +226,7 @@
             </table>
 
             <div class="Paginator">
-                <span class="prev">Trước</span><span class="current"><a href="/vieclam/tuyendung/10/ban-hang.html/page:1">1</a></span> | <span><a href="/vieclam/tuyendung/10/ban-hang.html/page:2">2</a></span> | <span><a href="/vieclam/tuyendung/10/ban-hang.html/page:3">3</a></span> | <span><a href="/vieclam/tuyendung/10/ban-hang.html/page:4">4</a></span> | <span><a href="/vieclam/tuyendung/10/ban-hang.html/page:5">5</a></span> | <span><a href="/vieclam/tuyendung/10/ban-hang.html/page:6">6</a></span> | <span><a href="/vieclam/tuyendung/10/ban-hang.html/page:7">7</a></span> | <span><a href="/vieclam/tuyendung/10/ban-hang.html/page:8">8</a></span> | <span><a href="/vieclam/tuyendung/10/ban-hang.html/page:9">9</a></span><span class="next"><a href="/vieclam/tuyendung/10/ban-hang.html/page:2" rel="next">Sau</a></span>
-            </div>
+                <?php echo $this->pagination1->create_links();?>	</div>
         </div>
     </div>
 </div>

@@ -30,13 +30,13 @@
                             <a href="#" class="VipEmployer"><?php echo $job['u_companyName']; ?></a>
                         </td>
                         <td class="Nowrap">
-                            <?php echo $list_bangcap[$job['e_trinhdo']]['bang_name']; ?><br>
-                            <?php echo $list_exp[$job['e_kinhnghiem']]['exp_name']; ?>
+                            <?php echo $list_bangcap[$job['e_trinhdo']]; ?><br>
+                            <?php echo $list_exp[$job['e_kinhnghiem']]; ?>
                             </td>
                         <td class="Nowrap">
-                            <?php echo $list_luong[$job['e_luong']]['luong_name']; ?></td>
+                            <?php echo $list_luong[$job['e_luong']]; ?></td>
                         <td class="Nowrap">
-                            <?php echo $list_city[$job['e_cityID']]['n_name']; ?><br>
+                            <?php echo $list_city[$job['e_cityID']]; ?><br>
                         </td>
                         <td class="Nowrap">
                             <?php echo date('d/m/Y',$job['e_dateActive']); ?><br>
