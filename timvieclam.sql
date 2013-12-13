@@ -1,13 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 4.0.4.1
+-- version 3.4.5
 -- http://www.phpmyadmin.net
 --
--- Host: 127.0.0.1
--- Generation Time: Dec 11, 2013 at 07:29 PM
--- Server version: 5.5.32
--- PHP Version: 5.4.19
+-- Host: localhost
+-- Generation Time: Dec 13, 2013 at 02:04 AM
+-- Server version: 5.5.16
+-- PHP Version: 5.3.8
 
-SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
 
 
@@ -19,8 +19,6 @@ SET time_zone = "+00:00";
 --
 -- Database: `timvieclam`
 --
-CREATE DATABASE IF NOT EXISTS `timvieclam` DEFAULT CHARACTER SET latin1 COLLATE latin1_swedish_ci;
-USE `timvieclam`;
 
 -- --------------------------------------------------------
 
@@ -42,7 +40,8 @@ CREATE TABLE IF NOT EXISTS `ci_sessions` (
 --
 
 INSERT INTO `ci_sessions` (`session_id`, `ip_address`, `user_agent`, `last_activity`, `user_data`) VALUES
-('f0ea3e7eec814bee6e9266a587741f49', '::1', 'Mozilla/5.0 (Windows NT 6.2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/31.0.1650.63 Safari/537.36', 1386783612, 'a:1:{s:9:"user_data";s:0:"";}');
+('0e9339febcaf8c3c3aabe19b5b74ed43', '127.0.0.1', 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/31.0.1650.63 Safari/537.36', 1386875946, 0x613a363a7b733a393a22757365725f64617461223b733a303a22223b733a343a22755f6964223b733a323a223132223b733a31303a22755f757365726e616d65223b733a31383a22636869706368697040676d61696c2e636f6d223b733a31303a22755f66756c6c6e616d65223b733a31393a22c490c3a06f20c490e1bba963205469e1babf6e223b733a383a22755f737461747573223b733a313a2231223b733a363a22755f726f6c65223b733a313a2232223b7d),
+('d57022cb884f4fb6f373aabfd52bc5b1', '127.0.0.1', 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/31.0.1650.63 Safari/537.36', 1386896341, '');
 
 -- --------------------------------------------------------
 
@@ -265,9 +264,9 @@ CREATE TABLE IF NOT EXISTS `tbl_employers_post` (
   `j_luongmm` int(11) NOT NULL,
   `j_timeID` int(11) NOT NULL,
   `j_goto` text CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
-  `j_date` int(10) NOT NULL,
-  `j_update` int(10) NOT NULL,
-  `j_lastdate` int(11) NOT NULL,
+  `j_date` text CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `j_update` text CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `j_lastdate` text CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
   `j_visits` text CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
   `j_active` int(11) NOT NULL,
   `j_hot` int(11) NOT NULL,
@@ -287,18 +286,20 @@ CREATE TABLE IF NOT EXISTS `tbl_employers_post` (
   `j_datestart` int(11) NOT NULL,
   `j_thamkhao` text CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
   `j_sanggia` int(11) NOT NULL DEFAULT '0',
+  `j_status` int(11) NOT NULL DEFAULT '0',
   PRIMARY KEY (`j_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=8 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=9 ;
 
 --
 -- Dumping data for table `tbl_employers_post`
 --
 
-INSERT INTO `tbl_employers_post` (`j_id`, `u_id`, `m_id`, `j_nghe1`, `j_nghe2`, `j_nghe3`, `j_countryID`, `j_cityID`, `j_cityID1`, `j_cityID2`, `j_cityID3`, `j_title`, `j_copy`, `j_year`, `j_perID`, `j_degID`, `j_muctieunn`, `j_kynang`, `j_dalam`, `j_luongdaco`, `j_chucmm`, `j_luongmm`, `j_timeID`, `j_goto`, `j_date`, `j_update`, `j_lastdate`, `j_visits`, `j_active`, `j_hot`, `j_activeSearch`, `j_hienthi`, `j_trinhdo`, `j_nganhhoc`, `j_namtotnghiep`, `j_loaitotnghiep`, `j_truongdahoc`, `j_ngoaingu`, `j_trinhdonn`, `j_tinhoc`, `j_bangcapkhac`, `j_kinhnghiem`, `j_infokinhnghiem`, `j_datestart`, `j_thamkhao`, `j_sanggia`) VALUES
-(3, 14, 10, 'coder', 'IT phần cứng', 'Ăn chơi nhảy múa', '1', 1, '2', '3', '4', 'Nhân viên công nghệ thông tin', 'dán demo vào đây', 1, '1', '1', 'mục tiêu nn', 'nhiều', 'teera Sorfware', 4000000, '3', 3, 2, '1', 12032013, 30042013, 30052013, '33', 1, 1, '0', '1', 2, 'Công nghệ thông tin', 2013, 3, 'Đại học công nghiệp Hà Nội', 4, '2', 'cao thủ', 'đéo có', 2, 'chém đấy chưa có kinh nghiệm', 0, 'ko có ai', 1),
-(5, 14, 13, 'phổ thông', 'đánh nhau', 'chém nhau', '1', 1, '3', '5', '8', 'Nhân viên công nghệ thông tin', 'demo vào đây', 2, '1', '1', '2', 'bao la', 'rất nhiều', 6000000, '2', 1, 1, '1', 1, 1, 0, '14', 1, 0, '0', '1', 0, '', 0, 0, '', 0, '', '', '', 0, '', 0, '', 0),
-(6, 14, 11, '', '', '', '', 5, '', '', '', 'Nhân viên IT webDevoloper', '', 0, '', '', '', '', '', 0, '', 0, 0, '', 0, 0, 0, '', 0, 0, '', '', 0, '', 0, 0, '', 0, '', '', '', 0, '', 0, '', 0),
-(7, 14, 11, '', '', '', '', 2, '', '', '', 'Nhân viên siêu siêu sao', '', 0, '', '', '3', 'ko có kỹ năng nổi bật ji', '', 0, '4', 6, 1, '', 0, 0, 0, '', 0, 0, '', '', 2, 'Đánh nhau vô tội vạ', 2013, 1, 'Đại học bôn ba', 0, '3', 'trình độ tin học', 'ko có bằng cấp ji khác nhé', 2, 'Tên công ty:\r\nVị trí công việc:\r\nNgành nghề:\r\nThời gian bắt đầu:\r\nThời gian kết thúc:\r\nMô tả công việc:\r\nLý do thôi việc:\r\nThành tích đạt được:\r\nMức lương:\r\n                            ', 0, 'Họ và tên:\r\nĐịa chỉ:\r\nĐiện thoại:\r\nNghề nghiệp:\r\nQuan hệ:\r\nThời gian quen biết:\r\n                            ', 0);
+INSERT INTO `tbl_employers_post` (`j_id`, `u_id`, `m_id`, `j_nghe1`, `j_nghe2`, `j_nghe3`, `j_countryID`, `j_cityID`, `j_cityID1`, `j_cityID2`, `j_cityID3`, `j_title`, `j_copy`, `j_year`, `j_perID`, `j_degID`, `j_muctieunn`, `j_kynang`, `j_dalam`, `j_luongdaco`, `j_chucmm`, `j_luongmm`, `j_timeID`, `j_goto`, `j_date`, `j_update`, `j_lastdate`, `j_visits`, `j_active`, `j_hot`, `j_activeSearch`, `j_hienthi`, `j_trinhdo`, `j_nganhhoc`, `j_namtotnghiep`, `j_loaitotnghiep`, `j_truongdahoc`, `j_ngoaingu`, `j_trinhdonn`, `j_tinhoc`, `j_bangcapkhac`, `j_kinhnghiem`, `j_infokinhnghiem`, `j_datestart`, `j_thamkhao`, `j_sanggia`, `j_status`) VALUES
+(3, 11, 10, 'coder', 'IT phần cứng', 'Ăn chơi nhảy múa', '1', 1, '2', '3', '4', 'Nhân viên công nghệ thông tin', 'dán demo vào đây', 1, '1', '1', 'mục tiêu nn', 'nhiều', 'teera Sorfware', 4000000, '3', 3, 2, '1', '12032013', '30042013', '30052013', '33', 1, 1, '0', '1', 2, 'Công nghệ thông tin', 2013, 3, 'Đại học công nghiệp Hà Nội', 4, '2', 'cao thủ', 'đéo có', 2, 'chém đấy chưa có kinh nghiệm', 0, 'ko có ai', 1, 0),
+(5, 11, 13, 'phổ thông', 'đánh nhau', 'chém nhau', '1', 1, '3', '5', '8', 'Nhân viên công nghệ thông tin', 'demo vào đây', 2, '1', '1', '2', 'bao la', 'rất nhiều', 6000000, '2', 1, 1, '1', '1', '1', '0', '14', 1, 0, '0', '1', 0, '', 0, 3, '', 0, '1', '', '', 0, '', 0, '', 0, 1),
+(6, 12, 10, '', '', '', '', 5, '', '', '', 'Nhân viên IT webDevoloper', '', 0, '', '', '', '', '', 0, '2', 0, 0, '', '12081991', '23122121', '12312341', '', 0, 0, '', '', 0, '', 0, 2, '', 0, '2', '', '', 0, '', 0, '', 0, 0),
+(7, 11, 10, '', '', '', '', 2, '', '', '', 'Nhân viên siêu siêu sao', '', 0, '', '', '3', 'ko có kỹ năng nổi bật ji', '', 0, '4', 6, 1, '', '0', '0', '0', '', 0, 0, '', '', 2, 'Đánh nhau vô tội vạ', 2013, 1, 'Đại học bôn ba', 0, '3', 'trình độ tin học', 'ko có bằng cấp ji khác nhé', 2, 'Tên công ty:\r\nVị trí công việc:\r\nNgành nghề:\r\nThời gian bắt đầu:\r\nThời gian kết thúc:\r\nMô tả công việc:\r\nLý do thôi việc:\r\nThành tích đạt được:\r\nMức lương:\r\n                            ', 0, 'Họ và tên:\r\nĐịa chỉ:\r\nĐiện thoại:\r\nNghề nghiệp:\r\nQuan hệ:\r\nThời gian quen biết:\r\n                            ', 0, 1),
+(8, 12, 10, '', '', '', '', 1, '', '', '', 'Nhân viên siêu siêu sao online', '', 0, '', '', 'asdasdasdqweqwsdc', 'asdwqwesdc', '', 0, '4', 1, 1, '', '0', '0', '0', '', 0, 0, '', '', 2, 'Đánh nhau vô tội vạ', 2013, 1, 'asdasdasqweqwsad', 3, '3', 'dasdqwxcasdasd', 'asdqwesdcsadq', 8, 'Tên công ty:\r\nVị trí công việc:\r\nNgành nghề:\r\nThời gian bắt đầu:\r\nThời gian kết thúc:\r\nMô tả công việc:\r\nLý do thôi việc:\r\nThành tích đạt được:\r\nMức lương:\r\n                            ', 0, 'Họ và tên:\r\nĐịa chỉ:\r\nĐiện thoại:\r\nNghề nghiệp:\r\nQuan hệ:\r\nThời gian quen biết:\r\n                            ', 0, 0);
 
 -- --------------------------------------------------------
 
@@ -392,6 +393,8 @@ CREATE TABLE IF NOT EXISTS `tbl_job_post` (
   `m_id` int(11) NOT NULL,
   `e_lienhe` text CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
   `e_dotuoi` int(11) NOT NULL,
+  `e_daluu1` int(11) NOT NULL,
+  `e_daungtuyen1` int(11) NOT NULL,
   PRIMARY KEY (`e_id`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=8 ;
 
@@ -399,14 +402,14 @@ CREATE TABLE IF NOT EXISTS `tbl_job_post` (
 -- Dumping data for table `tbl_job_post`
 --
 
-INSERT INTO `tbl_job_post` (`e_id`, `u_id`, `e_title`, `e_mem`, `e_luong`, `e_luonga`, `e_luongb`, `e_trinhdo`, `e_capbacID`, `e_timeID`, `e_cityID`, `e_cityID1`, `e_cityID2`, `e_cityID3`, `e_nghe`, `e_nghe1`, `e_nghe2`, `e_nghe3`, `e_descript`, `e_request`, `e_hoso`, `e_phucLoi`, `e_kinhnghiem`, `e_date`, `e_dateActive`, `e_lastDate`, `e_visits`, `e_hienthi`, `e_indam`, `e_hot`, `e_sanggia`, `e_active`, `e_active_home`, `e_sex`, `e_skill`, `e_timetest`, `e_datesave`, `m_id`, `e_lienhe`, `e_dotuoi`) VALUES
-(1, 3, 'Tuyển nhân viên Bán hàng', '5', 2, '5000000', '7000000', 2, '1', 1, 1, '0', '0', '0', 4, '2', '0', '0', 'Mô tả công việc vào đây', 'yêu cầu thêm', 'hồ sơ cần ji viết vào đây', 'phúc lợi ra sao', 2, 28112013, 29112013, 12122012, '56', '1', 1, 1, 1, 1, 1, 0, 'kỹ năng thì ghi vào đây', 12, 12122013, 10, '', 0),
-(2, 5, 'Tuyển nhân viên văn phòng', '5', 3, '900$', '800$', 2, '3', 1, 1, '1', '1', '1', 1, '1', '1', '1', 'skhkjdahsidiuwhiuh', 'thông tin hả', 'ji cũng đc', 'như nhà nước quy định', 1, 12052013, 13052013, 12062013, '32', '1', 1, 1, 1, 1, 1, 1, '1', 0, 0, 13, '', 0),
-(3, 4, 'Tuyển cửu vạn bê vác', '1', 1, '1', '1', 3, '1', 1, 1, '1', '1', '1', 1, '1', '1', '1', '1', '1', '1', '1', 1, 1, 1, 1, '1', '1', 0, 0, 0, 0, 0, 0, 'ừ thì kỹ năng', 0, 0, 10, '', 0),
-(4, 6, 'Nhân viên kinh doanh', '3', 4, '', '', 1, '3', 3, 15, '', '', '', 0, '', '', '', 'mô tả công việc', 'yêu cầu khác', 'hồ sơ bao gồm', 'quyền lợi được hưởng', 8, 0, 0, 0, '', '', 0, 0, 0, 0, 0, 1, '', 0, 0, 24, '3', 2),
-(5, 10, 'Nhân viên IT phần mêm', '5', 1, '', '', 2, '7', 1, 1, '', '', '', 0, '', '', '', 'mô tả công việc', 'yêu cầu khác', 'yêu cầu của hồ sơ', 'quyền lợi được hưởng của nhân viên', 5, 0, 0, 0, '', '', 0, 0, 0, 0, 0, 1, '', 0, 0, 10, '3', 2),
-(6, 11, 'Tuyển nhân viên bán hàng toàn quốc', '5', 1, '', '', 1, '4', 1, 2, '', '', '', 0, '', '', '', 'công việc dạng háng ăn hàng', 'yêu cầu khác của nhà tuyển dụng', 'hồ sơ cần những ji', 'hưởng đầy đủ quyền lợi', 2, 0, 0, 0, '', '', 0, 0, 0, 0, 0, 0, '', 0, 0, 10, '1', 1),
-(7, 11, 'Giám đốc chém gió', '3', 4, '', '', 1, '3', 2, 2, '', '', '', 0, '', '', '', 'công việc thì chỉ ngồi và chém gió thôi', 'yêu cầu đẹp trai co to đen hôi', 'hồ sơ như bình thường', 'quyền của giám đốc thì đừng có hỏi', 1, 0, 0, 0, '', '', 0, 0, 0, 0, 0, 1, '', 0, 0, 11, '3', 2);
+INSERT INTO `tbl_job_post` (`e_id`, `u_id`, `e_title`, `e_mem`, `e_luong`, `e_luonga`, `e_luongb`, `e_trinhdo`, `e_capbacID`, `e_timeID`, `e_cityID`, `e_cityID1`, `e_cityID2`, `e_cityID3`, `e_nghe`, `e_nghe1`, `e_nghe2`, `e_nghe3`, `e_descript`, `e_request`, `e_hoso`, `e_phucLoi`, `e_kinhnghiem`, `e_date`, `e_dateActive`, `e_lastDate`, `e_visits`, `e_hienthi`, `e_indam`, `e_hot`, `e_sanggia`, `e_active`, `e_active_home`, `e_sex`, `e_skill`, `e_timetest`, `e_datesave`, `m_id`, `e_lienhe`, `e_dotuoi`, `e_daluu1`, `e_daungtuyen1`) VALUES
+(1, 11, 'Tuyển nhân viên Bán hàng', '5', 2, '5000000', '7000000', 2, '1', 1, 1, '0', '0', '0', 4, '2', '0', '0', 'Mô tả công việc vào đây', 'yêu cầu thêm', 'hồ sơ cần ji viết vào đây', 'phúc lợi ra sao', 2, 28112013, 29112013, 12122012, '56', '1', 1, 1, 1, 1, 1, 0, 'kỹ năng thì ghi vào đây', 12, 12122013, 10, '', 0, 11, 12),
+(2, 5, 'Tuyển nhân viên văn phòng', '5', 3, '900$', '800$', 2, '3', 1, 1, '1', '1', '1', 1, '1', '1', '1', 'skhkjdahsidiuwhiuh', 'thông tin hả', 'ji cũng đc', 'như nhà nước quy định', 1, 12052013, 13052013, 12062013, '32', '1', 1, 1, 1, 1, 1, 1, '1', 0, 0, 13, '', 0, 12, 11),
+(3, 4, 'Tuyển cửu vạn bê vác', '1', 1, '1', '1', 3, '1', 1, 1, '1', '1', '1', 1, '1', '1', '1', '1', '1', '1', '1', 1, 1, 1, 1, '1', '1', 0, 0, 0, 0, 0, 0, 'ừ thì kỹ năng', 0, 0, 10, '', 0, 0, 0),
+(4, 6, 'Nhân viên kinh doanh', '3', 4, '', '', 1, '3', 3, 15, '', '', '', 0, '', '', '', 'mô tả công việc', 'yêu cầu khác', 'hồ sơ bao gồm', 'quyền lợi được hưởng', 5, 0, 0, 0, '', '', 0, 0, 0, 0, 0, 1, '', 0, 0, 24, '3', 2, 0, 0),
+(5, 10, 'Nhân viên IT phần mêm', '5', 1, '', '', 2, '7', 1, 1, '', '', '', 0, '', '', '', 'mô tả công việc', 'yêu cầu khác', 'yêu cầu của hồ sơ', 'quyền lợi được hưởng của nhân viên', 5, 0, 0, 0, '', '', 0, 0, 0, 0, 0, 1, '', 0, 0, 10, '3', 2, 0, 0),
+(6, 11, 'Tuyển nhân viên bán hàng toàn quốc', '5', 1, '', '', 1, '4', 1, 2, '', '', '', 0, '', '', '', 'công việc dạng háng ăn hàng', 'yêu cầu khác của nhà tuyển dụng', 'hồ sơ cần những ji', 'hưởng đầy đủ quyền lợi', 2, 0, 0, 0, '', '', 0, 0, 0, 0, 0, 0, '', 0, 0, 10, '1', 1, 11, 11),
+(7, 12, 'Giám đốc chém gió', '3', 4, '', '', 1, '3', 2, 2, '', '', '', 0, '', '', '', 'công việc thì chỉ ngồi và chém gió thôi', 'yêu cầu đẹp trai co to đen hôi', 'hồ sơ như bình thường', 'quyền của giám đốc thì đừng có hỏi', 1, 0, 0, 0, '', '', 0, 0, 0, 0, 0, 1, '', 0, 0, 11, '3', 2, 0, 0);
 
 -- --------------------------------------------------------
 
@@ -460,22 +463,27 @@ CREATE TABLE IF NOT EXISTS `tbl_job_user` (
   `u_national` text CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
   `last_ip` text NOT NULL,
   `last_login` text NOT NULL,
-  `is_mail` int(11) NOT NULL,
+  `u_daluu1` int(11) NOT NULL,
+  `u_daluu2` int(11) NOT NULL,
+  `u_daluu3` int(11) NOT NULL,
+  `u_daungtuyen1` int(11) NOT NULL,
+  `u_daungtuyen2` int(11) NOT NULL,
+  `u_daungtuyen3` int(11) NOT NULL,
   PRIMARY KEY (`u_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=15 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=13 ;
 
 --
 -- Dumping data for table `tbl_job_user`
 --
 
-INSERT INTO `tbl_job_user` (`u_id`, `u_username`, `u_password`, `u_salt`, `u_companyName`, `u_companyadress`, `u_companyTypeID`, `u_companyIntro`, `u_companyRun`, `u_companyMem`, `u_img`, `u_home`, `u_companyphone`, `u_companyMobi`, `u_fax`, `u_email`, `u_contactName`, `u_contactPosition`, `u_contactPhone`, `u_status`, `u_contactMobi`, `u_contactEmail`, `u_lienhe`, `u_countryID`, `u_cityID`, `u_urban`, `u_adress`, `u_redate`, `u_lasttime`, `u_now`, `u_sotin`, `u_visits`, `u_active`, `u_contactAdress`, `u_role`, `u_fullname`, `u_sex`, `u_birthday`, `u_age`, `u_marry`, `u_menh`, `u_mobi`, `u_national`, `last_ip`, `last_login`, `is_mail`) VALUES
-(3, 'quangthang12891@gmail.com', '$2a$08$c0woLMpEHdsLSzr4MVN01uojIDzrKoGj9XGcB5AOSvUYvZYFX8Vla', 'CHGD5', 'CP DV An Tâm', '', '2', 'sơ lược về công ty', 'lĩnh vực hoạt động', 'quy mô công ty 13', 'đường link ảnh logo', 'baoveantam.net', '09348374748', '', '37438468237', 'kinhdoanh@baoveantam.net', 'Tên ng liên hệ', 'chức vụ người liên hệ', 'điện thoại ng liên hệ', 1, 'điện thoại di động', 'emailnguoilienhe@gmail.com', '', '1', '2', 'quận nào', 'địa chỉ - của người - tuyển dụng', 12052013, 22052013, 'cái này bỏ được ko', '2', '43', 1, 'địa chỉ ng liên hệ', 1, 'Đoàn Quang Thắng12', '1', 12, '23', '0', 'Thổ', '0962925599', 'Việt Nam', '127.0.0.1', '2013-12-07 09:50:15', 0),
-(4, 'chipshock12891@gmail.com', '', '', 'Công ty Phát Tài', 'địa chỉ cty', '', '       ssssssssssss', '', '1', '', 'baoveantam.net', '03675236212', '', '2323364', 'kinhdoanh@baoveantam.net', 'Mr.Thắng', '', '0962925599', 0, '0931273626', 'quangthang12891@gmail.com', '0', '', '2', '', 'địa chỉ - của người - tuyển dụng', 0, 0, '', '', '', 0, '', 2, 'Đoàn Quang Thắng 3', '1', 12, '', '0', '', '0962925599', '', '', '', 0),
-(5, 'quangthang12891', '$2a$08$gupiwL9MdnyZ.I/tjRQ37uuIHo5Gz.Ze0XrnXsnW/v4oM.Y6A0uOG', '', '', '', '', '', '', '', '', '', '', '', '', 'quangthang12891@gmail.com', '', '', '', 1, '', '', '', '', '1', '', 'quangthang12891', 2013, 0, '', '', '', 0, '', 2, 'quangthang12891', 'Y', 9, '', '', '', '11111', '', '::1', '', 0),
-(6, 'beobeboi91@gmail.com', '$2a$08$SiY/2UH4qcaM3bitriDSUu35z7Q7FMczaXKybjSHAiQ1kAPLpeIwW', '', '', '', '', '', '', '', '', '', '', '', '', 'beobeboi91@gmail.com', '', '', '', 1, '', '', '', '', '1', '', 'beobeboi91', 2013, 0, '', '', '', 0, '', 2, 'beobeboi91', 'Y', 9, '', '', '', '01667039939', '', '::1', '', 0),
-(10, 'giangbeoit232222@gmail.com', '$2a$08$Uk32CZFKI5sh1OyP5AaIG.UpcoKThGa9wj2ZXaAurWQ57Qm.uxu4i', '', 'giangbeoit', 'giangbeoit', '', '                                  giangbeoit  ', '', '0', '3eb50c9e6fa88056081daac283b832cf.jpg', 'giangbeoit', 'giangbeoit', '', 'giangbeoitgiangbeoitgiangbeoit', 'giangbeoit232222@gmail.com', 'giangbeoit', '', 'giangbeoit', 1, 'giangbeoit', 'giangbeoit@gmail.com', '', '', '1', '', 'giangbeoit', 2013, 0, '', '', '', 0, '', 3, '', '', 0, '', '', '', '', '', '::1', '', 0),
-(11, 'chipshock@gmail.com', '$2a$08$ZzCyE4QOPjvv.9yNvqvSQ.vi60SlAvC.K2ya7mYUnsgnS7CDH19pi', '', '', '', '', '', '', '', '', '', '', '', '', 'chipshock@gmail.com', '', '', '', 1, '', '', '', '', '1', '', 'Hải Dương', 1386641621, 0, '', '', '', 0, '', 2, 'Đoàn Quang Thắng', 'Y', 12, '', '', '', '0962925599', '', '127.0.0.1', '2013-12-11 02:11:17', 1),
-(14, 'giangbeoit@gmail.com', '$2a$08$NJqqOABOHiGpqeTFi1jvCexsQXN5WYV2RCaNG5nCzu0sz.jU3NJD6', '', '', '', '', '', '', '', '', '', '', '', '', 'giangbeoit@gmail.com', '', '', '', 1, '', '', '', '', '1', '', 'giangbeoit', 1386781098, 0, '', '', '', 0, '', 2, 'giangbeoit', 'Y', 9, '', '', '', 'giangbeoit', '', '::1', '', 1);
+INSERT INTO `tbl_job_user` (`u_id`, `u_username`, `u_password`, `u_salt`, `u_companyName`, `u_companyadress`, `u_companyTypeID`, `u_companyIntro`, `u_companyRun`, `u_companyMem`, `u_img`, `u_home`, `u_companyphone`, `u_companyMobi`, `u_fax`, `u_email`, `u_contactName`, `u_contactPosition`, `u_contactPhone`, `u_status`, `u_contactMobi`, `u_contactEmail`, `u_lienhe`, `u_countryID`, `u_cityID`, `u_urban`, `u_adress`, `u_redate`, `u_lasttime`, `u_now`, `u_sotin`, `u_visits`, `u_active`, `u_contactAdress`, `u_role`, `u_fullname`, `u_sex`, `u_birthday`, `u_age`, `u_marry`, `u_menh`, `u_mobi`, `u_national`, `last_ip`, `last_login`, `u_daluu1`, `u_daluu2`, `u_daluu3`, `u_daungtuyen1`, `u_daungtuyen2`, `u_daungtuyen3`) VALUES
+(3, 'quangthang12891@gmail.com', '$2a$08$c0woLMpEHdsLSzr4MVN01uojIDzrKoGj9XGcB5AOSvUYvZYFX8Vla', 'CHGD5', 'CP DV An Tâm', '', '2', 'sơ lược về công ty', 'lĩnh vực hoạt động', 'quy mô công ty 13', 'đường link ảnh logo', 'baoveantam.net', '09348374748', '', '37438468237', 'kinhdoanh@baoveantam.net', 'Tên ng liên hệ', 'chức vụ người liên hệ', 'điện thoại ng liên hệ', 1, 'điện thoại di động', 'emailnguoilienhe@gmail.com', '', '1', '2', 'quận nào', 'địa chỉ - của người - tuyển dụng', 12052013, 22052013, 'cái này bỏ được ko', '2', '43', 1, 'địa chỉ ng liên hệ', 1, 'Đoàn Quang Thắng12', '1', 12, '23', '0', 'Thổ', '0962925599', 'Việt Nam', '127.0.0.1', '2013-12-07 09:50:15', 0, 0, 0, 0, 0, 0),
+(4, 'chipshock12891@gmail.com', '', '', 'Công ty Phát Tài', 'địa chỉ cty', '', '       ssssssssssss', '', '1', '', 'baoveantam.net', '03675236212', '', '2323364', 'kinhdoanh@baoveantam.net', 'Mr.Thắng', '', '0962925599', 0, '0931273626', 'quangthang12891@gmail.com', '0', '', '2', '', 'địa chỉ - của người - tuyển dụng', 0, 0, '', '', '', 0, '', 2, 'Đoàn Quang Thắng 3', '1', 12, '', '0', '', '0962925599', '', '', '', 0, 0, 0, 0, 0, 0),
+(5, 'quangthang12891', '$2a$08$gupiwL9MdnyZ.I/tjRQ37uuIHo5Gz.Ze0XrnXsnW/v4oM.Y6A0uOG', '', '', '', '', '', '', '', '', '', '', '', '', 'quangthang12891@gmail.com', '', '', '', 1, '', '', '', '', '1', '', 'quangthang12891', 2013, 0, '', '', '', 0, '', 2, 'quangthang12891', 'Y', 9, '', '', '', '11111', '', '::1', '', 0, 0, 0, 0, 0, 0),
+(6, 'beobeboi91@gmail.com', '$2a$08$SiY/2UH4qcaM3bitriDSUu35z7Q7FMczaXKybjSHAiQ1kAPLpeIwW', '', '', '', '', '', '', '', '', '', '', '', '', 'beobeboi91@gmail.com', '', '', '', 1, '', '', '', '', '1', '', 'beobeboi91', 2013, 0, '', '', '', 0, '', 2, 'beobeboi91', 'Y', 9, '', '', '', '01667039939', '', '::1', '', 0, 0, 0, 0, 0, 0),
+(10, 'giangbeoit232222@gmail.com', '$2a$08$Uk32CZFKI5sh1OyP5AaIG.UpcoKThGa9wj2ZXaAurWQ57Qm.uxu4i', '', 'giangbeoit', 'giangbeoit', '', '                                  giangbeoit  ', '', '0', '3eb50c9e6fa88056081daac283b832cf.jpg', 'giangbeoit', 'giangbeoit', '', 'giangbeoitgiangbeoitgiangbeoit', 'giangbeoit232222@gmail.com', 'giangbeoit', '', 'giangbeoit', 1, 'giangbeoit', 'giangbeoit@gmail.com', '', '', '1', '', 'giangbeoit', 2013, 0, '', '', '', 0, '', 3, '', '', 0, '', '', '', '', '', '::1', '', 0, 0, 0, 0, 0, 0),
+(11, 'chipshock@gmail.com', '$2a$08$ZzCyE4QOPjvv.9yNvqvSQ.vi60SlAvC.K2ya7mYUnsgnS7CDH19pi', '', '', '', '', '', '', '', '', '', '', '', '', 'chipshock@gmail.com', '', '', '', 1, '', '', '', '', '1', '', 'Hải Dương', 1386641621, 0, '', '', '', 0, '', 3, 'Đoàn Quang Thắng', 'Y', 12, '', '', '', '0962925599', '', '127.0.0.1', '2013-12-12 20:18:24', 0, 0, 0, 0, 0, 0),
+(12, 'chipchip@gmail.com', '$2a$08$Rh4/wQor6gfS04DS5.KWy.n/ZsRIbN.NGWjs1szogUIYab1TN/EkW', '', '', '', '', '', '', '', '', '', '', '', '', 'chipchip@gmail.com', '', '', '', 1, '', '', '', '', '1', '', 'Hải Dương', 1386815781, 0, '', '', '', 0, '', 2, 'Đào Đức Tiến', 'Y', 12, '', '', '', '0962925599', '', '127.0.0.1', '2013-12-12 20:21:54', 0, 0, 0, 0, 0, 0);
 
 -- --------------------------------------------------------
 
