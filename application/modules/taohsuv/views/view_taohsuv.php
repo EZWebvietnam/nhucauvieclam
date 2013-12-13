@@ -1,66 +1,70 @@
-<div id="user-menu">
+<?php
+if ($is_login == 1) {
+    ?>
+    <div id="user-menu">
 
-    <div class="GridInfo">
-        <div class="Content">
+        <div class="GridInfo">
+            <div class="Content">
 
-            <ul class="UserMenu">
-                <li>
-                    <a href="<?php echo base_url(); ?>quanly-timviec/<?php echo $taohsuv_detail[0]['u_id'] ?>">Quản lý tìm việc</a>
-                </li>
+                <ul class="UserMenu">
+                    <li>
+                        <a href="<?php echo base_url(); ?>quanly-timviec/<?php echo $this->session->userdata['u_id']; ?>">Quản lý tìm việc</a>
+                    </li>
 
-                <li class="Separator">
-                    |
-                </li>
+                    <li class="Separator">
+                        |
+                    </li>
 
-                <li>
-                    <a href="<?php echo base_url(); ?>hsda-dang/<?php echo $taohsuv_detail[0]['u_id'] ?>">Hồ Sơ đã đăng</a>
-                </li>
+                    <li>
+                        <a href="<?php echo base_url(); ?>hsda-dang/<?php echo $this->session->userdata['u_id']; ?>">Hồ Sơ đã đăng</a>
+                    </li>
 
-                <li class="Separator">
-                    |
-                </li>
+                    <li class="Separator">
+                        |
+                    </li>
 
-                <li>
-                    <a href="<?php echo base_url(); ?>tao-hsungvien/<?php echo $taohsuv_detail[0]['u_id'] ?>">Tạo HS tìm việc</a>
-                </li>
+                    <li>
+                        <a href="<?php echo base_url(); ?>tao-hsungvien/<?php echo $this->session->userdata['u_id']; ?>">Tạo HS tìm việc</a>
+                    </li>
 
-                <li class="Separator">
-                    |
-                </li>
+                    <li class="Separator">
+                        |
+                    </li>
 
-                <li>
-                    <a href="<?php echo base_url(); ?>daluu/<?php echo $taohsuv_detail[0]['u_id'] ?>">Việc làm đã Lưu</a>
-                </li>
+                    <li>
+                        <a href="<?php echo base_url(); ?>daluu/<?php echo $this->session->userdata['u_id']; ?>">Việc làm đã Lưu</a>
+                    </li>
 
-                <li class="Separator">
-                    |
-                </li>
+                    <li class="Separator">
+                        |
+                    </li>
 
-                <li>
-                    <a href="<?php echo base_url(); ?>da-ung-tuyen/<?php echo $taohsuv_detail[0]['u_id'] ?>">Việc làm đã ứng tuyển</a>
-                </li>
+                    <li>
+                        <a href="<?php echo base_url(); ?>da-ung-tuyen/<?php echo $this->session->userdata['u_id']; ?>">Việc làm đã ứng tuyển</a>
+                    </li>
 
-                <li class="Separator">
-                    |
-                </li>
+                    <li class="Separator">
+                        |
+                    </li>
 
-                <li>
-                    <a href="<?php echo base_url(); ?>cv/<?php echo $taohsuv_detail[0]['u_id'] ?>">Hồ sơ cá nhân(CV)</a>
-                </li>
+                    <li>
+                        <a href="<?php echo base_url(); ?>cv/<?php echo $this->session->userdata['u_id']; ?>">Hồ sơ cá nhân(CV)</a>
+                    </li>
 
-                <li class="Separator">
-                    |
-                </li>
+                    <li class="Separator">
+                        |
+                    </li>
 
-                <li>
-                    <a href="<?php echo base_url(); ?>thongtin-canhan/<?php echo $taohsuv_detail[0]['u_id'] ?>">Thông tin cá nhân</a>
-                </li>
+                    <li>
+                        <a href="<?php echo base_url(); ?>thongtin-canhan/<?php echo $this->session->userdata['u_id']; ?>">Thông tin cá nhân</a>
+                    </li>
 
-            </ul>
-            <div class="Clear"></div>
+                </ul>
+                <div class="Clear"></div>
+            </div>
         </div>
     </div>
-</div>
+<?php } ?>
 <div name="div_ntv_quan_tri_cap_nhat_tin_tim_viec" id="div_ntv_quan_tri_cap_nhat_tin_tim_viec">
     <div class="colLeft-QT">
         <form name="form_cap_nhat_tin_tv" id="form_cap_nhat_tin_tv" action="" method="post" onsubmit="" enctype="multipart/form-data">

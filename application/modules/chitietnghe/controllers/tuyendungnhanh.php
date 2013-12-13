@@ -20,7 +20,6 @@ class Tuyendungnhanh extends CI_Controller
             
         } else {
             $data['is_login'] = 0;
-            redirect('/');
         }
        
         if($this->session->userdata('u_id'))
@@ -80,11 +79,7 @@ class Tuyendungnhanh extends CI_Controller
         {
             redirect($_SERVER['HTTP_REFERER']);
         }
-        $data['tintimviec_detail']= $this->tuyendungnhanh_up->tintimviec_post($id);
-        if(empty($data['tintimviec_detail']))
-        {
-            redirect($_SERVER['HTTP_REFERER']);
-        }        
+           
         $data['main_content']='view_timviecnhanh';
         $this->load->view('home/chitietnghe_layout',$data);
     }

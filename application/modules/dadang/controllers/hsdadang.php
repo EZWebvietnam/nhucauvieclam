@@ -20,10 +20,7 @@ class Hsdadang extends MY_Controller
             $this->data['is_login'] = 0;
             redirect('/');
         }
-        if($this->session->userdata('u_role')==3)
-        {
-            redirect('/');
-        }
+        
         if($this->session->userdata('u_id'))
         {
                 $u_id = $this->session->userdata('u_id');
@@ -33,10 +30,7 @@ class Hsdadang extends MY_Controller
                 $u_id = 0;
             }        
         $this->data['hsdangdang_detail']= $this->tindadang_post->hsdadang_detail($u_id);
-        if(empty($this->data['hsdangdang_detail']))
-        {
-            redirect($_SERVER['HTTP_REFERER']);
-        }
+        
         $this->data['main_content']='view_hsdadang';
         $this->load->view('home/hsdadang_layout',  $this->data);
     }

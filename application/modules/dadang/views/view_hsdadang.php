@@ -1,66 +1,70 @@
-<div id="user-menu">
+<?php
+if ($is_login == 1) {
+    ?>
+    <div id="user-menu">
 
-    <div class="GridInfo">
-        <div class="Content">
+        <div class="GridInfo">
+            <div class="Content">
 
-            <ul class="UserMenu">
-                <li>
-                    <a href="<?php echo base_url(); ?>quanly-timviec/<?php echo $hsdangdang_detail[0]['u_id'] ?>">Quản lý tìm việc</a>
-                </li>
+                <ul class="UserMenu">
+                    <li>
+                        <a href="<?php echo base_url(); ?>quanly-timviec/<?php echo $this->session->userdata['u_id']; ?>">Quản lý tìm việc</a>
+                    </li>
 
-                <li class="Separator">
-                    |
-                </li>
+                    <li class="Separator">
+                        |
+                    </li>
 
-                <li>
-                    <a href="<?php echo base_url(); ?>hsda-dang/<?php echo $hsdangdang_detail[0]['u_id'] ?>">Hồ Sơ đã đăng</a>
-                </li>
+                    <li>
+                        <a href="<?php echo base_url(); ?>hsda-dang/<?php echo $this->session->userdata['u_id']; ?>">Hồ Sơ đã đăng</a>
+                    </li>
 
-                <li class="Separator">
-                    |
-                </li>
+                    <li class="Separator">
+                        |
+                    </li>
 
-                <li>
-                    <a href="<?php echo base_url(); ?>tao-hsungvien/<?php echo $hsdangdang_detail[0]['u_id'] ?>">Tạo HS tìm việc</a>
-                </li>
+                    <li>
+                        <a href="<?php echo base_url(); ?>tao-hsungvien/<?php echo $this->session->userdata['u_id']; ?>">Tạo HS tìm việc</a>
+                    </li>
 
-                <li class="Separator">
-                    |
-                </li>
+                    <li class="Separator">
+                        |
+                    </li>
 
-                <li>
-                    <a href="<?php echo base_url(); ?>daluu/<?php echo $hsdangdang_detail[0]['u_id'] ?>">Việc làm đã Lưu</a>
-                </li>
+                    <li>
+                        <a href="<?php echo base_url(); ?>daluu/<?php echo $this->session->userdata['u_id']; ?>">Việc làm đã Lưu</a>
+                    </li>
 
-                <li class="Separator">
-                    |
-                </li>
+                    <li class="Separator">
+                        |
+                    </li>
 
-                <li>
-                    <a href="<?php echo base_url(); ?>da-ung-tuyen/<?php echo $hsdangdang_detail[0]['u_id'] ?>">Việc làm đã ứng tuyển</a>
-                </li>
+                    <li>
+                        <a href="<?php echo base_url(); ?>da-ung-tuyen/<?php echo $this->session->userdata['u_id']; ?>">Việc làm đã ứng tuyển</a>
+                    </li>
 
-                <li class="Separator">
-                    |
-                </li>
+                    <li class="Separator">
+                        |
+                    </li>
 
-                <li>
-                    <a href="<?php echo base_url(); ?>cv/<?php echo $hsdangdang_detail[0]['u_id'] ?>">Hồ sơ cá nhân(CV)</a>
-                </li>
+                    <li>
+                        <a href="<?php echo base_url(); ?>cv/<?php echo $this->session->userdata['u_id']; ?>">Hồ sơ cá nhân(CV)</a>
+                    </li>
 
-                <li class="Separator">
-                    |
-                </li>
+                    <li class="Separator">
+                        |
+                    </li>
 
-                <li>
-                    <a href="<?php echo base_url(); ?>thongtin-canhan/<?php echo $hsdangdang_detail[0]['u_id'] ?>">Thông tin cá nhân</a>
-                </li>
+                    <li>
+                        <a href="<?php echo base_url(); ?>thongtin-canhan/<?php echo $this->session->userdata['u_id']; ?>">Thông tin cá nhân</a>
+                    </li>
 
-            </ul>
-            <div class="Clear"></div>
+                </ul>
+                <div class="Clear"></div>
+            </div>
         </div>
     </div>
-</div>
+<?php } ?>
 <div class="content-qlhs">
     <input type="hidden" name="dang_xu_ly" id="dang_xu_ly" value="0">
     <div>
@@ -104,35 +108,40 @@
 
                         <input type="hidden" name="gia_han_2444325" id="gia_han_2444325" value="3">
                         <input type="hidden" name="lam_moi_2444325" id="lam_moi_2444325" value="1000">
+                        <?php 
+                        foreach($hsdangdang_detail as $detail_hs)
+                        {
+                        ?>
                         <tr style="">
                             <td class="tb-row-W" align="center">
                                 <input type="checkbox" name="checkbox_ttv[]" id="checkbox_ttv[0]" value="2444325">
                             </td>
-                            <td class="tb-row-W" align="center"><?php echo $hsdangdang_detail[0]['j_id']; ?></td>
+                            <td class="tb-row-W" align="center"><?php echo $detail_hs['j_id']; ?></td>
                             <td class="tb-row-W">
                                 <div class="cumTT-tieude">
                                     <b class="textRed11"> <a href="/nha-tuyen-dung/it-phan-mem/nhan-vien-it-c74p0id2444325.html" target="_blank" title="Nhân Viên IT" class="textRed11"><?php echo $hsdangdang_detail[0]['j_title']; ?></a> </b>
                                     <br>
-                                    <span style="font-size: 11px;"><?php echo $list_cate_job[$hsdangdang_detail[0]['m_id']]['m_name']; ?></span>
+                                    <span style="font-size: 11px;"><?php echo $list_cate_job[$detail_hs['m_id']]['m_name']; ?></span>
                                     <br>                             
                                 </div></td>
-                            <td class="tb-row-W" align="center"><?php echo date('d/m/Y', $hsdangdang_detail[0]['j_update']); ?>
+                            <td class="tb-row-W" align="center"><?php echo date('d/m/Y', $detail_hs['j_update']); ?>
                                 <br>
                                 (Số lần làm mới còn lại: <span class="textRed11">1000</span>) </td>
-                            <td class="tb-row-W" align="center"> <?php echo date('d/m/Y', $hsdangdang_detail[0]['j_date']); ?></td>
-                            <td class="tb-row-W" align="center"><?php echo date('d/m/Y', $hsdangdang_detail[0]['j_update']); ?></td>
-                            <td class="tb-row-W" align="center"><?php echo date('d/m/Y', $hsdangdang_detail[0]['j_lastdate']); ?>
+                            <td class="tb-row-W" align="center"> <?php echo date('d/m/Y', $detail_hs['j_date']); ?></td>
+                            <td class="tb-row-W" align="center"><?php echo date('d/m/Y', $detail_hs['j_update']); ?></td>
+                            <td class="tb-row-W" align="center"><?php echo date('d/m/Y', $detail_hs['j_lastdate']); ?>
                             </td>
                             <td class="tb-row-W"><span class="textRed11"></span></td>
                             <td class="tb-row-W">
                                 <div class="borderBot padTop5">
-                                    <a href="<?php echo base_url(); ?>hoso-ungvien/<?php echo $hsdangdang_detail[0]['j_id']; ?>" target="_blank" title="Xem thông tin chi tiết tin tìm việc">Xem</a> |
-                                    <a href="<?php echo base_url(); ?>hoso-ungvien/<?php echo $hsdangdang_detail[0]['j_id']; ?>" title="">Sửa</a> | <a href='javascript: if (dat_trang_thai_dang_xu_ly()) {ntv_quan_tri_doi_trang_thai_1_ttv(2444325,"xoa_tam"); }' title="Xoá tạm hồ sơ">Xóa</a>
+                                    <a href="<?php echo base_url(); ?>hoso-ungvien/<?php echo $detail_hs['j_id']; ?>" target="_blank" title="Xem thông tin chi tiết tin tìm việc">Xem</a> |
+                                    <a href="<?php echo base_url(); ?>hoso-ungvien/<?php echo $detail_hs['j_id']; ?>" title="">Sửa</a> | <a href='javascript: if (dat_trang_thai_dang_xu_ly()) {ntv_quan_tri_doi_trang_thai_1_ttv(2444325,"xoa_tam"); }' title="Xoá tạm hồ sơ">Xóa</a>
                                 </div>
                                 <div class="padTop5">
                                     <a href="javascript: if (dat_trang_thai_dang_xu_ly()) {ntv_quan_tri_gia_han_1_ttv(2281716,2444325); }" title="">Gia hạn</a>
                                 </div></td>
                         </tr>
+                        <?php } ?>
                         </tbody>
                     </table>
                     <table width="100%" class="padTop10">

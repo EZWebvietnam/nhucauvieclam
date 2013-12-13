@@ -34,10 +34,7 @@ class Tddaluu extends MY_Controller
                 $u_id = 0;
             }
         $this->data['tddaluu_detail']= $this->daluu_post->load_post($u_id);
-        if(empty($this->data['tddaluu_detail']))
-        {
-            redirect($_SERVER['HTTP_REFERER']);
-        }
+        
         $this->data['main_content']='view_tddaluu';
         $this->load->view('home/daluu_layout',  $this->data);
     }

@@ -150,10 +150,10 @@ class Maillinux {
         $headers.="From: $from\nX-Mailer: " . $fromfullname . "\r\n";
         $headers .="Mime-Version: 1.0\r\n";
         $headers .="Content-type: text/html; charset=utf-8\r\n";
-        $smtp_host = 'smtp.nhucauvieclam.net'; //Dia chi mail server
-        $admin_email = 'thangdq@nhucauvieclam.net'; //User duoc khai bao tren mail server
-        $smtp_username = 'thangdq@nhucauvieclam.net'; //User duoc khai bao tren mail server
-        $smtp_password = 'thangdq123'; //Pass cua email nay
+        $smtp_host = 'mail.baoveantam.com'; //Dia chi mail server
+        $admin_email = 'no-reply@nhucauvieclam.net'; //User duoc khai bao tren mail server
+        $smtp_username = 'no-reply@nhucauvieclam.net'; //User duoc khai bao tren mail server
+        $smtp_password = 'no-reply123'; //Pass cua email nay
         $result = $this->smtpmail($tomail, $subject, $message, $headers, $smtp_host, $smtp_username, $smtp_password, $admin_email);
     }
 }

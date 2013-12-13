@@ -1,11 +1,14 @@
-<div id="user-menu">
+<?php
+if ($is_login == 1) {
+    ?>
+    <div id="user-menu">
 
         <div class="GridInfo">
             <div class="Content">
 
                 <ul class="UserMenu">
                     <li>
-                        <a href="<?php echo base_url(); ?>quanly-timviec/<?php echo $info_tintd_detail[0]['u_id'] ?>">Quản lý tìm việc</a>
+                        <a href="<?php echo base_url(); ?>quanly-timviec/<?php echo $this->session->userdata['u_id']; ?>">Quản lý tìm việc</a>
                     </li>
 
                     <li class="Separator">
@@ -13,7 +16,7 @@
                     </li>
 
                     <li>
-                        <a href="<?php echo base_url(); ?>hsda-dang/<?php echo $info_tintd_detail[0]['u_id'] ?>">Hồ Sơ đã đăng</a>
+                        <a href="<?php echo base_url(); ?>hsda-dang/<?php echo $this->session->userdata['u_id']; ?>">Hồ Sơ đã đăng</a>
                     </li>
 
                     <li class="Separator">
@@ -21,7 +24,7 @@
                     </li>
 
                     <li>
-                        <a href="<?php echo base_url(); ?>tao-hsungvien/<?php echo $info_tintd_detail[0]['u_id'] ?>">Tạo HS tìm việc</a>
+                        <a href="<?php echo base_url(); ?>tao-hsungvien/<?php echo $this->session->userdata['u_id']; ?>">Tạo HS tìm việc</a>
                     </li>
 
                     <li class="Separator">
@@ -29,7 +32,7 @@
                     </li>
 
                     <li>
-                        <a href="<?php echo base_url(); ?>daluu/<?php echo $info_tintd_detail[0]['u_id'] ?>">Việc làm đã Lưu</a>
+                        <a href="<?php echo base_url(); ?>daluu/<?php echo $this->session->userdata['u_id']; ?>">Việc làm đã Lưu</a>
                     </li>
 
                     <li class="Separator">
@@ -37,7 +40,7 @@
                     </li>
 
                     <li>
-                        <a href="<?php echo base_url(); ?>da-ung-tuyen/<?php echo $info_tintd_detail[0]['u_id'] ?>">Việc làm đã ứng tuyển</a>
+                        <a href="<?php echo base_url(); ?>da-ung-tuyen/<?php echo $this->session->userdata['u_id']; ?>">Việc làm đã ứng tuyển</a>
                     </li>
 
                     <li class="Separator">
@@ -45,7 +48,7 @@
                     </li>
 
                     <li>
-                        <a href="<?php echo base_url(); ?>cv/<?php echo $info_tintd_detail[0]['u_id'] ?>">Hồ sơ cá nhân(CV)</a>
+                        <a href="<?php echo base_url(); ?>cv/<?php echo $this->session->userdata['u_id']; ?>">Hồ sơ cá nhân(CV)</a>
                     </li>
 
                     <li class="Separator">
@@ -53,7 +56,7 @@
                     </li>
 
                     <li>
-                        <a href="<?php echo base_url(); ?>thongtin-canhan/<?php echo $info_tintd_detail[0]['u_id'] ?>">Thông tin cá nhân</a>
+                        <a href="<?php echo base_url(); ?>thongtin-canhan/<?php echo $this->session->userdata['u_id']; ?>">Thông tin cá nhân</a>
                     </li>
 
                 </ul>
@@ -61,6 +64,7 @@
             </div>
         </div>
     </div>
+<?php } ?>
 <div id="content-detail">
     Đăng bởi: <a href="/vieclam/congty/2592848/cty-tnhh-cuu-long-giang-company.html" target="_blank"><?php echo $info_tintd_detail[0]['u_companyName']; ?></a>
     <div class="HighBlank"></div>
