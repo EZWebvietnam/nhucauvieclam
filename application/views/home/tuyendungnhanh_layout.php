@@ -719,7 +719,7 @@ base_url(); ?>template/home/img/slider8.png" alt="" title="nhan luc chat luong">
 
                                                                                 <?php
                                                                                 $i = 1;
-                                                                                foreach ($list_city as $city_cate) {
+                                                                                foreach ($list_city_1 as $city_cate) {
 
                                                                                     if ($i % 3 == 1) {
                                                                                         ?>
