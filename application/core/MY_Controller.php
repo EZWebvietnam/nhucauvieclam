@@ -103,4 +103,12 @@ class MY_Controller extends CI_Controller
         $this->load->model('chitietnghe/tuyendungnhanh_up');
         $this->data['list_loaitn']=$this->tuyendungnhanh_up->get_loaitn();   
     }
+     public function load_city_1()
+    {
+        $this->load->model('chitietnghe/tuyendungnhanh_up');
+        $list_city = $this->tuyendungnhanh_up->get_city();
+        
+        $this->data['list_city_1']=$list_city;
+        
+    }
 }

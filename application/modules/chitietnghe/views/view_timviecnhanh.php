@@ -196,7 +196,7 @@
                             Ngày hết hạn </th>
                     </tr>
                     <?php 
-                     foreach ($tintimviec_detail as $tin_tuyen_dung)
+                     foreach ($uvsanggia_detail as $tin_tuyen_dung)
                      {
                          ?>                     
                     <tr class="Even">

@@ -82,16 +82,9 @@ class Tuyendungnhanh extends CI_Controller
             redirect($_SERVER['HTTP_REFERER']);
         }
         $data['uvsanggia_detail']= $this->tuyendungnhanh_up->timviec_sanggia();
-        if(empty($data['uvsanggia_detail']))
-        {
-            redirect($_SERVER['HTTP_REFERER']);
-        }
+        
         $data['uvhot_detail']= $this->tuyendungnhanh_up->timviec_hot($id);
-        if(empty($data['uvhot_detail']))
-        {
-            redirect($_SERVER['HTTP_REFERER']);
-        }
-           
+        
         $data['main_content']='view_timviecnhanh';
         $this->load->view('home/chitietnghe_layout',$data);
     }
