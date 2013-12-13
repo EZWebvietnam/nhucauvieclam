@@ -730,43 +730,7 @@ base_url(); ?>template/home/css/slider.css">
                             <strong>Tìm Việc Nhanh thương hiệu nổi tiếng: Tuyển dụng, tìm việc làm, việc làm, tìm kiếm việc làm nhanh, tuyển dụng nhân sự nhanh chóng</strong>
 
                             <div class="HighBlank"></div>
-                            <div id="bottom-hotline">
-                                <div id="bottom-hotline-inner" style="text-align: center">
-                                    <h2 class="float-left">Hotline 24/7</h2>                                    
-                                    <ul>
-                                        <li>
-                                            <table class="table-hotline">
-                                                <tbody width="100%">
-                                                    <tr>
-                                                        <td><span class="Mobile">01676.534.751 </span><span class="Name">Ms.Yến</span></td>
-
-                                                        <td><span class="Mobile">01685.455.381 </span><span class="Name">Ms.Tình</span></td>
-                                                        <td><span class="Mobile">0979.368.313 </span><span class="Name">Ms.Khoa</span></td>
-                                                        <td><span class="Mobile">01656.134.306 </span><span class="Name">Ms.Thoa</span></td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td><span class="Mobile">01656.244.327 </span><span class="Name">Ms.Tâm</span></td>
-                                                        
-                                                        <td><span class="Mobile">01642.446.754 </span><span class="Name">Ms.Yên</span></td>
-
-                                                        <td><span class="Mobile">01278.789.987 </span><span class="Name">Ms.Khuê</span></td>
-                                                        <td><span class="Mobile">0962925599 </span><span class="Name">Mr.Thắng</span></td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td><span class="Mobile">01689.952.759 </span><span class="Name">Ms.Khuê</span></td>
-                                                        
-                                                        <td><span class="Mobile">0935.916.420 </span><span class="Name">Mr.Trung</span></td>
-
-                                                        <td><span class="Mobile">0169.533.2638 </span><span class="Name">Ms.Thanh</span></td>
-                                                        <td><span class="Mobile">0932.597.000 </span><span class="Name">Ms.Hiếu</span></td>
-                                                    </tr>
-                                                                                             
-                                            </table>
-                                        </li>
-                                    </ul>
-                                    <div class="Clear"></div>
-                                </div>
-                            </div>
+                            
 
                             <div class="Blank"></div>
                             <div id="fb-container">

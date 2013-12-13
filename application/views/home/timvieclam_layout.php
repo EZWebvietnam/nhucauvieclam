@@ -1505,39 +1505,6 @@ base_url(); ?>template/home/img/slider8.png" alt="" title="nhan luc chat luong">
                                 </div>
                             </div><div style="position: absolute; width: 9999px; visibility: hidden; display: none;"></div>
                         </div><iframe name="oauth2relay583766969" id="oauth2relay583766969" src="https://accounts.google.com/o/oauth2/postmessageRelay?parent=http%3A%2F%2Fwww.timviecnhanh.com#rpctoken=259258227&amp;forcesecure=1" style="width: 1px; height: 1px; position: absolute; top: -100px;"></iframe>
-                    <div class="barhotline">
-            <table class="table-barhotline">
-                <tr>
-                    <td><img src="<?php echo base_url(); ?>template/home/img/hotline.png" style="width: 25px;height: 25px;">Ms.Tình</td>                    
-                </tr>
-                <tr>
-                    <td class="line-hotline">01685.455.381</td>
-                </tr>
-                <tr>
-                    <td><img src="<?php echo base_url(); ?>template/home/img/hotline.png" style="width: 25px;height: 25px;">Ms.Yến</td>                    
-                </tr>
-                <tr>
-                    <td class="line-hotline">01676.534.751</td>
-                </tr>
-                <tr>
-                    <td><img src="<?php echo base_url(); ?>template/home/img/hotline.png" style="width: 25px;height: 25px;">Ms.Tâm</td>                    
-                </tr>
-                <tr>
-                    <td class="line-hotline">01656.244.327</td>
-                </tr>
-                <tr>
-                    <td><img src="<?php echo base_url(); ?>template/home/img/hotline.png" style="width: 25px;height: 25px;">Ms.Thoa</td>                    
-                </tr>
-                <tr>
-                    <td class="line-hotline">01656.134.306</td>
-                </tr>
-                <tr>
-                    <td><img src="<?php echo base_url(); ?>template/home/img/hotline.png" style="width: 25px;height: 25px;">Ms.Yên</td>                    
-                </tr>
-                <tr>
-                    <td class="line-hotline">01642.446.754</td>
-                </tr>
-            </table>            
-        </div>
+                    
                     </body>
                     </html>

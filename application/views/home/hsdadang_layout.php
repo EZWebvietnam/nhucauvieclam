@@ -869,39 +869,6 @@ base_url(); ?>template/home/img/slider8.png" alt="" title="nhan luc chat luong">
                                     </div>
                                 </div><div style="position: absolute; width: 9999px; visibility: hidden; display: none;"></div>
                             </div><div id="ui-datepicker-div" class="ui-datepicker ui-widget ui-widget-content ui-helper-clearfix ui-corner-all"></div>
-                            <div class="barhotline">
-                                <table class="table-barhotline">
-                                    <tr>
-                                        <td><img src="<?php echo base_url(); ?>template/home/img/hotline.png" style="width: 25px;height: 25px;">Ms.Tình</td>                    
-                                    </tr>
-                                    <tr>
-                                        <td class="line-hotline">01685.455.381</td>
-                                    </tr>
-                                    <tr>
-                                        <td><img src="<?php echo base_url(); ?>template/home/img/hotline.png" style="width: 25px;height: 25px;">Ms.Yến</td>                    
-                                    </tr>
-                                    <tr>
-                                        <td class="line-hotline">01676.534.751</td>
-                                    </tr>
-                                    <tr>
-                                        <td><img src="<?php echo base_url(); ?>template/home/img/hotline.png" style="width: 25px;height: 25px;">Ms.Tâm</td>                    
-                                    </tr>
-                                    <tr>
-                                        <td class="line-hotline">01656.244.327</td>
-                                    </tr>
-                                    <tr>
-                                        <td><img src="<?php echo base_url(); ?>template/home/img/hotline.png" style="width: 25px;height: 25px;">Ms.Thoa</td>                    
-                                    </tr>
-                                    <tr>
-                                        <td class="line-hotline">01656.134.306</td>
-                                    </tr>
-                                    <tr>
-                                        <td><img src="<?php echo base_url(); ?>template/home/img/hotline.png" style="width: 25px;height: 25px;">Ms.Yên</td>                    
-                                    </tr>
-                                    <tr>
-                                        <td class="line-hotline">01642.446.754</td>
-                                    </tr>
-                                </table>            
-                            </div>
+                            
                     </body>
                     </html>
