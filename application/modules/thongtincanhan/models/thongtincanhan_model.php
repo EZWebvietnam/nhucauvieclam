@@ -8,7 +8,6 @@ class Thongtincanhan_model extends CI_Model
     public function save_info($id,array $data)
     {
         $id = intval($id);
-   
         $this->db->where('u_id',$id);
         $this->db->update('tbl_job_user',$data);
     }

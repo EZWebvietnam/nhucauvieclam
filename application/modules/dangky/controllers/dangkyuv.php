@@ -41,7 +41,7 @@ class Dangkyuv extends CI_Controller
                 'u_username' => $this->form_validation->set_value('email'),
                 'u_password' => $this->form_validation->set_value('password'),
                 'u_email' => $this->form_validation->set_value('email'),
-                'u_birthday' => $this->form_validation->set_value('c_birthday'),
+                'u_birthday' => strtotime(''.$this->form_validation->set_value('c_birthday')),
                 'u_sex' => $this->input->post('c_sex'),
                 'u_adress' => $this->form_validation->set_value('c_address'),
                 'u_cityID' => $this->input->post('c_city'),
