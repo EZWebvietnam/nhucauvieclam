@@ -13,6 +13,9 @@ class Dangkytd extends CI_Controller
     }
     public function dangky_td()
     {
+        $this->load->model('chitietnghe/tuyendungnhanh_up');
+        $list_city = $this->tuyendungnhanh_up->get_city();
+        $data['list_city']=$list_city;
         $active = true;
         $location = 'home';
         if ($this->tank_auth->is_logged_in($active, $location)) {

@@ -209,11 +209,11 @@
                         ?>                     
                         <tr class="Even">
                             <td><a href="<?php echo base_url(); ?>tin-tuyen-dung/<?php echo $tin_tuyen_dung['e_id']; ?>-<?php echo mb_strtolower(url_title(removesign($tin_tuyen_dung['e_title']))) ?>" class="NormalJob"><?php echo $tin_tuyen_dung['e_title']; ?></a><div class="Blank"></div><a href="/vieclam/congty/2552602/cong-ty-tnhh-tm-dv-xd-hiep-phat.html" class="VipEmployer"><?php echo $tin_tuyen_dung['u_companyName']; ?></a></td>
-                            <td class="Nowrap"><?php echo $list_bangcap[$tin_tuyen_dung['e_trinhdo']]['bang_name']; ?>
+                            <td class="Nowrap"><?php echo $list_bangcap[$tin_tuyen_dung['e_trinhdo']]; ?>
                                 <br>
-                                <?php echo $list_exp[$tin_tuyen_dung['e_kinhnghiem']]['exp_name']; ?></td>
-                            <td class="Nowrap"><?php echo $list_luong[$tin_tuyen_dung['e_luong']]['luong_name']; ?></td>
-                            <td class="Nowrap"><?php echo $list_city[$tin_tuyen_dung['e_cityID']]['n_name']; ?>
+                                <?php echo $list_exp[$tin_tuyen_dung['e_kinhnghiem']]; ?></td>
+                            <td class="Nowrap"><?php echo $list_luong[$tin_tuyen_dung['e_luong']]; ?></td>
+                            <td class="Nowrap"><?php echo $list_city[$tin_tuyen_dung['e_cityID']]; ?>
 
                             </td>
                             <td class="Nowrap"><?php echo date('d/m/Y', $tin_tuyen_dung['e_dateActive']); ?><br>

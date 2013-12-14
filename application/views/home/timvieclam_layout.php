@@ -798,7 +798,7 @@ base_url(); ?>template/home/img/slider8.png" alt="" title="nhan luc chat luong">
                                                                                         <td width="33%">
                                                                                             <ul>
                                                                                                 <li>
-                                                                                                    <a href="<?php echo base_url(); ?>nganh-nghe/<?php echo $city_cate['n_id'] ?>-<?php echo mb_strtolower(url_title(removesign($city_cate['n_name']))) ?>"  title="<?php echo $city_cate['n_name'] ?>" target="_blank"> <?php echo $city_cate['n_name'] ?> </a>
+                                                                                                    <a href="<?php echo base_url(); ?>thanh-pho/<?php echo $city_cate['n_id'] ?>-<?php echo mb_strtolower(url_title(removesign($city_cate['n_name']))) ?>"  title="<?php echo $city_cate['n_name'] ?>" target="_blank"> <?php echo $city_cate['n_name'] ?> </a>
                                                                                                 </li>
                                                                                             </ul>
                                                                                         </td>

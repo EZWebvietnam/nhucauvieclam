@@ -13,6 +13,9 @@ class Dangkyuv extends CI_Controller
     
     public function dangky_uv()
     {   
+        $this->load->model('chitietnghe/tuyendungnhanh_up');
+        $list_city = $this->tuyendungnhanh_up->get_city();
+        $data['list_city']=$list_city;
         $active = true;
         $location = 'home';
         if ($this->tank_auth->is_logged_in($active, $location)) {
@@ -48,6 +51,7 @@ class Dangkyuv extends CI_Controller
                 'u_mobi' => $this->input->post('c_mobi'),
                 'u_role' => 2,
                 'u_fullname' => $this->form_validation->set_value('c_fullname'),
+                'is_mail'=>$this->input->post('radio'),
                 'u_redate'=>strtotime('now')
                 );
 

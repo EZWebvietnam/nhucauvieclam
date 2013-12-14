@@ -89,6 +89,7 @@ class MY_Controller extends CI_Controller
             $array[$luong['luong_id']] = $luong['luong_name'];
         }
         $this->data['list_luong']=$array;   
+       
     }
     public function load_exp()
     {
