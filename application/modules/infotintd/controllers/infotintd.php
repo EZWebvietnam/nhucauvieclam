@@ -4,6 +4,7 @@ class Infotintd extends MY_Controller{
         parent::__construct();
         $this->load->model('info_tintd');
         $this->load->library('tank_auth');
+       
     }
     public function view_job_post($id)
     {   
@@ -27,11 +28,11 @@ class Infotintd extends MY_Controller{
         if($this->session->userdata('u_id'))
         {
                 $u_id = $this->session->userdata('u_id');
-            }
-            else
-            {
+        }
+        else
+        {
                 $u_id = 0;
-            }
+        }
         $this->data['info_tintd_detail']= $this->info_tintd->load_job($id);
         if(empty($this->data['info_tintd_detail']))
         {
@@ -40,15 +41,6 @@ class Infotintd extends MY_Controller{
         $this->data['main_content']='view_infotintd';
         $this->load->view('home/infotintd_layout',  $this->data);
     }
-//    public function view_user_post($id = null)
-//    {
-//        $data['info_td_detail']= $this->info_tintd->load_job($id);
-//        if(empty($data['info_td_detail']))
-//        {
-//            redirect($_SERVER['HTTP_REFERER']);
-//        }
-//        $data['main_content']='view_infotd';
-//        $this->load->view('home/infotintd_layout',$data);
-//    }
+
 }
 ?>

@@ -34,10 +34,7 @@ class Daungtuyen extends MY_Controller
                 $u_id = 0;
             }
             $this->data['ungtuyen_detail']= $this->daungtuyen_post->load_post($u_id);
-        if(empty($this->data['ungtuyen_detail']))
-        {
-            redirect($_SERVER['HTTP_REFERER']);
-        }
+        
         $this->data['main_content']='view_daungtuyen';
         $this->load->view('home/daungtuyen_layout',  $this->data);
     }

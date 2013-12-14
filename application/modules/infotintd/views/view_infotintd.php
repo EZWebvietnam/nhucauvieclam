@@ -1,70 +1,118 @@
-<?php
-if ($is_login == 1) {
-    ?>
-    <div id="user-menu">
+<?php 
+                                        if($is_login == 1)
+                                        {
+                                        if($this->session->userdata['u_role']==2)
+                                        {
+                                        ?>
+                                        <div id="user-menu">
 
-        <div class="GridInfo">
-            <div class="Content">
+                                            <div class="GridInfo">
+                                                <div class="Content">
 
-                <ul class="UserMenu">
-                    <li>
-                        <a href="<?php echo base_url(); ?>quanly-timviec/<?php echo $this->session->userdata['u_id']; ?>">Quản lý tìm việc</a>
-                    </li>
+                                                    <ul class="UserMenu">
+                                                        <li>
+                                                            <a href="<?php echo base_url(); ?>quanly-timviec">Quản lý tìm việc</a>
+                                                        </li>
 
-                    <li class="Separator">
-                        |
-                    </li>
+                                                        <li class="Separator">
+                                                            |
+                                                        </li>
 
-                    <li>
-                        <a href="<?php echo base_url(); ?>hsda-dang/<?php echo $this->session->userdata['u_id']; ?>">Hồ Sơ đã đăng</a>
-                    </li>
+                                                        <li>
+                                                            <a href="<?php echo base_url(); ?>hsda-dang">Hồ Sơ đã đăng</a>
+                                                        </li>
 
-                    <li class="Separator">
-                        |
-                    </li>
+                                                        <li class="Separator">
+                                                            |
+                                                        </li>
 
-                    <li>
-                        <a href="<?php echo base_url(); ?>tao-hsungvien/<?php echo $this->session->userdata['u_id']; ?>">Tạo HS tìm việc</a>
-                    </li>
+                                                        <li>
+                                                            <a href="<?php echo base_url(); ?>tao-hsungvien">Tạo HS tìm việc</a>
+                                                        </li>
 
-                    <li class="Separator">
-                        |
-                    </li>
+                                                        <li class="Separator">
+                                                            |
+                                                        </li>
 
-                    <li>
-                        <a href="<?php echo base_url(); ?>daluu/<?php echo $this->session->userdata['u_id']; ?>">Việc làm đã Lưu</a>
-                    </li>
+                                                        <li>
+                                                            <a href="<?php echo base_url(); ?>daluu">Việc làm đã Lưu</a>
+                                                        </li>
 
-                    <li class="Separator">
-                        |
-                    </li>
+                                                        <li class="Separator">
+                                                            |
+                                                        </li>
 
-                    <li>
-                        <a href="<?php echo base_url(); ?>da-ung-tuyen/<?php echo $this->session->userdata['u_id']; ?>">Việc làm đã ứng tuyển</a>
-                    </li>
+                                                        <li>
+                                                            <a href="<?php echo base_url(); ?>da-ung-tuyen">Việc làm đã ứng tuyển</a>
+                                                        </li>
 
-                    <li class="Separator">
-                        |
-                    </li>
+                                                        <li class="Separator">
+                                                            |
+                                                        </li>
 
-                    <li>
-                        <a href="<?php echo base_url(); ?>cv/<?php echo $this->session->userdata['u_id']; ?>">Hồ sơ cá nhân(CV)</a>
-                    </li>
+                                                        <li>
+                                                            <a href="<?php echo base_url(); ?>cv">Hồ sơ cá nhân(CV)</a>
+                                                        </li>
 
-                    <li class="Separator">
-                        |
-                    </li>
+                                                        <li class="Separator">
+                                                            |
+                                                        </li>
 
-                    <li>
-                        <a href="<?php echo base_url(); ?>thongtin-canhan/<?php echo $this->session->userdata['u_id']; ?>">Thông tin cá nhân</a>
-                    </li>
+                                                        <li>
+                                                            <a href="<?php echo base_url(); ?>thongtin-canhan">Thông tin cá nhân</a>
+                                                        </li>
 
-                </ul>
-                <div class="Clear"></div>
-            </div>
-        </div>
-    </div>
-<?php } ?>
+                                                    </ul>
+                                                    <div class="Clear"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <?php } else {?>
+                                        <div id="user-menu">
+
+                                            <div class="GridInfo">
+                                                <div class="Content">
+
+                                                    <ul class="UserMenu">
+                                                        <li>
+                                                            <a href="<?php echo base_url(); ?>quanly-tuyendung">Quản lý tuyển dụng</a>
+                                                        </li>
+                                                        <li class="Separator">
+                                                            |
+                                                        </li>
+                                                        <li>
+                                                            <a href="<?php echo base_url(); ?>tintd-dadang">Tin TD đã đăng</a>
+                                                        </li>
+                                                        <li class="Separator">
+                                                            |
+                                                        </li>
+                                                        <li>
+                                                            <a href="<?php echo base_url(); ?>tao-tintuyendung">Taọ tin TD mới</a>
+                                                        </li>
+                                                        <li class="Separator">
+                                                            |
+                                                        </li>
+                                                        <li>
+                                                            <a href="<?php echo base_url(); ?>thongtin-ntd">Thông tin NTD</a>
+                                                        </li>
+                                                        <li class="Separator">
+                                                            |
+                                                        </li>
+                                                        <li>
+                                                            <a href="<?php echo base_url(); ?>quanly-hoso-ungvien">Quản lý hồ sơ ứng viên</a>
+                                                        </li>
+                                                        <li class="Separator">
+                                                            |
+                                                        </li>
+                                                        <li>
+                                                            <a href="#">Liên hệ quản cáo</a>
+                                                        </li>
+                                                    </ul>
+                                                    <div class="Clear"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <?php }} ?>
 <div id="content-detail">
     Đăng bởi: <a href="/vieclam/congty/2592848/cty-tnhh-cuu-long-giang-company.html" target="_blank"><?php echo $info_tintd_detail[0]['u_companyName']; ?></a>
     <div class="HighBlank"></div>
@@ -93,17 +141,17 @@ if ($is_login == 1) {
 
                         <tr>
                             <th>Ngành nghề</th>
-                            <td><a href="<?php echo $list_cate_job[$info_tintd_detail[0]['m_id']]['m_name']; ?>" target="_blank"><?php echo $list_cate_job[$info_tintd_detail[0]['m_id']]['m_name']; ?></a>
+                            <td><a href="<?php echo base_url();?>nganh-nghe/<?php echo $info_tintd_detail[0]['m_id']; ?>-<?php echo mb_strtolower(url_title(removesign($list_cate_job[$info_tintd_detail[0]['m_id']]))) ?>" target="_blank"><?php echo $list_cate_job[$info_tintd_detail[0]['m_id']]; ?></a>
                                 <br>                            
                             </td>
                         </tr>
                         <tr>
                             <th>Tính chất công việc</th>
-                            <td><a href="<?php echo $list_time[$info_tintd_detail[0]['e_timeID']]['t_name']; ?>" target="_blank"><?php echo $list_time[$info_tintd_detail[0]['e_timeID']]['t_name']; ?></a></td>
+                            <td><a href="<?php echo base_url();?>search-time/<?php echo $info_tintd_detail[0]['e_timeID']; ?>-<?php echo mb_strtolower(url_title(removesign($list_time[$info_tintd_detail[0]['e_timeID']]))); ?>" target="_blank"><?php echo $list_time[$info_tintd_detail[0]['e_timeID']]; ?></a></td>
                         </tr>
                         <tr>
                             <th>Tỉnh/Thành phố</th>
-                            <td><a href="<?php echo $list_city[$info_tintd_detail[0]['e_cityID']]['n_name']; ?>" target="_blank"><?php echo $list_city[$info_tintd_detail[0]['e_cityID']]['n_name']; ?></a>
+                            <td><a href="<?php echo $list_city[$info_tintd_detail[0]['e_cityID']]; ?>" target="_blank"><?php echo $list_city[$info_tintd_detail[0]['e_cityID']]; ?></a>
                                 <br>
 
                             </td>
@@ -123,19 +171,19 @@ if ($is_login == 1) {
 
                         <tr>
                             <th>Trình độ</th>
-                            <td><?php echo $list_bangcap[$info_tintd_detail[0]['e_trinhdo']]['bang_name']; ?></td>
+                            <td><?php echo $list_bangcap[$info_tintd_detail[0]['e_trinhdo']]; ?></td>
                         </tr>
                         <tr>
                             <th>Kinh nghiệm</th>
-                            <td><?php echo $list_exp[$info_tintd_detail[0]['e_kinhnghiem']]['exp_name']; ?></td>
+                            <td><?php echo $list_exp[$info_tintd_detail[0]['e_kinhnghiem']]; ?></td>
                         </tr>
                         <tr>
                             <th>Mức lương</th>
-                            <td><?php echo $list_luong[$info_tintd_detail[0]['e_luong']]['luong_name']; ?></td>
+                            <td><?php echo $list_luong[$info_tintd_detail[0]['e_luong']]; ?></td>
                         </tr>
                         <tr>
                             <th>Hình thức làm việc</th>
-                            <td><?php echo $list_time[$info_tintd_detail[0]['e_timeID']]['t_name']; ?></td>
+                            <td><?php echo $list_time[$info_tintd_detail[0]['e_timeID']]; ?></td>
                         </tr>
 
                         <tr>
@@ -149,11 +197,11 @@ if ($is_login == 1) {
                         </tr>
                         <tr>
                             <th>Hạn nộp hồ sơ</th>
-                            <td><span class="JobName"><?php echo $info_tintd_detail[0]['e_lastDate']; ?></span></td>
+                            <td><span class="JobName"><?php echo date('d/m/Y',$info_tintd_detail[0]['e_lastDate']); ?></span></td>
                         </tr>
                         <tr>
                             <th></th>
-                            <td><a href="#s-login" title="Nộp hồ sơ" class="ImageLink cboxElement" rel="popup"> <img src="<?php echo base_url(); ?>template/home/img/nop_ho_so.png" alt="Nộp hồ sơ"> </a></td>
+                            <td><a href="<?php echo base_url();?>ung-tuyen-check/<?php echo $info_tintd_detail[0]['e_id']; ?>-<?php echo mb_strtolower(url_title(removesign($info_tintd_detail[0]['e_title']))); ?>" title="Nộp hồ sơ" class="ImageLink cboxElement" rel="popup"> <img src="<?php echo base_url(); ?>template/home/img/nop_ho_so.png" alt="Nộp hồ sơ"> </a></td>
                         </tr>
                     </tbody>
                 </table>
@@ -258,7 +306,7 @@ if ($is_login == 1) {
 
                 <h2><u>Lưu ý</u>: Yêu cầu Ghi rõ bìa hồ sơ và trong hồ sơ gửi đến Nhà tuyển dụng</h2>
 
-                Nguồn thông tin tại nhucauvieclam.net vị trí: <a href="#" class="Readmore"><?php echo $info_tintd_detail[0]['e_title']; ?> - <?php echo $info_tintd_detail[0]['u_companyName']; ?></a>
+                Nguồn thông tin tại nhucauvieclam.net vị trí: <a href="<?php echo $_SERVER['REQUEST_URI']?>" class="Readmore"><?php echo $info_tintd_detail[0]['e_title']; ?> - <?php echo $info_tintd_detail[0]['u_companyName']; ?></a>
 
                 <div class="Blank"></div>
                 Hạn nộp hồ sơ: <span class="JobName"><?php echo date('d/m/Y', $info_tintd_detail[0]['e_lastDate']); ?></span> theo nhucauvieclam.net
@@ -280,12 +328,17 @@ if ($is_login == 1) {
             <div class="BodyLeft">
                 <div class="BodyRight">
                     <ul class="Tool">
+                    <?php 
+                    if($is_login ==1)
+                    {
+                    ?>
                         <li>
                             <a href="#s-login" title="Nộp hồ sơ" rel="popup" class="cboxElement">Nộp hồ sơ</a>
                         </li>
                         <li>
                             <a href="#s-login" title="Lưu công việc" rel="popup" class="cboxElement">Lưu công việc</a>
                         </li>
+                    <?php } ?>
                         <li>
                             <a href="/vieclam/incongviec/2811197" target="_blank">In công việc</a>
                         </li>
@@ -322,65 +375,6 @@ if ($is_login == 1) {
 
         <div class="Blank"></div>
 
-        <div class="Grid">
-            <div class="TopLeft">
-                <div class="TopRight">
-                    <h2 class="Headline">Việc làm đã xem</h2>
-                </div>
-            </div>
-            <div class="BodyLeft">
-                <div class="BodyRight">
-
-                    <ul class="ToolHistory">
-
-                        <li>
-                            <a href="/vieclam/congviec/2790664/nhan-vien-truyen-thong.html" title="Nhân Viên Truyền Thông">Nhân Viên Truyền Thông</a>
-                        </li>
-
-                        <li>
-                            <a href="/vieclam/congviec/2811197/vie-c-la-m-them-cho-sinh-vien.html" title="Việc Làm Thêm Cho Sinh Viên">Việc Làm Thêm Cho Sinh Viên</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-            <div class="BottomLeft">
-                <div class="BottomRight"></div>
-            </div>
-        </div>
-
-        <div class="Blank"></div>
-        <div class="GridInfo">
-            <div class="Content">
-                <div class="Blank"></div>
-                <a href="/vieclam/tags/vie-c-la-m" target="_blank" class="Tags">Việc Làm</a>
-                <a href="/vieclam/tags/them-cho" target="_blank" class="Tags">Thêm Cho</a>
-                <a href="/vieclam/tags/sinh-vien" target="_blank" class="Tags">Sinh Viên</a>
-                <br>
-
-                <a href="/vieclam/tags/ban-hang" target="_blank" class="Tags">Bán hàng</a>
-                <a href="/vieclam/tags/lao-dong-pho-thong" target="_blank" class="Tags">Lao động phổ thông</a>
-                <a href="/vieclam/tags/quang-cao" target="_blank" class="Tags">Quảng cáo</a>
-                <a href="/vieclam/tags/marketing" target="_blank" class="Tags">Marketing</a>
-                <a href="/vieclam/tags/pr" target="_blank" class="Tags">PR</a>
-
-                <a href="/vieclam/tags/viec-lam-them" target="_blank" class="Tags">Việc làm thêm</a>
-                <a href="/vieclam/tags/lam-viec-ngoai-gio" target="_blank" class="Tags">Làm việc ngoài giờ</a>
-
-                <a href="/vieclam/tags/tp-ho-chi-minh" target="_blank" class="Tags">TP.Hồ Chí Minh</a>
-                <a href="/vieclam/tags/binh-duong" target="_blank" class="Tags">Bình Dương</a>
-                <a href="/vieclam/tags/dong-nai" target="_blank" class="Tags">Đồng Nai</a>
-
-                <a href="/vieclam/tags/lao-dong-pho-thong" target="_blank" class="Tags">Lao động phổ thông</a>
-
-                <a href="/vieclam/tags/chua-co-kinh-nghiem" target="_blank" class="Tags">Chưa có kinh nghiệm</a>
-
-                <a href="/vieclam/tags/3-4-trieu" target="_blank" class="Tags">3-4 triệu</a>
-
-                <a href="/vieclam/tags/lam-them-ngoai-gio" target="_blank" class="Tags">Làm thêm ngoài giờ</a>
-
-                <a href="/vieclam/timkiem/nganhnghe:ban-hang/tinhthanhpho:tp-ho-chi-minh/trinhdo:lao-dong-pho-thong/hinhthuclamviec:lam-them-ngoai-gio/mucluong:3-4-trieu" target="_blank" class="Tags">Bán hàng, TP.Hồ Chí Minh, Lao động phổ thông, Làm thêm ngoài giờ, 3-4 triệu</a>
-            </div>
-        </div>
     </div>
     <div class="Blank"></div>
 

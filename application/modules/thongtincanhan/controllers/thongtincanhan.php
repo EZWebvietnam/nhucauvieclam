@@ -5,16 +5,25 @@ class Thongtincanhan extends CI_Controller{
         $this->load->model('thongtincanhan_model');
         $this->load->library('tank_auth');
     }
-    public function index($id = null)
+    public function index()
     {   
         $active = true;
         $location = 'home';
         if ($this->tank_auth->is_logged_in($active, $location)) {
             $data['is_login'] = 1;
+            
         } else {
             $data['is_login'] = 0;
         }
-        $data['info_list']=  $this->thongtincanhan_model->info_detail($id);
+        if($this->session->userdata('u_id'))
+        {
+                $u_id = $this->session->userdata('u_id');
+            }
+            else
+            {
+                $u_id = 0;
+            }
+        $data['info_list']=  $this->thongtincanhan_model->info_detail($u_id);
         if(empty($data['info_list']))
         {
             redirect($_SERVER['HTTP_REFERER']);

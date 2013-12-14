@@ -605,7 +605,12 @@ base_url(); ?>template/home/img/slider8.png" alt="" title="nhan luc chat luong">
                             <div id="content">
                                 <div id="content-bottom">
                                     <div id="content-wrapper">
-
+                                        <?php 
+                                        if($is_login == 1)
+                                        {
+                                        if($this->session->userdata['u_role']==2)
+                                        {
+                                        ?>
                                         <div id="user-menu">
 
                                             <div class="GridInfo">
@@ -613,7 +618,7 @@ base_url(); ?>template/home/img/slider8.png" alt="" title="nhan luc chat luong">
 
                                                     <ul class="UserMenu">
                                                         <li>
-                                                            <a href="<?php echo base_url(); ?>quanly-timviec/<?php echo $info_user[0]['u_id'] ?>">Quản lý tìm việc</a>
+                                                            <a href="<?php echo base_url(); ?>quanly-timviec">Quản lý tìm việc</a>
                                                         </li>
 
                                                         <li class="Separator">
@@ -621,7 +626,7 @@ base_url(); ?>template/home/img/slider8.png" alt="" title="nhan luc chat luong">
                                                         </li>
 
                                                         <li>
-                                                            <a href="<?php echo base_url(); ?>hsda-dang/<?php echo $info_user[0]['u_id'] ?>">Hồ Sơ đã đăng</a>
+                                                            <a href="<?php echo base_url(); ?>hsda-dang">Hồ Sơ đã đăng</a>
                                                         </li>
 
                                                         <li class="Separator">
@@ -629,7 +634,7 @@ base_url(); ?>template/home/img/slider8.png" alt="" title="nhan luc chat luong">
                                                         </li>
 
                                                         <li>
-                                                            <a href="<?php echo base_url(); ?>tao-hsungvien/<?php echo $info_user[0]['u_id'] ?>">Tạo HS tìm việc</a>
+                                                            <a href="<?php echo base_url(); ?>tao-hsungvien">Tạo HS tìm việc</a>
                                                         </li>
 
                                                         <li class="Separator">
@@ -637,7 +642,7 @@ base_url(); ?>template/home/img/slider8.png" alt="" title="nhan luc chat luong">
                                                         </li>
 
                                                         <li>
-                                                            <a href="<?php echo base_url(); ?>daluu/<?php echo $info_user[0]['u_id'] ?>">Việc làm đã Lưu</a>
+                                                            <a href="<?php echo base_url(); ?>daluu">Việc làm đã Lưu</a>
                                                         </li>
 
                                                         <li class="Separator">
@@ -645,7 +650,7 @@ base_url(); ?>template/home/img/slider8.png" alt="" title="nhan luc chat luong">
                                                         </li>
 
                                                         <li>
-                                                            <a href="<?php echo base_url(); ?>da-ung-tuyen/<?php echo $info_user[0]['u_id'] ?>">Việc làm đã ứng tuyển</a>
+                                                            <a href="<?php echo base_url(); ?>da-ung-tuyen">Việc làm đã ứng tuyển</a>
                                                         </li>
 
                                                         <li class="Separator">
@@ -653,7 +658,7 @@ base_url(); ?>template/home/img/slider8.png" alt="" title="nhan luc chat luong">
                                                         </li>
 
                                                         <li>
-                                                            <a href="<?php echo base_url(); ?>cv/<?php echo $info_user[0]['u_id'] ?>">Hồ sơ cá nhân(CV)</a>
+                                                            <a href="<?php echo base_url(); ?>cv">Hồ sơ cá nhân(CV)</a>
                                                         </li>
 
                                                         <li class="Separator">
@@ -661,7 +666,7 @@ base_url(); ?>template/home/img/slider8.png" alt="" title="nhan luc chat luong">
                                                         </li>
 
                                                         <li>
-                                                            <a href="<?php echo base_url(); ?>thongtin-canhan/<?php echo $info_user[0]['u_id'] ?>">Thông tin cá nhân</a>
+                                                            <a href="<?php echo base_url(); ?>thongtin-canhan">Thông tin cá nhân</a>
                                                         </li>
 
                                                     </ul>
@@ -669,6 +674,52 @@ base_url(); ?>template/home/img/slider8.png" alt="" title="nhan luc chat luong">
                                                 </div>
                                             </div>
                                         </div>
+                                        <?php } else {?>
+                                        <div id="user-menu">
+
+                                            <div class="GridInfo">
+                                                <div class="Content">
+
+                                                    <ul class="UserMenu">
+                                                        <li>
+                                                            <a href="<?php echo base_url(); ?>quanly-tuyendung">Quản lý tuyển dụng</a>
+                                                        </li>
+                                                        <li class="Separator">
+                                                            |
+                                                        </li>
+                                                        <li>
+                                                            <a href="<?php echo base_url(); ?>tintd-dadang">Tin TD đã đăng</a>
+                                                        </li>
+                                                        <li class="Separator">
+                                                            |
+                                                        </li>
+                                                        <li>
+                                                            <a href="<?php echo base_url(); ?>tao-tintuyendung">Taọ tin TD mới</a>
+                                                        </li>
+                                                        <li class="Separator">
+                                                            |
+                                                        </li>
+                                                        <li>
+                                                            <a href="<?php echo base_url(); ?>thongtin-ntd">Thông tin NTD</a>
+                                                        </li>
+                                                        <li class="Separator">
+                                                            |
+                                                        </li>
+                                                        <li>
+                                                            <a href="<?php echo base_url(); ?>quanly-hoso-ungvien">Quản lý hồ sơ ứng viên</a>
+                                                        </li>
+                                                        <li class="Separator">
+                                                            |
+                                                        </li>
+                                                        <li>
+                                                            <a href="#">Liên hệ quản cáo</a>
+                                                        </li>
+                                                    </ul>
+                                                    <div class="Clear"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <?php }} ?>
                                         <div class="content-info" style="background: none repeat scroll 0 0 #FFFFFF;">
                                             <input type="hidden" name="dang_xu_ly" id="dang_xu_ly" value="0">
                                                 <div name="div_thong_tin_ntd" id="div_thong_tin_ntd">
@@ -691,7 +742,7 @@ base_url(); ?>template/home/img/slider8.png" alt="" title="nhan luc chat luong">
 
                                                                                 <?php
                                                                                 $i = 1;
-                                                                                foreach ($list_cate_job as $job_cate) {
+                                                                                foreach ($list_cate_job as $k=>$job_cate) {
 
                                                                                     if ($i % 3 == 1) {
                                                                                         ?>
@@ -700,7 +751,7 @@ base_url(); ?>template/home/img/slider8.png" alt="" title="nhan luc chat luong">
                                                                                         <td width="33%">
                                                                                             <ul>
                                                                                                 <li>
-                                                                                                    <a href="<?php echo base_url(); ?>nganh-nghe/<?php echo $job_cate['m_id'] ?>-<?php echo mb_strtolower(url_title(removesign($job_cate['m_name']))) ?>"  title="<?php echo $job_cate['m_name'] ?>" target="_blank"> <?php echo $job_cate['m_name'] ?> </a>
+                                                                                                    <a href="<?php echo base_url(); ?>nganh-nghe/<?php echo $k ?>-<?php echo mb_strtolower(url_title(removesign($job_cate))) ?>"  title="<?php echo $job_cate ?>" target="_blank"> <?php echo $job_cate ?> </a>
                                                                                                 </li>
                                                                                             </ul>
                                                                                         </td>

@@ -9,7 +9,13 @@ class MY_Controller extends CI_Controller
     public function load_cate_job()
     {
         $this->load->model('chitietnghe/tuyendungnhanh_up');
-        $this->data['list_cate_job']=$this->tuyendungnhanh_up->get_cate();
+        $list_cate = $this->tuyendungnhanh_up->get_cate();
+        $array =array();
+        foreach($list_cate as $data)
+        {
+            $array[$data['m_id']] = $data['m_name'];
+        }
+        $this->data['list_cate_job']=$array;
         
     }
     public function load_user()
@@ -33,7 +39,13 @@ class MY_Controller extends CI_Controller
     public function load_time()
     {
         $this->load->model('chitietnghe/tuyendungnhanh_up');
-        $this->data['list_time']=$this->tuyendungnhanh_up->get_time();   
+        $list_time = $this->tuyendungnhanh_up->get_time();
+        $array =array();
+        foreach($list_time as $data)
+        {
+            $array[$data['t_id']] = $data['t_name'];
+        }
+        $this->data['list_time']=$array;   
     }
     public function load_age()
     {
@@ -54,7 +66,13 @@ class MY_Controller extends CI_Controller
     public function load_capbac()
     {
         $this->load->model('chitietnghe/tuyendungnhanh_up');
-        $this->data['list_capbac']=$this->tuyendungnhanh_up->get_capbac();   
+        $list_cb = $this->tuyendungnhanh_up->get_capbac(); 
+        $array =array();
+        foreach($list_cb as $cb)
+        {
+            $array[$cb['cb_id']] = $cb['cb_name'];
+        }
+        $this->data['list_capbac']=$array;   
     }
     public function load_hoso()
     {
@@ -91,17 +109,35 @@ class MY_Controller extends CI_Controller
     public function load_ngoaingu()
     {
         $this->load->model('chitietnghe/tuyendungnhanh_up');
-        $this->data['list_ngoaingu']=$this->tuyendungnhanh_up->get_ngoaingu();   
+        $list_nn = $this->tuyendungnhanh_up->get_ngoaingu();
+        $array = array();
+        foreach($list_nn as $data)
+        {
+            $array[$data['nn_id']]=$data['nn_name'];
+        }
+        $this->data['list_ngoaingu']=$array;   
     }
     public function load_trinhdonn()
     {
         $this->load->model('chitietnghe/tuyendungnhanh_up');
-        $this->data['list_trinhdonn']=$this->tuyendungnhanh_up->get_trinhdonn();   
+        $array = array();
+        $trinh_do = $this->tuyendungnhanh_up->get_trinhdonn();
+        foreach($trinh_do as $data)
+        {
+            $array[$data['td_id']]=$data['td_name'];
+        }
+        $this->data['list_trinhdonn']=$array;   
     }
     public function load_loaitn()
     {
         $this->load->model('chitietnghe/tuyendungnhanh_up');
-        $this->data['list_loaitn']=$this->tuyendungnhanh_up->get_loaitn();   
+        $list_tn = $this->tuyendungnhanh_up->get_loaitn();
+        $array = array();
+        foreach($list_tn as $data)
+        {
+            $array[$data['tn_id']]=$data['tn_name'];
+        }
+        $this->data['list_loaitn']=$array;   
     }
      public function load_city_1()
     {

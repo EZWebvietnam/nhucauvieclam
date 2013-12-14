@@ -39,7 +39,7 @@ class Taohsuv extends CI_Controller
             $timeid = $this->input->post('thoi_gian_lam_viec');
             $luongmm = $this->input->post('muc_luong');
             $muctieunn = $this->input->post('muc_tieu_nghe_nghiep');
-            $lastdate = $this->input->post('den_ngay');
+            $lastdate = $this->input->post('c_ngay_co_the_bat_dau_lam');
             $trinhdo = $this->input->post('trinh_do');
             $nganhhoc = $this->input->post('nganh_hoc');
             $namtotnghiep = $this->input->post('select_box_nam_tot_nghiep');
@@ -53,6 +53,7 @@ class Taohsuv extends CI_Controller
             $infokinhnghiem = $this->input->post('c_kinh_nghiem');
             $kynang = $this->input->post('ky_nang');
             $thamkhao = $this->input->post('c_nguon_tham_khao');
+            $lastdate = strtotime(''.$lastdate);
             if($this->session->userdata('u_id'))
             {
                 $u_id = $this->session->userdata('u_id');

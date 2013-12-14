@@ -41,7 +41,7 @@
                             <tbody>
                                 <tr>
                                     <td width="180" valign="top" class="tbUser-info_ntd" align="right"><b>Trình độ học vấn:</b></td>
-                                    <td class="tbUser-info_ntd"><?php echo $list_bangcap[$hsuv_detail[0]['j_trinhdo']]['bang_name']; ?></td>
+                                    <td class="tbUser-info_ntd"><?php echo $list_bangcap[$hsuv_detail[0]['j_trinhdo']]; ?></td>
                                 </tr>
                                 <tr>
                                     <td valign="top" class="tbUser-info_ntd" align="right"><b>Ngành học:</b></td>
@@ -50,7 +50,7 @@
                                 </tr>
                                 <tr>
                                     <td valign="top" class="tbUser-info_ntd" align="right"><b>Tốt nghiệp năm:</b></td>
-                                    <td class="tbUser-info_ntd"><?php echo $hsuv_detail[0]['j_namtotnghiep']; ?><?php echo $list_loaitn[$hsuv_detail[0]['j_loaitotnghiep']]['tn_name']; ?></td>
+                                    <td class="tbUser-info_ntd"><?php echo $hsuv_detail[0]['j_namtotnghiep']; ?><?php echo $list_loaitn[$hsuv_detail[0]['j_loaitotnghiep']]; ?></td>
                                 </tr>
                                 <tr>
                                     <td valign="top" class="tbUser-info_ntd" align="right"><b>Tốt nghiệp tại trường:</b></td>
@@ -59,7 +59,7 @@
                                 </tr>
                                 <tr>
                                     <td valign="top" class="tbUser-info_ntd" align="right"><b>Ngoại ngữ:</b></td>
-                                    <td class="tbUser-info_ntd"><?php echo $list_ngoaingu[$hsuv_detail[0]['j_ngoaingu']]['nn_name']; ?> <?php echo $list_trinhdonn[$hsuv_detail[0]['j_trinhdonn']]['td_name']; ?>
+                                    <td class="tbUser-info_ntd"><?php echo $list_ngoaingu[$hsuv_detail[0]['j_ngoaingu']]; ?> <?php echo $list_trinhdonn[$hsuv_detail[0]['j_trinhdonn']]; ?>
                                     </td>
                                 </tr>
                                 <tr>
@@ -87,7 +87,7 @@
                             <tbody>
                                 <tr>
                                     <td width="280" valign="top" class="tbUser-info_ntd" align="right"><b>Số năm kinh nghiệm:</b></td>
-                                    <td class="tbUser-info_ntd"><?php echo $list_exp[$hsuv_detail[0]['j_kinhnghiem']]['exp_name']; ?></td>
+                                    <td class="tbUser-info_ntd"><?php echo $list_exp[$hsuv_detail[0]['j_kinhnghiem']]; ?></td>
                                 </tr>
                                 <tr>
                                     <td valign="top" class="tbUser-info_ntd" align="right"><b>Kinh nghiệm:</b></td>
@@ -112,7 +112,7 @@
                             <tbody>
                                 <tr>
                                     <td width="280" valign="top" class="tbUser-info_ntd" align="right"><b>Vị trí mong muốn:</b></td>
-                                    <td class="tbUser-info_ntd"><?php echo $list_capbac[$hsuv_detail[0]['j_chucmm']]['cb_name']; ?></td>
+                                    <td class="tbUser-info_ntd"><?php echo $list_capbac[$hsuv_detail[0]['j_chucmm']]; ?></td>
                                 </tr>
                                 <tr>
                                     <td valign="top" class="tbUser-info_ntd" align="right"><b>Cấp bậc mong muốn:</b></td>
@@ -120,19 +120,19 @@
                                 </tr>
                                 <tr>
                                     <td valign="top" class="tbUser-info_ntd" align="right"><b>Ngành nghề:</b></td>
-                                    <td class="tbUser-info_ntd"><?php echo $list_cate_job[$hsuv_detail[0]['m_id']]['m_name']; ?></td>
+                                    <td class="tbUser-info_ntd"><?php echo $list_cate_job[$hsuv_detail[0]['m_id']]; ?></td>
                                 </tr>
                                 <tr>
                                     <td valign="top" class="tbUser-info_ntd" align="right"><b>Hình thức làm việc:</b></td>
-                                    <td class="tbUser-info_ntd"><?php echo $list_time[$hsuv_detail[0]['j_timeID']]['t_name']; ?></td>
+                                    <td class="tbUser-info_ntd"><?php echo $list_time[$hsuv_detail[0]['j_timeID']]; ?></td>
                                 </tr>
                                 <tr>
                                     <td valign="top" class="tbUser-info_ntd" align="right"><b>Địa điểm làm việc:</b></td>
-                                    <td class="tbUser-info_ntd"><?php echo $list_city[$hsuv_detail[0]['j_cityID']]['n_name']; ?></td>
+                                    <td class="tbUser-info_ntd"><?php echo $list_city[$hsuv_detail[0]['j_cityID']]; ?></td>
                                 </tr>
                                 <tr>
                                     <td valign="top" class="tbUser-info_ntd" align="right"><b>Mức lương mong muốn:</b></td>
-                                    <td class="tbUser-info_ntd"><?php echo $list_luong[$hsuv_detail[0]['j_luongmm']]['luong_name']; ?></td>
+                                    <td class="tbUser-info_ntd"><?php echo $list_luong[$hsuv_detail[0]['j_luongmm']]; ?></td>
                                 </tr>
                                 <tr>
                                     <td valign="top" class="tbUser-info_ntd" align="right"><b>Mục tiêu nghề nghiệp:</b></td>
@@ -284,13 +284,13 @@
                     <table class="TableList">
                         <tbody>
                             <?php
-                            foreach ($list_time as $time) {
+                            foreach ($list_time as $k=>$time) {
                                 ?>
                                 <tr>
                                     <td>
                                         <ul>
                                             <li>
-                                                <a href="/vieclam/tinhchatcongviec/20/viec-lam-cho-tri-thuc-lon-tuoi-tren-50-tuoi.html" ga_click="_gaq.push(['_trackEvent', 'Home', 'Click', 'Tìm việc làm - Việc làm cho trí thức lớn tuổi (trên 50 tuổi)']);" title="<?php echo $time['t_name'] ?>" target="_blank"><?php echo $time['t_name'] ?></a>
+                                                <a href="<?php echo base_url();?>search-time/<?php echo $k?>-<?php echo mb_strtolower(url_title(removesign($time)))?>" ga_click="_gaq.push(['_trackEvent', 'Home', 'Click', 'Tìm việc làm - Việc làm cho trí thức lớn tuổi (trên 50 tuổi)']);" title="<?php echo $time ?>" target="_blank"><?php echo $time ?></a>
 
                                             </li>
                                         </ul></td>

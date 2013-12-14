@@ -40,10 +40,7 @@ class Qltimviec extends MY_Controller
         $this->data['qltimviec_detail']= $this->qltimviec_model->load_employers($u_id);
         $this->data['qlungtuyen_detail']= $this->qltimviec_model->load_employers_ungtuyen($u_id);
         $this->data['qlhoso_detail']= $this->qltimviec_model->load_post($u_id);
-        if(empty($this->data['qltimviec_detail']))
-        {
-            redirect($_SERVER['HTTP_REFERER']);
-        }
+        
         $this->data['main_content']='view_qltimviec';
         $this->load->view('home/qltimviec_layout',  $this->data);
     }
