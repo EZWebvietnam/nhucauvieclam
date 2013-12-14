@@ -111,8 +111,10 @@ $confirm_password = array(
                                 <th>Giới tính</th>
                                 <td>
                                     <select name="c_sex" id="SeekerSeekergender">
-                                        <option value="Y">Nam</option>
-                                        <option value="N">Nữ</option>
+                                        
+                                        <option value="1">Nam</option>
+                                        <option value="2">Nữ</option>
+                                        <option value="3">Khác</option>
                                     </select></td>
                             </tr>
                             <tr>

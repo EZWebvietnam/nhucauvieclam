@@ -85,6 +85,8 @@ class Taohsuv extends CI_Controller
                 'j_cityID'=>$city,
                 'j_timeID'=>$timeid,
                 'j_lastdate'=>$lastdate,
+                'j_date'=>$lastdate,
+                'j_updatedate'=>$lastdate,
                 );
             // Khi gán vào mảng xong, lưu xuống DB, hàm sẽ trả về một số là id được insert xuống
             $id = $this->taohsuv_model->save_hsuv($data);

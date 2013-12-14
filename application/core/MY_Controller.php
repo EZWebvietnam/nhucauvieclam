@@ -104,7 +104,14 @@ class MY_Controller extends CI_Controller
     public function load_sex()
     {
         $this->load->model('chitietnghe/tuyendungnhanh_up');
-        $this->data['list_sex']=$this->tuyendungnhanh_up->get_sex();   
+        $array = array();
+        $list_sex = $this->tuyendungnhanh_up->get_sex();
+        foreach($list_sex as $sex)
+        {
+            $array[$sex['sex_id']]=$sex['sex_name'];
+        }
+       
+        $this->data['list_sex']=$array;   
     }
     public function load_ngoaingu()
     {

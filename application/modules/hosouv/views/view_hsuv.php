@@ -27,7 +27,7 @@
                                 </tr>
                                 <tr>
                                     <td valign="top" class="tbUser-info_ntd" align="right"><b>Giới tính:</b></td>
-                                    <td class="tbUser-info"><?php echo $list_sex[$hsuv_detail[0]['e_sex']]['sex_name']; ?></td>
+                                    <td class="tbUser-info"><?php echo $list_sex[$hsuv_detail[0]['u_sex']]; ?></td>
                                 </tr>                                
                             </tbody>
                         </table></td>

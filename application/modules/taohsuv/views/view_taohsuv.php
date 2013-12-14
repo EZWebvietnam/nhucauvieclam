@@ -363,10 +363,6 @@
                                             <td class="tbUser-row"> Nam </td>
                                         </tr>
                                         <tr>
-                                            <td valign="top" class="tbUser-row"><b>Tình trạng hôn nhân:</b></td>
-                                            <td class="tbUser-row"> Độc thân </td>
-                                        </tr>
-                                        <tr>
                                             <td colspan="2" align="right">
                                                 <input type="button" class="buttonGreen" value="Sửa" onclick="ntv_quan_tri_hien_thi_sua_thong_tin_tai_khoan();
                                                         return(false);">
