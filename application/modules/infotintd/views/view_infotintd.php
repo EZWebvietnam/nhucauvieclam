@@ -136,7 +136,7 @@
 
                         <tr>
                             <th>Giới tính</th>
-                            <td><?php echo $list_sex[$info_tintd_detail[0]['e_sex']]['sex_name']; ?></td>
+                            <td><?php echo $list_sex[$info_tintd_detail[0]['e_sex']]; ?></td>
                         </tr>
 
                         <tr>
