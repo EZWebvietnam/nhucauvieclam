@@ -3,6 +3,18 @@
         <link href="img/" />
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
             <title>Thông tin ứng viên, CV</title>
+             <meta name="keywords" content="Việc làm, tuyển dụng, tìm việc, tim viec lam, tuyen dung, viec lam, công việc, việc làm bán thời gian, tuyển dụng nhanh, tìm việc nhanh, việc làm sinh viên, đăng tuyển dụng" />
+        <meta name="description" content="Tìm Việc Nhanh - Hệ thống Việc làm, Tuyển dụng, Tìm việc hàng đầu tại Việt Nam với hàng chục ngàn Việc làm mới. Nơi nhà tuyển dụng và ứng viên lựa chọn" />
+        <meta name="robots" content="index, follow" />
+        
+        <link rel="canonical" href="http://www.nhucauvieclam.net/" />
+        <link rel="image_src" href="http://www.nhucauvieclam.net/file/timviecnhanh_facebook.jpg" />
+        <meta property="og:site_name" content="Việc làm, tuyển dụng, tìm việc làm, kiếm việc nhanh" />
+        <meta property="og:title" content="Việc làm, tuyển dụng, tìm việc làm, kiếm việc nhanh" />
+        <meta property="og:description" content="Nhu Cầu Việc Làm - Hệ thống Việc làm, Tuyển dụng, Tìm việc hàng đầu tại Việt Nam với hàng chục ngàn Việc làm mới. Nơi nhà tuyển dụng và ứng viên lựa chọn" />
+        <meta property="og:url" content="http://www.nhucauvieclam.net/" />
+        <meta property="og:image" content="http://www.nhucauvieclam.net/file/timviecnhanh_facebook.jpg" />
+        <meta property="og:type" content="website" />
             <link type="text/css" rel="stylesheet" href="<?php echo base_url(); ?>template/home/css/cache_blue_sky_default.css">
                 <link type="text/css" rel="stylesheet" href="<?php echo base_url(); ?>template/home/css/style.css">
                     <script type="text/javascript" async="" src="<?php echo base_url(); ?>template/home/js/ga.js"></script>

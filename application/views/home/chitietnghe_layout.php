@@ -11,6 +11,18 @@
         <script type="text/javascript" src="<?php echo base_url(); ?>template/home/js/cache_blue_sky_default.js"></script>
         <script type="text/javascript" src="<?php echo base_url(); ?>template/home/js/demo.js"></script>
         <title>Tim viec lam</title>
+        <meta name="keywords" content="Việc làm, tuyển dụng, tìm việc, tim viec lam, tuyen dung, viec lam, công việc, việc làm bán thời gian, tuyển dụng nhanh, tìm việc nhanh, việc làm sinh viên, đăng tuyển dụng" />
+        <meta name="description" content="Tìm Việc Nhanh - Hệ thống Việc làm, Tuyển dụng, Tìm việc hàng đầu tại Việt Nam với hàng chục ngàn Việc làm mới. Nơi nhà tuyển dụng và ứng viên lựa chọn" />
+        <meta name="robots" content="index, follow" />
+        
+        <link rel="canonical" href="http://www.nhucauvieclam.net/" />
+        <link rel="image_src" href="http://www.nhucauvieclam.net/file/timviecnhanh_facebook.jpg" />
+        <meta property="og:site_name" content="Việc làm, tuyển dụng, tìm việc làm, kiếm việc nhanh" />
+        <meta property="og:title" content="Việc làm, tuyển dụng, tìm việc làm, kiếm việc nhanh" />
+        <meta property="og:description" content="Nhu Cầu Việc Làm - Hệ thống Việc làm, Tuyển dụng, Tìm việc hàng đầu tại Việt Nam với hàng chục ngàn Việc làm mới. Nơi nhà tuyển dụng và ứng viên lựa chọn" />
+        <meta property="og:url" content="http://www.nhucauvieclam.net/" />
+        <meta property="og:image" content="http://www.nhucauvieclam.net/file/timviecnhanh_facebook.jpg" />
+        <meta property="og:type" content="website" />
     </head>
     <body>
         <div id="container">
