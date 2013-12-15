@@ -1,5 +1,5 @@
 <?php
-class Qlhsuv extends CI_Controller
+class Qlhsuv extends MY_Controller
 {
     public function __construct() {
         parent::__construct();
@@ -11,10 +11,10 @@ class Qlhsuv extends CI_Controller
         $location = 'home';
         if ($this->tank_auth->is_logged_in($active, $location)) {
             
-            $data['is_login'] = 1;
+            $this->data['is_login'] = 1;
             
         } else {
-            $data['is_login'] = 0;
+            $this->data['is_login'] = 0;
             redirect('/');
         }
         if($this->session->userdata('u_role')==2)
@@ -29,13 +29,21 @@ class Qlhsuv extends CI_Controller
             {
                 $u_id = 0;
             }
-        $data['qlhsuv_detail']= $this->qlhsuv_model->load_post($u_id);
-        if(empty($data['qlhsuv_detail']))
+        $this->data['qlhsuv_detail']= $this->qlhsuv_model->load_post($u_id);
+        
+        $this->data['main_content']='view_qlhsuv';
+        $this->load->view('home/qlhsuv_layout',$this->data);
+    }
+    public function ajax_hs()
+    {
+        if ($this->input->is_ajax_request())
         {
-            redirect($_SERVER['HTTP_REFERER']);
+            parent::load_city();
+            parent::load_capbac();
+            $id_hs = $this->input->post('hs_id');
+            $this->data['detail']= $this->qlhsuv_model->load_hs($id_hs);
+            $this->load->view('view_ajax_detail',$this->data);
         }
-        $data['main_content']='view_qlhsuv';
-        $this->load->view('home/qlhsuv_layout',$data);
     }
 }
 ?>

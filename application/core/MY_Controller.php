@@ -50,7 +50,13 @@ class MY_Controller extends CI_Controller
     public function load_age()
     {
         $this->load->model('chitietnghe/tuyendungnhanh_up');
-        $this->data['list_age']=$this->tuyendungnhanh_up->get_age();   
+        $array = array();
+        $list_age = $this->tuyendungnhanh_up->get_age();
+        foreach($list_age as $age)
+        {
+            $array[$age['age_id']]=$age['age_name'];
+        }
+        $this->data['list_age']=$age;   
     }
     public function load_bangcap()
     {

@@ -17,6 +17,7 @@
         <meta property="og:type" content="website" />
             <link type="text/css" rel="stylesheet" href="<?php echo base_url(); ?>template/home/css/cache_blue_sky_default.css">
                 <link type="text/css" rel="stylesheet" href="<?php echo base_url(); ?>template/home/css/style.css">
+                <script type="text/javascript" src="<?php echo base_url(); ?>template/home/js/jquery.js"></script>
                     <script type="text/javascript" async="" src="<?php echo base_url(); ?>template/home/js/ga.js"></script>
                 
                     <script type="text/javascript" src="<?php echo base_url(); ?>template/home/js/cache_blue_sky_default.js"></script>
@@ -29,96 +30,7 @@
                                     <div id="header-logo">
                                         <a href="/" title="nhu cau viec lam" rel="home" id="logo"> <img src="<?php echo base_url(); ?>template/home/img/logo.png" alt="Tìm việc làm hàng đầu - Itworks" height="125" width="430"> </a>
                                     </div>
-                                    <div id="bg_slider">
-                                        <div class="hbs">
-                                            <div class="slider1">
-                                                <div class="s-wrap">
-                                                    <div class="trans t-left"></div>
-                                                    <div class="trans t-right"></div>
-                                                    <div class=" jcarousel-skin-tango">
-                                                        <div class="jcarousel-container jcarousel-container-horizontal" style="position: relative; display: block;">
-                                                            <div class="jcarousel-clip jcarousel-clip-horizontal" style="position: relative;">
-                                                                <ul id="mycarousel" class="jcarousel-list jcarousel-list-horizontal" style="overflow: hidden; position: relative; top: 0px; margin: 0px; padding: 0px; left: -4255.900143703704px; width: 9190px;">
-                                                    <li class="jcarousel-item jcarousel-item-horizontal jcarousel-item-1 jcarousel-item-1-horizontal" jcarouselindex="1" style="float: left; list-style: none;">
-                                                        <a href="" target="_blank"><img src="<?php echo
-base_url(); ?>template/home/img/slider1.png" alt="" title="Nhu cau viec lam"></a>
-                                                    </li>
-                                                    <li class="jcarousel-item jcarousel-item-horizontal jcarousel-item-2 jcarousel-item-2-horizontal" jcarouselindex="2" style="float: left; list-style: none;">
-                                                        <a href="" target="_blank"><img src="<?php echo
-base_url(); ?>template/home/img/slider2.png" alt="" title="tim viec lam"></a>
-                                                    </li>
-                                                    <li class="jcarousel-item jcarousel-item-horizontal jcarousel-item-3 jcarousel-item-3-horizontal" jcarouselindex="3" style="float: left; list-style: none;">
-                                                        <a href="" target="_blank"><img src="<?php echo
-base_url(); ?>template/home/img/slider3.png" alt="" title="tuyen dung nhanh"></a>
-                                                    </li>
-                                                    <li class="jcarousel-item jcarousel-item-horizontal jcarousel-item-4 jcarousel-item-4-horizontal" jcarouselindex="4" style="float: left; list-style: none;">
-                                                        <a href="" target="_blank"><img src="<?php echo
-base_url(); ?>template/home/img/slider4.png" alt="" title="tim viec ho chi minh"></a>
-                                                    </li>
-                                                    <li class="jcarousel-item jcarousel-item-horizontal jcarousel-item-622 jcarousel-item-622-horizontal" jcarouselindex="5" style="float: left; list-style: none;">
-                                                        <a href="" target="_blank"><img src="<?php echo
-base_url(); ?>template/home/img/slider5.png" alt="" title="tim viec ha noi"></a>
-                                                    </li>
-                                                    <li class="jcarousel-item jcarousel-item-horizontal jcarousel-item-623 jcarousel-item-623-horizontal" jcarouselindex="6" style="float: left; list-style: none;">
-                                                        <a href="" target="_blank"><img src="<?php echo
-base_url(); ?>template/home/img/slider6.png" alt="" title="tim viec sai gon"></a>
-                                                    </li>
-                                                    <li class="jcarousel-item jcarousel-item-horizontal jcarousel-item-624 jcarousel-item-624-horizontal" jcarouselindex="7" style="float: left; list-style: none;">
-                                                        <a href="" target="_blank"><img src="<?php echo
-base_url(); ?>template/home/img/slider7.png" alt="" title="viec lam chat luong"></a>
-                                                    </li>
-                                                    <li class="jcarousel-item jcarousel-item-horizontal jcarousel-item-624 jcarousel-item-624-horizontal" jcarouselindex="8" style="float: left; list-style: none;">
-                                                        <a href="" target="_blank"><img src="<?php echo
-base_url(); ?>template/home/img/slider8.png" alt="" title="nhan luc chat luong"></a>
-                                                    </li>
-                                                </ul>
-                                                            </div>
-                                                            <div class="jcarousel-prev jcarousel-prev-horizontal" style="display: block;"></div>
-                                                            <div class="jcarousel-next jcarousel-next-horizontal" style="display: block;"></div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="clearer"></div>
-                                        <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>template/home/css/slider.css">
-                                            <script type="text/javascript" src="<?php echo base_url(); ?>template/home/js/jquery.js"></script>
-                                            <script type="text/javascript" src="<?php echo base_url(); ?>template/home/js/slider.js"></script>
-                                            <script type="text/javascript">
-                                                function mycarousel_initCallback(e) {
-                                                    e.buttonNext.bind("click", function() {
-                                                        e.startAuto(1)
-                                                    });
-                                                    e.buttonPrev.bind("click", function() {
-                                                        e.startAuto(1)
-                                                    });
-                                                    e.clip.hover(function() {
-                                                        e.stopAuto()
-                                                    }, function() {
-                                                        e.startAuto()
-                                                    })
-                                                }
-                                                ;
-
-                                                jQuery(document).ready(function() {
-                                                    var e = jQuery("#slider");
-                                                    var t = jQuery(".hbs").offset();
-                                                    e.css({
-                                                        position: "absolute",
-                                                        top: "142px",
-                                                        left: "0"
-                                                    });
-                                                    jQuery("#mycarousel").show().jcarousel({
-                                                        auto: 3,
-                                                        scroll: 1,
-                                                        animation: 1500,
-                                                        wrap: "circular",
-                                                        easing: "easeInOutCubic",
-                                                        initCallback: mycarousel_initCallback
-                                                    })
-                                                });
-                                            </script>
-                                    </div>
+                                    
                                     <div class="clear"></div>
                                     <?php if ($is_login == 0) { ?>
                                         <div id="header-user-menu">
@@ -512,18 +424,18 @@ base_url(); ?>template/home/img/slider8.png" alt="" title="nhan luc chat luong">
                             <div class="Blank"></div>
                             <div class="fb-like-box" data-href="https://www.facebook.com/NhuCauViecLam?ref=hl" data-width="980px" data-height="230px" data-colorscheme="light" data-show-faces="true" data-header="true" data-stream="false" data-show-border="true"></div>
                             <div id="fb-root"></div>
-<script>(function(d, s, id) {
-  var js, fjs = d.getElementsByTagName(s)[0];
-  if (d.getElementById(id)) return;
-  js = d.createElement(s); js.id = id;
-  js.src = "//connect.facebook.net/vi_VN/all.js#xfbml=1";
-  fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));</script>
+                                <script>(function(d, s, id) {
+                                  var js, fjs = d.getElementsByTagName(s)[0];
+                                  if (d.getElementById(id)) return;
+                                  js = d.createElement(s); js.id = id;
+                                  js.src = "//connect.facebook.net/vi_VN/all.js#xfbml=1";
+                                  fjs.parentNode.insertBefore(js, fjs);
+                                }(document, 'script', 'facebook-jssdk'));</script>
                         </div>
                                     </div>
                                 </div>
                             </div>
-                        </div><iframe name="oauth2relay612216730" id="oauth2relay612216730" src="https://accounts.google.com/o/oauth2/postmessageRelay?parent=http%3A%2F%2Fwww.timviecnhanh.com#rpctoken=621144592&amp;forcesecure=1" style="width: 1px; height: 1px; position: absolute; top: -100px;"></iframe>
+                        </div>
 
                         <script type="text/javascript">
                             

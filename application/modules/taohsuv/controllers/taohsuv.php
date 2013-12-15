@@ -9,7 +9,16 @@ class Taohsuv extends MY_Controller
     }
     public function index()
     {   
+        parent::load_capbac();
+        parent::load_city();
+        parent::load_cate_job();
+        parent::load_time();
+        parent::load_luong();
+        parent::load_exp();
+        parent::load_bangcap();
         parent::load_sex();
+        parent::load_age();
+        
         $active = true;
         $location = 'home';
         if ($this->tank_auth->is_logged_in($active, $location)) {

@@ -1,5 +1,5 @@
 <?php
-class Tintd extends CI_Controller
+class Tintd extends MY_Controller
 {
     public function __construct() {
         parent::__construct();
@@ -9,14 +9,24 @@ class Tintd extends CI_Controller
     }
     public function index()
     {   
+        parent::load_capbac();
+        parent::load_city();
+        parent::load_cate_job();
+        parent::load_time();
+        
+        parent::load_luong();
+        parent::load_exp();
+        parent::load_bangcap();
+        parent::load_sex();
+        parent::load_age();
         $active = true;
         $location = 'home';
         if ($this->tank_auth->is_logged_in($active, $location)) {
             
-            $data['is_login'] = 1;
+            $this->data['is_login'] = 1;
             
         } else {
-            $data['is_login'] = 0;
+            $this->data['is_login'] = 0;
             redirect('/');
         }
         if($this->session->userdata('u_role')==2)
@@ -31,7 +41,7 @@ class Tintd extends CI_Controller
             {
                 $u_id = 0;
             }
-        $data['taotintd_detail']= $this->taotintd_model->tintd_detail($u_id);
+        $this->data['taotintd_detail']= $this->taotintd_model->tintd_detail($u_id);
         if($this->input->post())
         {
             $title = $this->input->post('tieu_de');
@@ -49,7 +59,7 @@ class Tintd extends CI_Controller
             $dotuoi = $this->input->post('c_do_tuoi');
             $yeucau = $this->input->post('yeu_cau');
             $hoso = $this->input->post('ho_so');
-            $denngay = $this->input->post('den_ngay');
+            $denngay = strtotime($this->input->post('c_ngay_co_the_bat_dau_lam'));
             $lienhe = $this->input->post('cach_lien_he');
             
             $data = array('e_title'=>$title,
@@ -71,6 +81,7 @@ class Tintd extends CI_Controller
                 'e_lastDate'=>$denngay,
                 'e_lienhe'=>$lienhe,
                 );
+               
             // Khi gán vào mảng xong, lưu xuống DB, hàm sẽ trả về một số là id được insert xuống
             $id = $this->taotintd_model->save_tintd($data);
             if($id > 0)
@@ -86,8 +97,8 @@ class Tintd extends CI_Controller
         }
         else
         {
-            $data['main_content']='view_tintd';
-            $this->load->view('home/taotintd_layout',$data);
+            $this->data['main_content']='view_tintd';
+            $this->load->view('home/taotintd_layout',$this->data);
         }     
     }
 }
