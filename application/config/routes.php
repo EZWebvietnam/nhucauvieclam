@@ -56,15 +56,15 @@ $route['dangnhap/index'] = "dangnhap/index";
 $route['hoso-ungvien/(:any)'] = "hosouv/hosouv/hosouv_post/$1";
 $route['tin-tuyen-dung/(:any)-(:any)'] = "infotintd/infotintd/view_job_post/$1";
 $route['info-hoso-ungvien/(:any)-(:any)'] = "infohsuv/infohsuv/view_employers_post/$1";
-$route['quanly-hoso-ungvien/(:any)'] = "qlhsuv/qlhsuv/index/$1";
+$route['quanly-hoso-ungvien'] = "qlhsuv/qlhsuv/index/$1";
 $route['quanly-timviec'] = "qltimviec/qltimviec/index/$1";
-$route['quanly-tuyendung'] = "qltuyendung/qltuyendung/index/$1";
+$route['quanly-tuyendung'] = "qltuyendung/qltuyendung/index";
 $route['timviec-city/(:any)'] = "searchadress/searchadress/searchadress_post/$1";
 $route['tao-hsungvien'] = "taohsuv/taohsuv/index/$1";
-$route['tao-tintuyendung/(:any)'] = "taotintd/tintd/index/$1";
-$route['tintd-dadang/(:any)'] = "tddadang/tddadang/index/$1";
+$route['tao-tintuyendung'] = "taotintd/tintd/index/$1";
+$route['tintd-dadang'] = "tddadang/tddadang/index";
 $route['thongtin-canhan'] = "thongtincanhan/thongtincanhan/index/$1";
-$route['thongtin-ntd/(:any)'] = "thongtinntd/infontd/index/$1";
+$route['thongtin-ntd'] = "thongtinntd/infontd/index/$1";
 $route['timvieclam'] = "timvieclam/timvieclam";
 $route['tuyendungnhanh'] = "tuyendungnhanh/tuyendungnhanh";
 $route['da-ung-tuyen'] = "ungtuyen/daungtuyen/index/$1";
@@ -72,5 +72,6 @@ $route['search-time/(:any)'] = "searchtime/searchtime/index/$1";
 $route['tim-kiem'] = "formsearch/search";
 $route['ung-tuyen-check/(:any)-(:any)'] = "nopdon/nopdon/redirect_nopdon/$1";
 $route['ung-tuyen/(:any)-(:any)'] = "nopdon/nopdon/index/$1";
+$route['xoa-ho-so/(:any)/(:any)'] = "dadang/hsdadang/delete/$1";
 /* End of file routes.php */
 /* Location: ./application/config/routes.php */

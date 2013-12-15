@@ -34,10 +34,7 @@ class Qltuyendung extends MY_Controller
                 $u_id = 0;
             }
             $this->data['qltuyendung_detail']= $this->qltuyendung_model->load_post($u_id);
-        if(empty($this->data['qltuyendung_detail']))
-        {
-            redirect($_SERVER['HTTP_REFERER']);
-        }
+       
         $this->data['main_content']='view_qltuyendung';
         $this->load->view('home/qltuyendung_layout',  $this->data);
     }

@@ -13,6 +13,7 @@ class Index extends MY_Controller
         $location = 'home';
         if ($this->tank_auth->is_logged_in($active, $location)) {
             $this->data['is_login'] = 1;
+            redirect('/');
         } else {
             $this->data['is_login'] = 0;
         }

@@ -20,6 +20,7 @@ class Dangkytd extends CI_Controller
         $location = 'home';
         if ($this->tank_auth->is_logged_in($active, $location)) {
             $data['is_login'] = 1;
+            redirect('/');
         } else {
             $data['is_login'] = 0;
         }
@@ -67,6 +68,7 @@ class Dangkytd extends CI_Controller
                 'u_contactPhone' => $this->form_validation->set_value('com_phone'),
                 'u_contactMobi' => $this->input->post('c_contactmobi'),
                 'u_role' => 3,
+                'u_status'=>0,
                 'u_redate' => strtotime('now'));
             $this->load->library('upload');
             $image_upload_folder = $_SERVER['DOCUMENT_ROOT'] . ROT_DIR . 'file';

@@ -22,5 +22,12 @@ class Tindadang_post extends CI_Model
         $query = $this->db->query($sql_join);
         return $query->result_array();
     }
+    public function delete($id,$id_user)
+    {
+        $id = intval($id);
+        $id_user = intval($id_user);
+        $where = array('j_id'=>$id,'u_id'=>$id_user);
+        $this->db->delete('tbl_employers_post',$where);
+    }
 }
 ?>

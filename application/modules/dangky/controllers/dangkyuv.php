@@ -20,6 +20,7 @@ class Dangkyuv extends CI_Controller
         $location = 'home';
         if ($this->tank_auth->is_logged_in($active, $location)) {
             $data['is_login'] = 1;
+            redirect('/');
         } else {
             $data['is_login'] = 0;
         }

@@ -180,13 +180,7 @@
                         <option value="66">Nước ngoài</option>
                     </select>
                 </form>
-                <script>
-                    $(document).ready(function() {
-                        $('#filter-province').change(function() {
-                            $('#form-filter').submit();
-                        });
-                    });
-                </script>
+               
             </div>
             <div class="HighBlank"></div>
 

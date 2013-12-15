@@ -23,33 +23,5 @@
         </div>
     </div>
     <div class="Blank"></div>
-    <script type="text/javascript">
-        $(document).ready(function() {
-            $('#button-seeker-login').click(function() {
-                var config = {
-                    cookie: 'seekerPopup',
-                    width: 600,
-                    height: 400,
-                    left: 600,
-                    top: 100
-                };
-
-                jsPopunder('http://webhoctienganh.com/17-tinh-huong-tieng-anh-phong-van-xin-viec-lam-710.html', config);
-                window.location.href = '/thanhvien/nguoitimviec_dangnhap';
-            });
-
-            $('#button-employer-login').click(function() {
-                var config = {
-                    cookie: 'employerPopup',
-                    width: 600,
-                    height: 400,
-                    left: 600,
-                    top: 100
-                };
-
-                jsPopunder('http://webhoctienganh.com/100-tinh-huong-giao-tiep-tieng-anh-cong-so-679.html', config);
-                window.location.href = '/thanhvien/nhatuyendung_dangnhap';
-            });
-        });
-    </script>                        
+                          
 </div>

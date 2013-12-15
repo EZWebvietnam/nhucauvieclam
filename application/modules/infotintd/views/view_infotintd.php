@@ -364,13 +364,7 @@
                     </div>
                 </div>
             </div>
-            <script>
-                $(document).ready(function() {
-                    $('#s-seeker-login').click(function() {
-                        window.location.href = '/thanhvien/nguoitimviec_dangnhap?return_url=http%3A%2F%2Fwww.timviecnhanh.com%2Fvieclam%2Fcongviec%2F2811197%2Fvie-c-la-m-them-cho-sinh-vien.html';
-                    });
-                });
-            </script>
+            
         </div>
 
         <div class="Blank"></div>

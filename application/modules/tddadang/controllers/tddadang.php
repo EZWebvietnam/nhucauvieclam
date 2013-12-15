@@ -34,10 +34,7 @@ class Tddadang extends MY_Controller
                 $u_id = 0;
             }
             $this->data['tddangdang_detail']= $this->tindadang_post->load_post($u_id);
-        if(empty($this->data['tddangdang_detail']))
-        {
-            redirect($_SERVER['HTTP_REFERER']);
-        }
+       
         $this->data['main_content']='view_tddadang';
         $this->load->view('home/tddadang_layout',  $this->data);
     }

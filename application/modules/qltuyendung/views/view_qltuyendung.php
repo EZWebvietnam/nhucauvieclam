@@ -150,7 +150,7 @@
                                         <b class="linkBlack">
                                             <a href="<?php echo base_url(); ?>tin-tuyen-dung/<?php echo $qltuyendung['e_id']; ?>-<?php echo mb_strtolower(url_title(removesign($qltuyendung['e_title']))) ?>" target="_blank" title="<?php echo $qltuyendung['e_title']; ?>" class="linkBlack"><?php echo $qltuyendung['e_title']; ?></a>
                                         </b>							<br>
-                                        <span style="font-size: 11px;"><?php echo $list_cate_job[$qltuyendung['m_id']]['m_name']; ?></span>
+                                        <span style="font-size: 11px;"><?php echo $list_cate_job[$qltuyendung['m_id']]; ?></span>
                                         <br>
                                     </div>
                                 </td>

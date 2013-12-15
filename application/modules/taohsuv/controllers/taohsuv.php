@@ -1,5 +1,5 @@
 <?php
-class Taohsuv extends CI_Controller
+class Taohsuv extends MY_Controller
 {
     public function __construct() {
         parent::__construct();
@@ -9,14 +9,15 @@ class Taohsuv extends CI_Controller
     }
     public function index()
     {   
+        parent::load_sex();
         $active = true;
         $location = 'home';
         if ($this->tank_auth->is_logged_in($active, $location)) {
             
-            $data['is_login'] = 1;
+            $this->data['is_login'] = 1;
             
         } else {
-            $data['is_login'] = 0;
+            $this->data['is_login'] = 0;
             redirect('/');
         }
        
@@ -28,8 +29,8 @@ class Taohsuv extends CI_Controller
             {
                 $u_id = 0;
             }
-        $data['taohsuv_detail']= $this->taohsuv_model->view_hsuv_detail($u_id);
-        $data['main_content']='view_taohsuv';
+        $this->data['taohsuv_detail']= $this->taohsuv_model->view_hsuv_detail($u_id);
+        $this->data['main_content']='view_taohsuv';
         if($this->input->post())
         {
             $title = $this->input->post('tieu_de');
@@ -86,7 +87,7 @@ class Taohsuv extends CI_Controller
                 'j_timeID'=>$timeid,
                 'j_lastdate'=>$lastdate,
                 'j_date'=>$lastdate,
-                'j_updatedate'=>$lastdate,
+                'j_update'=>$lastdate,
                 );
             // Khi gán vào mảng xong, lưu xuống DB, hàm sẽ trả về một số là id được insert xuống
             $id = $this->taohsuv_model->save_hsuv($data);
@@ -103,8 +104,8 @@ class Taohsuv extends CI_Controller
         }
         else
         {
-            $data['main_content']='view_taohsuv';
-            $this->load->view('home/taohsuv_layout',$data);
+            $this->data['main_content']='view_taohsuv';
+            $this->load->view('home/taohsuv_layout',$this->data);
         }     
     }
 }

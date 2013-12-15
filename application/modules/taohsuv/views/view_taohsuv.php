@@ -352,15 +352,16 @@
                                     <tbody>
                                         <tr>
                                             <td width="125" valign="top" class="tbUser-row"><b>Họ và tên:</b></td>
-                                            <td class="tbUser-row"> Đoàn Quang Thắng </td>
+                                            <td class="tbUser-row"> <?php echo $this->session->userdata('u_fullname')?> </td>
                                         </tr>
                                         <tr>
                                             <td valign="top" class="tbUser-row"><b>Ngày sinh:</b></td>
-                                            <td class="tbUser-row"> 12-08-1981 </td>
+                                            <td class="tbUser-row"> <?php echo date('d/m/Y',$this->session->userdata('u_birthday'))?> </td>
                                         </tr>
                                         <tr>
+                                            
                                             <td valign="top" class="tbUser-row"><b>Giới tính:</b></td>
-                                            <td class="tbUser-row"> Nam </td>
+                                            <td class="tbUser-row"> <?php echo $list_sex[$this->session->userdata('sex')]?> </td>
                                         </tr>
                                         <tr>
                                             <td colspan="2" align="right">
@@ -551,15 +552,7 @@
                         <td valign="top" class="tbUser-row"><b>Quá trình làm việc:</b>
                             <br>
                             <span class="text11" style="line-height:14px"> Nếu bạn chưa có kinh nghiệm làm việc, hãy đưa ra các công việc/ hoạt động bạn đã từng tham gia hoặc đảm trách và các thành tích kỹ năng đạt được </span></td>
-                        <td class="tbUser-row"><a name="href-kinh_nghiem"></a>												<textarea class="textArea" style="width:500px;height:200px;line-height:20px" name="c_kinh_nghiem" id="c_kinh_nghiem">Tên công ty:
-Vị trí công việc:
-Ngành nghề:
-Thời gian bắt đầu:
-Thời gian kết thúc:
-Mô tả công việc:
-Lý do thôi việc:
-Thành tích đạt được:
-Mức lương:
+                        <td class="tbUser-row"><a name="href-kinh_nghiem"></a>												<textarea class="textArea" style="width:500px;height:200px;line-height:20px" name="c_kinh_nghiem" id="c_kinh_nghiem">
                             </textarea></td>
                     </tr>
                     <tr>
@@ -583,12 +576,7 @@ Mức lương:
                         <td valign="top" width="350" class="tbUser-row br-L"><b>Nguồn tham khảo:</b>
                             <br>
                             <span class="text11" style="line-height:14px">Hãy nêu tên những người không phải là người thân, không phải là người đã thuê bạn làm việc? (Họ tên, địa chỉ, số điện thoại, nghề nghiệp, quan hệ, đã biết bạn mấy năm?)</span></td>
-                        <td class="tbUser-row"><a name="href-nguon_tham_khao"></a>												<textarea class="textArea" style="width:500px;height:100px" name="c_nguon_tham_khao" id="c_nguon_tham_khao">Họ và tên:
-Địa chỉ:
-Điện thoại:
-Nghề nghiệp:
-Quan hệ:
-Thời gian quen biết:
+                        <td class="tbUser-row"><a name="href-nguon_tham_khao"></a>												<textarea class="textArea" style="width:500px;height:100px" name="c_nguon_tham_khao" id="c_nguon_tham_khao">
                             </textarea></td>
                         <td rowspan="15" width="100" class="br-R"></td>
                     </tr>
@@ -607,20 +595,20 @@ Thời gian quen biết:
                         <tr>
                             <td rowspan="20" width="10" class="br-L"></td>
                             <td valign="top" width="115" class="tbUser-row"><b>Người liên hệ:</b></td>
-                            <td class="tbUser-row"> Đoàn Quang Thắng </td>
+                            <td class="tbUser-row"><?php echo $this->session->userdata('u_fullname')?> </td>
                             <td rowspan="10" width="25" class="br-R"></td>
                         </tr>
                         <tr>
                             <td valign="top" class="tbUser-row"><b>Địa chỉ liên hệ:</b></td>
-                            <td class="tbUser-row"> Phúc Đồng - Sài Đồng - Long Biên </td>
+                            <td class="tbUser-row"> <?php echo $this->session->userdata('u_adress')?> </td>
                         </tr>
                         <tr>
                             <td valign="top" class="tbUser-row"><b>Email liên hệ:</b></td>
-                            <td class="tbUser-row"> quangthang12891@gmail.com </td>
+                            <td class="tbUser-row"> <?php echo $this->session->userdata('u_username')?> </td>
                         </tr>
                         <tr>
                             <td valign="top" class="tbUser-row"><b>Điện thoại liên hệ:</b></td>
-                            <td class="tbUser-row"> 0962925599 </td>
+                            <td class="tbUser-row"> <?php echo $this->session->userdata('u_mobi')?> </td>
                         </tr>
                         <tr>
                             <td colspan="2" align="right">
@@ -652,26 +640,26 @@ Thời gian quen biết:
                             <td rowspan="20" width="45" class="br-L"></td>
                             <td valign="top" width="115" class="tbUser-row"><b>Người liên hệ:</b></td>
                             <td class="tbUser-row">
-                                <input type="text" class="textbox" name="nguoi_lien_he" id="nguoi_lien_he" value="Đoàn Quang Thắng">
+                                <input type="text" class="textbox" name="nguoi_lien_he" id="nguoi_lien_he" value="<?php echo $this->session->userdata('u_fullname')?>">
                                 <div id="err_nguoi_lien_he" class="textRed11"></div></td>
                             <td rowspan="10" width="25" class="br-R"></td>
                         </tr>
                         <tr>
                             <td valign="top" class="tbUser-row"><b>Địa chỉ liên hệ:</b></td>
                             <td class="tbUser-row">
-                                <input type="text" class="textbox" name="dia_chi_nguoi_lien_he" id="dia_chi_nguoi_lien_he" value="Phúc Đồng - Sài Đồng - Long Biên ">
+                                <input type="text" class="textbox" name="dia_chi_nguoi_lien_he" id="dia_chi_nguoi_lien_he" value="<?php echo $this->session->userdata('u_adress')?> ">
                                 <div id="err_dia_chi_nguoi_lien_he" class="textRed11"></div></td>
                         </tr>
                         <tr>
                             <td valign="top" class="tbUser-row"><b>Email liên hệ:</b></td>
                             <td class="tbUser-row">
-                                <input type="text" class="textbox" name="email_lien_he" id="email_lien_he" value="quangthang12891@gmail.com">
+                                <input type="text" class="textbox" name="email_lien_he" id="email_lien_he" value="<?php echo $this->session->userdata('u_username')?>">
                                 <div id="err_email_lien_he" class="textRed11"></div></td>
                         </tr>
                         <tr>
                             <td valign="top" class="tbUser-row"><b>Điện thoại liên hệ:</b></td>
                             <td class="tbUser-row">
-                                <input type="text" class="textbox" name="dien_thoai_lien_he" id="dien_thoai_lien_he" value="0962925599">
+                                <input type="text" class="textbox" name="dien_thoai_lien_he" id="dien_thoai_lien_he" value="<?php echo $this->session->userdata('u_mobi')?>">
                                 <div id="err_dien_thoai_lien_he" class="textRed11"></div></td>
                         </tr>
 
@@ -700,11 +688,9 @@ Thời gian quen biết:
                     </tr>
                     <tr>
                         <td class="tbUser-row" valign="top" colspan="2" align="center">
-                            <input type="submit" class="button" value="Đăng hồ sơ tìm việc" style="width:150px;" onclick="javascript: if (dat_trang_thai_dang_xu_ly()) {
-                                        ntv_quan_tri_ghi_lai_tin_tv('dang_tin');
-                                    }">
+                            <input type="submit" class="button" value="Đăng hồ sơ tìm việc" style="width:150px;" />
                             &nbsp;&nbsp;
-                            <input type="submit" class="button" value="Quay lại" onclick="javascript: window.location.href = '/ntv-trang-quan-tri-tin-tim-viec.html';" title="Về trang quản lý hồ sơ tìm việc">
+                            <input type="submit" class="button" value="Quay lại" >
                         </td>
                     </tr>
                 </tbody>
@@ -714,168 +700,9 @@ Thời gian quen biết:
 
             </div>
         </form>
-        <script src="/js/HeaderScriptHandler.js"></script>
-        <script src="/temp/ds_truong_dhcd.js"></script>
-        <script src="/temp/ds_tinh.js"></script>
-        <script src="/temp/ds_nganh_cap1.js"></script>
-        <script>
-                                set_focus(document.forms['form_cap_nhat_tin_tv']);
-                                SetAutoComplete(ds_truong_dhcd, 'txt_truong', 'chon_truong_tu_suggestion', 'chon_truong_tu_suggestion', 150, 'ntv_quan_tri_them_truong_tu_suggestion(",~,")');
-                                SetAutoComplete(ds_tinh, 'txt_tinh', 'them_tinh_tu_suggestion', 'them_tinh_tu_suggestion', 150, 'ntd_ntv_quan_tri_them_tinh_tu_suggestion(",~,",10)');
-                                SetAutoComplete(ds_nganh_cap1, 'txt_nganh_nghe', 'txt_nganh_nghe', 'them_nganh_cap1_tu_suggestion', 150, 'ntd_ntv_quan_tri_them_nganh_cap_1_tu_suggestion()');</script>
-        <!--</div> -->
+        
+        
     </div>
-    <div name="div_mau_tin_tim_viec" id="div_mau_tin_tim_viec">
-        <!--<div name='div_mau_tin_tuyen_dung' id='div_mau_tin_tuyen_dung'> -->
-        <div class="colRight-QT">
-            <div class="borderBot"></div>
-            <div>
-                <b class="text15">MẪU HỒ SƠ TÌM VIỆC</b>
-            </div>
-            <div class="borderBot"></div>
-            <div id="div_hien_thi_nganh_thu_1" style="display:inline;">
-                <div class="HSMauItem">
-                    <span class="searchGroupMauTin">Báo chí-Truyền hình</span><div class="clear"></div>
-                    <ul class="HSMau">
-                        <div id="div_hien_thi_nganh_thu_1_tin_mau_1" style="display:inline;">
-                            <li>
-                                <a href="/ntv-trang-quan-tri-cap-nhat-tin-tim-viec.html?id_mau_tin_tv=82&amp;id_tin_tv=-1" title="">
-                                    <input type="checkbox" id="mau_tin_tim_viec_82" onclick="javascript: if (document.getElementById('mau_tin_tim_viec_82').checked) {
-                                                window.location.href = '/ntv-trang-quan-tri-cap-nhat-tin-tim-viec.html?id_mau_tin_tv=82';
-                                            }">
-                                    Phóng viên, biên tập viên, cộng tác viên </a>
-                            </li>
-                        </div>
-                        <div id="div_hien_thi_nganh_thu_1_tin_mau_2" style="display:inline;">
-                            <li>
-                                <a href="/ntv-trang-quan-tri-cap-nhat-tin-tim-viec.html?id_mau_tin_tv=83&amp;id_tin_tv=-1" title="">
-                                    <input type="checkbox" id="mau_tin_tim_viec_83" onclick="javascript: if (document.getElementById('mau_tin_tim_viec_83').checked) {
-                                                window.location.href = '/ntv-trang-quan-tri-cap-nhat-tin-tim-viec.html?id_mau_tin_tv=83';
-                                            }">
-                                    Nhân viên dựng phim, quay phim, biên tập nhiều năm kinh nghiệm </a>
-                            </li>
-                        </div>
-                    </ul>
-                    <script language="javascript" type="text/javascript"></script>
-                </div>
-            </div>
-            <div id="div_hien_thi_nganh_thu_2" style="display:inline;">
-                <div class="HSMauItem">
-                    <span class="searchGroupMauTin">Chứng khoán- Vàng</span><div class="clear"></div>
-                    <ul class="HSMau">
-                        <div id="div_hien_thi_nganh_thu_2_tin_mau_1" style="display:inline;">
-                            <li>
-                                <a href="/ntv-trang-quan-tri-cap-nhat-tin-tim-viec.html?id_mau_tin_tv=81&amp;id_tin_tv=-1" title="">
-                                    <input type="checkbox" id="mau_tin_tim_viec_81" onclick="javascript: if (document.getElementById('mau_tin_tim_viec_81').checked) {
-                                                window.location.href = '/ntv-trang-quan-tri-cap-nhat-tin-tim-viec.html?id_mau_tin_tv=81';
-                                            }">
-                                    Chuyên viên tư vấn đầu tư tài chính </a>
-                            </li>
-                        </div>
-                    </ul>
-                    <script language="javascript" type="text/javascript"></script>
-                </div>
-            </div>
-            <div id="div_hien_thi_nganh_thu_3" style="display:inline;">
-                <div class="HSMauItem">
-                    <span class="searchGroupMauTin">IT phần cứng/mạng</span><div class="clear"></div>
-                    <ul class="HSMau">
-                        <div id="div_hien_thi_nganh_thu_3_tin_mau_1" style="display:inline;">
-                            <li>
-                                <a href="/ntv-trang-quan-tri-cap-nhat-tin-tim-viec.html?id_mau_tin_tv=79&amp;id_tin_tv=-1" title="">
-                                    <input type="checkbox" id="mau_tin_tim_viec_79" onclick="javascript: if (document.getElementById('mau_tin_tim_viec_79').checked) {
-                                                window.location.href = '/ntv-trang-quan-tri-cap-nhat-tin-tim-viec.html?id_mau_tin_tv=79';
-                                            }">
-                                    Quản trị mạng, Nhân viên IT, Quản trị Website </a>
-                            </li>
-                        </div>
-                        <div id="div_hien_thi_nganh_thu_3_tin_mau_2" style="display:inline;">
-                            <li>
-                                <a href="/ntv-trang-quan-tri-cap-nhat-tin-tim-viec.html?id_mau_tin_tv=80&amp;id_tin_tv=-1" title="">
-                                    <input type="checkbox" id="mau_tin_tim_viec_80" onclick="javascript: if (document.getElementById('mau_tin_tim_viec_80').checked) {
-                                                window.location.href = '/ntv-trang-quan-tri-cap-nhat-tin-tim-viec.html?id_mau_tin_tv=80';
-                                            }">
-                                    Nhân viên IT phần cứng/mạng 3 năm kinh nghiệm </a>
-                            </li>
-                        </div>
-                    </ul>
-                    <script language="javascript" type="text/javascript"></script>
-                </div>
-            </div>
-            <div id="div_hien_thi_nganh_thu_4" style="display:none;">
-                <div class="HSMauItem">
-                    <span class="searchGroupMauTin">Kế toán-Kiểm toán</span><div class="clear"></div>
-                    <ul class="HSMau">
-                        <div id="div_hien_thi_nganh_thu_4_tin_mau_1" style="display:inline;">
-                            <li>
-                                <a href="/ntv-trang-quan-tri-cap-nhat-tin-tim-viec.html?id_mau_tin_tv=7&amp;id_tin_tv=-1" title="">
-                                    <input type="checkbox" id="mau_tin_tim_viec_7" onclick="javascript: if (document.getElementById('mau_tin_tim_viec_7').checked) {
-                                                window.location.href = '/ntv-trang-quan-tri-cap-nhat-tin-tim-viec.html?id_mau_tin_tv=7';
-                                            }">
-                                    Kế toán tổng hợp </a>
-                            </li>
-                        </div>
-                        <div id="div_hien_thi_nganh_thu_4_tin_mau_2" style="display:inline;">
-                            <li>
-                                <a href="/ntv-trang-quan-tri-cap-nhat-tin-tim-viec.html?id_mau_tin_tv=11&amp;id_tin_tv=-1" title="">
-                                    <input type="checkbox" id="mau_tin_tim_viec_11" onclick="javascript: if (document.getElementById('mau_tin_tim_viec_11').checked) {
-                                                window.location.href = '/ntv-trang-quan-tri-cap-nhat-tin-tim-viec.html?id_mau_tin_tv=11';
-                                            }">
-                                    Nhân viên kế toán 3 năm kinh nghiệm </a>
-                            </li>
-                        </div>
-                    </ul>
-                    <script language="javascript" type="text/javascript"></script>
-                </div>
-            </div>
-            <div id="div_hien_thi_nganh_thu_5" style="display:none;">
-                <div class="HSMauItem">
-                    <span class="searchGroupMauTin">Nhân viên kinh doanh</span><div class="clear"></div>
-                    <ul class="HSMau">
-                        <div id="div_hien_thi_nganh_thu_5_tin_mau_1" style="display:inline;">
-                            <li>
-                                <a href="/ntv-trang-quan-tri-cap-nhat-tin-tim-viec.html?id_mau_tin_tv=77&amp;id_tin_tv=-1" title="">
-                                    <input type="checkbox" id="mau_tin_tim_viec_77" onclick="javascript: if (document.getElementById('mau_tin_tim_viec_77').checked) {
-                                                window.location.href = '/ntv-trang-quan-tri-cap-nhat-tin-tim-viec.html?id_mau_tin_tv=77';
-                                            }">
-                                    Trưởng nhóm kinh doanh/ Nhân viên kinh doanh </a>
-                            </li>
-                        </div>
-                        <div id="div_hien_thi_nganh_thu_5_tin_mau_2" style="display:inline;">
-                            <li>
-                                <a href="/ntv-trang-quan-tri-cap-nhat-tin-tim-viec.html?id_mau_tin_tv=78&amp;id_tin_tv=-1" title="">
-                                    <input type="checkbox" id="mau_tin_tim_viec_78" onclick="javascript: if (document.getElementById('mau_tin_tim_viec_78').checked) {
-                                                window.location.href = '/ntv-trang-quan-tri-cap-nhat-tin-tim-viec.html?id_mau_tin_tv=78';
-                                            }">
-                                    Trưởng/ phó phòng kinh doanh </a>
-                            </li>
-                        </div>
-                        <div id="div_hien_thi_nganh_thu_5_tin_mau_3" style="display:none;">
-                            <li>
-                                <a href="/ntv-trang-quan-tri-cap-nhat-tin-tim-viec.html?id_mau_tin_tv=64&amp;id_tin_tv=-1" title="">
-                                    <input type="checkbox" id="mau_tin_tim_viec_64" onclick="javascript: if (document.getElementById('mau_tin_tim_viec_64').checked) {
-                                                window.location.href = '/ntv-trang-quan-tri-cap-nhat-tin-tim-viec.html?id_mau_tin_tv=64';
-                                            }">
-                                    Nhân viên kinh doanh, chăm sóc khách hàng </a>
-                            </li>
-                        </div>
-                    </ul>
-                    <div class="chiTiet mar-T-B-10" id="nut_bam_div_hien_thi_nganh_thu_5_tin_mau_">
-                        <a href="javascript: hien_thi_cac_div_an_trong_list_div('div_hien_thi_nganh_thu_5_tin_mau_', 3, 2, -1, 'Xem thêm', 'Thu gọn')" title="Xem tất cả các mẫu tin tuyển dụng ngành này">Xem thêm</a>
-                    </div>
-                    <script language="javascript" type="text/javascript"></script>
-                </div>
-            </div>
-            <div class="chiTiet mar-T-B-10" id="nut_bam_div_hien_thi_nganh_thu_">
-                <a href="javascript: hien_thi_cac_div_an_trong_list_div('div_hien_thi_nganh_thu_', 5, 3, -1, 'Xem tất cả các ngành', 'Thu gọn danh sách các ngành')" title="Xem tất cả các ngành có tin tuyển dụng mẫu">Xem tất cả các ngành</a>
-            </div>
-            <script language="javascript" type="text/javascript"></script>
-        </div>
-        <!--</div> -->
-    </div><div class="clear"></div>
-    <script type="text/javascript">
-        if (document.getElementById("a_menu_lv2_68") != null) {
-            document.getElementById("a_menu_lv2_68").style.color = "#518c04";
-        }
-    </script>
+    <div class="clear"></div>
+   
 </div>

@@ -183,7 +183,7 @@
                             <td class="tb-row-W">
                                 <div class="borderBot padTop5">
                                     <a href="<?php echo base_url(); ?>hoso-ungvien/<?php echo $detail_hs['j_id']; ?>" target="_blank" title="Xem thông tin chi tiết tin tìm việc">Xem</a> |
-                                    <a href="<?php echo base_url(); ?>hoso-ungvien/<?php echo $detail_hs['j_id']; ?>" title="">Sửa</a> | <a href='javascript: if (dat_trang_thai_dang_xu_ly()) {ntv_quan_tri_doi_trang_thai_1_ttv(2444325,"xoa_tam"); }' title="Xoá tạm hồ sơ">Xóa</a>
+                                    <a href="<?php echo base_url(); ?>hoso-ungvien/<?php echo $detail_hs['j_id']; ?>" title="">Sửa</a> | <a onclick="return confirm('Bạn có chắc muốn xóa hồ sơ không ?')" href='<?php echo base_url();?>xoa-ho-so/<?php echo $detail_hs['j_id']; ?>/<?php echo mb_strtolower(url_title(removesign($detail_hs['j_title']))) ?>' title="Xoá tạm hồ sơ">Xóa</a>
                                 </div>
                                 <div class="padTop5">
                                     <a href="javascript: if (dat_trang_thai_dang_xu_ly()) {ntv_quan_tri_gia_han_1_ttv(2281716,2444325); }" title="">Gia hạn</a>

@@ -15,10 +15,12 @@
         <meta property="og:url" content="http://www.nhucauvieclam.net/" />
         <meta property="og:image" content="http://www.nhucauvieclam.net/file/timviecnhanh_facebook.jpg" />
         <meta property="og:type" content="website" />
-            <link type="text/css" rel="stylesheet" href="<?php echo base_url(); ?>template/home/css/cache_blue_sky_default.css">
+            <link type="text/css" rel="stylesheet" href="<?php echo base_url(); ?>template/home/css/cache_blue_sky_
+             <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+        <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>default.css">
                 <link type="text/css" rel="stylesheet" href="<?php echo base_url(); ?>template/home/css/style.css">
                     <script type="text/javascript" async="" src="<?php echo base_url(); ?>template/home/js/ga.js"></script>
-                    <script type="text/javascript" src="<?php echo base_url(); ?>template/home/js/demo.js"></script>
+                    
                     <script type="text/javascript" src="<?php echo base_url(); ?>template/home/js/cache_blue_sky_default.js"></script>
                     </head>
                     <body>

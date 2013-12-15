@@ -161,7 +161,7 @@
                                 <b class="linkBlack"> <a href="<?php echo base_url(); ?>tin-tuyen-dung/<?php echo $tddadang['e_id']; ?>-<?php echo mb_strtolower(url_title(removesign($tddadang['e_title']))) ?>" target="_blank" title="<?php echo $tddadang['e_title']; ?>" class="linkBlack"><?php echo $tddadang['e_title']; ?></a> </b>
                                 <br>
                                 <span style="font-size: 11px;">
-                                    <?php echo $list_cate_job[$tddadang['m_id']]['m_name']; ?>
+                                    <?php echo $list_cate_job[$tddadang['m_id']]; ?>
                                 </span>
                                 <br>
                                 <span style="font-size: 11px; font-style:italic;color: #999;">(0 lượt xem)</span>

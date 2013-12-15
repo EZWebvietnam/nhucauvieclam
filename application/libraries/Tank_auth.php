@@ -76,7 +76,11 @@ class Tank_auth
                                 'u_username' => $user->u_username,
                                 'u_fullname' => $user->u_fullname,
                                 'u_status' => ($user->u_status == 1) ? STATUS_ACTIVATED : STATUS_NOT_ACTIVATED,
-                                'u_role' => $user->u_role));
+                                'u_role' => $user->u_role,
+                                'u_birthday' => $user->u_birthday,
+                                'u_adress'=>$user->u_adress,
+                                'u_phone'=>$user->u_mobi,
+                                'sex'=>$user->u_sex));
 
                             if ($user->u_status == 0) { // fail - not activated
                                 $this->error = array('not_activated' => 'not_activated');
