@@ -143,7 +143,7 @@
                             <select class="dropbox" name="select_box_chuc_vu" id="select_box_chuc_vu">
                                 <option value="-1">-- Chọn cấp bậc --</option>
                                <?php 
-                               foreach($list_capba as $k_cb=>$cb)
+                               foreach($list_capbac as $k_cb=>$cb)
                                 {
                                 ?>
                                 <option value="<?php echo $k_cb ?>"><?php echo $cb;?></opption>

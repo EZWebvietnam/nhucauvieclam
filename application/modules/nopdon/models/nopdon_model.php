@@ -31,5 +31,9 @@ class Nopdon_model extends CI_Model{
         $query =  $this->db->get('tbl_employers_post');        
         return $query->result_array();
     }
+    public function insert_nd(array $data)
+    {
+        $this->db->insert('tbl_nop_don',$data);
+    }
 }
 ?>

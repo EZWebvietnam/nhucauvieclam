@@ -26,7 +26,25 @@ class Nopdon extends CI_Controller
         preg_match('/(\d+)/', $id, $b);
         if($this->input->post())
         {
-            
+            $title = $this->input->post('txt_tieu_de');
+            $content = $this->input->post('txta_noi_dung');
+            $id_cv = $this->input->post('c_cv');
+            $id_user = $this->session->userdata('u_id');
+            $id_job = $this->input->post('checkbox_ut')[0];
+            $title_job = $this->input->post('title_job');
+            $email_com = $this->input->post('email_com');
+            $data_cv = array(
+            'id_job'=>$id_job,
+            'id_user'=>$id_user,
+            'title'=>$title,
+            'id_cv'=>$id_cv,
+            'content'=>$content,
+            'create_date'=>strtotime('now')
+            );
+            $this->nopdon_model->insert_nd($data_cv);
+            $this->sendmail($email_com,$title_job);
+            $this->sendmail_user($this->session->userdata('u_username'),$title_job,$this->session->userdata('u_fullname'));
+            redirect('/');
         }
         else
         {
@@ -50,6 +68,26 @@ class Nopdon extends CI_Controller
             $data['main_content']='view_nopdon';
             $this->load->view('home/nopdon_layout', $data);
         }
+    }
+    public function sendmail($to,$name)
+    {
+        $this->load->library('maillinux');
+        $subject = "Ứng tuyển công việc - $name";
+        $content = "Xin chào quý doanh nghiệp ! <br>
+        Hiện tại đã có hồ sơ ứng tuyển tại công việc $name bạn đăng tại Nhu Cầu Việc Làm.<br>
+        Vui lòng truy cập đường link http://nhucauvieclam.net/quanly-hoso-ungvien để coi ứng viên !
+        ";
+        $from = "no-reply@nhucauvieclam.net";
+        $this->maillinux->SendMail($from, $to, $subject, $content);
+    }
+    public function sendmail_user($to,$name,$fullname)
+    {
+        $this->load->library('maillinux');
+        $subject = "Ứng tuyển công việc - $name";
+        $content = "Xin chào $fullname ! <br>
+        Bạn đã ứng tuyển vào hồ sơ $name trên hệ thống Nhu Cầu Việc Làm !";
+        $from = "no-reply@nhucauvieclam.net";
+        $this->maillinux->SendMail($from, $to, $subject, $content);
     }
 }
 ?>

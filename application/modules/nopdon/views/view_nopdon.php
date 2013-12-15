@@ -114,9 +114,9 @@
                                         </div>
                                         <?php }} ?>
 <div id="content-detail">
-
+    <form method="post" name="nopdon">
     <div class="content-qlhs">
-        <input type="hidden" name="dang_xu_ly" id="dang_xu_ly" value="0">
+        
         <div class="colLeft-QT1">
             <div class="navBar">
                 <div class="navBarLeft"><h2><span class="navBarTxt24-1">Nộp hồ sơ trực tuyến</span></h2></div>
@@ -143,11 +143,13 @@
                             </tr>
                             <tr>
                                 <td valign="center" style="padding: 5px 10px 5px 10px;line-height: 23px;" align="center">
-                                    <input type="checkbox" name="checkbox_ut[]" id="checkbox_ut[0]" checked="" value="1402232">
+                                    <input type="checkbox" name="checkbox_ut[]" id="checkbox_ut[0]" checked="" value="<?php echo $tintd_detail[0]['e_id']; ?>">
                                 </td>
                                 <td valign="top" class="tbUser-row"><?php echo $tintd_detail[0]['e_title']; ?></td>
                                 <td valign="top" class="tbUser-row"><?php echo $tintd_detail[0]['u_companyName']; ?></td>
                                 <td valign="top" class="tbUser-row"><?php echo $tintd_detail[0]['u_contactName']; ?></td>
+                                <input type="hidden" name="email_com" value="<?php echo $tintd_detail[0]['u_username']; ?>" />
+                                 <input type="hidden" name="title_job" value="<?php echo $tintd_detail[0]['e_title']; ?>" />
                             </tr>
                         </tbody></table>
                     <table>	
@@ -202,11 +204,39 @@
                     </div>
                 </div>
             </form>
-            <div class="mar-T-B-10" align="center"><input type="button" class="button" onclick="javascript: if (dat_trang_thai_dang_xu_ly()) {
-                cap_nhat_nop_don_truc_tuyen();
-            }" value="Nộp đơn">&nbsp;&nbsp;<input type="button" class="button" onclick="javascript: window.location = document.referrer;" value="Quay lại"></div>
+            <div class="mar-T-B-10" align="center"><input onclick="submit_();" type="button" class="button"  value="Nộp đơn">&nbsp;&nbsp;<input type="button" class="button" onclick="javascript: window.location = document.referrer;" value="Quay lại"></div>
         </div>
         
         <div class="clear"></div> 
     </div>
+    </form>
 </div>
+<script>
+function submit_()
+{
+    if(document.getElementById('c_cv').value==-1)
+    {
+        alert('Chưa chọn CV');
+    }
+    else
+    {
+        if(document.getElementById('txta_noi_dung').value=='')
+        {
+            alert('Chưa điền nội dung');
+            document.getElementById('txta_noi_dung').focus();
+        }
+        else
+        {
+            if(document.getElementById('txt_tieu_de').value=='')
+            {
+                alert('Chưa điền tiêu đề');
+                document.getElementById('txt_tieu_de').focus();
+            }
+            else
+            {
+                document.nopdon.submit();   
+            }
+        }
+    }
+}
+</script>
