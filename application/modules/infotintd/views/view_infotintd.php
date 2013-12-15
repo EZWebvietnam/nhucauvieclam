@@ -124,6 +124,7 @@
                 <table class="TableInfo">
                     <tbody>
                         <tr>
+                        <input type="hidden" class="abc" value="<?php echo $info_tintd_detail[0]['e_id']; ?>"/>
                             <th>Vị trí</th>
                             <td><span class="JobName"><?php
                                     echo $info_tintd_detail[0]['e_title'];
@@ -333,10 +334,10 @@
                     {
                     ?>
                         <li>
-                            <a href="#s-login" title="Nộp hồ sơ" rel="popup" class="cboxElement">Nộp hồ sơ</a>
+                            <a href="<?php echo base_url();?>ung-tuyen-check/<?php echo $info_tintd_detail[0]['e_id']; ?>-<?php echo mb_strtolower(url_title(removesign($info_tintd_detail[0]['e_title']))); ?>" title="Nộp hồ sơ" rel="popup" class="cboxElement">Nộp hồ sơ</a>
                         </li>
                         <li>
-                            <a href="#s-login" title="Lưu công việc" rel="popup" class="cboxElement">Lưu công việc</a>
+                            <a style="cursor: pointer;" onclick="save_tin();" title="Lưu công việc" rel="popup" class="cboxElement">Lưu công việc</a>
                         </li>
                     <?php } ?>
                         <li>
@@ -373,3 +374,27 @@
     <div class="Blank"></div>
 
 </div>
+<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+    <script type="text/javascript">
+    function save_tin()
+    {
+        var tinh_den ='';
+        $('.abc').each(function(){
+            
+            tinh_den = $(this).val();
+        })
+         $.ajax({
+			      url: "<?php echo base_url();?>infotintd/infotintd/ajax_autosave",
+			      type: "post",
+			      data: {'cv_id':tinh_den,'id_user':<?php echo $this->session->userdata('u_id');?> },
+			      success: function(response){
+			    	 
+		              alert('Lưu thành công !');
+			      },
+			      error:function(){
+			    	  alert('Không thể lưu !');
+			      }   
+			    });
+    }
+        
+    </script>

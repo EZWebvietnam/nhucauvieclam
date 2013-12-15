@@ -125,6 +125,26 @@ class Infotintd extends MY_Controller{
         $this->data['main_content']='view_infotintd';
         $this->load->view('home/infotintd_layout',  $this->data);
     }
+    public function ajax_autosave()
+    {
+         if ($this->input->is_ajax_request())
+        {
+
+            $id_cv = $this->input->post('cv_id');
+            $id_user = $this->input->post('id_user');
+            $array = $this->nopdon_model->check_save($id_cv,$id_user);
+            if(count($array)==0)
+            {
+                $data_array = array(
+                'id_user'=>$id_user,
+                'id_job'=>$id_cv,
+                'create_date'=>strtotime('now')
+                );
+                $this->nopdon_model->save_cv($data_array);
+            }
+            
+        }
+    }
 
 }
 ?>
