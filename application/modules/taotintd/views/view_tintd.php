@@ -667,7 +667,7 @@
                 </table>
             </form>
         </div>
-        <script src="<?php echo base_url(); ?>template/home/js/demo.js"></script>
+        
         <script src="<?php echo base_url(); ?>template/home/js/HeaderScriptHandler.js"></script>
         <!--</div> -->
     </div>
