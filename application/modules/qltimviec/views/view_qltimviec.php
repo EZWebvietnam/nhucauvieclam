@@ -289,21 +289,21 @@
                             <td class="tb-row-W" align="center">
                                 <input type="checkbox" name="checkbox_viec_lam_da_ung_tuyen[]" id="checkbox_viec_lam_da_ung_tuyen[0]" value="1330523">
                             </td>
-                            <td class="tb-row-W"><b><a href="<?php echo base_url();?>tin-tuyen-dung/<?php echo $detail_ut['e_id']?>-<?php echo mb_strtolower(url_title(removesign($detail_ut['title'])))?>" target="_blank" title="Click để xem thông tin chi tiết việc làm" class="linkBlack"><?php echo $qlungtuyen_detail[0]['e_title']; ?></a></b>
+                            <td class="tb-row-W"><b><a href="<?php echo base_url();?>tin-tuyen-dung/<?php echo $detail_ut['e_id']?>-<?php echo mb_strtolower(url_title(removesign($detail_ut['e_title'])))?>" target="_blank" title="Click để xem thông tin chi tiết việc làm" class="linkBlack"><?php echo $qlungtuyen_detail[0]['e_title']; ?></a></b>
                                 <br>
                                 <span>Ngành: <?php echo $list_cate_job[$detail_ut['m_id']]; ?>
                                 </span>
                                 <br>
                                 Số lượng: <?php echo $detail_ut['e_mem']; ?> </td>
                             <td class="tb-row-W" align="center"><?php echo $detail_ut['u_companyName']; ?></td>
-                            <td class="tb-row-W" align="center" onmouseover="tooltip.show('Hải Dương');" onmouseout="tooltip.hide();"><?php echo $list_city[$qlungtuyen_detail[0]['e_cityID']]['n_name']; ?></td>
-                            <td class="tb-row-W" align="center"><?php echo $list_luong[$detail_ut['e_luong']]['luong_name']; ?></td>
+                            <td class="tb-row-W" align="center" onmouseover="tooltip.show('Hải Dương');" onmouseout="tooltip.hide();"><?php echo $list_city[$qlungtuyen_detail[0]['e_cityID']]; ?></td>
+                            <td class="tb-row-W" align="center"><?php echo $list_luong[$detail_ut['e_luong']]; ?></td>
                             <td class="tb-row-W" align="center"><?php echo date('d/m/Y', $detail_ut['e_dateActive']); ?></td>
                             <td class="tb-row-W" align="center"><?php echo date('d/m/Y', $detail_ut['e_lastDate']); ?></td>
-                            <td class="tb-row-W" align="center"><?php echo date('d/m/Y', $detail_ut['e_datesave']); ?></td>
+                            <td class="tb-row-W" align="center"><?php echo date('d/m/Y', $detail_ut['create_date']); ?></td>
                             <td class="tb-row-W">
                                 <div class="borderBot padTop5">
-                                    <a href="<?php echo base_url(); ?>tin-tuyen-dung/<?php echo $detail_ut['j_id']; ?>-<?php echo mb_strtolower(url_title(removesign($detail_ut['j_title']))) ?>">Xem</a>
+                                    <a href="<?php echo base_url(); ?>tin-tuyen-dung/<?php echo $detail_ut['e_id']; ?>-<?php echo mb_strtolower(url_title(removesign($detail_ut['e_title']))) ?>">Xem</a>
                                 </div>
                                 <div class="padTop5">
                                     <a href="javascript: if (dat_trang_thai_dang_xu_ly()) {ntv_quan_tri_xoa_1_viec_lam_da_ung_tuyen(1330523); }" title="Hủy ứng tuyển việc làm đã ứng tuyển">Hủy ứng tuyển</a>
