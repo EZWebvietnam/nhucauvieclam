@@ -80,6 +80,8 @@ class Tintd extends MY_Controller
                 'e_hoso'=>$hoso,
                 'e_lastDate'=>$denngay,
                 'e_lienhe'=>$lienhe,
+                'e_dateActive'=>strtotime('now'),
+                'e_date'=>strtotime('now')
                 );
                
             // Khi gán vào mảng xong, lưu xuống DB, hàm sẽ trả về một số là id được insert xuống
