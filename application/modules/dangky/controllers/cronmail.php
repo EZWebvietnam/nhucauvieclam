@@ -14,7 +14,6 @@ class Cronmail extends MY_Controller
         $link = "";
         
         foreach ($list_user as $user) {
-
             $list_job = $this->cronmailmodel->get_job();
             foreach ($list_job as $job) {
                 $link .= "<a href='http://nhucauvieclam.net/tin-tuyen-dung/" . $job['e_id'] .
@@ -23,7 +22,8 @@ class Cronmail extends MY_Controller
             }
            
             $this->sendmail($user['u_email'],$user['u_fullname'],$link);
-             $link="";
+            $this->doLog($user['u_email']);
+            $link="";
         }
     }
     public function sendmail($to,$name,$link)
@@ -35,6 +35,17 @@ class Cronmail extends MY_Controller
         " . $link;
         $from = "no-reply@nhucauvieclam.net";
         $this->maillinux->SendMail($from, $to, $subject, $content);
+    }
+    function doLog($mail)
+    {
+      // open log file
+      $txt="Time Send:".date('d/m/Y h:i:s')."\n";
+      $txt.="Email:$mail - send:".date('d/m/Y h:i:s')."\n";
+      $txt.="------------------------\n";
+      $filename = $_SERVER['DOCUMENT_ROOT'].ROT_DIR."mail_log.txt";
+      $fh = fopen($filename, "a+") or die("Could not open log file.");
+      fwrite($fh,$txt) or die("Could not write file!");
+      fclose($fh);
     }
 }
 ?>
