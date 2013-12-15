@@ -341,10 +341,10 @@
                         </li>
                     <?php } ?>
                         <li>
-                            <a href="/vieclam/incongviec/2811197" target="_blank">In công việc</a>
+                            <a href="javascript:window.print()" target="_blank">In công việc</a>
                         </li>
                         <li>
-                            <a href="/vieclam/thongbaotindang/2811197">Thông báo tin đăng sai sự thật</a>
+                            <a href="<?php echo base_url();?>report-tin/<?php echo $info_tintd_detail[0]['e_id']; ?>-<?php echo mb_strtolower(url_title(removesign($info_tintd_detail[0]['e_title']))); ?>">Thông báo tin đăng sai sự thật</a>
                         </li>
                     </ul>
                 </div>

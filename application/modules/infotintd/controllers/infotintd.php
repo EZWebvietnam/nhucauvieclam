@@ -145,6 +145,39 @@ class Infotintd extends MY_Controller{
             
         }
     }
+    public function report($id = null)
+    {
+        if($this->input->post())
+        {
+            $content = $this->input->post('txta_noi_dung');
+            $this->sendmail_report('info@nhucauvieclam.net',$content);
+            redirect('/');
+        }
+        else
+        {  
+            preg_match('/(\d+)/', $id, $b);
+                $active = true;
+                $location = 'home';
+                if ($this->tank_auth->is_logged_in($active, $location)) {
+                    $data['is_login'] = 1;
+                    
+                } else {
+                    $data['is_login'] = 0;
+                    redirect($_SERVER['HTTP_REFERER']);
+                }
+            $data['tintd_detail']= $this->nopdon_model->load_job($b[0]);
+            $data['main_content']='report';
+          $this->load->view('home/nopdon_layout', $data);
+        }
+    }
+    public function sendmail_report($to,$noidung)
+    {
+        $this->load->library('maillinux');
+        $subject = "Thông tin sai sự thật";
+        $content = "Xin chào Nhu Cầu Việc Làm ! <br>".$noidung;
+        $from = "no-reply@nhucauvieclam.net";
+        $this->maillinux->SendMail($from, $to, $subject, $content);
+    }
 
 }
 ?>
