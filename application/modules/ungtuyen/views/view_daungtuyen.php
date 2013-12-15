@@ -168,7 +168,7 @@
                             Số lượng: <?php echo $ung_tuyen['e_mem']; ?> </td>
                         <td class="tb-row-W" align="center"><?php echo $ung_tuyen['u_companyName']; ?></td>
                         <td class="tb-row-W" align="center" onmouseover="tooltip.show('Hải Dương');" onmouseout="tooltip.hide();"><?php echo $list_city[$ung_tuyen['e_cityID']]; ?></td>
-                        <td class="tb-row-W" align="center"><?php echo $list_luong[$ung_tuyen['e_luong']]['luong_name']; ?></td>
+                        <td class="tb-row-W" align="center"><?php echo $list_luong[$ung_tuyen['e_luong']]; ?></td>
                         <td class="tb-row-W" align="center"><?php echo date('d/m/Y', $ung_tuyen[0]['e_dateActive']); ?></td>
                         <td class="tb-row-W" align="center"><?php echo date('d/m/Y', $ung_tuyen['e_lastDate']); ?></td>
                         <td class="tb-row-W" align="center"><?php echo date('d/m/Y', $ung_tuyen['e_datesave']); ?></td>

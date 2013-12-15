@@ -56,7 +56,7 @@ class MY_Controller extends CI_Controller
         {
             $array[$age['age_id']]=$age['age_name'];
         }
-        $this->data['list_age']=$age;   
+        $this->data['list_age']=$array;   
     }
     public function load_bangcap()
     {

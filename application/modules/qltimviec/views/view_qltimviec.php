@@ -233,7 +233,7 @@
                                     Số lượng:<?php echo $detail_vl['e_mem']; ?></td>
                                     <td class="tb-row-W" align="center"><?php echo $detail_vl['u_companyName']; ?></td>
                                     <td class="tb-row-W" align="center" onmouseover="tooltip.show('TP. HCM');" onmouseout="tooltip.hide();">
-                                        <?php echo $list_city[$detail_vl['e_cityID']]['n_name']; ?></td>
+                                        <?php echo $list_city[$detail_vl['e_cityID']]; ?></td>
                                     <td class="tb-row-W" align="center"><?php echo $list_luong[$detail_vl['e_luong']]; ?></td>
                                     <td class="tb-row-W" align="center"><?php echo date('d/m/Y', $detail_vl['e_dateActive']); ?></td>
                                     <td class="tb-row-W" align="center"><?php echo date('d/m/Y', $detail_vl['e_lastDate']); ?></td>

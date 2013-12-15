@@ -151,7 +151,7 @@
                         </tr>
                         <tr>
                             <th>Tỉnh/Thành phố</th>
-                            <td><a href="<?php echo $list_city[$info_tintd_detail[0]['e_cityID']]; ?>" target="_blank"><?php echo $list_city[$info_tintd_detail[0]['e_cityID']]; ?></a>
+                            <td><a href="<?php echo base_url();?>thanh-pho/<?php echo $info_tintd_detail[0]['e_cityID'];?>-<?php echo mb_strtolower(url_title(removesign($list_city[$info_tintd_detail[0]['e_cityID']]))) ?>" target="_blank"><?php echo $list_city[$info_tintd_detail[0]['e_cityID']]; ?></a>
                                 <br>
 
                             </td>
