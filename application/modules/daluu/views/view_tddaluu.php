@@ -169,7 +169,7 @@
                             Số lượng:<?php echo $td_luu['e_mem']; ?></td>
                         <td class="tb-row-W" align="center"><?php echo $tddaluu_detail[0]['u_companyName']; ?></td>
                         <td class="tb-row-W" align="center" onmouseover="tooltip.show('TP. HCM');" onmouseout="tooltip.hide();">
-                            <?php echo $list_city[$td_luu['e_cityID']]['n_name']; ?>
+                            <?php echo $list_city[$td_luu['e_cityID']]; ?>
                         </td>
                         <td class="tb-row-W" align="center"><?php echo $list_luong[$td_luu['e_luong']]; ?></td>
                         <td class="tb-row-W" align="center"><?php echo date('d/m/Y',$td_luu['e_dateActive']); ?></td>
