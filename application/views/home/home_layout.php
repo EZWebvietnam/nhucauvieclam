@@ -473,7 +473,42 @@ base_url(); ?>template/home/css/slider.css">
                             <strong>Tìm Việc Nhanh thương hiệu nổi tiếng: Tuyển dụng, tìm việc làm, việc làm, tìm kiếm việc làm nhanh, tuyển dụng nhân sự nhanh chóng</strong>
 
                             <div class="HighBlank"></div>
-                            
+                            <div id="bottom-hotline">
+                                <div id="bottom-hotline-inner" style="text-align: center">
+                                    <h2 class="float-left">Hotline 24/7</h2>                                    
+                                    <ul>
+                                        <li>
+                                            <table class="table-hotline">
+                                                <tbody width="100%">
+                                                    <tr>
+                                                        <td><span class="Name">Ms.Yến:</span><span class="Mobile"> Tel: 01676.534.751
+                                                            <br>Email: trolykinhdoanh.yen@gmail.com </span>
+                                                        </td>
+
+                                                        <td><span class="Name">Ms.Tình:</span><span class="Mobile"> Tel: 01685.455.381
+                                                            <br>Email: nhansutinh@baoveantam.net </span>
+                                                        </td>
+                                                        <td><span class="Name">Mr.Thắng:</span><span class="Mobile"> Tel: 096.292.5599
+                                                            <br>Email: kythuat@nhucauvieclam.net</span>
+                                                        </td>                    
+                                                    </tr>
+                                                    <tr>
+                                                        <td><span class="Name">Ms.Thoa:</span><span class="Mobile"> Tel: 01656.134.306
+                                                            <br>Email: duyettin@nhucauvieclam.net</span>
+                                                        </td>
+                                                        <td><span class="Name">Ms.Tâm:</span><span class="Mobile"> Tel: 0938.625.901
+                                                            <br>Email: phattriennhansu@nhucauvieclam.net</span>
+                                                        </td>
+                                                        <td><span class="Name">Mr.Khuê:</span><span class="Mobile"> Tel: 01278.789.987
+                                                            <br>Email: nhansu.khue@nhucauvieclam.net</span>
+                                                        </td>    
+                                                    </tr>                                
+                                            </table>
+                                        </li>
+                                    </ul>
+                                    <div class="Clear"></div>
+                                </div>
+                            </div>
 
                             <div class="Blank"></div>
                             <div class="fb-like-box" data-href="https://www.facebook.com/NhuCauViecLam?ref=hl" data-width="980px" data-height="230px" data-colorscheme="light" data-show-faces="true" data-header="true" data-stream="false" data-show-border="true"></div>

@@ -211,7 +211,7 @@
 
         <div class="Blank"></div>
         <div class="AlignRight">
-            <span class="CustomerCare"> <?php echo $info_tintd_detail[0]['e_dateActive']; ?>          -
+            <span class="CustomerCare"> <?php echo date('d/m/Y',$info_tintd_detail[0]['e_dateActive']); ?>          -
                 <?php echo $info_tintd_detail[0]['e_visits']; ?> </span>
         </div>
 

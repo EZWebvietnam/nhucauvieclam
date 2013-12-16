@@ -748,29 +748,28 @@ base_url(); ?>template/home/img/slider8.png" alt="" title="nhan luc chat luong">
                                             <table class="table-hotline">
                                                 <tbody width="100%">
                                                     <tr>
-                                                        <td><span class="Mobile">01676.534.751 </span><span class="Name">Ms.Yến</span></td>
+                                                        <td><span class="Name">Ms.Yến:</span><span class="Mobile"> Tel: 01676.534.751
+                                                            <br>Email: trolykinhdoanh.yen@gmail.com </span>
+                                                        </td>
 
-                                                        <td><span class="Mobile">01685.455.381 </span><span class="Name">Ms.Tình</span></td>
-                                                        <td><span class="Mobile">0979.368.313 </span><span class="Name">Ms.Khoa</span></td>
-                                                        <td><span class="Mobile">01656.134.306 </span><span class="Name">Ms.Thoa</span></td>
+                                                        <td><span class="Name">Ms.Tình:</span><span class="Mobile"> Tel: 01685.455.381
+                                                            <br>Email: nhansutinh@baoveantam.net </span>
+                                                        </td>
+                                                        <td><span class="Name">Mr.Thắng:</span><span class="Mobile"> Tel: 096.292.5599
+                                                            <br>Email: kythuat@nhucauvieclam.net</span>
+                                                        </td>                    
                                                     </tr>
                                                     <tr>
-                                                        <td><span class="Mobile">01656.244.327 </span><span class="Name">Ms.Tâm</span></td>
-                                                        
-                                                        <td><span class="Mobile">01642.446.754 </span><span class="Name">Ms.Yên</span></td>
-
-                                                        <td><span class="Mobile">01278.789.987 </span><span class="Name">Ms.Khuê</span></td>
-                                                        <td><span class="Mobile">0962925599 </span><span class="Name">Mr.Thắng</span></td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td><span class="Mobile">01689.952.759 </span><span class="Name">Ms.Khuê</span></td>
-                                                        
-                                                        <td><span class="Mobile">0935.916.420 </span><span class="Name">Mr.Trung</span></td>
-
-                                                        <td><span class="Mobile">0169.533.2638 </span><span class="Name">Ms.Thanh</span></td>
-                                                        <td><span class="Mobile">0932.597.000 </span><span class="Name">Ms.Hiếu</span></td>
-                                                    </tr>
-                                                                                             
+                                                        <td><span class="Name">Ms.Thoa:</span><span class="Mobile"> Tel: 01656.134.306
+                                                            <br>Email: duyettin@nhucauvieclam.net</span>
+                                                        </td>
+                                                        <td><span class="Name">Ms.Tâm:</span><span class="Mobile"> Tel: 0938.625.901
+                                                            <br>Email: phattriennhansu@nhucauvieclam.net</span>
+                                                        </td>
+                                                        <td><span class="Name">Mr.Khuê:</span><span class="Mobile"> Tel: 01278.789.987
+                                                            <br>Email: nhansu.khue@nhucauvieclam.net</span>
+                                                        </td>    
+                                                    </tr>                                
                                             </table>
                                         </li>
                                     </ul>
