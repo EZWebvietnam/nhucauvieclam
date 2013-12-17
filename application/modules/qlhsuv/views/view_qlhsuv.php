@@ -179,65 +179,10 @@
                                 </tr>
                             </tbody>
                         </table>
-                        <table border="0" cellpadding="0" cellspacing="0" width="100%">
-                            <tbody>
-                                <tr>
-                                    <td colspan="2" style="padding:10px;"> Thống kê: Danh sách hiện có <span style="color:red;font-size:14px;font-weight:bold">0 </span> Hồ sơ ứng viên </td>
-                                </tr>
-                                <tr>
-                                    <td class="tb-row-G"><span class="text12">Tìm kiếm hồ sơ ứng viên
-                                            trong danh sách ứng viên đã nộp hồ sơ theo tiêu chí:</span></td>
-                                    <td class="tb-row-G" width="100">
-                                        <input src="<?php echo base_url(); ?>template/home/img/btnHuyTimkiem.gif" type="image" onclick="ntd_quan_tri_huy_tim_kiem_ho_so_ung_vien()">
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
-                        <table class="box-DK-search-header" border="0" cellpadding="0" cellspacing="0" width="100%" style="border-bottom:0px;">
-                            <tbody>
-                                <tr>
-                                    <td height="20" valign="top" width="280">
-                                        <div class="borderBot">
-                                            <b>Trạng thái hồ sơ:</b>
-                                        </div></td>
-                                    <td height="20" valign="top" width="200">
-                                        <div class="borderBot">
-                                            <b>Mức lương mong muốn:</b>
-                                        </div></td>
-                                    <td height="20" valign="top" width="200">
-                                        <div class="borderBot">
-                                            <b>Trình độ học vấn:</b>
-                                        </div></td>
-                                    <td height="20" valign="top" width="180">
-                                        <div class="borderBot">
-                                            <b>Giới tính:</b>
-                                        </div></td>
-                                    <td height="20" valign="top" width="200">
-                                        <div class="borderBot">
-                                            <b>Tình trạng hôn nhân:</b>
-                                        </div></td>
-                                    <td height="20" valign="top" width="280">
-                                        <div class="borderBot">
-                                            <b>Số năm kinh nghiệm:</b>
-                                        </div></td>
-                                    <td style="width:15px;"></td>
-                                </tr>
-                            </tbody>
-                        </table>
-                        <div style="height: 90px; overflow-x: hidden; overflow-y: scroll;border:#c6dbe0 solid 1px;border-top:0px;">
-                            <table class="box-DK-search-noborder" border="0" cellpadding="0" cellspacing="0" width="100%">
-                                <tbody>
-                                    <tr>
-                                        <td height="30" valign="top" width="280"><div class="lineHeight25"></div></td>
-                                        <td height="30" valign="top" width="200"><div class=" lineHeight25"></div></td>
-                                        <td height="30" valign="top" width="200"><div class=" lineHeight25"></div></td>
-
-                                        <td height="30" valign="top" width="180"><div class=" lineHeight25"></div></td>
-                                        <td height="30" valign="top" width="200"><div class=" lineHeight25"></div></td>
-                                        <td height="30" valign="top" width="280"><div class=" lineHeight25"></div></td>
-                                    </tr>
-                                </tbody>
-                            </table>
+                        <div id="list_hs_td">
+                        
+                        
+                       
                         </div>
                     </div>
                 </div>
@@ -266,7 +211,19 @@
 			      error:function(){
 			    	  
 			      }   
-			    });
+		});
+          $.ajax({
+			      url: "<?php echo base_url();?>qlhsuv/qlhsuv/ajax_get_hs",
+			      type: "post",
+			      data: {'hs_id':tinh_den},
+			      success: function(response){
+			    	  $('#list_hs_td').html(response);
+		              
+			      },
+			      error:function(){
+			    	  
+			      }   
+		});
     }
         if (document.getElementById("a_menu_lv2_94") != null) {
             document.getElementById("a_menu_lv2_94").style.color = "#518c04";

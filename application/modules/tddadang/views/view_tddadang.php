@@ -137,7 +137,7 @@
                             <td class="tb-header-G" width="80">Ngày đăng</td>
                             <td class="tb-header-G" width="80">Ngày cập nhật</td>
                             <td class="tb-header-G" width="85">Ngày hết hạn</td>
-                            <td class="tb-header-G" width="80">Tình trạng tin</td>
+                            
                             <td class="tb-header-G" width="80">HS ứng tuyển</td>
                             <td class="tb-header-G" width="130">Thao tác</td>
 
@@ -148,7 +148,8 @@
                     <input type="hidden" name="gia_han_1407482" id="gia_han_1407482" value="3">
                     <input type="hidden" name="lam_moi_1407482" id="lam_moi_1407482" value="1000">
                     <?php  
-                            foreach ($tddangdang_detail as $tddadang){                      
+                            foreach ($tddangdang_detail as $tddadang){  
+                                $count = $this->load->tindadang_post->get_count($tddadang['e_id'])
                         ?>
                     <tr style="">
                         
@@ -173,8 +174,8 @@
                         <td class="tb-row-W" align="center"><?php echo date('d/m/Y', $tddadang['e_dateActive']); ?></td>
                         <td class="tb-row-W" align="center"><?php echo date('d/m/Y', $tddadang['e_lastDate']); ?>
                             </td>
-                        <td class="ntd_tb-row-W"><?php echo $tddadang['e_active']; ?></td>
-                        <td class="tb-row-W" align="center">0
+                    
+                        <td class="tb-row-W" align="center"><?php echo $count;?>
                             <br>
                         </td>
                         <td class="ntd_tb-row-W">

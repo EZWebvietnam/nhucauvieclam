@@ -15,5 +15,13 @@ class Tindadang_post extends CI_Model
         $query = $this->db->query($sql_join);
         return $query->result_array();
     }
+    public function get_count($id)
+    {
+        $this->db->select();
+        $this->db->where('id_job',$id);
+        $query = $this->db->get('tbl_nop_don');
+        $array = $query->result_array();
+        return count($array);
+    }
 }
 ?>
