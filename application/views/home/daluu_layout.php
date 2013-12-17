@@ -367,8 +367,7 @@ base_url(); ?>template/home/img/slider8.png" alt="" title="nhan luc chat luong">
                                         
                                         <?php echo $this->load->view($main_content); ?>
 
-                                        <div id="footer">
-
+                         <div id="footer">
                             <div id="footer-menubar">
                                 <div id="footer-menubar-left">
                                     <div id="footer-menubar-right">
