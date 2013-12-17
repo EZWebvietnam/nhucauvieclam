@@ -29,7 +29,7 @@
             <div id="header">
                 <div id="header-inner">
                     <div id="header-logo">
-                        <a href="/" title="nhu cau viec lam" rel="home" id="logo"> <img src="<?php echo base_url(); ?>template/home/img/logo.png" alt="Tìm việc làm hàng đầu - Itworks" height="125" width="430"> </a>
+                        <a href="/" title="nhu cau viec lam" rel="home" id="logo"> <img src="<?php echo base_url(); ?>template/home/img/logo.png" alt="Tìm việc làm hàng đầu" height="125" width="430"> </a>
                     </div>
                     <div id="bg_slider">
                         <div class="hbs">
@@ -481,14 +481,17 @@ base_url(); ?>template/home/css/slider.css">
                                             <table class="table-hotline">
                                                 <tbody width="100%">
                                                     <tr>
-                                                        <td><span class="Name">Ms.Yến:</span><span class="Mobile"> Tel: 01676.534.751
+                                                        <td><span class="Name" >Tư vấn</span><br>
+                                                            <span class="Name">Ms.Yến:</span><span class="Mobile"> Tel: 01676.534.751
                                                             <br>Email: trolykinhdoanh.yen@gmail.com </span>
                                                         </td>
 
-                                                        <td><span class="Name">Ms.Tình:</span><span class="Mobile"> Tel: 01685.455.381
+                                                        <td><span class="Name">Nhân sự</span><br>
+                                                            <span class="Name">Ms.Tình:</span><span class="Mobile"> Tel: 01685.455.381
                                                             <br>Email: nhansutinh@baoveantam.net </span>
                                                         </td>
-                                                        <td><span class="Name">Mr.Thắng:</span><span class="Mobile"> Tel: 096.292.5599
+                                                        <td><span class="Name">Kỹ thuật</span><br>
+                                                            <span class="Name">Mr.Thắng:</span><span class="Mobile"> Tel: 096.292.5599
                                                             <br>Email: kythuat@nhucauvieclam.net</span>
                                                         </td>                    
                                                     </tr>
