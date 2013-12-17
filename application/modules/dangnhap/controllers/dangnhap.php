@@ -47,7 +47,7 @@
             if ($this->tank_auth->login($this->form_validation->set_value('login'), $this->
                 form_validation->set_value('password'), $this->form_validation->set_value('remember'),
                 $this->data['login_by_username'], $this->data['login_by_email'])) { // success
-                    redirect($_SERVER['HTTP_REFERRER']);
+                    redirect('/');
             } else {
                 $errors = $this->tank_auth->get_error_message();
                 if (isset($errors['banned'])) { // banned user

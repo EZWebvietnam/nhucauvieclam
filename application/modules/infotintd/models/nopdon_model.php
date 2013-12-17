@@ -27,7 +27,7 @@ class Nopdon_model extends CI_Model{
         $id = intval($id);
         $this->db->select();
         $this->db->where('u_id',$id);
-        //$this->db->where('j_status',1);
+        $this->db->where('j_status',1);
         $query =  $this->db->get('tbl_employers_post');        
         return $query->result_array();
     }

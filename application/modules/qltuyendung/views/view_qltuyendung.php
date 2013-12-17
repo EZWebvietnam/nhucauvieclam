@@ -141,6 +141,7 @@
                             </tr>
                             <?php
                                     foreach ($qltuyendung_detail as $qltuyendung){
+                                        $count = $this->load->qltuyendung_model->get_count($qltuyendung['e_id'])
                                 ?>
                             <tr style="">
                                 
@@ -160,7 +161,7 @@
                                 <td class="tb-row-W" align="center"><?php echo date('d/m/Y', $qltuyendung['e_lastDate']); ?></td>
                                 <td class="ntd_tb-row-W">
                                     Đã đăng					</td>
-                                <td class="tb-row-W" align="center">0 <br> </td>
+                                <td class="tb-row-W" align="center"><?php echo $count;?><br> </td>
                                 <td class="ntd_tb-row-W">
                                     <div class="borderBot padTop5"><a href="<?php echo base_url(); ?>tin-tuyen-dung/<?php echo $qltuyendung['e_id']; ?>-<?php echo mb_strtolower(url_title(removesign($qltuyendung['e_title']))) ?>" title="" target="_blank">Xem</a> | 
                                         <a href="/ntd-trang-quan-tri-cap-nhat-tin-tuyen-dung.html?id_tin_td=1407482" title="">Sửa</a> | 

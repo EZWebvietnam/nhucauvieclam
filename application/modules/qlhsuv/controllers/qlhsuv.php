@@ -45,5 +45,18 @@ class Qlhsuv extends MY_Controller
             $this->load->view('view_ajax_detail',$this->data);
         }
     }
+    public function ajax_get_hs()
+    {
+        if ($this->input->is_ajax_request())
+        {
+            parent::load_luong();
+            parent::load_bangcap();
+            parent::load_sex();
+            parent::load_exp();
+            $id_hs = $this->input->post('hs_id');
+            $this->data['detail']= $this->qlhsuv_model->get_hs_detail($id_hs);
+            $this->load->view('view_ajax_list_cv',$this->data);
+        }
+    }
 }
 ?>

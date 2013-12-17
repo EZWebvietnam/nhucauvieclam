@@ -31,7 +31,7 @@ class Hosouv extends MY_Controller
             
         } else {
             $this->data['is_login'] = 0;
-            redirect('/');
+           
         }
         
         $this->data['user_post_list']=  $this->hsuv_post->timviec_hot();
@@ -39,7 +39,8 @@ class Hosouv extends MY_Controller
         $this->data['hsuv_detail']= $this->hsuv_post->load_post($id);
         if(empty($this->data['hsuv_detail']))
         {
-            redirect($_SERVER['HTTP_REFERER']);
+            show_404();
+            exit;
         }
         $this->data['main_content']='view_hsuv';
         $this->load->view('home/hosouv_layout',  $this->data);

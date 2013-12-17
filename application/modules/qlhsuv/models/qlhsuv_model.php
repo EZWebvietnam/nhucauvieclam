@@ -30,5 +30,16 @@ class Qlhsuv_model extends CI_Model
         $query = $this->db->query($sql_join);
         return $query->result_array();
     }
+    public function get_hs_detail($id)
+    {
+        $id = intval($id);
+        $sql = "SELECT tbl_job_user.u_sex,tbl_employers_post.j_id, tbl_employers_post.j_title,tbl_employers_post.j_luongmm,tbl_employers_post.j_kinhnghiem,tbl_employers_post.j_title,tbl_employers_post.j_trinhdo,tbl_employers_post.j_status
+        FROM tbl_nop_don
+        INNER JOIN tbl_job_user ON tbl_job_user.u_id = tbl_nop_don.id_user
+        INNER JOIN tbl_employers_post ON tbl_employers_post.j_id = tbl_nop_don.id_cv
+        WHERE tbl_nop_don.id_job=".$id;
+        $query = $this->db->query($sql);
+        return $query->result_array();
+    }
 }
 ?>
