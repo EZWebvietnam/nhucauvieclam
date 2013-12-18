@@ -75,6 +75,7 @@ $route['tim-kiem'] = "formsearch/search";
 $route['ung-tuyen-check/(:any)-(:any)'] = "infotintd/infotintd/redirect_nopdon/$1";
 $route['ung-tuyen/(:any)-(:any)'] = "infotintd/infotintd/nopdon/$1";
 $route['xoa-ho-so/(:any)/(:any)'] = "dadang/hsdadang/delete/$1";
+$route['xoa-tin-td/(:any)/(:any)'] = "tddadang/tddadang/delete/$1";
 $route['report-tin/(:any)-(:any)'] = "infotintd/infotintd/report/$1";
 /* End of file routes.php */
 /* Location: ./application/config/routes.php */

@@ -23,5 +23,12 @@ class Tindadang_post extends CI_Model
         $array = $query->result_array();
         return count($array);
     }
+    public function delete($id,$id_user)
+    {
+        $id = intval($id);
+        $id_user = intval($id_user);
+        $where = array('e_id'=>$id,'u_id'=>$id_user);
+        $this->db->delete('tbl_job_post',$where);
+    }
 }
 ?>
