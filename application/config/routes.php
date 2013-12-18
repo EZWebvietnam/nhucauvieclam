@@ -56,6 +56,7 @@ $route['dangnhap/index'] = "dangnhap/index";
 $route['hoso-ungvien/(:any)-(:any)'] = "hosouv/hosouv/hosouv_post/$1";
 $route['hoso-ungvien-cho-duyet/(:any)-(:any)'] = "hosouv/hosouv/hs_uv_pending/$1";
 $route['tin-tuyen-dung/(:any)-(:any)'] = "infotintd/infotintd/view_job_post/$1";
+$route['tin-tuyendung-cho-duyet/(:any)-(:any)'] = "infotintd/infotintd/view_tintd_pending/$1";
 $route['info-hoso-ungvien/(:any)-(:any)'] = "infohsuv/infohsuv/view_employers_post/$1";
 $route['quanly-hoso-ungvien'] = "qlhsuv/qlhsuv/index";
 $route['quanly-timviec'] = "qltimviec/qltimviec/index/$1";

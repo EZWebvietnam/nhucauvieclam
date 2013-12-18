@@ -1,118 +1,117 @@
-<?php 
-                                        if($is_login == 1)
-                                        {
-                                        if($this->session->userdata['u_role']==2)
-                                        {
-                                        ?>
-                                        <div id="user-menu">
+<?php
+if ($is_login == 1) {
+    if ($this->session->userdata['u_role'] == 2) {
+        ?>
+        <div id="user-menu">
 
-                                            <div class="GridInfo">
-                                                <div class="Content">
+            <div class="GridInfo">
+                <div class="Content">
 
-                                                    <ul class="UserMenu">
-                                                        <li>
-                                                            <a href="<?php echo base_url(); ?>quanly-timviec">Quản lý tìm việc</a>
-                                                        </li>
+                    <ul class="UserMenu">
+                        <li>
+                            <a href="<?php echo base_url(); ?>quanly-timviec">Quản lý tìm việc</a>
+                        </li>
 
-                                                        <li class="Separator">
-                                                            |
-                                                        </li>
+                        <li class="Separator">
+                            |
+                        </li>
 
-                                                        <li>
-                                                            <a href="<?php echo base_url(); ?>hsda-dang">Hồ Sơ đã đăng</a>
-                                                        </li>
+                        <li>
+                            <a href="<?php echo base_url(); ?>hsda-dang">Hồ Sơ đã đăng</a>
+                        </li>
 
-                                                        <li class="Separator">
-                                                            |
-                                                        </li>
+                        <li class="Separator">
+                            |
+                        </li>
 
-                                                        <li>
-                                                            <a href="<?php echo base_url(); ?>tao-hsungvien">Tạo HS tìm việc</a>
-                                                        </li>
+                        <li>
+                            <a href="<?php echo base_url(); ?>tao-hsungvien">Tạo HS tìm việc</a>
+                        </li>
 
-                                                        <li class="Separator">
-                                                            |
-                                                        </li>
+                        <li class="Separator">
+                            |
+                        </li>
 
-                                                        <li>
-                                                            <a href="<?php echo base_url(); ?>daluu">Việc làm đã Lưu</a>
-                                                        </li>
+                        <li>
+                            <a href="<?php echo base_url(); ?>daluu">Việc làm đã Lưu</a>
+                        </li>
 
-                                                        <li class="Separator">
-                                                            |
-                                                        </li>
+                        <li class="Separator">
+                            |
+                        </li>
 
-                                                        <li>
-                                                            <a href="<?php echo base_url(); ?>da-ung-tuyen">Việc làm đã ứng tuyển</a>
-                                                        </li>
+                        <li>
+                            <a href="<?php echo base_url(); ?>da-ung-tuyen">Việc làm đã ứng tuyển</a>
+                        </li>
 
-                                                        <li class="Separator">
-                                                            |
-                                                        </li>
+                        <li class="Separator">
+                            |
+                        </li>
 
-                                                        <li>
-                                                            <a href="<?php echo base_url(); ?>cv">Hồ sơ cá nhân(CV)</a>
-                                                        </li>
+                        <li>
+                            <a href="<?php echo base_url(); ?>cv">Hồ sơ cá nhân(CV)</a>
+                        </li>
 
-                                                        <li class="Separator">
-                                                            |
-                                                        </li>
+                        <li class="Separator">
+                            |
+                        </li>
 
-                                                        <li>
-                                                            <a href="<?php echo base_url(); ?>thongtin-canhan">Thông tin cá nhân</a>
-                                                        </li>
+                        <li>
+                            <a href="<?php echo base_url(); ?>thongtin-canhan">Thông tin cá nhân</a>
+                        </li>
 
-                                                    </ul>
-                                                    <div class="Clear"></div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <?php } else {?>
-                                        <div id="user-menu">
+                    </ul>
+                    <div class="Clear"></div>
+                </div>
+            </div>
+        </div>
+    <?php } else { ?>
+        <div id="user-menu">
 
-                                            <div class="GridInfo">
-                                                <div class="Content">
+            <div class="GridInfo">
+                <div class="Content">
 
-                                                    <ul class="UserMenu">
-                                                        <li>
-                                                            <a href="<?php echo base_url(); ?>quanly-tuyendung">Quản lý tuyển dụng</a>
-                                                        </li>
-                                                        <li class="Separator">
-                                                            |
-                                                        </li>
-                                                        <li>
-                                                            <a href="<?php echo base_url(); ?>tintd-dadang">Tin TD đã đăng</a>
-                                                        </li>
-                                                        <li class="Separator">
-                                                            |
-                                                        </li>
-                                                        <li>
-                                                            <a href="<?php echo base_url(); ?>tao-tintuyendung">Taọ tin TD mới</a>
-                                                        </li>
-                                                        <li class="Separator">
-                                                            |
-                                                        </li>
-                                                        <li>
-                                                            <a href="<?php echo base_url(); ?>thongtin-ntd">Thông tin NTD</a>
-                                                        </li>
-                                                        <li class="Separator">
-                                                            |
-                                                        </li>
-                                                        <li>
-                                                            <a href="<?php echo base_url(); ?>quanly-hoso-ungvien">Quản lý hồ sơ ứng viên</a>
-                                                        </li>
-                                                        <li class="Separator">
-                                                            |
-                                                        </li>
-                                                        <li>
-                                                            <a href="#">Liên hệ quản cáo</a>
-                                                        </li>
-                                                    </ul>
-                                                    <div class="Clear"></div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <?php }} ?>
+                    <ul class="UserMenu">
+                        <li>
+                            <a href="<?php echo base_url(); ?>quanly-tuyendung">Quản lý tuyển dụng</a>
+                        </li>
+                        <li class="Separator">
+                            |
+                        </li>
+                        <li>
+                            <a href="<?php echo base_url(); ?>tintd-dadang">Tin TD đã đăng</a>
+                        </li>
+                        <li class="Separator">
+                            |
+                        </li>
+                        <li>
+                            <a href="<?php echo base_url(); ?>tao-tintuyendung">Taọ tin TD mới</a>
+                        </li>
+                        <li class="Separator">
+                            |
+                        </li>
+                        <li>
+                            <a href="<?php echo base_url(); ?>thongtin-ntd">Thông tin NTD</a>
+                        </li>
+                        <li class="Separator">
+                            |
+                        </li>
+                        <li>
+                            <a href="<?php echo base_url(); ?>quanly-hoso-ungvien">Quản lý hồ sơ ứng viên</a>
+                        </li>
+                        <li class="Separator">
+                            |
+                        </li>
+                        <li>
+                            <a href="#">Liên hệ quản cáo</a>
+                        </li>
+                    </ul>
+                    <div class="Clear"></div>
+                </div>
+            </div>
+        </div>
+    <?php }
+} ?>
 <div class="content-qlhs">
     <input type="hidden" name="dang_xu_ly" id="dang_xu_ly" value="0">
     <div>
@@ -152,35 +151,32 @@
                     <input type="hidden" name="tong_so_viec_lam_da_ung_tuyen" id="tong_so_viec_lam_da_ung_tuyen" value="0">
                     <input type="hidden" name="page" id="page" value="1">
                     <input type="hidden" name="number_items" id="number_items" value="15">
-                    <?php 
-                    foreach($ungtuyen_detail as $ung_tuyen)
-                    {
-                    ?>
-                    <tr>
-                        <td class="tb-row-W" align="center">
-                            <input type="checkbox" name="checkbox_viec_lam_da_ung_tuyen[]" id="checkbox_viec_lam_da_ung_tuyen[0]" value="1330523">
-                        </td>
-                        <td class="tb-row-W"><b><a href="/it-phan-cung/mang/nhan-vien-cong-nghe-thong-tin-c5p1id1330523.html" target="_blank" title="Click để xem thông tin chi tiết việc làm" class="linkBlack" ><?php echo $ungtuyen_detail[0]['e_title']; ?></a></b>
-                            <br>
-                            <span>Ngành: <?php echo $list_cate_job[$ung_tuyen['m_id']]; ?>
-                            <?php echo $ung_tuyen['e_nghe1']; ?> <?php echo $ung_tuyen['e_nghe2']; ?> <?php echo $ung_tuyen['e_nghe3']; ?></span>
-                            <br>
-                            Số lượng: <?php echo $ung_tuyen['e_mem']; ?> </td>
-                        <td class="tb-row-W" align="center"><?php echo $ung_tuyen['u_companyName']; ?></td>
-                        <td class="tb-row-W" align="center" onmouseover="tooltip.show('Hải Dương');" onmouseout="tooltip.hide();"><?php echo $list_city[$ung_tuyen['e_cityID']]; ?></td>
-                        <td class="tb-row-W" align="center"><?php echo $list_luong[$ung_tuyen['e_luong']]; ?></td>
-                        <td class="tb-row-W" align="center"><?php echo date('d/m/Y', $ung_tuyen[0]['e_dateActive']); ?></td>
-                        <td class="tb-row-W" align="center"><?php echo date('d/m/Y', $ung_tuyen['e_lastDate']); ?></td>
-                        <td class="tb-row-W" align="center"><?php echo date('d/m/Y', $ung_tuyen['e_datesave']); ?></td>
-                        <td class="tb-row-W">
-                            <div class="borderBot padTop5">
-                                <a href="<?php echo base_url(); ?>tin-tuyen-dung/<?php echo $ung_tuyen['e_id']; ?>-<?php echo mb_strtolower(url_title(removesign($ung_tuyen['e_title']))) ?>" target="_blank" title="Click để xem thông tin chi tiết việc làm">Xem</a>
-                            </div>
-                            <div class="padTop5">
-                                <a href="javascript: if (dat_trang_thai_dang_xu_ly()) {ntv_quan_tri_xoa_1_viec_lam_da_ung_tuyen(1330523); }" title="Hủy ứng tuyển việc làm đã ứng tuyển">Hủy ứng tuyển</a>
-                            </div></td>
-                    </tr>
-                    <?php } ?>
+                    <?php
+                    foreach ($ungtuyen_detail as $ung_tuyen) {
+                        ?>
+                        <tr>
+                            <td class="tb-row-W" align="center">
+                                <input type="checkbox" name="checkbox_viec_lam_da_ung_tuyen[]" id="checkbox_viec_lam_da_ung_tuyen[0]" value="1330523">
+                            </td>
+                            <td class="tb-row-W"><b><a href="/it-phan-cung/mang/nhan-vien-cong-nghe-thong-tin-c5p1id1330523.html" target="_blank" title="Click để xem thông tin chi tiết việc làm" class="linkBlack" ><?php echo $ungtuyen_detail[0]['e_title']; ?></a></b>
+                                <br>
+                                <span>Ngành: <?php echo $list_cate_job[$ung_tuyen['m_id']]; ?>
+                                </span>
+                                <br>
+                                Số lượng: <?php echo $ung_tuyen['e_mem']; ?> </td>
+                            <td class="tb-row-W" align="center"><?php echo $ung_tuyen['u_companyName']; ?></td>
+                            <td class="tb-row-W" align="center" onmouseover="tooltip.show('Hải Dương');" onmouseout="tooltip.hide();"><?php echo $list_city[$ung_tuyen['e_cityID']]; ?></td>
+                            <td class="tb-row-W" align="center"><?php echo $list_luong[$ung_tuyen['e_luong']]; ?></td>
+                            <td class="tb-row-W" align="center"><?php echo date('d/m/Y', $ung_tuyen['e_dateActive']); ?></td>
+                            <td class="tb-row-W" align="center"><?php echo date('d/m/Y', $ung_tuyen['e_lastDate']); ?></td>
+                            <td class="tb-row-W" align="center"><?php echo date('d/m/Y', $ung_tuyen['e_datesave']); ?></td>
+                            <td class="tb-row-W">
+                                <div class="borderBot padTop5">
+                                    <a href="<?php echo base_url(); ?>tin-tuyen-dung/<?php echo $ung_tuyen['e_id']; ?>-<?php echo mb_strtolower(url_title(removesign($ung_tuyen['e_title']))) ?>" target="_blank" title="Click để xem thông tin chi tiết việc làm">Xem</a> | <a onclick="return confirm('Bạn có chắc muốn xóa hồ sơ không ?')" href='<?php echo base_url(); ?>xoa-ho-so/<?php echo $detail_hs['j_id']; ?>/<?php echo mb_strtolower(url_title(removesign($detail_hs['j_title']))) ?>' title="Xoá tạm hồ sơ">Xóa</a>
+                                </div>
+                            </td>
+                        </tr>
+<?php } ?>
                     </tbody>
                 </table>
                 <table width="100%" class="padTop10">

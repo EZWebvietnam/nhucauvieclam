@@ -5,13 +5,6 @@ class Tindadang_post extends CI_Model
         parent::__construct();
         $this->load->database();
     }
-    public function view_hsdadang_detail($id = null){
-        $id = intval($id);
-        $this->db->select();
-        $this->db->where('j_id',$id);
-        $query_array = $this->db->get('tbl_employers_post');
-        return $query_array->result_array();
-    }
     public function hsdadang_detail($id)
     {   
         intval($id);

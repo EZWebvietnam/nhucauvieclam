@@ -37,9 +37,9 @@ class Qltimviec extends MY_Controller
             {
                 $u_id = 0;
             }
-        $this->data['qltimviec_detail']= $this->qltimviec_model->load_employers($u_id);
-        $this->data['qlungtuyen_detail']= $this->qltimviec_model->load_employers_ungtuyen($u_id);
-        $this->data['qlhoso_detail']= $this->qltimviec_model->load_post($u_id);
+        $this->data['dadang_detail']= $this->qltimviec_model->hsdadang_detail($u_id);
+        $this->data['daluu_detail']= $this->qltimviec_model->daluu_post($u_id);
+        $this->data['ungtuyen_detail']= $this->qltimviec_model->ungtuyen_post($u_id);
         
         $this->data['main_content']='view_qltimviec';
         $this->load->view('home/qltimviec_layout',  $this->data);

@@ -37,5 +37,19 @@ class Daungtuyen extends MY_Controller
         $this->data['main_content'] = 'view_daungtuyen';
         $this->load->view('home/daungtuyen_layout', $this->data);
     }
+    public function delete($id = null)
+    {
+        $id = intval($id);
+        if($this->session->userdata('u_id'))
+        {
+            $u_id = $this->session->userdata('u_id');
+        }
+        else
+        {
+            $u_id = 0;
+        }
+        $this->daluu_post->delete($id,$u_id);
+        redirect($_SERVER['HTTP_REFERER']);
+    }
 }
 ?>

@@ -2,13 +2,6 @@
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
-        <group>
-            <file>file:/E:/xampp/htdocs/nhucauvieclam/template/home/js/demo.js</file>
-            <file>file:/E:/xampp/htdocs/nhucauvieclam/application/modules/home/views/home_/view_home.php</file>
-            <file>file:/E:/xampp/htdocs/nhucauvieclam/application/config/routes.php</file>
-            <file>file:/E:/xampp/htdocs/nhucauvieclam/application/modules/taotintd/controllers/tintd.php</file>
-            <file>file:/E:/xampp/htdocs/nhucauvieclam/application/modules/taohsuv/controllers/taohsuv.php</file>
-            <file>file:/E:/xampp/htdocs/nhucauvieclam/application/views/home/home_layout.php</file>
-        </group>
+        <group/>
     </open-files>
 </project-private>
