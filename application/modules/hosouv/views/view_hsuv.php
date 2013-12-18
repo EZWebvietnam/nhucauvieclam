@@ -28,7 +28,11 @@
                                 <tr>
                                     <td valign="top" class="tbUser-info_ntd" align="right"><b>Giới tính:</b></td>
                                     <td class="tbUser-info"><?php echo $list_sex[$hsuv_detail[0]['u_sex']]; ?></td>
-                                </tr>                                
+                                </tr>
+                                <tr>
+                                    <td valign="top" class="tbUser-info_ntd" align="right"><b>Địa chỉ:</b></td>
+                                    <td class="tbUser-info_ntd"><?php echo $hsuv_detail[0]['u_adress']; ?></td>
+                                </tr>
                             </tbody>
                         </table></td>
                 </tr>
@@ -40,7 +44,7 @@
                         <table width="80%" cellpadding="0" cellspacing="0" border="0">
                             <tbody>
                                 <tr>
-                                    <td width="180" valign="top" class="tbUser-info_ntd" align="right"><b>Trình độ học vấn:</b></td>
+                                    <td width="280" valign="top" class="tbUser-info_ntd" align="right"><b>Trình độ học vấn:</b></td>
                                     <td class="tbUser-info_ntd"><?php echo $list_bangcap[$hsuv_detail[0]['j_trinhdo']]; ?></td>
                                 </tr>
                                 <tr>
@@ -86,7 +90,7 @@
                         <table width="100%" cellpadding="0" cellspacing="0" border="0">
                             <tbody>
                                 <tr>
-                                    <td width="280" valign="top" class="tbUser-info_ntd" align="right"><b>Số năm kinh nghiệm:</b></td>
+                                    <td width="260" valign="top" class="tbUser-info_ntd" align="right"><b>Số năm kinh nghiệm:</b></td>
                                     <td class="tbUser-info_ntd"><?php echo $list_exp[$hsuv_detail[0]['j_kinhnghiem']]; ?></td>
                                 </tr>
                                 <tr>
@@ -111,7 +115,7 @@
                         <table width="100%" cellpadding="0" cellspacing="0" border="0">
                             <tbody>
                                 <tr>
-                                    <td width="280" valign="top" class="tbUser-info_ntd" align="right"><b>Vị trí mong muốn:</b></td>
+                                    <td width="260" valign="top" class="tbUser-info_ntd" align="right"><b>Vị trí mong muốn:</b></td>
                                     <td class="tbUser-info_ntd"><?php echo $list_capbac[$hsuv_detail[0]['j_chucmm']]; ?></td>
                                 </tr>
                                 <tr>
@@ -152,7 +156,7 @@
                         <table width="100%" cellpadding="0" cellspacing="0" border="0">
                             <tbody>
                                 <tr>
-                                    <td width="280" valign="top" class="tbUser-info_ntd" align="right"><b>Nguồn tham khảo:</b></td>
+                                    <td width="260" valign="top" class="tbUser-info_ntd" align="right"><b>Nguồn tham khảo:</b></td>
                                     <td class="tbUser-info_ntd"><?php echo $hsuv_detail[0]['j_thamkhao']; ?></td>
                                 </tr>
                                 <tr>
@@ -169,7 +173,7 @@
                         <table width="100%" cellpadding="0" cellspacing="0" border="0">
                             <tbody>
                                 <tr>
-                                    <td width="280" valign="top" class="tbUser-info_ntd" align="right"><b>Người liên hệ:</b></td>
+                                    <td width="260" valign="top" class="tbUser-info_ntd" align="right"><b>Người liên hệ:</b></td>
                                     <td class="tbUser-info_ntd"><?php echo $hsuv_detail[0]['u_fullname']; ?></td>
                                 </tr>
                                 <tr>
