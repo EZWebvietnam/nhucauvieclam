@@ -298,8 +298,6 @@ base_url(); ?>template/home/css/slider.css">
                         <div class="BottomRight"></div>
                     </div>
                 </div>
-
-                
                 <div class="Blank"></div>
                 <script type="text/javascript">
                     jQuery(document).ready(function($) {

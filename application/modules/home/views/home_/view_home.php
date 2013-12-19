@@ -179,12 +179,12 @@
                             <?php
                             $i = 1;
                             foreach ($sanggia_detail as $job) {
-
-                                if ($i % 2 == 1) {
+                                if ($job['e_status'] == 0) {                               
+                                    if ($i % 2 == 1) {
                                     ?>
                                     <tr>
-                                <?php } ?>
-                                    <td width="50%">
+                                    <?php } ?>
+                                    <td width="33%">
                                         <ul>
                                             <li>
                                                 <a href="<?php echo base_url(); ?>tin-tuyen-dung/<?php echo $job['e_id'] ?>-<?php echo mb_strtolower(url_title(removesign($job['e_title']))) ?>" title="<?php echo $job['e_title'] ?>" target="_blank"><?php echo $job['e_title'] ?></a>
@@ -199,6 +199,7 @@
                                 <?php } ?>
                                 <?php
                                 $i++;
+                                }
                             }
                             ?>
                         </tbody>
