@@ -44,6 +44,7 @@ class Infontd extends CI_Controller{
             $adress = $this->input->post('txt_dia_chi_nguoi_lien_he');
             $mobi = $this->input->post('txt_dien_thoai_lien_he');
             $email = $this->input->post('txt_email_lien_he');
+            $mst = $this->input->post('txt_ma_so_thue');
             
             $data = array('u_companyName'=>$companyname,
                 'u_companyMem'=>$quymo,
@@ -56,6 +57,7 @@ class Infontd extends CI_Controller{
                 'u_contactAdress'=>$adress,
                 'u_contactMobi'=>$mobi,
                 'u_contactEmail'=>$email,
+                'u_mst'=>$mst,
                 );
             $id = $this->infontd_model->save_info($data);
             if($id > 0)

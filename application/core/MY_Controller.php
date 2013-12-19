@@ -47,17 +47,6 @@ class MY_Controller extends CI_Controller
         }
         $this->data['list_time']=$array;   
     }
-    public function load_age()
-    {
-        $this->load->model('chitietnghe/tuyendungnhanh_up');
-        $array = array();
-        $list_age = $this->tuyendungnhanh_up->get_age();
-        foreach($list_age as $age)
-        {
-            $array[$age['age_id']]=$age['age_name'];
-        }
-        $this->data['list_age']=$array;   
-    }
     public function load_bangcap()
     {
         $this->load->model('chitietnghe/tuyendungnhanh_up');
@@ -80,10 +69,27 @@ class MY_Controller extends CI_Controller
         }
         $this->data['list_capbac']=$array;   
     }
+    public function load_age()
+    {
+        $this->load->model('chitietnghe/tuyendungnhanh_up');
+        $array = array();
+        $list_age = $this->tuyendungnhanh_up->get_age();
+        foreach($list_age as $age)
+        {
+            $array[$age['age_id']]=$age['age_name'];
+        }
+        $this->data['list_age']=$array;   
+    }
     public function load_hoso()
     {
         $this->load->model('chitietnghe/tuyendungnhanh_up');
-        $this->data['list_hoso']=$this->tuyendungnhanh_up->get_hoso();   
+        $list_hs = $this->tuyendungnhanh_up->get_hoso();
+        $array =array();
+        foreach($list_hs as $hs)
+        {
+            $array[$hs['hoso_id']] = $hs['hoso_name'];
+        }
+        $this->data['list_hs']=$array;
     }
     public function load_luong()
     {

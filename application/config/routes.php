@@ -64,6 +64,7 @@ $route['quanly-tuyendung'] = "qltuyendung/qltuyendung/index";
 $route['timviec-city/(:any)'] = "searchadress/searchadress/searchadress_post/$1";
 $route['tao-hsungvien'] = "taohsuv/taohsuv/index/$1";
 $route['tao-tintuyendung'] = "taotintd/tintd/index/$1";
+$route['sua-tintuyendung/(:any)'] = "suatintd/tintd/index/$1";
 $route['tintd-dadang'] = "tddadang/tddadang/index";
 $route['thongtin-canhan'] = "thongtincanhan/thongtincanhan/index/$1";
 $route['thongtin-ntd'] = "thongtinntd/infontd/index/$1";

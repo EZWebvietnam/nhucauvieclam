@@ -7,18 +7,18 @@ class Tintd extends MY_Controller
         $this->load->library('session');
         $this->load->library('tank_auth');
     }
-    public function index()
+    public function index($id)
     {   
         parent::load_capbac();
         parent::load_city();
         parent::load_cate_job();
-        parent::load_time();
-        
+        parent::load_time();       
         parent::load_luong();
         parent::load_exp();
         parent::load_bangcap();
         parent::load_sex();
         parent::load_age();
+        parent::load_hoso();
         $active = true;
         $location = 'home';
         if ($this->tank_auth->is_logged_in($active, $location)) {
@@ -41,7 +41,7 @@ class Tintd extends MY_Controller
             {
                 $u_id = 0;
             }
-        $this->data['taotintd_detail']= $this->taotintd_model->tintd_detail($u_id);
+        $this->data['taotintd_detail']= $this->taotintd_model->tintd_detail($id);
         if($this->input->post())
         {
             $title = $this->input->post('tieu_de');
@@ -85,7 +85,7 @@ class Tintd extends MY_Controller
                 );
                
             // Khi gán vào mảng xong, lưu xuống DB, hàm sẽ trả về một số là id được insert xuống
-            $id = $this->taotintd_model->save_tintd($data);
+            $id = $this->taotintd_model->save_tintd($u_id,$data);
             if($id > 0)
             {
                 //Insert thành công
