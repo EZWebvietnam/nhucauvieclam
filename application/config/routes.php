@@ -73,6 +73,7 @@ $route['tuyendungnhanh'] = "tuyendungnhanh/tuyendungnhanh";
 $route['da-ung-tuyen'] = "ungtuyen/daungtuyen/index/$1";
 $route['search-time/(:any)'] = "searchtime/searchtime/index/$1";
 $route['tim-kiem'] = "formsearch/search";
+$route['tim-kiem-main'] = "searchmain/search";
 $route['ung-tuyen-check/(:any)-(:any)'] = "infotintd/infotintd/redirect_nopdon/$1";
 $route['ung-tuyen/(:any)-(:any)'] = "infotintd/infotintd/nopdon/$1";
 $route['xoa-ho-so/(:any)/(:any)'] = "dadang/hsdadang/delete/$1";

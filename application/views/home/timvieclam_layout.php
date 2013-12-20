@@ -589,7 +589,7 @@ base_url(); ?>template/home/img/slider8.png" alt="" title="nhan luc chat luong">
                                                                 </div>
                                                                 <div class="BodyLeft">
                                                                     <div class="BodyRight">
-                                                                        <form action="/vieclam/timkiem" enctype="multipart/form-data" id="JobSearchJobFormForm" method="get" accept-charset="utf-8">            <table class="TableSearchForm">
+                                                                        <form action="<?php echo base_url();?>tim-kiem-main" enctype="multipart/form-data" id="JobSearchJobFormForm" method="get" accept-charset="utf-8">            <table class="TableSearchForm">
                                                                                 <tbody><tr>
                                                                                         <th>Ngành nghề</th>
                                                                                     </tr>
@@ -775,40 +775,8 @@ base_url(); ?>template/home/img/slider8.png" alt="" title="nhan luc chat luong">
                                                                                                 <option value="3">Bán thời gian</option>
                                                                                                 <option value="4">Làm thêm ngoài giờ</option>
                                                                                                 <option value="5">Thực tập và dự án</option>
-                                                                                            </select>                    </td>
-                                                                                    </tr>
-                                                                                    <tr>
-                                                                                        <th>Mức lương</th>
-                                                                                    </tr>
-                                                                                    <tr>
-                                                                                        <td>
-                                                                                            <select name="VND" class="W80" id="JobVND">
-                                                                                                <option value="">Bất kỳ</option>
-                                                                                                <option value="Y">VND</option>
-                                                                                                <option value="N">USD</option>
-                                                                                            </select>                            <select name="jobsalary_vnd" id="job-salary-vnd" class="W120" disabled="disabled">
-                                                                                                <option value="">Bất kỳ</option>
-                                                                                                <option value="1">1-2 triệu</option>
-                                                                                                <option value="2">2-3 triệu</option>
-                                                                                                <option value="3">3-4 triệu</option>
-                                                                                                <option value="4">4-5 triệu</option>
-                                                                                                <option value="5">5-8 triệu</option>
-                                                                                                <option value="6">8-15 triệu</option>
-                                                                                                <option value="8">15-30 triệu</option>
-                                                                                                <option value="9">Trên 30 triệu</option>
-                                                                                                <option value="7">Thỏa thuận</option>
-                                                                                            </select>                            <select name="jobsalary_usd" id="job-salary-usd" class="W120" style="display: none;" disabled="disabled">
-                                                                                                <option value="">Bất kỳ</option>
-                                                                                                <option value="1">100-150 USD</option>
-                                                                                                <option value="2">150-200 USD</option>
-                                                                                                <option value="3">200-250 USD</option>
-                                                                                                <option value="4">250-300 USD</option>
-                                                                                                <option value="5">300-400 USD</option>
-                                                                                                <option value="6">400-750 USD</option>
-                                                                                                <option value="8">750-1500 USD</option>
-                                                                                                <option value="9">Trên 1500 USD</option>
-                                                                                                <option value="7">Thỏa thuận</option>
-                                                                                            </select>                                            </td>
+                                                                                            </select>                    
+                                                                                        </td>
                                                                                     </tr>
                                                                                     <tr>
                                                                                         <th>

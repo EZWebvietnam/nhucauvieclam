@@ -331,7 +331,7 @@ $com_phone = array(
                                                 •&nbsp;&nbsp;&nbsp; NhuCauViecLam.net khẳng định rằng nội dung qui định truy cập NhuCauViecLam.net có thể thay đổi bất cứ lúc nào tùy theo sự thay đổi của Pháp Luật và hoàn cảnh Xã Hội.
                                             </p>
                                             <p>
-                                                Điều khoản kiểm duyệt tin là một phần không thể tách rời của bản thỏa thuận này: <a title="Điều khoản kiểm duyệt tin" href="http://www.nhucauvieclam.net/tintuc/dieukhoankiemduyettin" target="_blank">http://www.nhucauvieclam.net/tintuc/dieukhoankiemduyettin</a>
+                                                Điều khoản kiểm duyệt tin là một phần không thể tách rời của bản thỏa thuận này. 
                                                 <br>
                                                 <br>
                                                 Bản thỏa thuận này sẽ được quản lý và thực thi theo Quy Định Pháp Luật của Nước Cộng Hòa Xã Hội Chủ Nghĩa Việt Nam. Bản thỏa thuận này dành riêng cho bạn và NhuCauViecLam.net, bạn không thể chuyển quyền và nghĩa vụ của bạn cho bất kỳ ai . Khi bạn truy cập và sử dụng mọi tiện ích và dịch vụ từ NhuCauViecLam.net mặc nhiên xem như bạn đã đồng ý và ràng buộc với điều khoản sử dụng này.

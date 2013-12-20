@@ -31,7 +31,7 @@ class Search extends MY_Controller
                 . ",tbl_job_post.e_id,tbl_job_post.u_id,tbl_job_post.e_sex,tbl_job_post.e_mem,tbl_job_post.e_visits,tbl_job_post.e_timetest,tbl_job_post.e_phucloi,tbl_job_post.e_dateActive,tbl_job_post.e_title,tbl_job_post.e_lastDate,tbl_job_post.e_dateActive,tbl_job_post.e_descript,tbl_job_post.e_luonga,tbl_job_post.e_luong,tbl_job_post.e_luongb,tbl_job_post.e_cityID,tbl_job_post.e_cityID1,tbl_job_post.e_cityID2,tbl_job_post.e_cityID3,tbl_job_post.e_timeID,tbl_job_post.e_trinhdo,tbl_job_post.m_id,tbl_job_post.e_kinhnghiem,tbl_job_post.e_skill,tbl_job_post.e_hoso,tbl_job_post.e_phucLoi"
                 . " FROM tbl_job_user"
                 . " INNER JOIN tbl_job_post ON tbl_job_post.u_id = tbl_job_user.u_id WHERE 1";
-        $config['base_url'] = base_url('tim-kiem?jobfeild=' . $this->input->get('jobfeild') . '&jobplace=' . $this->input->get('jobplace'));
+        $config['base_url'] = base_url('tim-kiem?jobfeild=' . $this->input->get('jobfeild') . '&jobplace=' . $this->input->get('jobplace') . '&joblevel=' . $this->input->get('joblevel') . '&jobexperience=' . $this->input->get('jobexperience') . '&jobtimework=' . $this->input->get('jobtimework'));
         
         $config['per_page'] = 10;
         $config['uri_segment'] = 5;
@@ -56,13 +56,21 @@ class Search extends MY_Controller
                 $sql_join.=" AND tbl_job_post.m_id =".$this->input->get('jobfeild');
             }
         }
-        else
-        {
-            redirect('/');
-        }
         if($this->input->get('jobplace'))
         {
             $sql_join.=" AND tbl_job_post.e_cityID = ".$this->input->get('jobplace')." OR tbl_job_post.e_cityID1 =".$this->input->get('jobplace')." OR tbl_job_post.e_cityID2=".$this->input->get('jobplace');
+        }
+        if($this->input->get('joblevel'))
+        {
+            $sql_join.=" AND tbl_job_post.e_trinhdo = ".$this->input->get('joblevel');
+        }
+        if($this->input->get('jobexperience'))
+        {
+            $sql_join.=" AND tbl_job_post.e_kinhnghiem = ".$this->input->get('jobexperience');
+        }
+        if($this->input->get('jobtimework'))
+        {
+            $sql_join.=" AND tbl_job_post.e_timeID = ".$this->input->get('jobtimework');
         }
         
         $config['total_rows'] = $this->search_model->count_all($sql_join);

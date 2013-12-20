@@ -168,7 +168,7 @@
         <div class="GridVip">
             <div class="TopLeft">
                 <div class="TopRight">
-                    <h2 class="Headline"><a href="/tintieudiem" target="_blank"> Tin tiêu điểm tuyển dụng nhân sự </a></h2>
+                    <h2 class="Headline"><a href="/tintieudiem" target="_blank"> Tin tiêu điểm tuyển dụng mới nhất</a></h2>
                 </div>
             </div>
             <div class="BodyLeft">
