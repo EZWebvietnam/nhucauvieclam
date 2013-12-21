@@ -270,7 +270,10 @@
         <div class="GridInfo">
             <div class="Content">
                 <h2>Thông tin liên hệ</h2>
-
+                <?php 
+                if($is_login == 1)
+                {
+                ?>
                 <table class="TableInfo">
                     <tbody>
                         <tr>
@@ -304,14 +307,18 @@
                         </tr>
                     </tbody>
                 </table>
-
                 <h2><u>Lưu ý</u>: Yêu cầu Ghi rõ bìa hồ sơ và trong hồ sơ gửi đến Nhà tuyển dụng</h2>
 
                 Nguồn thông tin tại nhucauvieclam.net vị trí: <a href="<?php echo $_SERVER['REQUEST_URI']?>" class="Readmore"><?php echo $info_tintd_detail[0]['e_title']; ?> - <?php echo $info_tintd_detail[0]['u_companyName']; ?></a>
 
                 <div class="Blank"></div>
                 Hạn nộp hồ sơ: <span class="JobName"><?php echo date('d/m/Y', $info_tintd_detail[0]['e_lastDate']); ?></span> theo nhucauvieclam.net
+                <?php } else {?> 
+                <center>Vui lòng <a href="<?php echo base_url();?>dangnhap/index">ĐĂNG NHẬP</a> để thấy được thông tin liên hệ.</center>
+                
 
+                
+                <?php }?>
             </div>
         </div>
 
@@ -353,18 +360,7 @@
                 <div class="BottomRight"></div>
             </div>
 
-            <div style="display: none;">
-                <div id="s-login">
-                    <div class="CboxContent">
-                        Bạn chưa đăng nhập tài khoản Người tìm việc
-                    </div>
-                    <div class="CboxButton">
-                        <button type="button" id="s-seeker-login">
-                            <span>Đăng nhập Người tìm việc</span>
-                        </button>
-                    </div>
-                </div>
-            </div>
+            
             
         </div>
 
