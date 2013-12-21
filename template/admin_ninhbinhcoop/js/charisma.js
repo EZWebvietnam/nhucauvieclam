@@ -22,11 +22,11 @@ $(document).ready(function(){
             {
                     case 'dev.ninhbinhcoop.com':
                                       var rootFolder = ''; break;
-                    case 'ninhbinhcoop.com':
+                    case 'nhucauvieclam.net':
                                       var rootFolder = ''; break;
                     case 'localhost' :
-                                      var rootFolder = '/ninhbinh'; break;
-                    default :  // set whatever you want
+                                      var rootFolder = '/nhucauvieclam'; break;
+                    
             }
 		$('#bs-css').attr('href','http://'+document.location.hostname+rootFolder+'/template/admin_ninhbinhcoop/css/bootstrap-'+theme_name+'.css');
 	}

@@ -2,6 +2,7 @@
 
 // Errors
 $lang['auth_incorrect_password'] = 'Mật khẩu không đúng';
+$lang['auth_incorrect_login_admin'] = 'Bạn không có quyền đăng nhập vào phần này';
 $lang['not_activated'] = 'Thành viên chưa được kích hoạt';
 $lang['auth_incorrect_login'] = 'Incorrect login';
 $lang['auth_incorrect_email_or_username'] = 'Tài khoản không tồn tại!';

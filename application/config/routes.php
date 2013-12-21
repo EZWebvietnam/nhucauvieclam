@@ -79,5 +79,6 @@ $route['ung-tuyen/(:any)-(:any)'] = "infotintd/infotintd/nopdon/$1";
 $route['xoa-ho-so/(:any)/(:any)'] = "dadang/hsdadang/delete/$1";
 $route['xoa-tin-td/(:any)/(:any)'] = "tddadang/tddadang/delete/$1";
 $route['report-tin/(:any)-(:any)'] = "infotintd/infotintd/report/$1";
+$route['admin/login.xxx'] = "admin/index/login";
 /* End of file routes.php */
 /* Location: ./application/config/routes.php */

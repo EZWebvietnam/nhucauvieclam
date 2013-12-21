@@ -160,7 +160,7 @@
                                             <td valign="top" class="tbUser-row"><b>Cấp bậc: <span class="textRed">*</span></b></td>
                                             <td class="tbUser-row"><a name="href-chuc_vu"></a>
                                                 <select class="dropbox" name="select_box_chuc_vu" id="select_box_chuc_vu">
-                                                    <option value="-1">-- Chọn cấp bậc --</option>
+                                                    
                                                     <?php foreach($list_capbac as $k_cb=>$cb)
                                                         {
                                                         ?>
@@ -174,7 +174,7 @@
                                             <td valign="top" class="tbUser-row"><b>Chọn ngành nghề: <span class="textRed">*</span></b>                                           
                                             <td class="tbUser-row">        
                                                 <select name="nganh_nghe" class="dropbox" id="nganh_nghe">
-                                                    <option value="">Chọn ngành nghề</option>
+                                                    
                                                     <?php foreach($list_cate_job as $k_c=>$cate)
                                                         {
                                                         ?>
@@ -189,7 +189,7 @@
                                             <td valign="top" class="tbUser-row"><b>Địa điểm làm việc: <span class="textRed">*</span></b>
                                             <td class="tbUser-row"><a name="href-tinh"></a>
                                                 <select name="dia_diem" class="dropbox" id="dia_diem">
-                                                    <option value="">Chọn địa điểm</option>
+                                                    
                                                     <?php foreach($list_city as $k_city=>$city)
                                                         {
                                                         ?>
@@ -204,7 +204,7 @@
                                             <td valign="top" class="tbUser-row"><b>Hình thức làm việc: <span class="textRed">*</span></b></td>
                                             <td class="tbUser-row"><a name="href-thoi_gian"></a>
                                                 <select class="dropbox" name="thoi_gian_lam_viec" id="thoi_gian_lam_viec">
-                                                    <option value="-1">-- Chọn hình thức làm việc --</option>
+                                                    
                                                     <?php foreach($list_time as $k_time=>$time)
                                                         {
                                                         ?>
@@ -218,7 +218,7 @@
                                             <td valign="top" class="tbUser-row"><b>Mức lương: <span class="textRed">*</span></b></td>
                                             <td class="tbUser-row"><a name="href-muc_luong"></a>
                                                 <select class="dropbox" name="muc_luong" id="muc_luong">
-                                                    <option value="-1">-- Chọn mức lương --</option>
+                                                    
                                                      <?php foreach($list_luong as $k_luong=>$luong)
                                                         {
                                                         ?>
@@ -254,7 +254,7 @@
                                             <td width="130" valign="top" class="tbUser-row"><b>Yêu cầu số năm kinh nghiệm: <span class="textRed">*</span></b></td>
                                             <td class="tbUser-row"><a name="href-so_nam_kinh_nghiem"></a>
                                                 <select class="dropbox" name="so_nam_kinh_nghiem" id="so_nam_kinh_nghiem">
-                                                    <option value="-1">-- Chọn số năm kinh nghiệm --</option>
+                                                    
                                                     <?php foreach($list_exp as $k_exp=>$exp)
                                                         {
                                                         ?>
@@ -266,7 +266,7 @@
                                             <td width="125" valign="top" class="tbUser-row"><b>Yêu cầu bằng cấp: <span class="textRed">*</span></b></td>
                                             <td class="tbUser-row"><a name="href-trinh_do"></a>
                                                 <select class="dropbox" name="trinh_do" id="trinh_do">
-                                                    <option value="-1">-- Chọn yêu cầu bằng cấp --</option>
+                                                    
                                                     <?php foreach($list_bangcap as $k_bc=>$bc)
                                                         {
                                                         ?>
@@ -278,7 +278,7 @@
                                             <td width="125" valign="top" class="tbUser-row"><b>Yêu cầu giới tính:</b></td>
                                             <td class="tbUser-row"><a name="href-c_gioi_tinh"></a>
                                                 <select class="dropbox" name="c_gioi_tinh" id="c_gioi_tinh">
-                                                    <option value="-1">-- Chọn yêu cầu giới tính --</option>
+                                                    
                                                      <?php foreach($list_sex as $k_sx=>$sex)
                                                         {
                                                         ?>
@@ -290,7 +290,7 @@
                                             <td width="125" valign="top" class="tbUser-row"><b>Yêu cầu độ tuổi:</b></td>
                                             <td class="tbUser-row"><a name="href-c_do_tuoi"></a>
                                                 <select class="dropbox" name="c_do_tuoi" id="c_do_tuoi">
-                                                    <option value="-1">-- Chọn yêu cầu độ tuổi --</option>
+                                                  
                                                     <?php foreach($list_age as $k_age=>$age)
                                                         {
                                                         ?>

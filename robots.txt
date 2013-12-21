@@ -1,0 +1,13 @@
+User-agent: *
+Disallow: 
+Disallow: /cgi-bin/
+Disallow: /quanly-timviec/
+Disallow: /hsda-dang/
+Disallow: /tao-hsungvien/
+Disallow: /daluu/
+Disallow: /da-ung-tuyen/
+Disallow: /cv/
+Disallow: /quanly-tuyendung/
+Disallow: /tao-tintuyendung/
+Disallow: /quanly-hoso-ungvien/
+Disallow: /admin/

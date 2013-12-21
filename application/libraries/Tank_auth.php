@@ -44,7 +44,7 @@ class Tank_auth
      * @param	bool
      * @return	bool
      */
-    function login($login, $password, $remember, $login_by_username, $login_by_email)
+    function login($login, $password, $remember, $login_by_username, $login_by_email,$case='home')
     {
         if ((strlen($login) > 0) and (strlen($password) > 0)) {
 
@@ -59,14 +59,23 @@ class Tank_auth
                 }
 
                 if (!is_null($user = $this->ci->users->$get_user_func($login))) { // login ok
-
+                    if($case=='admin')
+                    {
+                       
+                        $admin_group = $this->admin_group();
+                        if(!in_array($user->u_role,$admin_group))
+                        {
+                            $this->error = array('login' => 'auth_incorrect_login_admin');
+                            return false;
+                        }
+                    }
                     // Does password match hash in database?
                     $hasher = new PasswordHash($this->ci->config->item('phpass_hash_strength',
                         'tank_auth'), $this->ci->config->item('phpass_hash_portable', 'tank_auth'));
                     if ($hasher->CheckPassword($password, $user->u_password)) { // password ok
 
                         if ($user->u_status == 0) { // fail - banned
-                            $this->error = array('banned' => $user->ban_reason);
+                            $this->error = array('banned' => $user->u_ban_reason);
 
                         } else {
                             $this->ci->session->sess_expiration = 7200;
@@ -130,7 +139,10 @@ class Tank_auth
             return $this->ci->session->userdata('u_status') === ($activated ?
                 STATUS_ACTIVATED : STATUS_NOT_ACTIVATED);
         } else {
-            if ($this->ci->session->userdata('u_role') == 1) {
+            $group_admin = $this->admin_group();
+            
+            if (in_array($this->ci->session->userdata('u_role'),$group_admin)) {
+               
                 return $this->ci->session->userdata('u_status') === ($activated ?
                     STATUS_ACTIVATED : STATUS_NOT_ACTIVATED);
             }
@@ -281,7 +293,19 @@ class Tank_auth
         }
         return null;
     }
-
+    /*
+    Get group admin
+    */
+    public function admin_group()
+    {
+        $admin_group = array();
+        $list = $this->ci->users->get_admin_group();
+        foreach($list as $k=>$value)
+        {
+            $admin_group[$value['id']]=$value['id'];
+        }
+        return $admin_group;
+    }
     /**
      * Activate user using given key
      *

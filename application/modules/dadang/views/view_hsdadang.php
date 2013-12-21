@@ -165,7 +165,13 @@ if ($is_login == 1) {
                                 <td class="tb-row-W" align="center"><?php echo $detail_hs['j_id']; ?></td>
                                 <td class="tb-row-W">
                                     <div class="cumTT-tieude">
-                                        <b class="textRed11"> <a href="/nha-tuyen-dung/it-phan-mem/nhan-vien-it-c74p0id2444325.html" target="_blank" title="Nhân Viên IT" class="textRed11"><?php echo $hsdangdang_detail[0]['j_title']; ?></a> </b>
+                                        <b class="textRed11"> <?php if($detail_hs['j_status']==1)
+                                        {?> 
+                                        <a href="<?php echo base_url(); ?>hoso-ungvien/<?php echo $detail_hs['j_id']; ?>-<?php echo mb_strtolower(url_title(removesign($detail_hs['j_title']))) ?>" target="_blank" title="<?php echo $detail_hs['j_title']?>" class="textRed11"><?php echo $hsdangdang_detail[0]['j_title']; ?></a>
+                                        <?php } else {?>
+                                        <a href="<?php echo base_url(); ?>hoso-ungvien-cho-duyet/<?php echo $detail_hs['j_id']; ?>-<?php echo mb_strtolower(url_title(removesign($detail_hs['j_title']))) ?>" target="_blank" title="<?php echo $detail_hs['j_title']?>" class="textRed11"><?php echo $hsdangdang_detail[0]['j_title']; ?></a>
+                                        <?php }?>
+                                        </b>
                                         <br>
                                         <span style="font-size: 11px;"><?php echo $list_cate_job[$detail_hs['m_id']]; ?></span>
                                         <br>                             
@@ -177,7 +183,12 @@ if ($is_login == 1) {
                                 <td class="tb-row-W" align="center"><?php echo date('d/m/Y', $detail_hs['j_update']); ?></td>
                                 <td class="tb-row-W" align="center"><?php echo date('d/m/Y', $detail_hs['j_lastdate']); ?>
                                 </td>
-                                <td class="tb-row-W"><span class="textRed11"></span></td>
+                                <td class="tb-row-W"><span class="textRed11">
+                                <?php 
+                                $array = array('1'=>'Đã duyệt','0'=>'Chưa duyệt');
+                                echo $array[$detail_hs['j_status']];
+                                ?>
+                                </span></td>
                                 <td class="tb-row-W">
                                     <div class="borderBot padTop5">
     <?php
@@ -202,26 +213,7 @@ if ($is_login == 1) {
                             </tr>
                         </tbody>
                     </table>
-                    <table width="100%">
-                        <tbody>
-                            <tr>
-                                <td height="30" class="borderBot" width="700"><a href="javascript: if (dat_trang_thai_dang_xu_ly()) {ntv_quan_tri_doi_trang_thai_ds_ttv('xoa_tam'); }" title="Xoá tạm các tin" class="xoaHoSo">Xóa tạm hồ sơ</a><a href="javascript: if (dat_trang_thai_dang_xu_ly()) {ntv_quan_tri_doi_trang_thai_ds_ttv('dang_tin'); }" title="Đăng các tin" class="dangHoSo">Đăng hồ sơ</a><!-- <a href="javascript: if (dat_trang_thai_dang_xu_ly()) {ntv_quan_tri_gia_han_ds_ttv(); }" title="Gia hạn các tin" class="refresh">Gia hạn</a> --><a href="javascript: if (dat_trang_thai_dang_xu_ly()) {ntv_quan_tri_doi_trang_thai_ds_ttv('huy_dang_tin'); }" title="Huỷ đăng các tin" class="khongtrungTuyen">Hủy đăng hồ sơ</a><a href="javascript: if (dat_trang_thai_dang_xu_ly()) {ntv_quan_tri_doi_trang_thai_ds_ttv('khoi_phuc'); }" title="Khôi phục các tin xoá tạm" class="phucHoi">Phục hồi hồ sơ xóa tạm</a></td>
-                                <td class="borderBot" align="right"><b>Sắp xếp theo: </b>
-                                    <select class="dropBox" name="select_sap_xep_bottom" id="select_sap_xep_bottom" style="width:200px;" onchange="ntv_quan_tri_sap_xep_ttv('select_sap_xep_bottom', 'select_sap_xep_top')">
-                                        <option value="thoi_gian_cap_nhat_giam" selected="">Thời gian cập nhật giảm dần</option>
-                                        <option value="thoi_gian_cap_nhat_tang">Thời gian cập nhật tăng dần</option>
-                                        <option value="thoi_gian_lam_moi_giam">Thời gian làm mới giảm dần</option>
-                                        <option value="thoi_gian_lam_moi_tang">Thời gian làm mới tăng dần</option>
-                                        <option value="thoi_gian_dang_tin_giam">Thời gian đăng giảm dần</option>
-                                        <option value="thoi_gian_dang_tin_tang">Thời gian đăng tăng dần</option>
-                                        <option value="thoi_gian_het_han_giam">Thời gian hết hạn giảm dần</option>
-                                        <option value="thoi_gian_het_han_tang">Thời gian hết hạn tăng dần</option>
-                                        <option value="so_lan_xem_giam">Số lần xem giảm dần</option>
-                                        <option value="so_lan_xem_tang">Số lần xem tăng dần</option>
-                                    </select></td>
-                            </tr>
-                        </tbody>
-                    </table>
+                    
                 </div>
             </form>
             <!--</div> -->

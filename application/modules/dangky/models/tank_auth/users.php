@@ -44,7 +44,16 @@ class Users extends CI_Model
             return $query->row();
         return null;
     }
-
+    /*
+    
+    Get admin group
+    */
+    public function get_admin_group()
+    {
+        $this->db->where('access_admin',1);
+        $query = $this->db->get('tbl_role');
+        return $query->result_array();
+    }
     /**
      * Get user record by login (username or email)
      *

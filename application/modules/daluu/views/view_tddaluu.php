@@ -165,7 +165,7 @@ if ($is_login == 1) {
                                 </span>
                                 <br>
                                 Số lượng:<?php echo $td_luu['e_mem']; ?></td>
-                            <td class="tb-row-W" align="center"><?php echo $tddaluu_detail[0]['u_companyName']; ?></td>
+                            <td class="tb-row-W" align="center"><?php echo $td_luu['u_companyName']; ?></td>
                             <td class="tb-row-W" align="center" onmouseover="tooltip.show('TP. HCM');" onmouseout="tooltip.hide();">
     <?php echo $list_city[$td_luu['e_cityID']]; ?>
                             </td>
@@ -173,7 +173,7 @@ if ($is_login == 1) {
                             <td class="tb-row-W" align="center"><?php echo date('d/m/Y', $td_luu['e_dateActive']); ?></td>
                             <td class="tb-row-W" align="center"><?php echo date('d/m/Y', $td_luu['e_lastDate']); ?></td>
                             <td class="tb-row-W" align="center"><?php echo $td_luu['e_visits']; ?></td>
-                            <td class="tb-row-W" align="center"><?php echo date('d/m/Y', $td_luu['e_datesave']); ?></td>
+                            <td class="tb-row-W" align="center"><?php echo date('d/m/Y', $td_luu['create_date']); ?></td>
                             <td class="tb-row-W">
                                 <div class="borderBot padTop5">                                
                                     <a href="<?php echo base_url(); ?>tin-tuyen-dung/<?php echo $td_luu['e_id']; ?>-<?php echo mb_strtolower(url_title(removesign($td_luu['e_title']))) ?>" target="_blank" title="Xem thông tin chi tiết tin tìm việc">Xem</a> | <a href="<?php echo base_url(); ?>ung-tuyen/<?php echo $td_luu['e_id']; ?>-<?php echo mb_strtolower(url_title(removesign($td_luu['e_title']))) ?>" target="_blank" title="Ứng tuyển vào vị trí này">Ứng tuyển</a>
@@ -191,24 +191,7 @@ if ($is_login == 1) {
                         </tr>
                     </tbody>
                 </table>
-                <table width="100%">
-                    <tbody>
-                        <tr>
-                            <td height="30" class="borderBot" width="700"><a href="javascript: if (dat_trang_thai_dang_xu_ly()) {ntv_quan_tri_xoa_ds_viec_lam_da_luu(); }" title="Xoá việc làm đã lưu" class="xoaHoSo">Xóa tin</a><a href="javascript: ntv_quan_tri_ung_tuyen_ds_viec_lam_da_luu(',~,')" title="Ứng tuyển vào các vị trí tuyển dụng đã chọn" class="dangHoSo">Ứng tuyển</a></td>
-                            <td class="borderBot" align="right"><b>Sắp xếp theo: </b>
-                                <select class="dropBox" name="select_sap_xep_bottom" id="select_sap_xep_bottom" style="width:200px;" onchange="ntv_quan_tri_sap_xep_viec_lam_da_luu('select_sap_xep_bottom', 'select_sap_xep_top')">
-                                    <option value="thoi_gian_luu_tin_giam" selected="">Thời gian lưu tin giảm dần</option>
-                                    <option value="thoi_gian_luu_tin_tang">Thời gian lưu tin tăng dần</option>
-                                    <option value="thoi_gian_dang_tin_giam">Thời gian đăng tin giảm dần</option>
-                                    <option value="thoi_gian_dang_tin_tang">Thời gian đăng tin tăng dần</option>
-                                    <option value="thoi_gian_het_han_giam">Hạn nộp hồ sơ giảm dần</option>
-                                    <option value="thoi_gian_het_han_tang">Hạn nộp hồ sơ tăng dần</option>
-                                    <option value="so_lan_xem_giam">Số lượt xem giảm dần</option>
-                                    <option value="so_lan_xem_tang">Số lượt xem tăng dần</option>
-                                </select></td>
-                        </tr>
-                    </tbody>
-                </table>
+                
             </div>
         </form>
         <!--</div> -->
