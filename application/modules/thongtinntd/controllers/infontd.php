@@ -75,5 +75,20 @@ class Infontd extends CI_Controller{
             $this->load->view('home/thongtinntd_layout',$data);
         }     
     }
+    public function show_tt_ntd($id = null)
+    {
+        $active = true;
+        $location = 'home';
+        if ($this->tank_auth->is_logged_in($active, $location)) {
+            
+            $data['is_login'] = 1;
+            
+        } else {
+            $data['is_login'] = 0;
+
+        }
+        $data['main_content']= 'show_tt_ntd';
+            $this->load->view('home/thongtinntd_layout',$data);
+    }
 }
 ?>
