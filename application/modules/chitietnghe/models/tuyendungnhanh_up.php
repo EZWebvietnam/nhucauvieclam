@@ -161,6 +161,12 @@ class Tuyendungnhanh_up extends CI_Model{
         $query=$this->db->get('tbl_loaitn');
         return $query->result_array();
     }
+    public function get_mem()
+    {
+        $this->db->select();
+        $query=$this->db->get('tbl_mem');
+        return $query->result_array();
+    }
     public function get_nghanh_nghe_detail($id)
     {
         $id = intval($id);

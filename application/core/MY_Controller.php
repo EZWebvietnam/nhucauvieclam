@@ -159,6 +159,17 @@ class MY_Controller extends CI_Controller
         }
         $this->data['list_loaitn']=$array;   
     }
+    public function load_mem()
+    {
+        $this->load->model('chitietnghe/tuyendungnhanh_up');
+        $list_mem = $this->tuyendungnhanh_up->get_mem();
+        $array = array();
+        foreach($list_mem as $data)
+        {
+            $array[$data['id_mem']]=$data['info_mem'];
+        }
+        $this->data['list_info_mem']=$array;
+    }
      public function load_city_1()
     {
         $this->load->model('chitietnghe/tuyendungnhanh_up');

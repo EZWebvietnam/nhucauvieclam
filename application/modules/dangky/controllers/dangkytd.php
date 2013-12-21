@@ -16,6 +16,8 @@ class Dangkytd extends CI_Controller
         $this->load->model('chitietnghe/tuyendungnhanh_up');
         $list_city = $this->tuyendungnhanh_up->get_city();
         $data['list_city']=$list_city;
+        $list_mem = $this->tuyendungnhanh_up->get_mem();
+        $data['list_mem']=$list_mem;
         $active = true;
         $location = 'home';
         if ($this->tank_auth->is_logged_in($active, $location)) {

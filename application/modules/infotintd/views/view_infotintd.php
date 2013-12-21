@@ -245,11 +245,8 @@
                             </tr>
                             <tr>
                                 <th>Quy mô</th>
-                                <td><?php
-                    echo $info_tintd_detail[0]['u_companyMem'];
-                    ?></td>
+                                <td><?php echo $list_info_mem[$info_tintd_detail[0]['u_companyMem']]; ?></td>
                             </tr>
-
                             <tr>
                                 <th>Website</th>
                                 <td><?php echo $info_tintd_detail[0]['u_home']; ?></td>

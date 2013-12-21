@@ -1,5 +1,5 @@
 <?php
-class Infontd extends CI_Controller{
+class Infontd extends MY_Controller{
     public function __construct() {
         parent::__construct();
         $this->load->model('infontd_model');
@@ -7,14 +7,22 @@ class Infontd extends CI_Controller{
     }
     public function index()
     {   
+        parent::load_city();
+        parent::load_age();
+        parent::load_capbac();
+        parent::load_bangcap();
+        parent::load_cate_job();
+        parent::load_exp();
+        parent::load_luong();
+        parent::load_mem();
         $active = true;
         $location = 'home';
         if ($this->tank_auth->is_logged_in($active, $location)) {
             
-            $data['is_login'] = 1;
+            $this->data['is_login'] = 1;
             
         } else {
-            $data['is_login'] = 0;
+            $this->data['is_login'] = 0;
             redirect('/');
         }
         if($this->session->userdata('u_role')==2)
@@ -29,8 +37,8 @@ class Infontd extends CI_Controller{
             {
                 $u_id = 0;
             }
-        $data['info_list']=  $this->infontd_model->info_detail($u_id);
-        $data['main_content']= 'view_infontd';
+            $this->data['info_list']=  $this->infontd_model->info_detail($u_id);
+            $this->data['main_content']= 'view_infontd';
         if($this->input->post())
         {
             $companyname = $this->input->post('txt_ten_cty');
@@ -46,7 +54,7 @@ class Infontd extends CI_Controller{
             $email = $this->input->post('txt_email_lien_he');
             $mst = $this->input->post('txt_ma_so_thue');
             
-            $data = array('u_companyName'=>$companyname,
+            $this->data = array('u_companyName'=>$companyname,
                 'u_companyMem'=>$quymo,
                 'u_companyIntro'=>$mota,
                 'u_img'=>$logo,
@@ -59,7 +67,7 @@ class Infontd extends CI_Controller{
                 'u_contactEmail'=>$email,
                 'u_mst'=>$mst,
                 );
-            $id = $this->infontd_model->save_info($data);
+            $id = $this->infontd_model->save_info($this->data);
             if($id > 0)
             {
                 redirect($_SERVER['HTTP_REFERER']);
@@ -71,8 +79,8 @@ class Infontd extends CI_Controller{
         }
         else
         {
-            $data['main_content']= 'view_infontd';
-            $this->load->view('home/thongtinntd_layout',$data);
+            $this->data['main_content']= 'view_infontd';
+            $this->load->view('home/thongtinntd_layout',  $this->data);
         }     
     }
 }

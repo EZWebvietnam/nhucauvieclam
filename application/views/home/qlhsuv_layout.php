@@ -355,32 +355,10 @@
                                     </tbody>
                                 </table>
                             </div>
-
-                            <div class="Blank"></div>
-                            <div id="web-company-partner">
-                                <table>
-                                    <tbody>
-                                        <tr>
-                                            <td width="33%" class="pl15">
-                                                <ul>
-                                                    <li>
-                                                        Giấy chứng nhận đăng ký kinh doanh số: 0303452460 do Sở kế hoạch đầu tư Thành phố Hồ Chí Minh cấp ngày 16 tháng 08 năm 2004
-                                                    </li>
-                                                    <li>
-                                                        <a href="http://www.onboom.com" target="_blank" rel="nofollow">Quảng bá web</a> bởi OnBoom Group
-                                                    </li>
-                                                    <li>
-                                                        Designed by Cong ty <a href="http://vinadesign.vn" target="_blank" rel="nofollow">Thiet Ke Web</a> VINA Design
-                                                    </li>
-                                                </ul></td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </div>
                             <div class="Clear"></div>
 
                             <div class="Blank"></div>
-                            <strong>Tìm Việc Nhanh thương hiệu nổi tiếng: Tuyển dụng, tìm việc làm, việc làm, tìm kiếm việc làm nhanh, tuyển dụng nhân sự nhanh chóng</strong>
+                            <strong>Nhu Cầu Việc Làm thương hiệu nổi tiếng: Tuyển dụng, tìm việc làm, việc làm, tìm kiếm việc làm nhanh, tuyển dụng nhân sự nhanh chóng</strong>
 
                             <div class="HighBlank"></div>
                             <div id="bottom-hotline">
@@ -423,13 +401,13 @@
                             <div class="Blank"></div>
                             <div class="fb-like-box" data-href="https://www.facebook.com/NhuCauViecLam?ref=hl" data-width="980px" data-height="230px" data-colorscheme="light" data-show-faces="true" data-header="true" data-stream="false" data-show-border="true"></div>
                             <div id="fb-root"></div>
-                                <script>(function(d, s, id) {
-                                  var js, fjs = d.getElementsByTagName(s)[0];
-                                  if (d.getElementById(id)) return;
-                                  js = d.createElement(s); js.id = id;
-                                  js.src = "//connect.facebook.net/vi_VN/all.js#xfbml=1";
-                                  fjs.parentNode.insertBefore(js, fjs);
-                                }(document, 'script', 'facebook-jssdk'));</script>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/vi_VN/all.js#xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
                         </div>
                                     </div>
                                 </div>

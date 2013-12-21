@@ -158,13 +158,12 @@ $com_phone = array(
                                 <th>Quy mô</th>
                                 <td>
                                     <select name="c_quy_mo" id="EmployerEmpscale">
-                                        <option value="0">Không xác định</option>
-                                        <option value="1">Dưới 20 người</option>
-                                        <option value="2">20-50 người</option>
-                                        <option value="3">50-100 người</option>
-                                        <option value="4">100-200 người</option>
-                                        <option value="5">200-500 người</option>
-                                        <option value="6">Trên 500 người</option>
+                                        <?php 
+                                    foreach($list_mem as $mem)
+                                    {
+                                    ?>
+                                        <option value="<?php echo $mem['id_mem']?>"><?php echo $mem['info_mem']?></option>
+                                    <?php } ?>
                                     </select></td>
                             </tr>
                             <tr>

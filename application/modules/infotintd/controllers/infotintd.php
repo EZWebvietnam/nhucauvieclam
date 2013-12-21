@@ -102,6 +102,7 @@ class Infotintd extends MY_Controller{
         parent::load_sex();
         parent::load_sex();
         parent::load_time();
+        parent::load_mem();
         $active = true;
         $location = 'home';
         if ($this->tank_auth->is_logged_in($active, $location)) {

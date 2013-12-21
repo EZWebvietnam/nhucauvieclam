@@ -443,32 +443,10 @@ base_url(); ?>template/home/css/slider.css">
                                     </tbody>
                                 </table>
                             </div>
-
-                            <div class="Blank"></div>
-                            <div id="web-company-partner">
-                                <table>
-                                    <tbody>
-                                        <tr>
-                                            <td width="33%" class="pl15">
-                                                <ul>
-                                                    <li>
-                                                        Giấy chứng nhận đăng ký kinh doanh số: 0303452460 do Sở kế hoạch đầu tư Thành phố Hồ Chí Minh cấp ngày 16 tháng 08 năm 2004
-                                                    </li>
-                                                    <li>
-                                                        <a href="http://www.onboom.com" target="_blank" rel="nofollow">Quảng bá web</a> bởi OnBoom Group
-                                                    </li>
-                                                    <li>
-                                                        Designed by Cong ty <a href="http://vinadesign.vn" target="_blank" rel="nofollow">Thiet Ke Web</a> VINA Design
-                                                    </li>
-                                                </ul></td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </div>
                             <div class="Clear"></div>
 
                             <div class="Blank"></div>
-                            <strong>Tìm Việc Nhanh thương hiệu nổi tiếng: Tuyển dụng, tìm việc làm, việc làm, tìm kiếm việc làm nhanh, tuyển dụng nhân sự nhanh chóng</strong>
+                            <strong>Nhu Cầu Việc Làm thương hiệu nổi tiếng: Tuyển dụng, tìm việc làm, việc làm, tìm kiếm việc làm nhanh, tuyển dụng nhân sự nhanh chóng</strong>
 
                             <div class="HighBlank"></div>
                             <div id="bottom-hotline">
@@ -479,17 +457,14 @@ base_url(); ?>template/home/css/slider.css">
                                             <table class="table-hotline">
                                                 <tbody width="100%">
                                                     <tr>
-                                                        <td><span class="Name" >Tư vấn</span><br>
-                                                            <span class="Name">Ms.Yến:</span><span class="Mobile"> Tel: 01676.534.751
+                                                        <td><span class="Name">Ms.Yến:</span><span class="Mobile"> Tel: 01676.534.751
                                                             <br>Email: trolykinhdoanh.yen@gmail.com </span>
                                                         </td>
 
-                                                        <td><span class="Name">Nhân sự</span><br>
-                                                            <span class="Name">Ms.Tình:</span><span class="Mobile"> Tel: 01685.455.381
+                                                        <td><span class="Name">Ms.Tình:</span><span class="Mobile"> Tel: 01685.455.381
                                                             <br>Email: nhansutinh@baoveantam.net </span>
                                                         </td>
-                                                        <td><span class="Name">Kỹ thuật</span><br>
-                                                            <span class="Name">Mr.Thắng:</span><span class="Mobile"> Tel: 096.292.5599
+                                                        <td><span class="Name">Mr.Thắng:</span><span class="Mobile"> Tel: 096.292.5599
                                                             <br>Email: kythuat@nhucauvieclam.net</span>
                                                         </td>                    
                                                     </tr>

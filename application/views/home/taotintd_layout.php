@@ -378,114 +378,92 @@ base_url();
 
                                         <div id="footer">
 
-                                            <div id="footer-menubar">
-                                                <div id="footer-menubar-left">
-                                                    <div id="footer-menubar-right">
-                                                        <ul>
-                                                            <li>
-                                                                <a class="trangchu" href="<?php echo base_url(); ?>" ga_click="_gaq.push(['_trackEvent', 'Footer', 'Click', 'Trang chủ']);" target="" rel=""> Trang chủ </a>
-                                                            </li>
-                                                            <li class="Separator">
-                                                                |
-                                                            </li>
-                                                            <li>
-                                                                <a href="<?php echo base_url(); ?>timvieclam"> Tìm việc làm </a>
-                                                            </li>
-                                                            <li class="Separator">
-                                                                |
-                                                            </li>
-                                                            <li>
-                                                                <a href="<?php echo base_url(); ?>tuyendungnhanh" ga_click="_gaq.push(['_trackEvent', 'Footer', 'Click', 'Tìm hồ sơ Người tìm việc']);" target="" rel=""> Tìm hồ sơ Người tìm việc </a>
-                                                            </li>
-                                                            <li class="Separator">
-                                                                |
-                                                            </li>
-                                                            <li>
-                                                                <a href="<?php echo base_url(); ?>" ga_click="_gaq.push(['_trackEvent', 'Footer', 'Click', 'Việc làm 24h']);" target="_blank" rel="">nhucauvieclam</a>
-                                                            </li>
+                            <div id="footer-menubar">
+                                <div id="footer-menubar-left">
+                                    <div id="footer-menubar-right">
+                                        <ul>
+                                <li>
+                                    <a class="trangchu" href="<?php echo base_url(); ?>" ga_click="_gaq.push(['_trackEvent', 'Footer', 'Click', 'Trang chủ']);" target="" rel=""> Trang chủ </a>
+                                </li>
+                                <li class="Separator">
+                                    |
+                                </li>
+                                <li>
+                                    <a href="<?php echo base_url(); ?>timvieclam"> Tìm việc làm </a>
+                                </li>
+                                <li class="Separator">
+                                    |
+                                </li>
+                                <li>
+                                    <a href="<?php echo base_url(); ?>tuyendungnhanh" ga_click="_gaq.push(['_trackEvent', 'Footer', 'Click', 'Tìm hồ sơ Người tìm việc']);" target="" rel=""> Tìm hồ sơ Người tìm việc </a>
+                                </li>
+                                <li class="Separator">
+                                    |
+                                </li>
+                                <li>
+                                    <a href="<?php echo base_url(); ?>" ga_click="_gaq.push(['_trackEvent', 'Footer', 'Click', 'Việc làm 24h']);" target="_blank" rel="">nhucauvieclam</a>
+                                </li>
 
-                                                            <li class="Separator">
-                                                                |
-                                                            </li>
-                                                            <li>
-                                                                <a href="<?php echo base_url(); ?>" ga_click="_gaq.push(['_trackEvent', 'Footer', 'Click', 'Cẩm nang tuyển dụng']);" target="_blank" rel="nofollow"> Cẩm nang tuyển dụng </a>
-                                                            </li>
-                                                            <li class="Separator">
-                                                                |
-                                                            </li>
-                                                            <li>
-                                                                <a href="<?php echo base_url(); ?>" ga_click="_gaq.push(['_trackEvent', 'Footer', 'Click', 'Cẩm nang việc làm']);" target="_blank" rel="nofollow"> Cẩm nang việc làm </a>
-                                                            </li>
-                                                            <li class="Separator">
-                                                                |
-                                                            </li>
-                                                            <li>
-                                                                <a href="<?php echo base_url(); ?>" ga_click="_gaq.push(['_trackEvent', 'Footer', 'Click', 'Nghề nghiệp']);" target="_blank" rel=""> Nghề nghiệp </a>
-                                                            </li>
+                                <li class="Separator">
+                                    |
+                                </li>
+                                <li>
+                                    <a href="<?php echo base_url(); ?>" ga_click="_gaq.push(['_trackEvent', 'Footer', 'Click', 'Cẩm nang tuyển dụng']);" target="_blank" rel="nofollow"> Cẩm nang tuyển dụng </a>
+                                </li>
+                                <li class="Separator">
+                                    |
+                                </li>
+                                <li>
+                                    <a href="<?php echo base_url(); ?>" ga_click="_gaq.push(['_trackEvent', 'Footer', 'Click', 'Cẩm nang việc làm']);" target="_blank" rel="nofollow"> Cẩm nang việc làm </a>
+                                </li>
+                                <li class="Separator">
+                                    |
+                                </li>
+                                <li>
+                                    <a href="<?php echo base_url(); ?>" ga_click="_gaq.push(['_trackEvent', 'Footer', 'Click', 'Nghề nghiệp']);" target="_blank" rel=""> Nghề nghiệp </a>
+                                </li>
 
-                                                        </ul>
-                                                        <div class="Clear"></div>
-                                                    </div>
-                                                </div>
-                                            </div>
+                            </ul>
+                            <div class="Clear"></div>
+                                    </div>
+                                </div>
+                            </div>
 
-                                            <div id="web-company-info">
-                                                <h2 style="font-size: 15px;">Công ty TNHH Phát Triển Nguồn Nhân Lực Nhu Cầu Việc Làm Đất Phương Nam</h2>
-                                                <table>
-                                                    <tbody>
+                            <div id="web-company-info">
+                                <h2 style="font-size: 15px;">Công ty TNHH Phát Triển Nguồn Nhân Lực Nhu Cầu Việc Làm Đất Phương Nam</h2>
+                                <table>
+                                    <tbody>
+                                        <tr>
+                                            <td width="33%"><span class="AlertTextSmall" style="font-size: 14px">nhucauvieclam.net</span><p></p>
+                                                <table class="TableFooterInfo">
+                                                   
                                                         <tr>
-                                                            <td width="33%"><span class="AlertTextSmall" style="font-size: 14px">nhucauvieclam.net</span><p></p>
-                                                                <table class="TableFooterInfo">
-
-                                                                    <tr>
-                                                                        <td>Địa chỉ: Tầng 3, Số 7, Đường Số 49, P.Hiệp Bình Chánh, Q.Thủ Đức, Tp.HCM</td>
-                                                                    </tr>
-                                                                    <tr>                                                            
-                                                                        <td>Email: hcm@nhucauvieclam.net</td>
-                                                                    </tr>
-                                                                    <tr>
-                                                                        <td>Fax: 37273665</td>
-                                                                    </tr>
-                                                                    </tbody>
-                                                                </table></td>                                            
+                                                            <td>Địa chỉ: Tầng 3, Số 7, Đường Số 49, P.Hiệp Bình Chánh, Q.Thủ Đức, Tp.HCM</td>
+                                                        </tr>
+                                                        <tr>                                                            
+                                                            <td>Email: hcm@nhucauvieclam.net</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Fax: 37273665</td>
                                                         </tr>
                                                     </tbody>
-                                                </table>
-                                            </div>
+                                                </table></td>                                            
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="Clear"></div>
 
-                                            <div class="Blank"></div>
-                                            <div id="web-company-partner">
-                                                <table>
-                                                    <tbody>
-                                                        <tr>
-                                                            <td width="33%" class="pl15">
-                                                                <ul>
-                                                                    <li>
-                                                                        Giấy chứng nhận đăng ký kinh doanh số: 0303452460 do Sở kế hoạch đầu tư Thành phố Hồ Chí Minh cấp ngày 16 tháng 08 năm 2004
-                                                                    </li>
-                                                                    <li>
-                                                                        <a href="http://www.onboom.com" target="_blank" rel="nofollow">Quảng bá web</a> bởi OnBoom Group
-                                                                    </li>
-                                                                    <li>
-                                                                        Designed by Cong ty <a href="http://vinadesign.vn" target="_blank" rel="nofollow">Thiet Ke Web</a> VINA Design
-                                                                    </li>
-                                                                </ul></td>
-                                                        </tr>
-                                                    </tbody>
-                                                </table>
-                                            </div>
-                                            <div class="Clear"></div>
+                            <div class="Blank"></div>
+                            <strong>Nhu Cầu Việc Làm thương hiệu nổi tiếng: Tuyển dụng, tìm việc làm, việc làm, tìm kiếm việc làm nhanh, tuyển dụng nhân sự nhanh chóng</strong>
 
-                                            <div class="Blank"></div>
-                                            <strong>Tìm Việc Nhanh thương hiệu nổi tiếng: Tuyển dụng, tìm việc làm, việc làm, tìm kiếm việc làm nhanh, tuyển dụng nhân sự nhanh chóng</strong>
-
-                                            <div class="HighBlank"></div>
-                                            <div id="bottom-hotline">
-                                                <div id="bottom-hotline-inner" style="text-align: center">
-                                                    <h2 class="float-left">Hotline 24/7</h2>                                    
-                                                    <ul>
-                                                        <li>
-                                                            <table class="table-hotline">
+                            <div class="HighBlank"></div>
+                            <div id="bottom-hotline">
+                                <div id="bottom-hotline-inner" style="text-align: center">
+                                    <h2 class="float-left">Hotline 24/7</h2>                                    
+                                    <ul>
+                                        <li>
+                                            <table class="table-hotline">
                                                 <tbody width="100%">
                                                     <tr>
                                                         <td><span class="Name">Ms.Yến:</span><span class="Mobile"> Tel: 01676.534.751
@@ -511,14 +489,14 @@ base_url();
                                                         </td>    
                                                     </tr>                                
                                             </table>
-                                                        </li>
-                                                    </ul>
-                                                    <div class="Clear"></div>
-                                                </div>
-                                            </div>
+                                        </li>
+                                    </ul>
+                                    <div class="Clear"></div>
+                                </div>
+                            </div>
 
-                                            <div class="Blank"></div>
-                                            <div class="fb-like-box" data-href="https://www.facebook.com/NhuCauViecLam?ref=hl" data-width="980px" data-height="230px" data-colorscheme="light" data-show-faces="true" data-header="true" data-stream="false" data-show-border="true"></div>
+                            <div class="Blank"></div>
+                            <div class="fb-like-box" data-href="https://www.facebook.com/NhuCauViecLam?ref=hl" data-width="980px" data-height="230px" data-colorscheme="light" data-show-faces="true" data-header="true" data-stream="false" data-show-border="true"></div>
                             <div id="fb-root"></div>
 <script>(function(d, s, id) {
   var js, fjs = d.getElementsByTagName(s)[0];
@@ -527,7 +505,7 @@ base_url();
   js.src = "//connect.facebook.net/vi_VN/all.js#xfbml=1";
   fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));</script>
-                                        </div>
+                        </div>
                                     </div>
                                 </div>
                             </div>
