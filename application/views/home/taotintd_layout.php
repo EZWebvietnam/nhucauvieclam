@@ -30,64 +30,7 @@
                                         <a href="/" title="nhu cau viec lam" rel="home" id="logo"> <img src="<?php echo base_url(); ?>template/home/img/logo.png" alt="Tìm việc làm hàng đầu - Itworks" height="125" width="430"> </a>
                                     </div>
                                     <div id="bg_slider">
-                                        <div class="hbs">
-                                            <div class="slider1">
-                                                <div class="s-wrap">
-                                                    <div class="trans t-left"></div>
-                                                    <div class="trans t-right"></div>
-                                                    <div class=" jcarousel-skin-tango">
-                                                        <div class="jcarousel-container jcarousel-container-horizontal" style="position: relative; display: block;">
-                                                            <div class="jcarousel-clip jcarousel-clip-horizontal" style="position: relative;">
-                                                                <ul id="mycarousel" class="jcarousel-list jcarousel-list-horizontal" style="overflow: hidden; position: relative; top: 0px; margin: 0px; padding: 0px; left: -4255.900143703704px; width: 9190px;">
-                                                                    <li class="jcarousel-item jcarousel-item-horizontal jcarousel-item-1 jcarousel-item-1-horizontal" jcarouselindex="1" style="float: left; list-style: none;">
-                                                                        <a href="" target="_blank"><img src="<?php echo
-base_url();
-?>template/home/img/slider1.png" alt="" title="Nhu cau viec lam"></a>
-                                                                    </li>
-                                                                    <li class="jcarousel-item jcarousel-item-horizontal jcarousel-item-2 jcarousel-item-2-horizontal" jcarouselindex="2" style="float: left; list-style: none;">
-                                                                        <a href="" target="_blank"><img src="<?php echo
-                                                                                                        base_url();
-?>template/home/img/slider2.png" alt="" title="tim viec lam"></a>
-                                                                    </li>
-                                                                    <li class="jcarousel-item jcarousel-item-horizontal jcarousel-item-3 jcarousel-item-3-horizontal" jcarouselindex="3" style="float: left; list-style: none;">
-                                                                        <a href="" target="_blank"><img src="<?php echo
-                                                                                                        base_url();
-?>template/home/img/slider3.png" alt="" title="tuyen dung nhanh"></a>
-                                                                    </li>
-                                                                    <li class="jcarousel-item jcarousel-item-horizontal jcarousel-item-4 jcarousel-item-4-horizontal" jcarouselindex="4" style="float: left; list-style: none;">
-                                                                        <a href="" target="_blank"><img src="<?php echo
-                                                                                                        base_url();
-?>template/home/img/slider4.png" alt="" title="tim viec ho chi minh"></a>
-                                                                    </li>
-                                                                    <li class="jcarousel-item jcarousel-item-horizontal jcarousel-item-622 jcarousel-item-622-horizontal" jcarouselindex="5" style="float: left; list-style: none;">
-                                                                        <a href="" target="_blank"><img src="<?php echo
-                                                                                                        base_url();
-?>template/home/img/slider5.png" alt="" title="tim viec ha noi"></a>
-                                                                    </li>
-                                                                    <li class="jcarousel-item jcarousel-item-horizontal jcarousel-item-623 jcarousel-item-623-horizontal" jcarouselindex="6" style="float: left; list-style: none;">
-                                                                        <a href="" target="_blank"><img src="<?php echo
-                                                                                                        base_url();
-?>template/home/img/slider6.png" alt="" title="tim viec sai gon"></a>
-                                                                    </li>
-                                                                    <li class="jcarousel-item jcarousel-item-horizontal jcarousel-item-624 jcarousel-item-624-horizontal" jcarouselindex="7" style="float: left; list-style: none;">
-                                                                        <a href="" target="_blank"><img src="<?php echo
-                                                                                                        base_url();
-?>template/home/img/slider7.png" alt="" title="viec lam chat luong"></a>
-                                                                    </li>
-                                                                    <li class="jcarousel-item jcarousel-item-horizontal jcarousel-item-624 jcarousel-item-624-horizontal" jcarouselindex="8" style="float: left; list-style: none;">
-                                                                        <a href="" target="_blank"><img src="<?php echo
-                                                                                                        base_url();
-?>template/home/img/slider8.png" alt="" title="nhan luc chat luong"></a>
-                                                                    </li>
-                                                                </ul>
-                                                            </div>
-                                                            <div class="jcarousel-prev jcarousel-prev-horizontal" style="display: block;"></div>
-                                                            <div class="jcarousel-next jcarousel-next-horizontal" style="display: block;"></div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
+                                        
                                         <div class="clearer"></div>
                                         <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>template/home/css/slider.css">
                                             <script type="text/javascript" src="<?php echo base_url(); ?>template/home/js/jquery.js"></script>

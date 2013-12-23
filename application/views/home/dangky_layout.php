@@ -20,7 +20,7 @@
                     <script type="text/javascript" async="" src="<?php echo base_url(); ?>template/home/js/ga.js"></script>
                 
                     <script type="text/javascript" src="<?php echo base_url(); ?>template/home/js/cache_blue_sky_default.js"></script>
-                    
+                      
                     </head>
                     <body>
                         <div id="container">

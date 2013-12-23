@@ -155,10 +155,9 @@ if ($is_login == 1) {
                             <br>
                         <td class="tbUser-row">        
                             <select name="nganh_nghe" class="dropbox" id="nganh_nghe">
-
-<?php
-foreach ($list_cate_job as $k_cate => $cate) {
-    ?>
+                                <?php
+                                foreach ($list_cate_job as $k_cate => $cate) {
+                                    ?>
                                     <option value="<?php echo $k_cate ?>"><?php echo $cate; ?></opption>
                                 <?php } ?>
 
@@ -170,10 +169,9 @@ foreach ($list_cate_job as $k_cate => $cate) {
                             <br>
                         <td class="tbUser-row"><a name="href-tinh"></a>
                             <select name="dia_diem" class="dropbox" id="dia_diem">
-
-<?php
-foreach ($list_city as $k => $city) {
-    ?>
+                                <?php
+                                foreach ($list_city as $k => $city) {
+                                    ?>
                                     <option value="<?php echo $k ?>"><?php echo $city; ?></opption>
                                 <?php } ?>
                             </select>
@@ -183,10 +181,9 @@ foreach ($list_city as $k => $city) {
                         <td valign="top" class="tbUser-row"><b>Hình thức làm việc (<span class="textRed">*</span>):</b></td>
                         <td class="tbUser-row"><a name="href-thoi_gian"></a>
                             <select class="dropbox" name="thoi_gian_lam_viec" id="thoi_gian_lam_viec">
-
-<?php
-foreach ($list_time as $k_t => $time) {
-    ?>
+                                <?php
+                                foreach ($list_time as $k_t => $time) {
+                                    ?>
                                     <option value="<?php echo $k_t ?>"><?php echo $time; ?></opption>
                                 <?php } ?>
                             </select><div id="err_thoi_gian" class="textRed11"></div></td>
@@ -195,10 +192,9 @@ foreach ($list_time as $k_t => $time) {
                         <td valign="top" class="tbUser-row"><b>Mức lương mong muốn (<span class="textRed">*</span>):</b></td>
                         <td class="tbUser-row"><a name="href-muc_luong"></a>
                             <select class="dropbox" name="muc_luong" id="muc_luong">
-
-<?php
-foreach ($list_luong as $k_l => $luong) {
-    ?>
+                                <?php
+                                foreach ($list_luong as $k_l => $luong) {
+                                    ?>
                                     <option value="<?php echo $k_l ?>"><?php echo $luong; ?></opption>
                                 <?php } ?>
                             </select><div id="err_muc_luong" class="textRed11"></div></td>
@@ -215,7 +211,7 @@ foreach ($list_luong as $k_l => $luong) {
                                 <tbody>
                                     <tr>
                                         <td width="130">
-                                            <input class="dateline" type="text" style="width:110px" name="c_ngay_co_the_bat_dau_lam">
+                                            <input class="dateline" id="datepicker" type="text" style="width:110px" name="c_ngay_co_the_bat_dau_lam">
                                         </td>
                                         <td width="30">
                                             <input type="image" src="<?php echo base_url(); ?>template/home/img/iconCalendar.gif" >
@@ -352,8 +348,11 @@ foreach ($list_luong as $k_l => $luong) {
                         <td width="160" valign="top" class="tbUser-row"><b>Trình độ học vấn (<span class="textRed">*</span>):</b></td>
                         <td class="tbUser-row"><a name="href-trinh_do"></a>
                             <select class="dropbox" name="trinh_do" id="trinh_do">
-
-                                <option value="1">Trên đại học</option><option value="2">Đại học</option><option value="3">Cao đẳng</option><option value="4">Trung cấp</option><option value="5">Trung học</option><option value="6">Không yêu cầu</option>
+                                <?php
+                                foreach ($list_bangcap as $k_bc => $bc) {
+                                    ?>
+                                    <option value="<?php echo $k_bc ?>"><?php echo $bc; ?></opption>
+                                <?php } ?>
                             </select><div id="err_trinh_do" class="textRed11"></div></td>
                         <td rowspan="10" width="50" class="br-R"></td>
                     </tr>
@@ -379,8 +378,7 @@ foreach ($list_luong as $k_l => $luong) {
                                         <td width="100"><b>Loại tốt nghiệp:</b></td>
                                         <td><a name="href-loai_tot_nghiep"></a>
                                             <select class="dropbox" style="width:120px" name="select_box_loai_tot_nghiep" id="select_box_loai_tot_nghiep">
-
-                                                <option value="1">Xuất sắc</option><option value="2">Giỏi</option><option value="3">Khá</option><option value="4">Trung bình khá</option><option value="5">Trung bình</option>
+                                                <option value="1">Xuất sắc</option><option value="2">Giỏi</option><option value="3" selected>Khá</option><option value="4">Trung bình khá</option><option value="5">Trung bình</option>
                                             </select><div id="err_loai_tot_nghiep" class="textRed11"></div></td>
                                     </tr>
                                 </tbody>
@@ -401,8 +399,11 @@ foreach ($list_luong as $k_l => $luong) {
                                     <tr>
                                         <td width="267"><a name="href-ngoai_ngu"></a>
                                             <select class="dropbox" style="width:255px" name="select_box_ngoai_ngu" id="select_box_ngoai_ngu">
-
-                                                <option value="1">Tiếng Anh – Tiếng Đức</option><option value="2">Tiếng Anh - Tiếng Nga</option><option value="3">Tiếng Anh – Tiếng Ý</option><option value="4">Tiếng Anh – Tiếng Tây Ban Nha</option><option value="5">English - Tiếng Anh</option><option value="6">French - Tiếng Pháp</option><option value="7">United States - Tiếng Anh Mỹ</option><option value="8">Russian - Tiếng Nga</option><option value="9">Chinese - Tiếng Trung</option><option value="10">Korean - Tiếng Hàn</option><option value="11">Japanese - Tiếng Nhật</option><option value="12">German - Tiếng Đức</option><option value="13">Arabic - Tiếng Ả Rập</option><option value="14">Bengalic - Tiếng Bengal</option><option value="15">Bulgarian - Tiếng Bungary</option><option value="16">Burmese - Tiếng Miến điện</option><option value="17">Cambodian - Tiếng Campuchia</option><option value="18">Czech  - Tiếng Séc</option><option value="19">Danmark - Tiếng Đan mạch</option><option value="20">Dutch - Tiếng Hà Lan</option><option value="21">Finnish - Tiếng phần Lan</option><option value="22">Greek - Tiếng Hy Lạp</option><option value="23">Hindi - Tiếng Hinđi</option><option value="24">Hungarian - Tiếng Hungary</option><option value="25">Indonesian - Tiếng Inđônesia</option><option value="26">Italian - Tiếng Ý</option><option value="27">Laotian - Tiếng Lào</option><option value="28">Malay - Tiếng Mã Lai</option><option value="29">Norwegian - Tiếng Nauy</option><option value="30">Polish - Tiếng Ba Lan</option><option value="31">Portuguese - Tiếng Bồ Đào Nha</option><option value="32">Romanian  - Tiếng Ru ma ni</option><option value="33">Spanish - Tiếng Tây Ban Nha</option><option value="34">Taiwanese - Tiếng Đài Loan</option><option value="35">Turkish - Tiếng Thổ Nhĩ Kỳ</option><option value="36">Thai - Tiếng Thái</option><option value="37">Ukrainian - Tiếng Ucraina</option><option value="38">Khác</option>
+                                            <?php
+                                            foreach ($list_nn as $k_nn => $nn) {
+                                                ?>
+                                                <option value="<?php echo $k_nn ?>"><?php echo $nn; ?></opption>
+                                            <?php } ?>
                                             </select><div id="err_ngoai_ngu" class="textRed11"></div></td>
                                         <td><a name="href-trinh_do_ngoai_ngu"></a>
                                             <select class="dropbox" style="width:255px" name="select_box_trinh_do_ngoai_ngu" id="select_box_trinh_do_ngoai_ngu">
@@ -442,8 +443,11 @@ foreach ($list_luong as $k_l => $luong) {
                         <td width="160" valign="top" class="tbUser-row"><b>Số năm kinh nghiệm (<span class="textRed">*</span>):</b></td>
                         <td class="tbUser-row"><a name="href-so_nam_kinh_nghiem"></a>
                             <select class="dropbox" name="so_nam_kinh_nghiem" id="so_nam_kinh_nghiem">
-
-                                <option value="8">Chưa có kinh nghiệm</option><option value="1">Dưới 1 năm</option><option value="2">1 năm</option><option value="3">2 năm</option><option value="4">3 năm</option><option value="5">4 năm</option><option value="6">5 năm</option><option value="7">Hơn 5 năm</option>
+                                        <?php
+                                            foreach ($list_exp as $k_exp => $exp) {
+                                                ?>
+                                                <option value="<?php echo $k_exp ?>"><?php echo $exp; ?></opption>
+                                            <?php } ?>
                             </select><div id="err_so_nam_kinh_nghiem" class="textRed11"></div></td>
                         <td width="50" rowspan="17" class="br-R"></td>
                     </tr>
@@ -604,5 +608,12 @@ foreach ($list_luong as $k_l => $luong) {
 
     </div>
     <div class="clear"></div>
-
+    <link rel="stylesheet" href="<?php echo base_url(); ?>template/home/css/jquery-ui.css" /> 
+    <script src="<?php echo base_url(); ?>template/home/js/jquery.js"></script> 
+    <script src="<?php echo base_url(); ?>template/home/js/jquery-ui.js"></script>
+    <script> 
+    $(function() { 
+        $( "#datepicker" ).datepicker(); 
+    }); 
+    </script>
 </div>

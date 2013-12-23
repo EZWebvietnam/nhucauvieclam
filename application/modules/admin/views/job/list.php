@@ -42,7 +42,7 @@
                             </a>
                             <a class="btn btn-info" href="#">
                                 <i class="icon-edit icon-white"></i>  
-                               Sửa                                        
+                               Duyệt tin
                             </a>
                             <a class="btn btn-danger" onclick="return confirm('Bạn có chắc muốn xóa ?');" href="<?php echo base_url();?>admin/adminjob/delete/<?php echo $cv['e_id']?>">
                                 <i class="icon-trash icon-white"></i> 

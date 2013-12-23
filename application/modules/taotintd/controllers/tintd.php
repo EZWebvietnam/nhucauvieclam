@@ -13,12 +13,14 @@ class Tintd extends MY_Controller
         parent::load_city();
         parent::load_cate_job();
         parent::load_time();
-        
+        parent::load_mem();
         parent::load_luong();
         parent::load_exp();
         parent::load_bangcap();
         parent::load_sex();
         parent::load_age();
+        parent::load_ngoaingu();
+        parent::load_trinhdonn();
         $active = true;
         $location = 'home';
         if ($this->tank_auth->is_logged_in($active, $location)) {

@@ -106,9 +106,9 @@ class MY_Controller extends CI_Controller
     public function load_exp()
     {
         $this->load->model('chitietnghe/tuyendungnhanh_up');
-        $list_kn = $this->tuyendungnhanh_up->get_exp();
+        $list_exp = $this->tuyendungnhanh_up->get_exp();
         $array =array();
-        foreach($list_kn as $kn)
+        foreach($list_exp as $kn)
         {
             $array[$kn['exp_id']] = $kn['exp_name'];
         }
@@ -135,7 +135,7 @@ class MY_Controller extends CI_Controller
         {
             $array[$data['nn_id']]=$data['nn_name'];
         }
-        $this->data['list_ngoaingu']=$array;   
+        $this->data['list_nn']=$array;   
     }
     public function load_trinhdonn()
     {
@@ -146,7 +146,7 @@ class MY_Controller extends CI_Controller
         {
             $array[$data['td_id']]=$data['td_name'];
         }
-        $this->data['list_trinhdonn']=$array;   
+        $this->data['trinh_do']=$array;   
     }
     public function load_loaitn()
     {

@@ -18,7 +18,7 @@ class Taohsuv extends MY_Controller
         parent::load_bangcap();
         parent::load_sex();
         parent::load_age();
-        
+        parent::load_ngoaingu();
         $active = true;
         $location = 'home';
         if ($this->tank_auth->is_logged_in($active, $location)) {

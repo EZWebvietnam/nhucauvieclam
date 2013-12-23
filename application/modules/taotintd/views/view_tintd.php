@@ -1,118 +1,117 @@
-<?php 
-                                        if($is_login == 1)
-                                        {
-                                        if($this->session->userdata['u_role']==2)
-                                        {
-                                        ?>
-                                        <div id="user-menu">
+<?php
+if ($is_login == 1) {
+    if ($this->session->userdata['u_role'] == 2) {
+        ?>
+        <div id="user-menu">
 
-                                            <div class="GridInfo">
-                                                <div class="Content">
+            <div class="GridInfo">
+                <div class="Content">
 
-                                                    <ul class="UserMenu">
-                                                        <li>
-                                                            <a href="<?php echo base_url(); ?>quanly-timviec">Quản lý tìm việc</a>
-                                                        </li>
+                    <ul class="UserMenu">
+                        <li>
+                            <a href="<?php echo base_url(); ?>quanly-timviec">Quản lý tìm việc</a>
+                        </li>
 
-                                                        <li class="Separator">
-                                                            |
-                                                        </li>
+                        <li class="Separator">
+                            |
+                        </li>
 
-                                                        <li>
-                                                            <a href="<?php echo base_url(); ?>hsda-dang">Hồ Sơ đã đăng</a>
-                                                        </li>
+                        <li>
+                            <a href="<?php echo base_url(); ?>hsda-dang">Hồ Sơ đã đăng</a>
+                        </li>
 
-                                                        <li class="Separator">
-                                                            |
-                                                        </li>
+                        <li class="Separator">
+                            |
+                        </li>
 
-                                                        <li>
-                                                            <a href="<?php echo base_url(); ?>tao-hsungvien">Tạo HS tìm việc</a>
-                                                        </li>
+                        <li>
+                            <a href="<?php echo base_url(); ?>tao-hsungvien">Tạo HS tìm việc</a>
+                        </li>
 
-                                                        <li class="Separator">
-                                                            |
-                                                        </li>
+                        <li class="Separator">
+                            |
+                        </li>
 
-                                                        <li>
-                                                            <a href="<?php echo base_url(); ?>daluu">Việc làm đã Lưu</a>
-                                                        </li>
+                        <li>
+                            <a href="<?php echo base_url(); ?>daluu">Việc làm đã Lưu</a>
+                        </li>
 
-                                                        <li class="Separator">
-                                                            |
-                                                        </li>
+                        <li class="Separator">
+                            |
+                        </li>
 
-                                                        <li>
-                                                            <a href="<?php echo base_url(); ?>da-ung-tuyen">Việc làm đã ứng tuyển</a>
-                                                        </li>
+                        <li>
+                            <a href="<?php echo base_url(); ?>da-ung-tuyen">Việc làm đã ứng tuyển</a>
+                        </li>
 
-                                                        <li class="Separator">
-                                                            |
-                                                        </li>
+                        <li class="Separator">
+                            |
+                        </li>
 
-                                                        <li>
-                                                            <a href="<?php echo base_url(); ?>cv">Hồ sơ cá nhân(CV)</a>
-                                                        </li>
+                        <li>
+                            <a href="<?php echo base_url(); ?>cv">Hồ sơ cá nhân(CV)</a>
+                        </li>
 
-                                                        <li class="Separator">
-                                                            |
-                                                        </li>
+                        <li class="Separator">
+                            |
+                        </li>
 
-                                                        <li>
-                                                            <a href="<?php echo base_url(); ?>thongtin-canhan">Thông tin cá nhân</a>
-                                                        </li>
+                        <li>
+                            <a href="<?php echo base_url(); ?>thongtin-canhan">Thông tin cá nhân</a>
+                        </li>
 
-                                                    </ul>
-                                                    <div class="Clear"></div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <?php } else {?>
-                                        <div id="user-menu">
+                    </ul>
+                    <div class="Clear"></div>
+                </div>
+            </div>
+        </div>
+    <?php } else { ?>
+        <div id="user-menu">
 
-                                            <div class="GridInfo">
-                                                <div class="Content">
+            <div class="GridInfo">
+                <div class="Content">
 
-                                                    <ul class="UserMenu">
-                                                        <li>
-                                                            <a href="<?php echo base_url(); ?>quanly-tuyendung">Quản lý tuyển dụng</a>
-                                                        </li>
-                                                        <li class="Separator">
-                                                            |
-                                                        </li>
-                                                        <li>
-                                                            <a href="<?php echo base_url(); ?>tintd-dadang">Tin TD đã đăng</a>
-                                                        </li>
-                                                        <li class="Separator">
-                                                            |
-                                                        </li>
-                                                        <li>
-                                                            <a href="<?php echo base_url(); ?>tao-tintuyendung">Taọ tin TD mới</a>
-                                                        </li>
-                                                        <li class="Separator">
-                                                            |
-                                                        </li>
-                                                        <li>
-                                                            <a href="<?php echo base_url(); ?>thongtin-ntd">Thông tin NTD</a>
-                                                        </li>
-                                                        <li class="Separator">
-                                                            |
-                                                        </li>
-                                                        <li>
-                                                            <a href="<?php echo base_url(); ?>quanly-hoso-ungvien">Quản lý hồ sơ ứng viên</a>
-                                                        </li>
-                                                        <li class="Separator">
-                                                            |
-                                                        </li>
-                                                        <li>
-                                                            <a href="#">Liên hệ quản cáo</a>
-                                                        </li>
-                                                    </ul>
-                                                    <div class="Clear"></div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <?php }} ?>
+                    <ul class="UserMenu">
+                        <li>
+                            <a href="<?php echo base_url(); ?>quanly-tuyendung">Quản lý tuyển dụng</a>
+                        </li>
+                        <li class="Separator">
+                            |
+                        </li>
+                        <li>
+                            <a href="<?php echo base_url(); ?>tintd-dadang">Tin TD đã đăng</a>
+                        </li>
+                        <li class="Separator">
+                            |
+                        </li>
+                        <li>
+                            <a href="<?php echo base_url(); ?>tao-tintuyendung">Taọ tin TD mới</a>
+                        </li>
+                        <li class="Separator">
+                            |
+                        </li>
+                        <li>
+                            <a href="<?php echo base_url(); ?>thongtin-ntd">Thông tin NTD</a>
+                        </li>
+                        <li class="Separator">
+                            |
+                        </li>
+                        <li>
+                            <a href="<?php echo base_url(); ?>quanly-hoso-ungvien">Quản lý hồ sơ ứng viên</a>
+                        </li>
+                        <li class="Separator">
+                            |
+                        </li>
+                        <li>
+                            <a href="#">Liên hệ quản cáo</a>
+                        </li>
+                    </ul>
+                    <div class="Clear"></div>
+                </div>
+            </div>
+        </div>
+    <?php }
+} ?>
 <div class="content-qlhs">
     <input type="hidden" name="dang_xu_ly" id="dang_xu_ly" value="0">
     <div>
@@ -160,12 +159,12 @@
                                             <td valign="top" class="tbUser-row"><b>Cấp bậc: <span class="textRed">*</span></b></td>
                                             <td class="tbUser-row"><a name="href-chuc_vu"></a>
                                                 <select class="dropbox" name="select_box_chuc_vu" id="select_box_chuc_vu">
-                                                    
-                                                    <?php foreach($list_capbac as $k_cb=>$cb)
-                                                        {
+
+                                                    <?php
+                                                    foreach ($list_capbac as $k_cb => $cb) {
                                                         ?>
-                                                        <option value="<?php echo $k_cb ?>"><?php echo $cb;?></opption>
-                                                        <?php }?>
+                                                        <option value="<?php echo $k_cb ?>"><?php echo $cb; ?></opption>
+                                                        <?php } ?>
                                                 </select><div id="err_chuc_vu" class="textRed11"></div></td>
                                             <td></td>
                                             <td></td>
@@ -174,12 +173,12 @@
                                             <td valign="top" class="tbUser-row"><b>Chọn ngành nghề: <span class="textRed">*</span></b>                                           
                                             <td class="tbUser-row">        
                                                 <select name="nganh_nghe" class="dropbox" id="nganh_nghe">
-                                                    
-                                                    <?php foreach($list_cate_job as $k_c=>$cate)
-                                                        {
+
+                                                    <?php
+                                                    foreach ($list_cate_job as $k_c => $cate) {
                                                         ?>
-                                                        <option value="<?php echo $k_c ?>"><?php echo $cate;?></opption>
-                                                        <?php }?>
+                                                        <option value="<?php echo $k_c ?>"><?php echo $cate; ?></opption>
+                                                        <?php } ?>
                                                 </select>
                                             </td>
                                             <td width="30"></td>
@@ -189,12 +188,12 @@
                                             <td valign="top" class="tbUser-row"><b>Địa điểm làm việc: <span class="textRed">*</span></b>
                                             <td class="tbUser-row"><a name="href-tinh"></a>
                                                 <select name="dia_diem" class="dropbox" id="dia_diem">
-                                                    
-                                                    <?php foreach($list_city as $k_city=>$city)
-                                                        {
+
+                                                    <?php
+                                                    foreach ($list_city as $k_city => $city) {
                                                         ?>
-                                                        <option value="<?php echo $k_city ?>"><?php echo $city;?></opption>
-                                                        <?php }?>
+                                                        <option value="<?php echo $k_city ?>"><?php echo $city; ?></opption>
+                                                        <?php } ?>
                                                 </select>
                                             </td>
                                             <td width="30"></td>
@@ -204,12 +203,12 @@
                                             <td valign="top" class="tbUser-row"><b>Hình thức làm việc: <span class="textRed">*</span></b></td>
                                             <td class="tbUser-row"><a name="href-thoi_gian"></a>
                                                 <select class="dropbox" name="thoi_gian_lam_viec" id="thoi_gian_lam_viec">
-                                                    
-                                                    <?php foreach($list_time as $k_time=>$time)
-                                                        {
+
+                                                    <?php
+                                                    foreach ($list_time as $k_time => $time) {
                                                         ?>
-                                                        <option value="<?php echo $k_time ?>"><?php echo $time;?></opption>
-                                                        <?php }?>
+                                                        <option value="<?php echo $k_time ?>"><?php echo $time; ?></opption>
+                                                        <?php } ?>
                                                 </select><div id="err_thoi_gian" class="textRed11"></div></td>
                                             <td></td>
                                             <td></td>
@@ -218,12 +217,12 @@
                                             <td valign="top" class="tbUser-row"><b>Mức lương: <span class="textRed">*</span></b></td>
                                             <td class="tbUser-row"><a name="href-muc_luong"></a>
                                                 <select class="dropbox" name="muc_luong" id="muc_luong">
-                                                    
-                                                     <?php foreach($list_luong as $k_luong=>$luong)
-                                                        {
+
+                                                    <?php
+                                                    foreach ($list_luong as $k_luong => $luong) {
                                                         ?>
-                                                        <option value="<?php echo $k_luong ?>"><?php echo $luong;?></opption>
-                                                        <?php }?>
+                                                        <option value="<?php echo $k_luong ?>"><?php echo $luong; ?></opption>
+                                                        <?php } ?>
                                                 </select><div id="err_muc_luong" class="textRed11"></div></td>
                                             <td></td>
                                             <td></td>
@@ -254,48 +253,47 @@
                                             <td width="130" valign="top" class="tbUser-row"><b>Yêu cầu số năm kinh nghiệm: <span class="textRed">*</span></b></td>
                                             <td class="tbUser-row"><a name="href-so_nam_kinh_nghiem"></a>
                                                 <select class="dropbox" name="so_nam_kinh_nghiem" id="so_nam_kinh_nghiem">
-                                                    
-                                                    <?php foreach($list_exp as $k_exp=>$exp)
-                                                        {
+                                                    <?php
+                                                    foreach ($list_exp as $k_exp => $exp) {
                                                         ?>
-                                                        <option value="<?php echo $k_exp ?>"><?php echo $exp;?></opption>
-                                                        <?php }?>
+                                                        <option value="<?php echo $k_exp ?>"><?php echo $exp; ?></opption>
+                                                        <?php } ?>
                                                 </select><div id="err_so_nam_kinh_nghiem" class="textRed11"></div></td>
                                         </tr>
                                         <tr>
                                             <td width="125" valign="top" class="tbUser-row"><b>Yêu cầu bằng cấp: <span class="textRed">*</span></b></td>
                                             <td class="tbUser-row"><a name="href-trinh_do"></a>
                                                 <select class="dropbox" name="trinh_do" id="trinh_do">
-                                                    
-                                                    <?php foreach($list_bangcap as $k_bc=>$bc)
-                                                        {
+
+                                                    <?php
+                                                    foreach ($list_bangcap as $k_bc => $bc) {
                                                         ?>
-                                                        <option value="<?php echo $k_bc ?>"><?php echo $bc;?></opption>
-                                                        <?php }?>
+                                                        <option value="<?php echo $k_bc ?>"><?php echo $bc; ?></opption>
+                                                        <?php } ?>
                                                 </select><div id="err_trinh_do" class="textRed11"></div></td>
                                         </tr>
                                         <tr>
                                             <td width="125" valign="top" class="tbUser-row"><b>Yêu cầu giới tính:</b></td>
                                             <td class="tbUser-row"><a name="href-c_gioi_tinh"></a>
                                                 <select class="dropbox" name="c_gioi_tinh" id="c_gioi_tinh">
-                                                    
-                                                     <?php foreach($list_sex as $k_sx=>$sex)
-                                                        {
+
+                                                    <?php
+                                                    foreach ($list_sex as $k_sx => $sex) {
                                                         ?>
-                                                        <option value="<?php echo $k_sx ?>"><?php echo $sex;?></opption>
-                                                        <?php }?>
+                                                        <option value="<?php echo $k_sx ?>"><?php echo $sex; ?></opption>
+                                                        <?php } ?>
                                                 </select><div id="err_c_gioi_tinh" class="textRed11"></div></td>
                                         </tr>
                                         <tr>
                                             <td width="125" valign="top" class="tbUser-row"><b>Yêu cầu độ tuổi:</b></td>
                                             <td class="tbUser-row"><a name="href-c_do_tuoi"></a>
                                                 <select class="dropbox" name="c_do_tuoi" id="c_do_tuoi">
-                                                  
-                                                    <?php foreach($list_age as $k_age=>$age)
-                                                        {
+
+                                                    <?php
+                                                    foreach ($list_age as $k_age => $age) {
                                                         ?>
-                                                        <option value="<?php echo $k_age ?>"><?php echo $age;?></opption>
-                                                        <?php }?>
+                                                        <option value="<?php echo $k_age ?>"><?php echo $age; ?></opption>
+                                                        <?php } ?>
                                                 </select><div id="err_c_do_tuoi" class="textRed11"></div></td>
                                         </tr>
                                         <tr>
@@ -310,18 +308,18 @@
                                             <td valign="top" class="tbUser-row"><b>Hạn nộp hồ sơ: <span class="textRed">*</span></b></td>
                                             <td class="tbUser-row"><a name="href-den_ngay"></a>
                                                 <table width="100%" cellpadding="0" cellspacing="0" border="0">
-                                                        <tbody>
-                                                            <tr>
-                                                                <td width="130">
-                                                                    <input class="dateline" type="text" style="width:110px" name="c_ngay_co_the_bat_dau_lam">
-                                                                </td>
-                                                                <td width="30">
-                                                                    <input type="image" src="<?php echo base_url(); ?>template/home/img/iconCalendar.gif" >
-                                                                </td>
-                                                                <td>(dd/mm/yyyy)</td>
-                                                            </tr>
-                                                        </tbody>
-                                                    </table><div id="err_den_ngay" class="textRed11"></div></td>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td width="130">
+                                                                <input class="dateline" type="text" id="datepicker" style="width:110px" name="c_ngay_co_the_bat_dau_lam">
+                                                            </td>
+                                                            <td width="30">
+                                                                <input type="image" src="<?php echo base_url(); ?>template/home/img/iconCalendar.gif" >
+                                                            </td>
+                                                            <td>(dd/mm/yyyy)</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table><div id="err_den_ngay" class="textRed11"></div></td>
                                         </tr>
                                         <tr>
                                             <td width="125" valign="top" class="tbUser-row"><b>Hình thức nộp hồ sơ: <span class="textRed">*</span></b></td>
@@ -351,7 +349,7 @@
                                             </tr>
                                             <tr>
                                                 <td valign="top" class="tbUser-info"><b>Quy mô công ty:</b></td>
-                                                <td class="tbUser-info"><?php echo $taotintd_detail[0]['u_companyMem'] ?></td>
+                                                <td class="tbUser-info"><?php echo $list_info_mem[$taotintd_detail[0]['u_companyMem']] ?></td>
                                             </tr>
                                             <tr>
                                                 <td valign="top" class="tbUser-info"><b>Sơ lược về công ty:</b></td>
@@ -581,14 +579,22 @@
                 </table>
             </form>
         </div>
-        
+
         <script src="<?php echo base_url(); ?>template/home/js/HeaderScriptHandler.js"></script>
         <!--</div> -->
     </div>
     <div class="clear"></div>
     <script type="text/javascript">
-        if (document.getElementById("a_menu_lv2_90") != null) {
-            document.getElementById("a_menu_lv2_90").style.color = "#518c04";
-        }
+                                    if (document.getElementById("a_menu_lv2_90") != null) {
+                                        document.getElementById("a_menu_lv2_90").style.color = "#518c04";
+                                    }
+    </script>
+    <link rel="stylesheet" href="<?php echo base_url(); ?>template/home/css/jquery-ui.css" /> 
+    <script src="<?php echo base_url(); ?>template/home/js/jquery.js"></script> 
+    <script src="<?php echo base_url(); ?>template/home/js/jquery-ui.js"></script>
+    <script> 
+    $(function() { 
+        $( "#datepicker" ).datepicker(); 
+    }); 
     </script>
 </div>

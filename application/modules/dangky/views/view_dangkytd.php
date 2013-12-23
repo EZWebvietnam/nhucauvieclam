@@ -76,7 +76,7 @@ $com_phone = array(
             <div id="login-panel">
                 <span class="AlertText"> Để Tuyển Dụng Nhanh bạn có thể sử dụng ngay tài khoản đã đăng ký (không cần chờ email kích hoạt).
                     <br>
-                    Nếu gặp bất kỳ khó khăn nào vui lòng liên hệ ngay các số hotline trên web TimViecNhanh.com để được hỗ trợ. </span>
+                    Nếu gặp bất kỳ khó khăn nào vui lòng liên hệ ngay các số hotline trên web NhuCauViecLam.net để được hỗ trợ. </span>
                 <div class="HighBlank"></div>
 
                 <form enctype="multipart/form-data" id="EmployerNhatuyendungDangkyForm" method="post" accept-charset="utf-8">
